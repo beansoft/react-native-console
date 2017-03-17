@@ -1,0 +1,118 @@
+<idea-plugin version="2">
+    <id>com.github.beansoftapp.reatnative.idea</id>
+    <name>React Native Console</name>
+    <version>1.0.0</version>
+    <vendor email="" url="https://github.com/beansoftapp/reactnativeconsole">刘长炯</vendor>
+
+    <description><![CDATA[
+    <h2>React Native Console</h2>
+      android studio/idea/web storm plugin for React Native.<br/><br/>
+      <a href='https://github.com/beansoftapp/reactnativeconsole'>https://github.com/beansoftapp/reactnativeconsole</a><br/><br/>
+      <h2>Features</h2>
+      OneClick run following commands:<br/>
+      react-native run-android<br/>
+      react-native link<br/>
+      react-native run-ios<br/>
+      npm run start<br/>
+      npm install<br/>
+      Open dev menu on Android device(adb shell input keyevent 82)<br/>
+      forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>
+      open React Native debugger ui(Chrome browser required)<br/>
+      <br/>
+
+      <h2>功能</h2>
+      一键运行下列功能:<br/>
+      react-native run-android<br/>
+      react-native link<br/>
+      react-native run-ios<br/>
+      npm run start<br/>
+      npm install<br/>
+      安卓设备上打开开发菜单(adb shell input keyevent 82)<br/>
+      安卓设备网络请求转发到开发机(adb reverse tcp:8081 tcp:8081)<br/>
+      打开 React Native debugger ui(需要Chrome浏览器)<br/>
+      <br/>
+
+      <br/><b>Contributors</b><br/>
+      <a href='https://github.com/beansoftapp'>beansoft@126.com</a>
+
+      <br/>Java 8 required to run the IDE.<br/>
+      <br/><b>ISSUES</b><br/>
+      <a href='https://github.com/beansoftapp/reactnativeconsole/issues'>Submit Suggestions or Bugs</a><br/><br/>
+    ]]></description>
+
+    <change-notes><![CDATA[
+      <ul>
+        <li>
+          <b>1.0.0</b><br/>
+          add React Native ToolWindow and let you easily run some commands without any type.
+        </li>
+      </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="139.1603"/>
+
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+        <depends>org.jetbrains.plugins.gradle</depends>
+    <depends>org.intellij.groovy</depends>
+        <depends>org.jetbrains.android</depends>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    -->
+    <depends>com.intellij.modules.lang</depends>
+    <depends>org.jetbrains.plugins.terminal</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/react.png"
+                    factoryClass="com.github.beansoftapp.reatnative.idea.views.FreelineToolWindowFactory" secondary="false"/>
+
+        <!-- ReactNative Run Configuration Type define TODO -->
+        <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"
+                           id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
+
+        <!-- ReactNative project UI service -->
+        <projectService serviceImplementation="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
+                        serviceInterface="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
+                        id="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"/>
+
+        <applicationService serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration" />
+
+    </extensions>
+
+    <actions>
+
+        <group id="react" text="react-native console" description="react-native console" icon="/icons/react.png" popup="true">
+
+        <add-to-group group-id="ToolsMenu" anchor="first"/>
+
+            <!-- ReactNative default run action -->
+            <action id="Plugin_ReactNative_Run" class="com.github.beansoftapp.reatnative.idea.actions.RNRunAction"
+                    text="Run ReactNative" description="Run ReactNative">
+                <add-to-group group-id="MainToolBar" anchor="last" />
+                <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
+            </action>
+
+            <action id="Plugin_ReactNative_Run_Update"
+                    class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"
+                    text="Check ReactNative Console Update"
+                    description="Check Update">
+            </action>
+
+        </group>
+
+    </actions>
+
+    <project-components>
+        <component>
+            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</implementation-class>
+        </component>
+    </project-components>
+
+</idea-plugin>
