@@ -9,11 +9,11 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Created by beansoft on 17/3/16.
  */
-public class FreelineToolWindowFactory implements ToolWindowFactory, DumbAware {
+public class RNToolWindowFactory implements ToolWindowFactory, DumbAware {
 
     public static final String TOOL_WINDOW_ID = "ReactNative";
 
-    public FreelineToolWindowFactory() {
+    public RNToolWindowFactory() {
     }
 
     @Override

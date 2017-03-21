@@ -10,7 +10,7 @@ import com.intellij.openapi.util.SystemInfo;
 
 public class NotificationUtils {
 
-    private static final String TITLE = "Freeline Plugin";
+    private static final String TITLE = "React Native Console";
     private static final NotificationGroup NOTIFICATION_GROUP = NotificationGroup.balloonGroup(TITLE);
 
     /**
@@ -69,12 +69,12 @@ public class NotificationUtils {
     }
 
     /**
-     * package.json 提示
+     * package.json error message
      */
     public static void packageJsonNotFound() {
-        String tip = "File 'package.json' not found\nMake sure you are inside a react-native project.";//找不到有效的React Native目录, 命令将停止执行
+        String tip = "File 'package.json' not found.\n Make sure that you have run `npm install` and that you are inside a react-native project.";//找不到有效的React Native目录, 命令将停止执行
         if (SystemInfo.isWindows) {
-            tip += "  if first installation python or Set Environment variable, Please restart your computer";
+            tip += "  if first installation React Native or Set Environment variable, Please restart your computer";
         }
         errorNotification(tip);
     }

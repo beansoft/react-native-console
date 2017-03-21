@@ -14,6 +14,6 @@ public class UpdateAction extends BaseAction {
 
     @Override
     public void actionPerformed() {
-        Utils.openUrl("https://github.com/beansoftapp/");
+        Utils.openUrl("https://github.com/beansoftapp/react-native-console");
     }
 }

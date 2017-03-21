@@ -157,7 +157,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
             @Override
             public void stateChanged() {
-                ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(FreelineToolWindowFactory.TOOL_WINDOW_ID);
+                ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(RNToolWindowFactory.TOOL_WINDOW_ID);
                 if (window != null) {
                     boolean visible = window.isVisible();
                     if (visible && toolWindow.getContentManager().getContentCount() == 0) {
@@ -177,7 +177,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
     }
 
     private ToolWindow getToolWindow() {
-        return ToolWindowManager.getInstance(myProject).getToolWindow(FreelineToolWindowFactory.TOOL_WINDOW_ID);
+        return ToolWindowManager.getInstance(myProject).getToolWindow(RNToolWindowFactory.TOOL_WINDOW_ID);
     }
 
     public void createNewSession() {
@@ -484,7 +484,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         }
     }
 
-    private static class DevMenuAction extends RunAction {
+    private static class DevMenuAction extends BaseRunNPMAction {
         public DevMenuAction(ReactNativeTerminal terminal) {
             super(terminal, "Open Dev Menu", "Open Dev Menu", PluginIcons.DevMenu);
         }
@@ -500,7 +500,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
      * If you're on a physical device connected to the same machine,
      * run 'adb reverse tcp:8081 tcp:8081' to forward requests from your device
      */
-    private static class AdbForwardAction extends RunAction {
+    private static class AdbForwardAction extends BaseRunNPMAction {
         public AdbForwardAction(ReactNativeTerminal terminal) {
             super(terminal, "adb reverse tcp:8081 tcp:8081",
                     "forward Android device request to this machine", PluginIcons.Link);
@@ -544,7 +544,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
     }
 
     /**
-     * 清空terminal
+     * Clear the terminal window
      */
     private static class ClearAction extends BaseTerminalAction {
         public ClearAction(ReactNativeTerminal terminal) {
@@ -577,7 +577,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         public abstract void doAction(AnActionEvent anActionEvent);
     }
 
-    // Original action taken from IDEA platform
+    // Original code taken from IDEA platform
     private static void hideIfNoActiveSessions(@NotNull ToolWindow toolWindow, @NotNull JBTabbedTerminalWidget terminal) {
         if(terminal.isNoActiveSessions()) {
             toolWindow.getContentManager().removeAllContents(true);
@@ -599,7 +599,6 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
             hideIfNoActiveSessions(this.myToolWindow, this.myTerminal);
         }
     }
-
 
 
     private static class NewSession extends DumbAwareAction {
