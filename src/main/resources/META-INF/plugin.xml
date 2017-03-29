@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -19,7 +19,13 @@
       Open dev menu on Android device(adb shell input keyevent 82)<br/>
       forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>
       open React Native debugger ui(Chrome browser required)<br/>
-      Auto detect React Native package.json in current folder and parent folder(eg only coding Java in Android Studio), thus the command will auto execute in that folder<br/>
+      react-native log-android<br/>
+      react-native log-ios<br/>
+      gradlew assembleRelease<br/>
+      react-native bundle --platform android/ios --dev false<br/><br/>
+
+      Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio),
+      thus the command will auto execute in the correct folder<br/>
       <br/>
 
       <h2>功能</h2>
@@ -31,7 +37,11 @@
       npm install<br/>
       安卓设备上打开开发菜单(adb shell input keyevent 82)<br/>
       安卓设备网络请求转发到开发机(adb reverse tcp:8081 tcp:8081)<br/>
-      打开 React Native debugger ui(需要Chrome浏览器)<br/>
+      打开 React Native debugger ui(需要Chrome浏览器)<br/><br/>
+      react-native log-android<br/>
+      react-native log-ios<br/>
+      gradlew assembleRelease<br/>
+      react-native bundle --platform android/ios --dev false<br/><br/>
       自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
       <br/>
 
@@ -44,12 +54,29 @@
       Then install this plugin to your IDE, then you'll find a React Native tab on your bottom dock bar.
 
       <br/>Java 8 required to run the IDE.<br/>
-      <br/><b>ISSUES</b><br/>
+      <br/>
+      <b>ISSUES</b><br/>
       <a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a><br/><br/>
+
+      <img src="https://plugins.jetbrains.com/files/9564/screenshot_16835.png" width='552' height='201' /><br/><br/>
     ]]></description>
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.0.3</b><br/>
+          Removed unused files to reduce plugin file size.
+          Add logs view function.
+          Main buttons will be shown horizontal, easier to find.
+        </li>
+        <li>
+          <b>1.0.2</b><br/>
+          Bug fix, now all commands execute in new tab, to avoid that first terminal command not finished, the following commands not executed. Also update source code link to fix the 404 issue.
+        </li>
+        <li>
+          <b>1.0.1</b><br/>
+          update source code link
+        </li>
         <li>
           <b>1.0.0</b><br/>
           add React Native ToolWindow and let you easily run some commands without type a key.

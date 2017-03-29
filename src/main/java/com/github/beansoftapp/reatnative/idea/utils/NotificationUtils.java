@@ -79,4 +79,15 @@ public class NotificationUtils {
         errorNotification(tip);
     }
 
+    /**
+     * build.gradle error message
+     */
+    public static void gradleFileNotFound() {
+        String tip = "File 'build.gradle' not found.\n Make sure that you have run `npm install` and that you are inside a android project.";
+        if (SystemInfo.isWindows) {
+            tip += "  if first installation React Native or Set Environment variable, Please restart your computer";
+        }
+        errorNotification(tip);
+    }
+
 }

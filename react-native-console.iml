@@ -7,12 +7,12 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="Android Studio AI-162.3764568" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
         <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/terminal/lib/jediterm-pty-2.2.1.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/plugins/terminal/lib/terminal.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
@@ -21,7 +21,7 @@
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
         <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/terminal/lib/terminal.jar!/" />
+          <root url="jar://$APPLICATION_HOME_DIR$/lib/jediterm-pty-2.5.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

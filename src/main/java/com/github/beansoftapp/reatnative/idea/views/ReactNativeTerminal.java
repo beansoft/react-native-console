@@ -2,6 +2,7 @@ package com.github.beansoftapp.reatnative.idea.views;
 
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
+import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.Utils;
 import com.intellij.icons.AllIcons;
@@ -12,7 +13,6 @@ import com.intellij.openapi.project.DumbAwareAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.InputValidator;
 import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
@@ -34,7 +34,9 @@ import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
+import java.io.File;
 import java.util.regex.Pattern;
+
 
 /**
  * A React Native terminal.
@@ -205,22 +207,26 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
     }
 
     /**
-     * 创建Terminal panel
+     * Create a terminal panel
      *
      * @param terminalRunner
      * @param toolWindow
      * @return
      */
     private Content createTerminalInContentPanel(@NotNull AbstractTerminalRunner terminalRunner, @NotNull final ToolWindow toolWindow) {
-        SimpleToolWindowPanel panel = new SimpleToolWindowPanel(false, true);
+        SimpleToolWindowPanel panel = new SimpleToolWindowPanel(true);
         Content content = ContentFactory.SERVICE.getInstance().createContent(panel, "", false);
         content.setCloseable(true);
         myTerminalWidget = terminalRunner.createTerminalWidget(content);
         panel.setContent(myTerminalWidget.getComponent());
         panel.addFocusListener(this);
-        ActionToolbar toolbar = createToolbar(terminalRunner, myTerminalWidget, toolWindow);
+
+        createToolbar(terminalRunner, myTerminalWidget, toolWindow, panel);// west toolbar
+
+        ActionToolbar toolbar = createTopToolbar(terminalRunner, myTerminalWidget, toolWindow);
         toolbar.setTargetComponent(panel);
-        panel.setToolbar(toolbar.getComponent());
+        panel.setToolbar(toolbar.getComponent(), false);
+
         content.setPreferredFocusableComponent(myTerminalWidget.getComponent());
         return content;
     }
@@ -233,39 +239,128 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
      * @param toolWindow
      * @return
      */
-    private ActionToolbar createToolbar(@Nullable AbstractTerminalRunner terminalRunner, @NotNull JBTabbedTerminalWidget terminal, @NotNull ToolWindow toolWindow) {
+    private ActionToolbar createTopToolbar(@Nullable AbstractTerminalRunner terminalRunner, @NotNull JBTabbedTerminalWidget terminal, @NotNull ToolWindow toolWindow) {
         DefaultActionGroup group = new DefaultActionGroup();
         if (terminalRunner != null) {
             // Termal basis
-            group.add(new NewSession(terminalRunner, terminal));
-            group.add(new CloseSession(terminal, toolWindow));
-            group.add(new StopAction(this));
-            group.addSeparator();
+//            group.add(new NewSession(terminalRunner, terminal));
+//            group.add(new CloseSession(terminal, toolWindow));
+//            group.add(new StopAction(this));
+//            group.add(new ClearAction(this));
+//            group.addSeparator();
+
+            group.add(new HelpAction(this));
 
             // Android
             group.addSeparator();
             group.add(new DevMenuAction(this));
             group.add(new AdbForwardAction(this));
-//            group.add(new ForceAction(this));
+            group.add(new NPMAndroidLogsAction(this));
             group.add(new RunAndroidAction(this));
+            group.add(new AndroidReleaseApkAction(this));
+            group.add(new AndroidBundleAction(this));
+
 
             // NPM
             group.addSeparator();
             group.add(new NPMStartAction(this));
             group.add(new NPMInstallAction(this));
 
-            // iOS
-            group.addSeparator();
-            group.add(new RunLinkAction(this));
-            group.add(new RunIOSAction(this));
+            if(OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
+                // iOS
+                group.addSeparator();
+                group.add(new RunLinkAction(this));
+                group.add(new RunIOSAction(this));
+                group.add(new NPMiOSLogsAction(this));
+                group.add(new IOSBundleAction(this));
+            }
 
             // General
             group.addSeparator();
-            group.add(new ClearAction(this));
             group.add(new DebugUiAction(this));
 
         }
-        return ActionManager.getInstance().createActionToolbar("unknown", group, false);
+        return ActionManager.getInstance().createActionToolbar("unknown", group, true);// horizontal: true
+    }
+
+    /**
+     * 创建左侧工具栏
+     *
+     * @param terminalRunner
+     * @param terminal
+     * @param toolWindow
+     * @return
+     */
+    private void createToolbar(@Nullable AbstractTerminalRunner terminalRunner, @NotNull JBTabbedTerminalWidget terminal,
+                               @NotNull ToolWindow toolWindow, @NotNull SimpleToolWindowPanel panel) {
+        // Termal basis
+        createAndAddLeftToolbar(terminalRunner, myTerminalWidget, panel,
+                new NewSession(terminalRunner, terminal),
+                new CloseSession(terminal, toolWindow),
+                new StopAction(this),
+                new ClearAction(this));
+
+        // Android
+//        createAndAddLeftToolbar(terminalRunner, myTerminalWidget, panel,
+//                new DevMenuAction(this),
+//                new AdbForwardAction(this),
+//                new RunAndroidAction(this),
+//                new AndroidReleaseApkAction(this),
+//                new NPMAndroidLogsAction(this));
+//
+//        // NPM
+//        createAndAddLeftToolbar(terminalRunner, myTerminalWidget, panel,
+//                new NPMStartAction(this),
+//                new NPMInstallAction(this));
+//
+//        // iOS
+//        createAndAddLeftToolbar(terminalRunner, myTerminalWidget, panel,
+//                new RunLinkAction(this),
+//                new RunIOSAction(this),
+//                new NPMiOSLogsAction(this));
+//
+//        // General
+//        createAndAddLeftToolbar(terminalRunner, myTerminalWidget, panel,
+////                new ClearAction(this),
+//                new DebugUiAction(this));
+    }
+
+    /**
+     * Create left toolbar
+     *
+     * @param terminalRunner
+     * @param terminal
+     * @return
+     */
+    private void createAndAddLeftToolbar(@Nullable AbstractTerminalRunner terminalRunner, @NotNull JBTabbedTerminalWidget terminal,
+                                         @NotNull SimpleToolWindowPanel panel, AnAction... actions) {
+        ActionToolbar toolbar = createToolbarWithActions(terminalRunner, myTerminalWidget, false, actions);
+        toolbar.setTargetComponent(panel);
+        panel.setToolbar(toolbar.getComponent(), true);
+    }
+
+    /**
+     * Create some actions
+     *
+     * @param terminalRunner
+     * @param terminal
+     * @param horizontal is horizontal displayed
+     * @return
+     */
+    private ActionToolbar createToolbarWithActions(@Nullable AbstractTerminalRunner terminalRunner, @NotNull JBTabbedTerminalWidget terminal,
+                                                   boolean horizontal,
+                                                   AnAction... actions) {
+        DefaultActionGroup group = new DefaultActionGroup();
+        if (terminalRunner != null) {
+
+            if (actions != null) {
+                for (AnAction anAction : actions) {
+                    group.add(anAction);
+                }
+            }
+            //group.addSeparator();
+        }
+        return ActionManager.getInstance().createActionToolbar("unknown", group, horizontal);// horizontal
     }
 
     @Override
@@ -278,27 +373,22 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
     @Override
     public void focusLost(FocusEvent e) {
-
     }
 
     @Override
     public void projectOpened() {
-
     }
 
     @Override
     public void projectClosed() {
-
     }
 
     @Override
     public void initComponent() {
-
     }
 
     @Override
     public void disposeComponent() {
-
     }
 
     @NotNull
@@ -308,7 +398,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
     }
 
     /**
-     * 停止执行
+     * Stop console command
      */
     private static class StopAction extends BaseTerminalAction {
         private Robot robot;
@@ -331,13 +421,86 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         }
     }
 
-    /** Run rpm command, but with a new terminal session */
+    /**
+     * Run command, but with a new terminal session
+     */
+    private static class BaseRunInNewTabAction extends RunAction {
+
+        public BaseRunInNewTabAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
+            super(terminal, text, description, icon);
+        }
+
+        @Override
+        public void doAction(AnActionEvent anActionEvent) {
+            terminal.createNewSession();
+
+            new Thread(() -> {
+                try {
+                    // Wait 0.5 second for the terminal to show up, no wait works ok on WebStorm but not on Android Studio
+                    Thread.currentThread().sleep(500L);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                // Below code without ApplicationManager.getApplication().invokeLater() will throw exception
+                // : IDEA Access is allowed from event dispatch thread only.
+                ApplicationManager.getApplication().invokeLater(() -> {
+                    terminal.executeShell(command());
+                });
+            }).start();
+        }
+
+        protected String command() {
+            return null;
+        }
+    }
+
+    /**
+     * Run android gradle command, but with a new terminal session
+     */
+    private static class BaseRunAndroidAction extends RunAction {
+        String gradleLocation;
+
+        public BaseRunAndroidAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
+            super(terminal, text, description, icon);
+        }
+
+        @Override
+        public void doAction(AnActionEvent anActionEvent) {
+            Project project = anActionEvent.getData(PlatformDataKeys.PROJECT);
+            String path = project.getBasePath();
+            gradleLocation = RNPathUtil.getAndroidProjectPath(project, path);
+
+            if (gradleLocation == null) {
+                NotificationUtils.gradleFileNotFound();
+            } else {
+                terminal.createNewSession();
+                new Thread(() -> {
+                    try {
+                        // Wait 0.5 second for the terminal to show up, no wait works ok on WebStorm but not on Android Studio
+                        Thread.currentThread().sleep(500L);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    // Below code without ApplicationManager.getApplication().invokeLater() will throw exception
+                    // : IDEA Access is allowed from event dispatch thread only.
+                    ApplicationManager.getApplication().invokeLater(() -> {
+                        terminal.executeShell("cd \"" + gradleLocation + "\"");
+                        terminal.executeShell(command());
+                    });
+                }).start();
+            }
+        }
+
+        protected String command() {
+            return null;
+        }
+    }
+
+    /**
+     * Run rpm command, but with a new terminal session
+     */
     private static class BaseRunNPMAction extends RunAction {
         String npmLocation;
-
-        public BaseRunNPMAction(ReactNativeTerminal terminal) {
-            this(terminal, "Run NPM", "Run NPM", PluginIcons.Execute);
-        }
 
         public BaseRunNPMAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
             super(terminal, text, description, icon);
@@ -356,7 +519,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
                 terminal.createNewSession();
                 // If direct call without this code, then the command will be sent to the original terminal session
 //                terminal.executeShell("cd \"" + npmLocation + "\"");
-//                terminal.executeShell(args());
+//                terminal.executeShell(command());
 
                 new Thread(() -> {
                     try {
@@ -369,34 +532,81 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
                     // : IDEA Access is allowed from event dispatch thread only.
                     ApplicationManager.getApplication().invokeLater(() -> {
                         terminal.executeShell("cd \"" + npmLocation + "\"");
-                        terminal.executeShell(args());
+                        beforeAction();
+                        terminal.executeShell(command());
+                        afterAction();
                     });
 // Background task
 //                    ApplicationManager.getApplication().executeOnPooledThread(() -> ApplicationManager.getApplication().runReadAction(() -> {
 //                        terminal.executeShell("cd \"" + npmLocation + "\"");
-//                        terminal.executeShell(args());
+//                        terminal.executeShell(command());
 //                    }));
                 }).start();
-
             }
         }
 
-        protected String args() {
+        protected String command() {
             return null;
         }
     }
 
     private static class RunAndroidAction extends BaseRunNPMAction {
         public RunAndroidAction(ReactNativeTerminal terminal) {
-            this(terminal, "Run Android", "Run Android", PluginIcons.Android);
+            super(terminal, "Debug Run Android", "react-native run-android", PluginIcons.Android);
         }
 
-        public RunAndroidAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
-            super(terminal, text, description, icon);
-        }
-
-        protected String args() {
+        protected String command() {
             return "react-native run-android";
+        }
+    }
+
+    private static class RunAndroidReleaseAction extends BaseRunNPMAction {
+        public RunAndroidReleaseAction(ReactNativeTerminal terminal) {
+            super(terminal, "Test Android Release APK", "Run Android with Release APK", PluginIcons.RealDevice);
+        }
+
+        protected String command() {
+            return "react-native run-android --configuration=release";
+        }
+    }
+
+    private static class AndroidReleaseApkAction extends BaseRunAndroidAction {
+        public AndroidReleaseApkAction(ReactNativeTerminal terminal) {
+            super(terminal, "Generate Release APK", "Generate Release APK file", PluginIcons.Archive);
+        }
+
+        protected String command() {
+            return "." + File.separator + "gradlew assembleRelease";
+        }
+    }
+
+    private static class AndroidBundleAction extends BaseRunNPMAction {
+        public AndroidBundleAction(ReactNativeTerminal terminal) {
+            super(terminal, "Create Android React Native Bundle File",
+                    "Create Release React Native Bundle File for Android ", PluginIcons.Deploy);
+        }
+
+        public void beforeAction() {
+            terminal.executeShell("mkdir bundle-android");
+        }
+
+        protected String command() {
+            return "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./bundle-android/index.android.bundle --assets-dest ./bundle-android";
+        }
+    }
+
+    private static class IOSBundleAction extends BaseRunNPMAction {
+        public IOSBundleAction(ReactNativeTerminal terminal) {
+            super(terminal, "Create iOS React Native Bundle File",
+                    "Create Release React Native Bundle File for iOS ", PluginIcons.Deploy);
+        }
+
+        public void beforeAction() {
+            terminal.executeShell("mkdir bundle-ios");
+        }
+
+        protected String command() {
+            return "react-native bundle --platform ios --dev false --entry-file index.ios.js --bundle-output ./bundle-ios/index.ios.bundle --assets-dest ./bundle-ios";
         }
     }
 
@@ -409,7 +619,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
             super(terminal, text, description, icon);
         }
 
-        protected String args() {
+        protected String command() {
             return "react-native run-ios";
         }
     }
@@ -423,7 +633,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
             super(terminal, text, description, icon);
         }
 
-        protected String args() {
+        protected String command() {
             return "react-native link";
         }
     }
@@ -438,7 +648,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
             super(terminal, text, description, icon);
         }
 
-        protected String args() {
+        protected String command() {
             return "npm run start";
         }
     }
@@ -446,23 +656,46 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
     // NPM Run start Task
     private static class NPMInstallAction extends BaseRunNPMAction {
         public NPMInstallAction(ReactNativeTerminal terminal) {
-            this(terminal, "npm install", "npm install", PluginIcons.Install);
+            super(terminal, "npm install", "npm install", PluginIcons.Install);
         }
 
-        public NPMInstallAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
-            super(terminal, text, description, icon);
-        }
 
-        protected String args() {
+        protected String command() {
             return "npm install";
+        }
+    }
+
+    // view android log
+    private static class NPMAndroidLogsAction extends BaseRunInNewTabAction {
+        public NPMAndroidLogsAction(ReactNativeTerminal terminal) {
+            super(terminal, "log-android", "react-native log-android", PluginIcons.TrackTests);
+        }
+
+        protected String command() {
+            return "adb logcat *:S ReactNative:V ReactNativeJS:V";
+        }
+    }
+
+    // view ios log, we have GUI version: /Applications/Utilities/Console.app/Contents/MacOS/Console /var/log/system.log or
+    // syslog -w 100(see: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/syslog.1.html
+    // and https://discussions.apple.com/thread/2285049?start=0&tstart=0, and the source code of RN logIOS.js shows:
+    // syslog -w -F std '-d', logDir(logDir is the active device dir var: xcrun simctl list devices --json, the status should be:
+    // device.availability === '(available)' && device.state === 'Booted'
+    private static class NPMiOSLogsAction extends BaseRunInNewTabAction {
+        public NPMiOSLogsAction(ReactNativeTerminal terminal) {
+            super(terminal, "log-ios", "react-native log-ios", PluginIcons.TrackTests);
+        }
+
+        protected String command() {
+            return "syslog -w -F std";
         }
     }
 
     private static class RunAction extends BaseTerminalAction {
         String pythonLocation;
 
-        public RunAction(ReactNativeTerminal terminal) {
-            this(terminal, "Run Android", "Run Android", PluginIcons.Execute);
+        public RunAction(ReactNativeTerminal terminal, String text) {
+            super(terminal, text);
         }
 
         public RunAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
@@ -475,11 +708,22 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 //            if (pythonLocation == null) {
 //                NotificationUtils.pythonNotFound();
 //            } else {
-            terminal.executeShell(args());//
+            beforeAction();
+            terminal.executeShell(command());//
+            afterAction();
 //            }
         }
 
-        protected String args() {
+        // Some action before execute commands, eg mkdir through API or shell
+        public void beforeAction() {
+        }
+
+        // Some action after execute commands, eg clean dir through API or shell
+        public void afterAction() {
+        }
+
+        // single line command to run
+        protected String command() {
             return null;
         }
     }
@@ -490,7 +734,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         }
 
         @Override
-        protected String args() {
+        protected String command() {
             return "adb shell input keyevent 82";
         }
     }
@@ -507,7 +751,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         }
 
         @Override
-        protected String args() {
+        protected String command() {
             return "adb reverse tcp:8081 tcp:8081";
         }
     }
@@ -548,7 +792,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
      */
     private static class ClearAction extends BaseTerminalAction {
         public ClearAction(ReactNativeTerminal terminal) {
-            super(terminal, "Clear", "Clear", PluginIcons.GC);
+            super(terminal, "Help", "Show Help Message", PluginIcons.GC);
         }
 
         @Override
@@ -560,11 +804,30 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         }
     }
 
+    /**
+     * Open help message.
+     */
+    private static class HelpAction extends BaseTerminalAction {
+        public HelpAction(ReactNativeTerminal terminal) {
+            super(terminal, "Clear", "Clear Terminal Content", PluginIcons.Help);
+        }
+
+        @Override
+        public void doAction(AnActionEvent anActionEvent) {
+                Utils.openUrl("https://github.com/beansoftapp/react-native-console");
+        }
+    }
+
     private static abstract class BaseTerminalAction extends DumbAwareAction {
         protected ReactNativeTerminal terminal;
 
         public BaseTerminalAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
             super(text, description, icon);
+            this.terminal = terminal;
+        }
+
+        public BaseTerminalAction(ReactNativeTerminal terminal, String text) {
+            super(text);
             this.terminal = terminal;
         }
 
@@ -579,7 +842,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
     // Original code taken from IDEA platform
     private static void hideIfNoActiveSessions(@NotNull ToolWindow toolWindow, @NotNull JBTabbedTerminalWidget terminal) {
-        if(terminal.isNoActiveSessions()) {
+        if (terminal.isNoActiveSessions()) {
             toolWindow.getContentManager().removeAllContents(true);
         }
     }

@@ -15,7 +15,7 @@ import java.io.File;
 public class RNUtil {
 
     // TODO: 2016/9/13 0013 need refactor tool window
-    private final static String TOOL_ID = "React Native Console";
+//    private final static String TOOL_ID = "React Native Console";
 
 //    public static void build(Project project) {
 //        GeneralCommandLine commandLine = new GeneralCommandLine();

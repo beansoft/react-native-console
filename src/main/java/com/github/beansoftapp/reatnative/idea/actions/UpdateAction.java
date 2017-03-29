@@ -9,7 +9,7 @@ import com.github.beansoftapp.reatnative.idea.utils.Utils;
 public class UpdateAction extends BaseAction {
 
     public UpdateAction() {
-        super(PluginIcons.GradleSync);
+        super(PluginIcons.Help);
     }
 
     @Override
