@@ -44,7 +44,7 @@ public class RNPathUtil {
      * @param inputDir
      * @return
      */
-    public static String getAndroidProjectPath(Project project, String inputDir) {
+    public static String getAndroidProjectPath(String inputDir) {
         File file = new File(inputDir, GRADLE_FILE);
         if (file.exists()) {
             return inputDir;

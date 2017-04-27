@@ -258,6 +258,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
             group.add(new NPMAndroidLogsAction(this));
             group.add(new RunAndroidAction(this));
             group.add(new AndroidReleaseApkAction(this));
+            group.add(new AndroidDebugApkAction(this));
             group.add(new AndroidBundleAction(this));
 
 
@@ -468,11 +469,14 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         public void doAction(AnActionEvent anActionEvent) {
             Project project = anActionEvent.getData(PlatformDataKeys.PROJECT);
             String path = project.getBasePath();
-            gradleLocation = RNPathUtil.getAndroidProjectPath(project, path);
+            gradleLocation = RNPathUtil.getAndroidProjectPath(path);
 
             if (gradleLocation == null) {
                 NotificationUtils.gradleFileNotFound();
             } else {
+                if(command() == null) {
+                    return;
+                }
                 terminal.createNewSession();
                 new Thread(() -> {
                     try {
@@ -577,6 +581,16 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
         protected String command() {
             return "." + File.separator + "gradlew assembleRelease";
+        }
+    }
+
+    private static class AndroidDebugApkAction extends BaseRunAndroidAction {
+        public AndroidDebugApkAction(ReactNativeTerminal terminal) {
+            super(terminal, "Generate Debug APK", "Generate Debug APK file", PluginIcons.StartDebugger);
+        }
+
+        protected String command() {
+            return "." + File.separator + "gradlew assembleDebug --configure-on-demand -p app\n";
         }
     }
 
@@ -692,7 +706,6 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
     }
 
     private static class RunAction extends BaseTerminalAction {
-        String pythonLocation;
 
         public RunAction(ReactNativeTerminal terminal, String text) {
             super(terminal, text);
@@ -704,10 +717,6 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
         @Override
         public void doAction(AnActionEvent anActionEvent) {
-//            pythonLocation = Utils.getPythonLocation();
-//            if (pythonLocation == null) {
-//                NotificationUtils.pythonNotFound();
-//            } else {
             beforeAction();
             terminal.executeShell(command());//
             afterAction();
@@ -820,6 +829,8 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
     private static abstract class BaseTerminalAction extends DumbAwareAction {
         protected ReactNativeTerminal terminal;
+        protected Project project;
+        protected DataContext dataContext;
 
         public BaseTerminalAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {
             super(text, description, icon);
@@ -832,9 +843,12 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         }
 
         @Override
-        public void actionPerformed(AnActionEvent anActionEvent) {
+        public void actionPerformed(AnActionEvent e) {
 //            DocumentUtil.saveDocument();
-            doAction(anActionEvent);
+            dataContext = e.getDataContext();
+            project = (Project)e.getData(CommonDataKeys.PROJECT);
+
+            doAction(e);
         }
 
         public abstract void doAction(AnActionEvent anActionEvent);

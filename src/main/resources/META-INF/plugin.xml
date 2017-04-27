@@ -100,11 +100,11 @@
     <depends>com.intellij.modules.lang</depends>
 
     -->
-    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/react.png"
+        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/ReactNative.png"
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO -->
@@ -116,20 +116,22 @@
                         serviceInterface="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
                         id="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"/>
 
-        <applicationService serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration" />
+        <applicationService
+                serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration"/>
 
     </extensions>
 
     <actions>
 
-        <group id="react" text="react-native console" description="react-native console" icon="/icons/react.png" popup="true">
+        <group id="react" text="react-native console" description="react-native console" icon="/icons/ReactNative.png"
+               popup="true">
 
-        <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
 
             <!-- ReactNative default run action -->
             <action id="Plugin_ReactNative_Run" class="com.github.beansoftapp.reatnative.idea.actions.RNRunAction"
                     text="Run ReactNative" description="Run ReactNative">
-                <add-to-group group-id="MainToolBar" anchor="last" />
+                <add-to-group group-id="MainToolBar" anchor="last"/>
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
             </action>
 
@@ -139,14 +141,22 @@
                     description="Check Update">
             </action>
 
+
         </group>
+
+        <action id="UpdateModuleAAR" class="com.github.beansoftapp.reatnative.idea.actions.UpdageModuleAARAction"
+                icon="/icons/libraryModule.png">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
 
     </actions>
 
     <project-components>
         <component>
             <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
-            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</implementation-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal
+            </implementation-class>
         </component>
     </project-components>
 
