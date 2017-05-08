@@ -24,7 +24,12 @@ Now just restart and enjoy!
       forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>
       open React Native debugger ui(Chrome browser required)<br/>
       <br/>
-      Auto detect React Native package.json in current folder and parent folder(eg coding Java in Android Studio), thus the command will auto execute in that folder<br/>
+      react-native log-android<br/>
+      react-native log-ios<br/>
+      gradlew assembleRelease<br/>
+      react-native bundle --platform android/ios --dev false<br/><br/>
+      Auto detect React Native package.json in current folder and parent folder(eg coding Java in Android Studio),
+       thus the command will auto execute in that folder<br/>
       <br/>
 
 
@@ -44,6 +49,10 @@ Now just restart and enjoy!
       安卓设备上打开开发菜单(adb shell input keyevent 82)<br/>
       安卓设备网络请求转发到开发机(adb reverse tcp:8081 tcp:8081)<br/>
       打开 React Native debugger ui(需要Chrome浏览器)<br/>
+      react-native log-android<br/>
+      react-native log-ios<br/>
+      gradlew assembleRelease<br/>
+      react-native bundle --platform android/ios --dev false<br/><br/>
       自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
       <br/>
 
