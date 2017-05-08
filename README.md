@@ -58,7 +58,7 @@ Now just restart and enjoy!
 
 #### ScreenShot
 
-<img src="https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/ReactNativeConsole.png" width="570" height="384" alt="图片名称" align=center />
+<img src="https://plugins.jetbrains.com/files/9564/screenshot_16835.png" width="552" height="201" alt="ScreenShot" align="center" />
 
 #### Demo Gif
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
