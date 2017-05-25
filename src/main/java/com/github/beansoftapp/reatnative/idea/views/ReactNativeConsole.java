@@ -1,5 +1,7 @@
 package com.github.beansoftapp.reatnative.idea.views;
 
+import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
+import com.github.beansoftapp.reatnative.idea.actions.BaseRNRunAction;
 import com.github.beansoftapp.reatnative.idea.actions.CloseTabAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.Utils;
@@ -7,9 +9,7 @@ import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.openapi.actionSystem.*;
-import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ProjectComponent;
-import com.intellij.openapi.project.DumbAwareAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
@@ -52,7 +52,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         ((ToolWindowManagerEx) ToolWindowManager.getInstance(this.myProject)).addToolWindowManagerListener(new ToolWindowManagerListener() {
             @Override
             public void toolWindowRegistered(@NotNull String s) {
-
             }
 
             @Override
@@ -78,11 +77,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     public void executeShell(String shell, String workDirectory, String displayName) {
         RNConsoleImpl rnConsole = getRNConsole(displayName);
         if(rnConsole != null) {
-            // Below code without ApplicationManager.getApplication().invokeLater() will throw exception
-            // : IDEA Access is allowed from event dispatch thread only.
-            ApplicationManager.getApplication().invokeLater(() -> {
-                rnConsole.executeShell(shell, workDirectory);
-            });
+            rnConsole.executeShell(shell, workDirectory);
         }
     }
 
@@ -249,7 +244,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     /**
      * Open help message.
      */
-    private static class HelpAction extends BaseTerminalAction {
+    private static class HelpAction extends BaseRNConsoleAction {
         public HelpAction(ReactNativeConsole terminal) {
             super(terminal, "Help", "Show Help Message", PluginIcons.Help);
         }
@@ -265,89 +260,17 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      * If you're on a physical device connected to the same machine,
      * run 'adb reverse tcp:8081 tcp:8081' to forward requests from your device
      */
-    private static class AdbForwardAction extends BaseTerminalAction {
+    private static class AdbForwardAction extends BaseRNRunAction {
         public AdbForwardAction(ReactNativeConsole terminal) {
             super(terminal, "Forward Android Request",
                     "forward Android device request to this machine", PluginIcons.Link);
         }
 
         @Override
-        public void doAction(AnActionEvent anActionEvent) {
-//            beforeAction();
-            terminal.executeShell(command(), null, myText);//
-//            afterAction();
-//            }
-        }
-
-//        @Override
         protected String command() {
             return "adb reverse tcp:8081 tcp:8081";
         }
     }
 
-    private static class RunAction extends BaseTerminalAction {
 
-        public RunAction(ReactNativeConsole terminal, String text) {
-            super(terminal, text);
-        }
-
-        public RunAction(ReactNativeConsole terminal, String text, String description, Icon icon) {
-            super(terminal, text, description, icon);
-        }
-
-        @Override
-        public void doAction(AnActionEvent anActionEvent) {
-            beforeAction();
-            terminal.executeShell(command(), null, myText);//
-            afterAction();
-//            }
-        }
-
-        // Some action before execute commands, eg mkdir through API or shell
-        public void beforeAction() {
-        }
-
-        // Some action after execute commands, eg clean dir through API or shell
-        public void afterAction() {
-        }
-
-        // single line command to run
-        protected String command() {
-            return null;
-        }
-    }
-
-    private static abstract class BaseTerminalAction extends DumbAwareAction {
-        protected ReactNativeConsole terminal;
-        protected Project project;
-        protected DataContext dataContext;
-        protected String myText;
-
-        public BaseTerminalAction(ReactNativeConsole terminal, String text, String description, Icon icon) {
-            super(text, description, icon);
-            this.terminal = terminal;
-            myText = text;
-        }
-
-        public BaseTerminalAction(ReactNativeConsole terminal, String text) {
-            super(text);
-            this.terminal = terminal;
-            myText = text;
-        }
-
-        public String getText() {
-            return myText;
-        }
-
-        @Override
-        public void actionPerformed(AnActionEvent e) {
-//            DocumentUtil.saveDocument();
-            dataContext = e.getDataContext();
-            project = (Project)e.getData(CommonDataKeys.PROJECT);
-
-            doAction(e);
-        }
-
-        public abstract void doAction(AnActionEvent anActionEvent);
-    }
 }
