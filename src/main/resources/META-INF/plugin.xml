@@ -104,7 +104,8 @@
     <depends>org.jetbrains.plugins.terminal</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="React Native" anchor="bottom" icon="/icons/ReactNative.png"
+        <!-- 注意 id 中不能有空格! RNToolWindowFactory中的ID定义也一样! -->
+        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/ReactNative.png"
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
@@ -122,18 +123,7 @@
 
     </extensions>
 
-    <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
-    <project-components>
-        <component>
-            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</interface-class>
-            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</implementation-class>
-        </component>
 
-        <component>
-            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
-            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</implementation-class>
-        </component>
-    </project-components>
 
     <actions>
 
@@ -166,6 +156,17 @@
 
     </actions>
 
+    <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
+    <project-components>
+        <component>
+            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</interface-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</implementation-class>
+        </component>
 
+        <component>
+            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</implementation-class>
+        </component>
+    </project-components>
 
 </idea-plugin>
