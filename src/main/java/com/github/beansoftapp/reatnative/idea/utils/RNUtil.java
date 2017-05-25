@@ -1,13 +1,16 @@
 package com.github.beansoftapp.reatnative.idea.utils;
 
+import com.github.beansoftapp.reatnative.idea.actions.CloseTabAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.intellij.execution.ExecutionException;
+import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.filters.TextConsoleBuilderFactory;
 import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
 import com.intellij.execution.ui.ConsoleView;
+import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.externalSystem.model.task.ExternalSystemTaskId;
 import com.intellij.openapi.externalSystem.model.task.ExternalSystemTaskNotificationListenerAdapter;
@@ -15,11 +18,14 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowAnchor;
 import com.intellij.openapi.wm.ToolWindowManager;
+import com.intellij.ui.content.Content;
 import com.intellij.ui.content.impl.ContentImpl;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
+import java.awt.*;
 import java.io.File;
+import java.util.Arrays;
 
 /**
  * RN Utility
@@ -108,7 +114,7 @@ public class RNUtil {
 
         // if already exist tool window then show it
         if (toolWindow != null) {
-            toolWindow.show(null);
+            toolWindow.show(null);// TODO add more tabs here?
             return;
         }
 
@@ -117,10 +123,44 @@ public class RNUtil {
         toolWindow.setStripeTitle("Android Console");
         toolWindow.setShowStripeButton(true);
         toolWindow.setIcon(PluginIcons.ICON_TOOL_WINDOW);
-        toolWindow.getContentManager().addContent(new ContentImpl(consoleView.getComponent(), "Build", false));
+
+        JPanel panel = new JPanel((LayoutManager) new BorderLayout());
+        panel.add((Component) consoleView.getComponent(), "Center");
+
+        // Create toolbars
+        DefaultActionGroup toolbarActions = new DefaultActionGroup();
+        AnAction[]
+                consoleActions = consoleView.createConsoleActions();// 必须在 consoleView.getComponent() 调用后组件真正初始化之后调用
+        toolbarActions.addAll((AnAction[]) Arrays.copyOf(consoleActions, consoleActions.length));
+        toolbarActions.add((AnAction) new StopProcessAction("Stop process", "Stop process", processHandler));
+//        toolbarActions.add((AnAction) new CloseAction(defaultExecutor, runDescriptor, project));
+
+
+        ActionToolbar toolbar = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) toolbarActions, false);
+        toolbar.setTargetComponent(consoleView.getComponent());
+        panel.add((Component) toolbar.getComponent(), "West");
+
+        ContentImpl consoleContent = new ContentImpl(panel, "Build", false);
+        consoleContent.setManager(toolWindow.getContentManager());
+
+        toolbarActions.add(new CloseTabAction(consoleContent));
+
+//        addAdditionalConsoleEditorActions(consoleView, consoleContent);
+//        consoleComponent.setActions();
+        toolWindow.getContentManager().addContent(consoleContent);
         toolWindow.getContentManager().addContent(new ContentImpl(new JButton("Test"), "Build2", false));
         toolWindow.show(null);
     }
+
+    public static void addAdditionalConsoleEditorActions(final ConsoleView console, final Content consoleContent) {
+        final DefaultActionGroup consoleActions = new DefaultActionGroup();
+            for (AnAction action : console.createConsoleActions()) {
+                consoleActions.add(action);
+            }
+
+        consoleContent.setActions(consoleActions, ActionPlaces.RUNNER_TOOLBAR, console.getComponent());
+    }
+
 
     /**
      * if had init freeline return true

@@ -104,12 +104,13 @@
     <depends>org.jetbrains.plugins.terminal</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/ReactNative.png"
+        <toolWindow id="React Native" anchor="bottom" icon="/icons/ReactNative.png"
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
-        <!-- ReactNative Run Configuration Type define TODO -->
+        <!-- ReactNative Run Configuration Type define TODO-->
         <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"
                            id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
+
 
         <!-- ReactNative project UI service -->
         <projectService serviceImplementation="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
@@ -120,6 +121,19 @@
                 serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration"/>
 
     </extensions>
+
+    <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
+    <project-components>
+        <component>
+            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</interface-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</implementation-class>
+        </component>
+
+        <component>
+            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</implementation-class>
+        </component>
+    </project-components>
 
     <actions>
 
@@ -152,12 +166,6 @@
 
     </actions>
 
-    <project-components>
-        <component>
-            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
-            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal
-            </implementation-class>
-        </component>
-    </project-components>
+
 
 </idea-plugin>

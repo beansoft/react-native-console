@@ -76,7 +76,7 @@ public class GradleSyncUtil {
         try {
             Class<?> syncClass = Class.forName("com.android.tools.idea.gradle.project.sync.GradleSyncInvoker");
             if (syncClass != null) {
-                Method instance = syncClass.getMethod("getInstance", null);
+                Method instance = syncClass.getMethod("getInstance", (Class<?>) null);
                 Object value = instance.invoke(null);
                 Method syncMethod = syncClass.getMethod("requestProjectSyncAndSourceGeneration", new Class[]{Project.class, adapter.getClass()});
                 syncMethod.invoke(value, project, adapter);
@@ -101,7 +101,7 @@ public class GradleSyncUtil {
         try {
             Class<?> syncClass = Class.forName("com.android.tools.idea.gradle.project.GradleProjectImporter");
             if (syncClass != null) {
-                Method instance = syncClass.getMethod("getInstance", null);
+                Method instance = syncClass.getMethod("getInstance", (Class<?>) null);
                 Object value = instance.invoke(null);
                 Method syncMethod = syncClass.getMethod("requestProjectSync", new Class[]{Project.class, adapter.getClass()});
                 syncMethod.invoke(value, project, adapter);

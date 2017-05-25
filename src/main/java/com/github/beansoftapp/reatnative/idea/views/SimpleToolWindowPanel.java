@@ -135,6 +135,10 @@ public class SimpleToolWindowPanel extends JPanel implements DataProvider {
     return false;
   }
 
+  public JComponent getContent() {
+    return myContent;
+  }
+
   public void setContent(JComponent c) {
     myContent = c;
     add(c, BorderLayout.CENTER);
@@ -146,6 +150,8 @@ public class SimpleToolWindowPanel extends JPanel implements DataProvider {
     revalidate();
     repaint();
   }
+
+
 
   @Override
   protected void paintComponent(final Graphics g) {

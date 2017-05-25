@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class RNToolWindowFactory implements ToolWindowFactory, DumbAware {
 
-    public static final String TOOL_WINDOW_ID = "ReactNative";
+    public static final String TOOL_WINDOW_ID = "React Native";
 
     public RNToolWindowFactory() {
     }
@@ -19,5 +19,6 @@ public class RNToolWindowFactory implements ToolWindowFactory, DumbAware {
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
         ReactNativeTerminal.getInstance(project).initTerminal(toolWindow);
+//        ReactNativeConsole.getInstance(project).initTerminal(toolWindow);
     }
 }

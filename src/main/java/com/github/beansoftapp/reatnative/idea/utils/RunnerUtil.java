@@ -38,7 +38,8 @@ public class RunnerUtil {
         toolbar.setTargetComponent(consoleView.getComponent());
         panel.add((Component) toolbar.getComponent(), "West");
 
-        RunContentDescriptor runDescriptor = new RunContentDescriptor((ExecutionConsole) consoleView, (ProcessHandler) runHandler, (JComponent) panel, header, AllIcons.RunConfigurations.Application);
+        RunContentDescriptor runDescriptor = new RunContentDescriptor((ExecutionConsole) consoleView,
+                (ProcessHandler) runHandler, (JComponent) panel, header, AllIcons.RunConfigurations.Application);
         AnAction[]
                 consoleActions = consoleView.createConsoleActions();
         toolbarActions.addAll((AnAction[]) Arrays.copyOf(consoleActions, consoleActions.length));
