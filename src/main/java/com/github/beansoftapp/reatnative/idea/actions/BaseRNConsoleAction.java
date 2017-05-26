@@ -17,22 +17,27 @@ public abstract class BaseRNConsoleAction extends DumbAwareAction {
     protected ReactNativeConsole terminal;
     protected Project project;
     protected DataContext dataContext;
-    protected String myText;
 
     public BaseRNConsoleAction(ReactNativeConsole terminal, String text, String description, Icon icon) {
         super(text, description, icon);
         this.terminal = terminal;
-        myText = text;
     }
 
     public BaseRNConsoleAction(ReactNativeConsole terminal, String text) {
         super(text);
         this.terminal = terminal;
-        myText = text;
     }
 
     public String getText() {
-        return myText;
+        return getTemplatePresentation().getText();
+    }
+
+    public Icon getIcon() {
+        return getTemplatePresentation().getIcon();
+    }
+
+    public Project getProject() {
+        return project;
     }
 
     @Override

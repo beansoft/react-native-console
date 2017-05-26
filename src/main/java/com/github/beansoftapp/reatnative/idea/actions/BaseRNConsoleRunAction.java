@@ -9,20 +9,20 @@ import javax.swing.*;
  * An action to run general commands, doesn't care about directory.
  * Created by beansoft on 2017/5/25.
  */
-public abstract class BaseRNRunAction extends BaseRNConsoleAction {
+public abstract class BaseRNConsoleRunAction extends BaseRNConsoleAction {
 
-    public BaseRNRunAction(ReactNativeConsole terminal, String text) {
+    public BaseRNConsoleRunAction(ReactNativeConsole terminal, String text) {
         super(terminal, text);
     }
 
-    public BaseRNRunAction(ReactNativeConsole terminal, String text, String description, Icon icon) {
+    public BaseRNConsoleRunAction(ReactNativeConsole terminal, String text, String description, Icon icon) {
         super(terminal, text, description, icon);
     }
 
     @Override
     public void doAction(AnActionEvent anActionEvent) {
         beforeAction();
-        terminal.executeShell(command(), null, getText());
+        terminal.executeShell(command(), null, getText(), getIcon());
         afterAction();
     }
 

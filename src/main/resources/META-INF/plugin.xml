@@ -1,4 +1,4 @@
-<idea-plugin version="2">
+<idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
     <version>1.0.3</version>
@@ -109,8 +109,8 @@
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
-        <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"
-                           id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
+        <!--<configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"-->
+                           <!--id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>-->
 
 
         <!-- ReactNative project UI service -->
@@ -123,8 +123,6 @@
 
     </extensions>
 
-
-
     <actions>
 
         <group id="react" text="react-native console" description="react-native console" icon="/icons/ReactNative.png"
@@ -132,27 +130,31 @@
 
             <add-to-group group-id="ToolsMenu" anchor="first"/>
 
-            <!-- ReactNative default run action -->
-            <action id="Plugin_ReactNative_Run" class="com.github.beansoftapp.reatnative.idea.actions.RNRunAction"
-                    text="Run ReactNative" description="Run ReactNative">
+            <!-- ReactNative console show action -->
+            <action id="Plugin_ReactNative_Run" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
+                    text="Show React Native Console" description="Show React Native Console">
                 <add-to-group group-id="MainToolBar" anchor="last"/>
                 <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
             </action>
 
+            <!--
             <action id="Plugin_ReactNative_Run_Update"
                     class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"
                     text="Check ReactNative Console Update"
                     description="Check Update">
             </action>
+            -->
 
 
         </group>
 
+        <!--
         <action id="UpdateModuleAAR" class="com.github.beansoftapp.reatnative.idea.actions.UpdageModuleAARAction"
                 icon="/icons/libraryModule.png">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
         </action>
+        -->
 
     </actions>
 
