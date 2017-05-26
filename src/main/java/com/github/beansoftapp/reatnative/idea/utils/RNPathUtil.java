@@ -97,4 +97,25 @@ public class RNPathUtil {
         }
         return "adb" + " " + args;
     }
+
+    public static String createCommand(String exe, String args) {
+        String adbFullPath = getExecuteFileFullPath(exe);
+        if (adbFullPath != null) {
+            return adbFullPath + " " + args;
+        }
+        return exe + " " + args;
+    }
+
+    public static String createFullPathCommand(String shell) {
+        String[] cmds = shell.split(" ");
+        if(cmds != null && cmds.length > 1) {
+            String exePath = cmds[0];
+
+            String args = shell.substring(exePath.length() + 1);
+
+            return createCommand(exePath, args);
+        }
+
+        return shell;
+    }
 }
