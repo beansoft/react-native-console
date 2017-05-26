@@ -1,11 +1,9 @@
 package com.github.beansoftapp.reatnative.idea.views;
 
-import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
-import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleNPMAction;
-import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleRunAction;
-import com.github.beansoftapp.reatnative.idea.actions.CloseTabAction;
+import com.github.beansoftapp.reatnative.idea.actions.*;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
+import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.Utils;
 import com.intellij.execution.actions.StopProcessAction;
@@ -14,6 +12,8 @@ import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.ui.InputValidator;
+import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
@@ -28,6 +28,7 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.io.File;
 import java.util.Arrays;
+import java.util.regex.Pattern;
 
 /**
  * A React Native Console with console view as process runner, no more depends on terminal widget,
@@ -164,6 +165,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         content.setCloseable(true);
         RNConsoleImpl consoleView = new RNConsoleImpl(myProject, true);
+
         if(icon != null) {
             content.setIcon(icon);
             content.setPopupIcon(icon);
@@ -178,12 +180,13 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             content.setPopupIcon(PluginIcons.React);
             content.putUserData(ToolWindow.SHOW_CONTENT_ICON, Boolean.TRUE);
             consoleView.print(
-                    "Welcome to React Native Console, now please click one button on top toolbar to start.\n\n" +
-                            "WARNING: if click one button for twice, " +
-                            "then the console will be reused and first running process will be terminated automatically then run the command again.",
+                    "Welcome to React Native Console, now please click one button on top toolbar to start." +
+                            "\n\n" +
+                            "WARNING: if click one button for twice, then the console will be reused and\n" +
+                            "the first running process will be terminated automatically then run the command again.\n",
                     ConsoleViewContentType.SYSTEM_OUTPUT);
             consoleView.print(
-                    "Click here for more info and issue, suggestion: ",
+                    "Click here for more info and issue, suggestion:\n",
                     ConsoleViewContentType.NORMAL_OUTPUT);
             consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console",
                     new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
@@ -198,36 +201,70 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 //        toolbar.setTargetComponent(panel);
 //        panel.setToolbar(toolbar.getComponent(), false);
 
-        // Create toolbars
-        DefaultActionGroup toolbarActions = new DefaultActionGroup();
-        AnAction[]
-                consoleActions = consoleView.createConsoleActions();// 必须在 consoleView.getComponent() 调用后组件真正初始化之后调用
 
-        StopProcessAction stopProcessAction = new StopProcessAction("Stop process", "Stop process", null);
-        consoleView.setStopProcessAction(stopProcessAction);
-        toolbarActions.add(stopProcessAction );
 
-        content.setManager(toolWindow.getContentManager());
-        toolbarActions.add(new CloseTabAction(content));
-        toolbarActions.addSeparator();
-        toolbarActions.addAll((AnAction[]) Arrays.copyOf(consoleActions, consoleActions.length));
+        // welcome page don't show console action buttons
+        if(!firstInit) {
+            // Create left console and normal toolbars
+            DefaultActionGroup toolbarActions = new DefaultActionGroup();
+            AnAction[]
+                    consoleActions = consoleView.createConsoleActions();// 必须在 consoleView.getComponent() 调用后组件真正初始化之后调用
 
-        ActionToolbar toolbar = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) toolbarActions, false);
-        toolbar.setTargetComponent(consoleView.getComponent());
-        panel.setToolbar(toolbar.getComponent(), true);
+            // Rerun current command
+            toolbarActions.add(consoleView.getReRunAction());
+            toolbarActions.addSeparator();
+            // Stop and close tab
+            StopProcessAction stopProcessAction = new StopProcessAction("Stop process", "Stop process", null);
+            consoleView.setStopProcessAction(stopProcessAction);
+            toolbarActions.add(stopProcessAction );
+
+            content.setManager(toolWindow.getContentManager());
+            toolbarActions.add(new CloseTabAction(content));
+            toolbarActions.addSeparator();
+            // Built in console action
+            toolbarActions.addAll((AnAction[]) Arrays.copyOf(consoleActions, consoleActions.length));
+            ActionToolbar toolbar = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) toolbarActions, false);
+            toolbar.setTargetComponent(consoleView.getComponent());
+            panel.setToolbar(toolbar.getComponent(), true);
+        }
 
         // top toolbars
-        DefaultActionGroup toolbarActionsTop = new DefaultActionGroup();
-        ActionToolbar toolbarNorth = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) toolbarActionsTop, true);
-        toolbar.setTargetComponent(consoleView.getComponent());
+        DefaultActionGroup group = new DefaultActionGroup();
+        ActionToolbar toolbarNorth = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) group, true);
+        toolbarNorth.setTargetComponent(consoleView.getComponent());
         panel.setToolbar(toolbarNorth.getComponent(), false);
 
+        group.add(new HelpAction(this));
+
         // Android
-        toolbarActionsTop.add(new HelpAction(this));
-        toolbarActionsTop.addSeparator();
-        toolbarActionsTop.add(new AdbForwardAction(this));
-        toolbarActionsTop.add(new AndroidBundleAction(this));
-        toolbarActionsTop.add(new IOSBundleAction(this));
+        group.addSeparator();
+        group.add(new DevMenuAction(this));
+        group.add(new AdbForwardAction(this));
+        group.add(new NPMAndroidLogsAction(this));
+        group.add(new RunAndroidAction(this));
+        group.add(new AndroidReleaseApkAction(this));
+        group.add(new AndroidDebugApkAction(this));
+        group.add(new AndroidBundleAction(this));
+
+
+        // NPM
+        group.addSeparator();
+        group.add(new NPMStartAction(this));
+        group.add(new NPMInstallAction(this));
+
+        if(OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
+            // iOS
+            group.addSeparator();
+            group.add(new RunLinkAction(this));
+            group.add(new RunIOSAction(this));
+            group.add(new NPMiOSLogsAction(this));
+            group.add(new IOSBundleAction(this));
+        }
+
+        // General
+        group.addSeparator();
+        group.add(new DebugUiAction(this));
+        // TODO npm init, jest
 
         content.setPreferredFocusableComponent(consoleView.getComponent());
 
@@ -254,24 +291,19 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     }
 
     @Override
-    public void focusLost(FocusEvent e) {
-    }
+    public void focusLost(FocusEvent e) {}
 
     @Override
-    public void projectOpened() {
-    }
+    public void projectOpened() {}
 
     @Override
-    public void projectClosed() {
-    }
+    public void projectClosed() {}
 
     @Override
-    public void initComponent() {
-    }
+    public void initComponent() {}
 
     @Override
-    public void disposeComponent() {
-    }
+    public void disposeComponent() {}
 
     @NotNull
     @Override
@@ -290,6 +322,26 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         @Override
         public void doAction(AnActionEvent anActionEvent) {
             Utils.openUrl("https://github.com/beansoftapp/react-native-console");
+        }
+    }
+
+    private static class AndroidReleaseApkAction extends BaseRNConsoleAndroidAction {
+        public AndroidReleaseApkAction(ReactNativeConsole terminal) {
+            super(terminal, "Release APK", "Generate Release APK file", PluginIcons.Archive);
+        }
+
+        protected String command() {
+            return "." + File.separator + "gradlew assembleRelease";
+        }
+    }
+
+    private static class AndroidDebugApkAction extends BaseRNConsoleAndroidAction {
+        public AndroidDebugApkAction(ReactNativeConsole terminal) {
+            super(terminal, "Debug APK", "Generate Debug APK file", PluginIcons.StartDebugger);
+        }
+
+        protected String command() {
+            return "." + File.separator + "gradlew assembleDebug";
         }
     }
 
@@ -338,6 +390,16 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
+    private static class RunAndroidAction extends BaseRNConsoleNPMAction {
+        public RunAndroidAction(ReactNativeConsole terminal) {
+            super(terminal, "Debug Android", "react-native run-android", PluginIcons.Android);
+        }
+
+        protected String command() {
+            return "react-native run-android";
+        }
+    }
+
     private static class IOSBundleAction extends BaseRNConsoleNPMAction {
         public IOSBundleAction(ReactNativeConsole terminal) {
             super(terminal, "iOS RN Bundle",
@@ -366,4 +428,110 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
+    private static class RunIOSAction extends BaseRNConsoleNPMAction {
+        public RunIOSAction(ReactNativeConsole terminal) {
+            super(terminal, "Debug iOS", "react-native run-ios", PluginIcons.IPhone);
+        }
+
+        protected String command() {
+            return "react-native run-ios";
+        }
+    }
+
+    private static class RunLinkAction extends BaseRNConsoleNPMAction {
+        public RunLinkAction(ReactNativeConsole terminal) {
+            super(terminal, "RN link", "react-native link", PluginIcons.Lightning);
+        }
+
+        protected String command() {
+            return "react-native link";
+        }
+    }
+    // NPM Run start Task
+    private static class NPMStartAction extends BaseRNConsoleNPMAction {
+        public NPMStartAction(ReactNativeConsole terminal) {
+            super(terminal, "React Packager", "start node server(npm run start)", PluginIcons.Execute);
+        }
+
+        protected String command() {
+            return "npm run start";
+        }
+    }
+    // NPM Run start Task
+    private static class NPMInstallAction extends BaseRNConsoleNPMAction {
+        public NPMInstallAction(ReactNativeConsole terminal) {
+            super(terminal, "npm install", "npm install", PluginIcons.Install);
+        }
+
+        protected String command() {
+            return "npm install";
+        }
+    }
+
+    // view android log
+    private static class NPMAndroidLogsAction extends BaseRNConsoleNPMAction {
+        public NPMAndroidLogsAction(ReactNativeConsole terminal) {
+            super(terminal, "log-android", "react-native log-android", PluginIcons.TrackTests);
+        }
+
+        protected String command() {
+            return "adb logcat *:S ReactNative:V ReactNativeJS:V";
+        }
+    }
+
+    // view ios log, we have GUI version: /Applications/Utilities/Console.app/Contents/MacOS/Console /var/log/system.log or
+    // syslog -w 100(see: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/syslog.1.html
+    // and https://discussions.apple.com/thread/2285049?start=0&tstart=0, and the source code of RN logIOS.js shows:
+    // syslog -w -F std '-d', logDir(logDir is the active device dir var: xcrun simctl list devices --json, the status should be:
+    // device.availability === '(available)' && device.state === 'Booted', so the final solution is just using RN built-in command
+    private static class NPMiOSLogsAction extends BaseRNConsoleNPMAction {
+        public NPMiOSLogsAction(ReactNativeConsole terminal) {
+            super(terminal, "log-ios", "react-native log-ios", PluginIcons.TrackTests);
+        }
+
+        protected String command() {
+            return "react-native log-ios";
+        }
+    }
+
+    private static class DevMenuAction extends BaseRNConsoleRunAction {
+        public DevMenuAction(ReactNativeConsole terminal) {
+            super(terminal, "Android Dev Menu", "Open Android Dev Menu", PluginIcons.DevMenu);
+        }
+
+        @Override
+        protected String command() {
+            return "adb shell input keyevent 82";
+        }
+    }
+
+    private static class DebugUiAction extends BaseRNConsoleAction {
+        public DebugUiAction(ReactNativeConsole terminal) {
+            super(terminal, "open debugger-ui", "open debugger-ui", PluginIcons.OpenChromeDebugger);
+        }
+
+        public void doAction(AnActionEvent anActionEvent) {
+            String url = Messages.showInputDialog(anActionEvent.getData(PlatformDataKeys.PROJECT),
+                    "input url",
+                    "open debugger-ui",
+                    new ImageIcon(anActionEvent.getData(PlatformDataKeys.PROJECT) + "/resources/icons/chrome.png"),
+                    "http://localhost:8081/debugger-ui",
+                    new InputValidator() {
+                        @Override
+                        public boolean checkInput(String url) {
+                            Pattern pattern = Pattern
+                                    .compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
+
+                            return pattern.matcher(url).matches();
+                        }
+
+                        @Override
+                        public boolean canClose(String s) {
+                            return true;
+                        }
+                    });
+
+            Utils.openUrl(url);
+        }
+    }
 }

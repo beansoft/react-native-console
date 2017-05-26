@@ -11,8 +11,13 @@ import com.intellij.execution.impl.ExecutionManagerImpl;
 import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
+import com.intellij.icons.AllIcons;
+import com.intellij.notification.NotificationType;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.util.registry.Registry;
 import com.intellij.psi.search.GlobalSearchScope;
 import org.jetbrains.annotations.NotNull;
 
@@ -22,7 +27,35 @@ import org.jetbrains.annotations.NotNull;
  */
 public class RNConsoleImpl extends ConsoleViewImpl {
 
+    private class RerunAction extends AnAction {
+        public RerunAction() {
+            super("Rerun", "Rerun",
+                    AllIcons.Actions.Restart);
+        }
+
+        @Override
+        public void actionPerformed(AnActionEvent e) {
+            reRun();
+        }
+
+        @Override
+        public void update(AnActionEvent e) {
+            e.getPresentation().setVisible(myGeneralCommandLine != null);
+            e.getPresentation().setEnabled(myGeneralCommandLine != null);
+            if(myGeneralCommandLine != null) {
+                e.getPresentation().setText("Rerun '" + myGeneralCommandLine.getCommandLineString() + "'");
+                e.getPresentation().setDescription("Rerun '" + myGeneralCommandLine.getCommandLineString() + "'");
+            }
+        }
+
+        @Override
+        public boolean isDumbAware() {
+            return Registry.is("dumb.aware.run.configurations");
+        }
+    }
+
     protected ProcessHandler myProcessHandler;
+    protected GeneralCommandLine myGeneralCommandLine;
 
     public void setStopProcessAction(StopProcessAction myStopProcessAction) {
         this.myStopProcessAction = myStopProcessAction;
@@ -42,6 +75,21 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         super(project, searchScope, viewer, initialState, usePredefinedMessageFilter);
     }
 
+    public AnAction getReRunAction() {
+        return new RerunAction();
+    }
+
+    public void reRun() {
+        if(myGeneralCommandLine != null) {
+            try {
+                processCommandline(myGeneralCommandLine);
+            } catch (ExecutionException e) {
+                NotificationUtils.showNotification("Unable to run the commandline:" + e.getMessage(),
+                        NotificationType.WARNING);
+            }
+        }
+    }
+
     /**
      * 执行shell
      * 利用terminal换行即执行原理
@@ -51,10 +99,12 @@ public class RNConsoleImpl extends ConsoleViewImpl {
     public void executeShell(String shell, String workDirectory) {
         GeneralCommandLine commandLine = new GeneralCommandLine(shell.split(" "));
         commandLine.setWorkDirectory(workDirectory);
+        myGeneralCommandLine = commandLine;
         try {
-            processCommandline(getProject(), commandLine);
+            processCommandline(commandLine);
         } catch (ExecutionException e) {
-            e.printStackTrace();
+            NotificationUtils.showNotification("Unable to run the commandline:" + e.getMessage(),
+                    NotificationType.WARNING);
         }
     }
 
@@ -80,7 +130,7 @@ public class RNConsoleImpl extends ConsoleViewImpl {
     }
 
     /* process command line, will very simple console view and tool window */
-    private void processCommandline(final Project project, GeneralCommandLine commandLine) throws ExecutionException {
+    private void processCommandline(GeneralCommandLine commandLine) throws ExecutionException {
         if(myProcessHandler != null) {
             ExecutionManagerImpl.stopProcess(myProcessHandler);
             myProcessHandler = null;

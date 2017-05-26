@@ -22,6 +22,25 @@ public class ShowRNConsoleAction extends BaseAction {
     @Override
     public void actionPerformed() {
         ReactNativeConsole.getInstance(currentProject).initAndActive();
+//        System.out.println(
+//                System.getProperty("user.home"));
+//        System.getProperties().list(System.out);
+//
+//        GeneralCommandLine commandLine = new GeneralCommandLine();
+//        commandLine.setExePath("xcrun");
+//        commandLine.addParameters("simctl", "list", "devices", "--json");
+//        commandLine.setCharset(Charset.forName("UTF-8"));
+//        try {
+//            String json = ExecUtil.execAndGetOutput(commandLine).getStdout();
+//            System.out.println(json);
+//            Devices result = new Gson().fromJson(json, Devices.class);
+//
+//        } catch (ExecutionException e) {
+//            e.printStackTrace();
+//            NotificationUtils.errorNotification( "xcrun invocation failed. Please check that Xcode is installed." );
+//            return;
+//        }
+//        NotificationUtils.infoNotification();
 
 //            String python = Utils.getPythonLocation();
 //            if (python == null) {
@@ -54,8 +73,6 @@ public class ShowRNConsoleAction extends BaseAction {
 //            NotificationUtils.errorNotification("Can't execute command: " + e.getMessage());
 //        }
     }
-
-
 
 
 //    /**

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -24,6 +24,8 @@
       gradlew assembleRelease<br/>
       react-native bundle --platform android/ios --dev false<br/><br/>
 
+      New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
+
       Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio),
       thus the command will auto execute in the correct folder<br/>
       <br/>
@@ -42,6 +44,9 @@
       react-native log-ios<br/>
       gradlew assembleRelease<br/>
       react-native bundle --platform android/ios --dev false<br/><br/>
+
+      新功能: 一键重新执行, 重用执行窗口, 可读性强的图标和标题, 执行结果支持查找.<br/>
+
       自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
       <br/>
 
@@ -63,6 +68,12 @@
 
     <change-notes><![CDATA[
       <ul>
+         <li>
+          <b>1.0.4</b><br/>
+          A major update on the command execution system, now support one-click rerun commands, reuse console window,
+           tabs with title and icon, search in console output.
+          Fix an ios log view bug.
+        </li>
         <li>
           <b>1.0.3</b><br/>
           Removed unused files to reduce plugin file size.

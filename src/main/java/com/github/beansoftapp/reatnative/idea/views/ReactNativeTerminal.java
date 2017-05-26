@@ -667,7 +667,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         }
     }
 
-    // NPM Run start Task
+    // NPM install Task
     private static class NPMInstallAction extends BaseRunNPMAction {
         public NPMInstallAction(ReactNativeTerminal terminal) {
             super(terminal, "npm install", "npm install", PluginIcons.Install);
@@ -801,7 +801,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
      */
     private static class ClearAction extends BaseTerminalAction {
         public ClearAction(ReactNativeTerminal terminal) {
-            super(terminal, "Help", "Show Help Message", PluginIcons.GC);
+            super(terminal, "Clear", "Clear Terminal Message", PluginIcons.GC);
         }
 
         @Override
