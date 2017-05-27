@@ -135,6 +135,13 @@ public class RNPathUtil {
             if (exeFullPath == null) {
                 exeFullPath = exePath;
             }
+            if(OSUtils.isWindows()) {
+                if(exePath.equalsIgnoreCase("npm")
+                        || exePath.equalsIgnoreCase("react-native")
+                        || exePath.indexOf("gradlew") >=0) {
+                    exeFullPath += ".cmd";
+                }
+            }
 
             cmdList.remove(0);
             cmdList.add(0, exeFullPath);

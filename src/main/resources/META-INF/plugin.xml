@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.4.1</version>
+    <version>1.0.5</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -69,8 +69,8 @@
     <change-notes><![CDATA[
       <ul>
         <li>
-          <b>1.0.4.1</b><br/>
-          bug fix: windows command run fail.
+          <b>1.0.5</b><br/>
+          Critical bug fix: windows command run fail with npm, react-native and gradlew.
         </li>
          <li>
           <b>1.0.4</b><br/>
