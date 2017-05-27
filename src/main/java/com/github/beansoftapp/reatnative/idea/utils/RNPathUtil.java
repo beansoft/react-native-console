@@ -1,10 +1,13 @@
 package com.github.beansoftapp.reatnative.idea.utils;
 
+import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.project.Project;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -106,6 +109,7 @@ public class RNPathUtil {
         return exe + " " + args;
     }
 
+    // TODO here will be a bug on Windows since there could be path with spaces
     public static String createFullPathCommand(String shell) {
         String[] cmds = shell.split(" ");
         if(cmds != null && cmds.length > 1) {
@@ -117,5 +121,32 @@ public class RNPathUtil {
         }
 
         return shell;
+    }
+
+    public static GeneralCommandLine createFullPathCommandLine(String shell) {
+        String[] cmds = shell.split(" ");
+        String exeFullPath = null;
+        if(cmds != null && cmds.length > 1) {
+            String exePath = cmds[0];
+
+            List<String> cmdList = new ArrayList<>();
+            cmdList.addAll(Arrays.asList(cmds));
+            exeFullPath = getExecuteFileFullPath(exePath);
+            if (exeFullPath == null) {
+                exeFullPath = exePath;
+            }
+
+            cmdList.remove(0);
+            cmdList.add(0, exeFullPath);
+
+            return new GeneralCommandLine(cmdList);
+        } else {
+            exeFullPath = getExecuteFileFullPath(shell);
+            if (exeFullPath == null) {
+                exeFullPath = shell;
+            }
+
+            return new GeneralCommandLine(exeFullPath);
+        }
     }
 }

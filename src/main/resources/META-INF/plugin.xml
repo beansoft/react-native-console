@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.4</version>
+    <version>1.0.4.1</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -68,6 +68,10 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.0.4.1</b><br/>
+          bug fix: windows command run fail.
+        </li>
          <li>
           <b>1.0.4</b><br/>
           A major update on the command execution system, now support one-click rerun commands, reuse console window,
@@ -136,29 +140,31 @@
 
     <actions>
 
-        <group id="react" text="react-native console" description="react-native console" icon="/icons/ReactNative.png"
-               popup="true">
+        <!--<group id="react" text="react-native console" description="react-native console" icon="/icons/ReactNative.png"-->
+               <!--popup="true">-->
 
+            <!--<add-to-group group-id="ToolsMenu" anchor="first"/>-->
+
+
+
+            <!--&lt;!&ndash;-->
+            <!--<action id="Plugin_ReactNative_Run_Update"-->
+                    <!--class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"-->
+                    <!--text="Check ReactNative Console Update"-->
+                    <!--description="Check Update">-->
+            <!--</action>-->
+            <!--&ndash;&gt;-->
+
+
+        <!--</group>-->
+
+        <!-- ReactNative console show action -->
+        <action id="Plugin_ReactNative_Show" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
+                text="Show React Native Console" description="Show React Native Console">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
-
-            <!-- ReactNative console show action -->
-            <action id="Plugin_ReactNative_Run" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
-                    text="Show React Native Console" description="Show React Native Console">
-                <add-to-group group-id="MainToolBar" anchor="last"/>
-                <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
-            </action>
-
-            <!--
-            <action id="Plugin_ReactNative_Run_Update"
-                    class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"
-                    text="Check ReactNative Console Update"
-                    description="Check Update">
-            </action>
-            -->
-
-
-        </group>
-
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
+        </action>
         <!--
         <action id="UpdateModuleAAR" class="com.github.beansoftapp.reatnative.idea.actions.UpdageModuleAARAction"
                 icon="/icons/libraryModule.png">
