@@ -1,7 +1,7 @@
-<idea-plugin version="2">
+<idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -24,6 +24,8 @@
       gradlew assembleRelease<br/>
       react-native bundle --platform android/ios --dev false<br/><br/>
 
+      New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
+
       Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio),
       thus the command will auto execute in the correct folder<br/>
       <br/>
@@ -42,6 +44,9 @@
       react-native log-ios<br/>
       gradlew assembleRelease<br/>
       react-native bundle --platform android/ios --dev false<br/><br/>
+
+      新功能: 一键重新执行, 重用执行窗口, 可读性强的图标和标题, 执行结果支持查找.<br/>
+
       自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
       <br/>
 
@@ -63,6 +68,16 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.0.5</b><br/>
+          Critical bug fix: windows command run fail with npm, react-native and gradlew.
+        </li>
+         <li>
+          <b>1.0.4</b><br/>
+          A major update on the command execution system, now support one-click rerun commands, reuse console window,
+           tabs with title and icon, search in console output.
+          Fix an ios log view bug.
+        </li>
         <li>
           <b>1.0.3</b><br/>
           Removed unused files to reduce plugin file size.
@@ -100,50 +115,73 @@
     <depends>com.intellij.modules.lang</depends>
 
     -->
-    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/react.png"
+        <!-- 注意 id 中不能有空格! RNToolWindowFactory中的ID定义也一样! -->
+        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/ReactNative.png"
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
-        <!-- ReactNative Run Configuration Type define TODO -->
-        <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"
-                           id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
+        <!-- ReactNative Run Configuration Type define TODO-->
+        <!--<configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"-->
+                           <!--id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>-->
+
 
         <!-- ReactNative project UI service -->
         <projectService serviceImplementation="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
                         serviceInterface="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
                         id="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"/>
 
-        <applicationService serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration" />
+        <applicationService
+                serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration"/>
 
     </extensions>
 
     <actions>
 
-        <group id="react" text="react-native console" description="react-native console" icon="/icons/react.png" popup="true">
+        <!--<group id="react" text="react-native console" description="react-native console" icon="/icons/ReactNative.png"-->
+               <!--popup="true">-->
 
-        <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <!--<add-to-group group-id="ToolsMenu" anchor="first"/>-->
 
-            <!-- ReactNative default run action -->
-            <action id="Plugin_ReactNative_Run" class="com.github.beansoftapp.reatnative.idea.actions.RNRunAction"
-                    text="Run ReactNative" description="Run ReactNative">
-                <add-to-group group-id="MainToolBar" anchor="last" />
-                <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
-            </action>
 
-            <action id="Plugin_ReactNative_Run_Update"
-                    class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"
-                    text="Check ReactNative Console Update"
-                    description="Check Update">
-            </action>
 
-        </group>
+            <!--&lt;!&ndash;-->
+            <!--<action id="Plugin_ReactNative_Run_Update"-->
+                    <!--class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"-->
+                    <!--text="Check ReactNative Console Update"-->
+                    <!--description="Check Update">-->
+            <!--</action>-->
+            <!--&ndash;&gt;-->
+
+
+        <!--</group>-->
+
+        <!-- ReactNative console show action -->
+        <action id="Plugin_ReactNative_Show" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
+                text="Show React Native Console" description="Show React Native Console">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
+        </action>
+        <!--
+        <action id="UpdateModuleAAR" class="com.github.beansoftapp.reatnative.idea.actions.UpdageModuleAARAction"
+                icon="/icons/libraryModule.png">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+        -->
 
     </actions>
 
+    <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
     <project-components>
+        <component>
+            <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</interface-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</implementation-class>
+        </component>
+
         <component>
             <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
             <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</implementation-class>

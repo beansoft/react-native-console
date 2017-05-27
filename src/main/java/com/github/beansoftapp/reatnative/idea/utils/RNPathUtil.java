@@ -1,10 +1,13 @@
 package com.github.beansoftapp.reatnative.idea.utils;
 
+import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.project.Project;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -44,7 +47,7 @@ public class RNPathUtil {
      * @param inputDir
      * @return
      */
-    public static String getAndroidProjectPath(Project project, String inputDir) {
+    public static String getAndroidProjectPath(String inputDir) {
         File file = new File(inputDir, GRADLE_FILE);
         if (file.exists()) {
             return inputDir;
@@ -96,5 +99,61 @@ public class RNPathUtil {
             return adbFullPath + " " + args;
         }
         return "adb" + " " + args;
+    }
+
+    public static String createCommand(String exe, String args) {
+        String adbFullPath = getExecuteFileFullPath(exe);
+        if (adbFullPath != null) {
+            return adbFullPath + " " + args;
+        }
+        return exe + " " + args;
+    }
+
+    // TODO here will be a bug on Windows since there could be path with spaces
+    public static String createFullPathCommand(String shell) {
+        String[] cmds = shell.split(" ");
+        if(cmds != null && cmds.length > 1) {
+            String exePath = cmds[0];
+
+            String args = shell.substring(exePath.length() + 1);
+
+            return createCommand(exePath, args);
+        }
+
+        return shell;
+    }
+
+    public static GeneralCommandLine createFullPathCommandLine(String shell) {
+        String[] cmds = shell.split(" ");
+        String exeFullPath = null;
+        if(cmds != null && cmds.length > 1) {
+            String exePath = cmds[0];
+
+            List<String> cmdList = new ArrayList<>();
+            cmdList.addAll(Arrays.asList(cmds));
+            exeFullPath = getExecuteFileFullPath(exePath);
+            if (exeFullPath == null) {
+                exeFullPath = exePath;
+            }
+            if(OSUtils.isWindows()) {
+                if(exePath.equalsIgnoreCase("npm")
+                        || exePath.equalsIgnoreCase("react-native")
+                        || exePath.indexOf("gradlew") >=0) {
+                    exeFullPath += ".cmd";
+                }
+            }
+
+            cmdList.remove(0);
+            cmdList.add(0, exeFullPath);
+
+            return new GeneralCommandLine(cmdList);
+        } else {
+            exeFullPath = getExecuteFileFullPath(shell);
+            if (exeFullPath == null) {
+                exeFullPath = shell;
+            }
+
+            return new GeneralCommandLine(exeFullPath);
+        }
     }
 }

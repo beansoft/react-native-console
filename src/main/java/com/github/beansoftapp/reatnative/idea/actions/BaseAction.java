@@ -1,5 +1,11 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
+import com.intellij.execution.ExecutionException;
+import com.intellij.execution.Executor;
+import com.intellij.execution.configurations.GeneralCommandLine;
+import com.intellij.execution.executors.DefaultRunExecutor;
+import com.intellij.execution.process.KillableColoredProcessHandler;
+import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.PlatformDataKeys;
@@ -33,6 +39,13 @@ public abstract class BaseAction extends AnAction {
 
     public abstract void actionPerformed();
 
+    protected OSProcessHandler createProcessHandler( GeneralCommandLine commandLine) throws ExecutionException {
+        return new KillableColoredProcessHandler( commandLine);
+    }
+
+    protected Executor getExecutor() {
+        return DefaultRunExecutor.getRunExecutorInstance();
+    }
 
     /**
      * 异步执行

@@ -7,11 +7,12 @@ import com.intellij.openapi.util.IconLoader;
 import javax.swing.*;
 
 /**
- * Created by pengwei on 16/9/15.
+ * Icons used by plugin.
+ * Created by beansoft on 17/4/1.
  */
 public class PluginIcons {
 
-    public static final Icon FreelineIcon = load("/icons/react.png");
+    public static final Icon FreelineIcon = load("/icons/ReactNative.png");
     public static final Icon OpenTerminal = load("/icons/OpenTerminal.png");
     public static final Icon Execute = intellijLoad("/actions/execute.png");
     public static final Icon Install = intellijLoad("/actions/install.png");
@@ -26,8 +27,10 @@ public class PluginIcons {
     public static final Icon DevMenu = load("/icons/dev.png");
     public static final Icon Link = load("/icons/link.png");
     public static final Icon Android = load("/icons/android.png");
+    public static final Icon LibraryModule = load("/icons/libraryModule.png");
+
     public static final Icon IPhone = load("/icons/Apple.png");
-    public static final Icon React = load("/icons/react.png");
+    public static final Icon React = load("/icons/ReactNative.png");
     public static final Icon ResourceBundle = intellijLoad("/nodes/resourceBundle.png");
     public static final Icon Archive = intellijLoad("/fileTypes/archive.png");
     public static final Icon Export = intellijLoad("/actions/export.png");
