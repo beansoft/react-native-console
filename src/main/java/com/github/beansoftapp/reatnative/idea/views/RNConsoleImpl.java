@@ -15,7 +15,6 @@ import com.intellij.icons.AllIcons;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.registry.Registry;
 import com.intellij.psi.search.GlobalSearchScope;
@@ -42,7 +41,10 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         public void update(AnActionEvent e) {
             e.getPresentation().setVisible(myGeneralCommandLine != null);
             e.getPresentation().setEnabled(myGeneralCommandLine != null);
-            if(myGeneralCommandLine != null) {
+            if(displayName != null) {
+                e.getPresentation().setText("Rerun '" + displayName + "'");
+                e.getPresentation().setDescription("Rerun '" + displayName + "'");
+            } else if(myGeneralCommandLine != null) {
                 e.getPresentation().setText("Rerun '" + myGeneralCommandLine.getCommandLineString() + "'");
                 e.getPresentation().setDescription("Rerun '" + myGeneralCommandLine.getCommandLineString() + "'");
             }
@@ -57,11 +59,9 @@ public class RNConsoleImpl extends ConsoleViewImpl {
     protected ProcessHandler myProcessHandler;
     protected GeneralCommandLine myGeneralCommandLine;
 
-    public void setStopProcessAction(StopProcessAction myStopProcessAction) {
-        this.myStopProcessAction = myStopProcessAction;
-    }
-
     protected StopProcessAction myStopProcessAction;
+
+    private String displayName;// Friendly display name
 
     public RNConsoleImpl(@NotNull Project project, boolean viewer) {
         super(project, viewer);
@@ -77,6 +77,14 @@ public class RNConsoleImpl extends ConsoleViewImpl {
 
     public AnAction getReRunAction() {
         return new RerunAction();
+    }
+
+    public void setStopProcessAction(StopProcessAction myStopProcessAction) {
+        this.myStopProcessAction = myStopProcessAction;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public void reRun() {
@@ -108,6 +116,10 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         }
     }
 
+    /**
+     * run gradle commands in android project dir
+     * @param command
+     */
     public void runGradleCI(String command) {
         String path = getProject().getBasePath();
         String gradleLocation = RNPathUtil.getAndroidProjectPath(path);
@@ -118,6 +130,10 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         }
     }
 
+    /**
+     * run npm commands in package.json project dir
+     * @param command
+     */
     public void runNPMCI(String command) {
         String path = getProject().getBasePath();
         String npmLocation = RNPathUtil.getRNProjectPath(getProject(), path);
@@ -142,12 +158,14 @@ public class RNConsoleImpl extends ConsoleViewImpl {
 
         ProcessTerminatedListener.attach(processHandler);
 
-        ApplicationManager.getApplication().invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                processConsole(processHandler);
-            }
-        });
+        processConsole(processHandler);
+
+//        ApplicationManager.getApplication().invokeLater(new Runnable() {
+//            @Override
+//            public void run() {
+//                processConsole(processHandler);
+//            }
+//        });
     }
 
     /* process attach to console,show the log */
@@ -156,6 +174,19 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         clear();
         attachToProcess(processHandler);
         processHandler.startNotify();// Don't call this, the command content will not be shown
+    }
+
+    /**
+     * Clean up process when close tab
+     * @since 1.0.6
+     */
+    public void dispose() {
+        super.dispose();
+        if(myProcessHandler != null && !myProcessHandler.isProcessTerminated() ) {
+            System.out.println("Terminate process of tab " + displayName + ", cmd:" + myGeneralCommandLine);
+            ExecutionManagerImpl.stopProcess(myProcessHandler);
+            myProcessHandler = null;
+        }
     }
 
 }

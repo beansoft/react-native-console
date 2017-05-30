@@ -303,7 +303,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
         // Android
 //        createAndAddLeftToolbar(terminalRunner, myTerminalWidget, panel,
-//                new DevMenuAction(this),
+//                new AndroidDevMenuAction(this),
 //                new AdbForwardAction(this),
 //                new RunAndroidAction(this),
 //                new AndroidReleaseApkAction(this),

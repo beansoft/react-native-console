@@ -9,6 +9,7 @@ import com.github.beansoftapp.reatnative.idea.utils.Utils;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.ui.ConsoleViewContentType;
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
@@ -41,8 +42,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     public static ReactNativeConsole getInstance(Project project) {
         return project.getComponent(ReactNativeConsole.class);
     }
-
-
 
     public ReactNativeConsole(Project project) {
         this.myProject = project;
@@ -124,6 +123,12 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
+    /**
+     * 获取 RN Console实例.
+     * @param displayName
+     * @param icon
+     * @return
+     */
     public RNConsoleImpl getRNConsole(String displayName, Icon icon) {
         ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(RNToolWindowFactory.TOOL_WINDOW_ID);
         if (window != null) {
@@ -152,7 +157,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      */
     private Content createConsoleTabContent(@NotNull final ToolWindow toolWindow, boolean firstInit,
                                             String displayName, Icon icon) {
-
         final ContentManager contentManager = toolWindow.getContentManager();
         final Content existingContent = contentManager.findContent(displayName);
         if (existingContent != null) {
@@ -165,6 +169,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         content.setCloseable(true);
         RNConsoleImpl consoleView = new RNConsoleImpl(myProject, true);
+        consoleView.setDisplayName(displayName);
+        content.setDisposer(consoleView);
 
         if(icon != null) {
             content.setIcon(icon);
@@ -238,7 +244,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         // Android
         group.addSeparator();
-        group.add(new DevMenuAction(this));
+        group.add(new AndroidDevMenuAction(this));
+        group.add(new AndroidRefreshAction(this));
         group.add(new AdbForwardAction(this));
         group.add(new NPMAndroidLogsAction(this));
         group.add(new RunAndroidAction(this));
@@ -494,14 +501,30 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
-    private static class DevMenuAction extends BaseRNConsoleRunAction {
-        public DevMenuAction(ReactNativeConsole terminal) {
+    private static class AndroidDevMenuAction extends BaseRNConsoleRunAction {
+        public AndroidDevMenuAction(ReactNativeConsole terminal) {
             super(terminal, "Android Dev Menu", "Open Android Dev Menu", PluginIcons.DevMenu);
         }
 
         @Override
         protected String command() {
             return "adb shell input keyevent 82";
+        }
+    }
+
+    /**
+     * Reloading JavaScript on Android device, tested on Samsung and MOTO XStyle only.
+     * @since 1.0.6
+     */
+    private static class AndroidRefreshAction extends BaseRNConsoleRunAction {
+        public AndroidRefreshAction(ReactNativeConsole terminal) {
+            super(terminal, "Android Reload JS", "Android Reloading JavaScript(beta)", AllIcons.Actions.Refresh);
+        }
+
+        @Override
+        protected String command() {
+            return "adb shell input keyevent 82 20 66 66";//First toggle menu, then press down key to select first menu item
+            // - Relead, final press enter will execute the action
         }
     }
 

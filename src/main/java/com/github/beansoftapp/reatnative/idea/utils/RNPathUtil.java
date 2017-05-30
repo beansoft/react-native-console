@@ -60,8 +60,8 @@ public class RNPathUtil {
                 }
             });
 
-            if(subfolders != null) {
-                for(File dir : subfolders) {
+            if (subfolders != null) {
+                for (File dir : subfolders) {
                     file = new File(dir.getAbsolutePath() + File.separatorChar + GRADLE_FILE);
                     if (file.exists()) {
                         return dir.getAbsolutePath();
@@ -85,11 +85,35 @@ public class RNPathUtil {
      * @return
      */
     public static String getExecuteFileFullPath(String exeName) {
+        String fullPath = exeName;
+        if (OSUtils.isWindows()) {
+            if (!exeName.endsWith(".exe")) {// first try exe
+                fullPath = getExecuteFullPathSingle(exeName + ".exe");
+                if (fullPath != null) {
+                    return fullPath;
+                } else if (!exeName.endsWith(".cmd")) {
+                    // Fix bug: npm, react-native and gradlew can't be run Windows:
+                /*
+                Unable to run the commandline:Cannot run program "D:\nodejs\npm" (in directory "D:\Project\wxsh"):
+                CreateProcess error=193, %1 不是有效的 Win32 应用程序
+                 */
+                    fullPath = getExecuteFullPathSingle(exeName + ".cmd");
+                    if (fullPath != null) {
+                        return fullPath;
+                    }
+                }
+            }
+        }
+        fullPath = getExecuteFullPathSingle(exeName);
+
+        return fullPath;
+    }
+
+    public static String getExecuteFullPathSingle(String exeName) {
         List<File> fromPath = PathEnvironmentVariableUtil.findAllExeFilesInPath(exeName);
         if (fromPath != null && fromPath.size() > 0) {
             return fromPath.get(0).toString();
         }
-
         return null;
     }
 
@@ -112,7 +136,7 @@ public class RNPathUtil {
     // TODO here will be a bug on Windows since there could be path with spaces
     public static String createFullPathCommand(String shell) {
         String[] cmds = shell.split(" ");
-        if(cmds != null && cmds.length > 1) {
+        if (cmds != null && cmds.length > 1) {
             String exePath = cmds[0];
 
             String args = shell.substring(exePath.length() + 1);
@@ -126,7 +150,7 @@ public class RNPathUtil {
     public static GeneralCommandLine createFullPathCommandLine(String shell) {
         String[] cmds = shell.split(" ");
         String exeFullPath = null;
-        if(cmds != null && cmds.length > 1) {
+        if (cmds != null && cmds.length > 1) {
             String exePath = cmds[0];
 
             List<String> cmdList = new ArrayList<>();
@@ -134,13 +158,6 @@ public class RNPathUtil {
             exeFullPath = getExecuteFileFullPath(exePath);
             if (exeFullPath == null) {
                 exeFullPath = exePath;
-            }
-            if(OSUtils.isWindows()) {
-                if(exePath.equalsIgnoreCase("npm")
-                        || exePath.equalsIgnoreCase("react-native")
-                        || exePath.indexOf("gradlew") >=0) {
-                    exeFullPath += ".cmd";
-                }
             }
 
             cmdList.remove(0);

@@ -1,12 +1,12 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
     <h2>React Native Console</h2>
-      an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native commands in embed terminal<br/><br/>
+      an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command in embed console tab<br/><br/>
       <a href='https://github.com/beansoftapp/react-native-console'>https://github.com/beansoftapp/react-native-console</a><br/><br/>
 
       <h2>Features</h2><br/>
@@ -18,6 +18,7 @@
       npm install<br/>
       Open dev menu on Android device(adb shell input keyevent 82)<br/>
       forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>
+      Android Reloading JavaScript<br/>
       open React Native debugger ui(Chrome browser required)<br/>
       react-native log-android<br/>
       react-native log-ios<br/>
@@ -39,6 +40,7 @@
       npm install<br/>
       安卓设备上打开开发菜单(adb shell input keyevent 82)<br/>
       安卓设备网络请求转发到开发机(adb reverse tcp:8081 tcp:8081)<br/>
+      安卓设备重新载入JavaScript<br/>
       打开 React Native debugger ui(需要Chrome浏览器)<br/><br/>
       react-native log-android<br/>
       react-native log-ios<br/>
@@ -63,11 +65,16 @@
       <b>ISSUES</b><br/>
       <a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a><br/><br/>
 
-      <img src="https://plugins.jetbrains.com/files/9564/screenshot_16835.png" width='552' height='201' /><br/><br/>
+      <img src="https://plugins.jetbrains.com/files/9564/screenshot_17033.png" width='552' height='201' /><br/><br/>
     ]]></description>
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.0.6</b><br/>
+          New Feature: Android Reloading JavaScript;
+          Bug fix: terminate running process when close tab or window.
+        </li>
         <li>
           <b>1.0.5</b><br/>
           Critical bug fix: windows command run fail with npm, react-native and gradlew.
