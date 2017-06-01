@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.6</version>
+    <version>1.0.6.1</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -70,6 +70,10 @@
 
     <change-notes><![CDATA[
       <ul>
+      <li>
+          <b>1.0.6.1</b><br/>
+          Bug fix: genreate debug and release apk failed on Windows.
+        </li>
         <li>
           <b>1.0.6</b><br/>
           New Feature: Android Reloading JavaScript;
