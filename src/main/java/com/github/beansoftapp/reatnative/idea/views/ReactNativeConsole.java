@@ -338,6 +338,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         protected String command() {
+            if (OSUtils.isWindows()) {// https://github.com/beansoftapp/react-native-console/issues/8
+                return "gradlew.bat assembleRelease";
+            }
             return "." + File.separator + "gradlew assembleRelease";
         }
     }
@@ -348,6 +351,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         protected String command() {
+            if (OSUtils.isWindows()) {// https://github.com/beansoftapp/react-native-console/issues/8
+                return "gradlew.bat assembleDebug";
+            }
             return "." + File.separator + "gradlew assembleDebug";
         }
     }

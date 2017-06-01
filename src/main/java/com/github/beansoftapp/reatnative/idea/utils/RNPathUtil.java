@@ -87,17 +87,33 @@ public class RNPathUtil {
     public static String getExecuteFileFullPath(String exeName) {
         String fullPath = exeName;
         if (OSUtils.isWindows()) {
-            if (!exeName.endsWith(".exe")) {// first try exe
+            if (!exeName.endsWith(".exe")) {
+                // first try exe
                 fullPath = getExecuteFullPathSingle(exeName + ".exe");
                 if (fullPath != null) {
                     return fullPath;
-                } else if (!exeName.endsWith(".cmd")) {
-                    // Fix bug: npm, react-native and gradlew can't be run Windows:
+                }
+
+                if (!exeName.endsWith(".cmd")) {
+                    // Fix bug: npm, react-native can't be run Windows: https://github.com/beansoftapp/react-native-console/issues/6
                 /*
                 Unable to run the commandline:Cannot run program "D:\nodejs\npm" (in directory "D:\Project\wxsh"):
                 CreateProcess error=193, %1 不是有效的 Win32 应用程序
                  */
                     fullPath = getExecuteFullPathSingle(exeName + ".cmd");
+                    if (fullPath != null) {
+                        return fullPath;
+                    }
+                }
+
+                if (!exeName.endsWith(".bat")) {
+                    // Fix bug: gradlew can't be run Windows:
+                /*
+                Unable to run the commandline:Cannot run program ".\gradlew.cmd"
+                 (in directory "D:\Project\wxsh\android"): CreateProcess error=2, 系统找不到指定的文件。
+                 there is only a gradlew.bat file, no gradlew.cmd file
+                 */
+                    fullPath = getExecuteFullPathSingle(exeName + ".bat");
                     if (fullPath != null) {
                         return fullPath;
                     }
@@ -147,7 +163,7 @@ public class RNPathUtil {
         return shell;
     }
 
-    public static GeneralCommandLine createFullPathCommandLine(String shell) {
+    public static GeneralCommandLine createFullPathCommandLine(String shell, String workDirectory) {
         String[] cmds = shell.split(" ");
         String exeFullPath = null;
         if (cmds != null && cmds.length > 1) {
@@ -158,6 +174,13 @@ public class RNPathUtil {
             exeFullPath = getExecuteFileFullPath(exePath);
             if (exeFullPath == null) {
                 exeFullPath = exePath;
+            }
+
+            // https://github.com/beansoftapp/react-native-console/issues/8
+            if (OSUtils.isWindows()) {
+                if(exeFullPath.equals("gradlew.bat")) {
+                    exeFullPath = workDirectory + File.separator + exeFullPath;
+                }
             }
 
             cmdList.remove(0);

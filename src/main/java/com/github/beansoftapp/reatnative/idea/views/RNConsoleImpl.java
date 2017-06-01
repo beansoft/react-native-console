@@ -105,7 +105,7 @@ public class RNConsoleImpl extends ConsoleViewImpl {
      * @param shell
      */
     public void executeShell(String shell, String workDirectory) {
-        GeneralCommandLine commandLine =RNPathUtil.createFullPathCommandLine(shell);
+        GeneralCommandLine commandLine =RNPathUtil.createFullPathCommandLine(shell, workDirectory);
         commandLine.setWorkDirectory(workDirectory);
         myGeneralCommandLine = commandLine;
         try {
