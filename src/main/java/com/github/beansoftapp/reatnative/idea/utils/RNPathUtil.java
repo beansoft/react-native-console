@@ -4,8 +4,10 @@ import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.project.Project;
 
+import javax.annotation.Nullable;
 import java.io.File;
 import java.io.FileFilter;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -149,24 +151,24 @@ public class RNPathUtil {
         return exe + " " + args;
     }
 
-    // TODO here will be a bug on Windows since there could be path with spaces
-    public static String createFullPathCommand(String shell) {
-        String[] cmds = shell.split(" ");
-        if (cmds != null && cmds.length > 1) {
-            String exePath = cmds[0];
 
-            String args = shell.substring(exePath.length() + 1);
-
-            return createCommand(exePath, args);
-        }
-
-        return shell;
+    public static GeneralCommandLine cmdToGeneralCommandLine(String cmd) {
+        GeneralCommandLine commandLine = new GeneralCommandLine(cmd.split(" "));
+        commandLine.setCharset(Charset.forName("UTF-8"));
+        return commandLine;
     }
 
-    public static GeneralCommandLine createFullPathCommandLine(String shell, String workDirectory) {
+    /**
+     * Create full path command line.
+     * @param shell
+     * @param workDirectory - only used on windows for gradlew.bat
+     * @return GeneralCommandLine
+     */
+    public static GeneralCommandLine createFullPathCommandLine(String shell,
+                                                               @Nullable String workDirectory) {
         String[] cmds = shell.split(" ");
-        String exeFullPath = null;
-        if (cmds != null && cmds.length > 1) {
+        String exeFullPath;
+        if (cmds.length > 1) {
             String exePath = cmds[0];
 
             List<String> cmdList = new ArrayList<>();

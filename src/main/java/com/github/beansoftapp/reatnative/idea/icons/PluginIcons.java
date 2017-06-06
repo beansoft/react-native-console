@@ -24,12 +24,14 @@ public class PluginIcons {
     public static final Icon GC = intellijLoad("/actions/gc.png");
 
     public static final Icon EditConfig = intellijLoad("/actions/edit.png");
-    public static final Icon DevMenu = load("/icons/dev.png");
+    public static final Icon DevMenu = load("/general/gearPlain.png");
     public static final Icon Link = load("/icons/link.png");
     public static final Icon Android = load("/icons/android.png");
     public static final Icon LibraryModule = load("/icons/libraryModule.png");
+    public static final Icon IPhoneDevice = load("/icons/iPhone.png");
+    public static final Icon IPhoneDevices = load("/icons/devices.png");
 
-    public static final Icon IPhone = load("/icons/Apple.png");
+    public static final Icon IPhone = load("/icons/apple.png");
     public static final Icon React = load("/icons/ReactNative.png");
     public static final Icon ResourceBundle = intellijLoad("/nodes/resourceBundle.png");
     public static final Icon Archive = intellijLoad("/fileTypes/archive.png");

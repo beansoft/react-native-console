@@ -27,7 +27,8 @@ public abstract class BaseRNConsoleRunAction extends BaseRNConsoleAction {
     }
 
     // Some action before execute commands, eg mkdir through API or shell
-    public void beforeAction() {
+    public boolean beforeAction() {
+        return true;
     }
 
     // Some action after execute commands, eg clean dir through API or shell

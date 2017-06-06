@@ -117,6 +117,23 @@ public class RNConsoleImpl extends ConsoleViewImpl {
     }
 
     /**
+     * Execute raw commands without any path or param modify.
+     *
+     * @param shell
+     */
+    public void executeRawShell(String workDirectory, String[] shell) {
+        GeneralCommandLine commandLine =new GeneralCommandLine(shell);
+        commandLine.setWorkDirectory(workDirectory);
+        myGeneralCommandLine = commandLine;
+        try {
+            processCommandline(commandLine);
+        } catch (ExecutionException e) {
+            NotificationUtils.showNotification("Unable to run the commandline:" + e.getMessage(),
+                    NotificationType.WARNING);
+        }
+    }
+
+    /**
      * run gradle commands in android project dir
      * @param command
      */
@@ -145,10 +162,26 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         }
     }
 
+    /**
+     * run npm commands in package.json project dir, execute raw commands without any path or param modify.
+     * @param command
+     */
+    public void runRawNPMCI(String... command) {
+        String path = getProject().getBasePath();
+        String npmLocation = RNPathUtil.getRNProjectPath(getProject(), path);
+
+        if (npmLocation == null) {
+            NotificationUtils.packageJsonNotFound();
+        } else {
+            executeRawShell(npmLocation, command);
+        }
+    }
+
     /* process command line, will very simple console view and tool window */
     private void processCommandline(GeneralCommandLine commandLine) throws ExecutionException {
         if(myProcessHandler != null) {
             ExecutionManagerImpl.stopProcess(myProcessHandler);
+            clear();
             myProcessHandler = null;
         }
 
@@ -171,7 +204,6 @@ public class RNConsoleImpl extends ConsoleViewImpl {
     /* process attach to console,show the log */
     // TODO: 2016/9/14 0014 need refactor console method
     private void processConsole(ProcessHandler processHandler) {
-        clear();
         attachToProcess(processHandler);
         processHandler.startNotify();// Don't call this, the command content will not be shown
     }
