@@ -31,7 +31,8 @@ public class PluginIcons {
     public static final Icon IPhoneDevice = load("/icons/iPhone.png");
     public static final Icon IPhoneDevices = load("/icons/devices.png");
 
-    public static final Icon IPhone = load("/icons/apple.png");
+    public static final Icon IPhoneSimulator = load("/icons/iphone_simulator.png");
+    public static final Icon Apple = load("/icons/apple.png");
     public static final Icon React = load("/icons/ReactNative.png");
     public static final Icon ResourceBundle = intellijLoad("/nodes/resourceBundle.png");
     public static final Icon Archive = intellijLoad("/fileTypes/archive.png");

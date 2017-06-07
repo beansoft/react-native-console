@@ -626,7 +626,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
     private static class RunIOSAction extends BaseRunNPMAction {
         public RunIOSAction(ReactNativeTerminal terminal) {
-            this(terminal, "Run on iOS Simulator", "react-native run-ios", PluginIcons.IPhone);
+            this(terminal, "Run on iOS Simulator", "react-native run-ios", PluginIcons.IPhoneSimulator);
         }
 
         public RunIOSAction(ReactNativeTerminal terminal, String text, String description, Icon icon) {

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.6.1</version>
+    <version>1.0.7</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -14,6 +14,8 @@
       react-native run-android<br/>
       react-native link<br/>
       react-native run-ios<br/>
+      run with physical iOS device<br/>
+      list all iOS devices(include monitor and physical) and run target one <br/>
       npm run start<br/>
       npm install<br/>
       Open dev menu on Android device(adb shell input keyevent 82)<br/>
@@ -36,6 +38,8 @@
       react-native run-android<br/>
       react-native link<br/>
       react-native run-ios<br/>
+      一键真机运行<br/>
+      列出所有iOS设备(包括模拟器和真机设备)并选中运行<br/>
       npm run start<br/>
       npm install<br/>
       安卓设备上打开开发菜单(adb shell input keyevent 82)<br/>
@@ -65,12 +69,18 @@
       <b>ISSUES</b><br/>
       <a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a><br/><br/>
 
-      <img src="https://plugins.jetbrains.com/files/9564/screenshot_17033.png" width='552' height='201' /><br/><br/>
+      <img src="https://plugins.jetbrains.com/files/9564/screenshot_17061.png" width='552' height='201' /><br/><br/>
     ]]></description>
 
     <change-notes><![CDATA[
       <ul>
-      <li>
+         <li>
+          <b>1.0.7</b><br/>
+          iOS New Feature only:
+          run with physical iOS device<br/>
+          list all iOS devices(include monitor and physical) and run target one
+        </li>
+        <li>
           <b>1.0.6.1</b><br/>
           Bug fix: genreate debug and release apk failed on Windows.
         </li>

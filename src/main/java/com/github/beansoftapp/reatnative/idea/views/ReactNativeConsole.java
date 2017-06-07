@@ -17,6 +17,9 @@ import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ProjectComponent;
+import com.intellij.openapi.progress.ProgressIndicator;
+import com.intellij.openapi.progress.ProgressManager;
+import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.InputValidator;
 import com.intellij.openapi.ui.Messages;
@@ -28,6 +31,7 @@ import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentManager;
 import com.intellij.ui.content.impl.ContentImpl;
+import com.intellij.util.ui.UIUtil;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -97,11 +101,12 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
     /**
      * 执行shell
+     *
      * @param shell
      */
     public void executeShell(String shell, String workDirectory, String displayName, Icon icon) {
         RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
-        if(rnConsole != null) {
+        if (rnConsole != null) {
             rnConsole.executeShell(shell, workDirectory);
         }
     }
@@ -114,7 +119,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      */
     public void runGradleCI(String shell, String displayName, Icon icon) {
         RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
-        if(rnConsole != null) {
+        if (rnConsole != null) {
             rnConsole.runGradleCI(shell);
         }
     }
@@ -127,13 +132,14 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      */
     public void runNPMCI(String shell, String displayName, Icon icon) {
         RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
-        if(rnConsole != null) {
+        if (rnConsole != null) {
             rnConsole.runNPMCI(shell);
         }
     }
 
     /**
      * 获取 RN Console实例.
+     *
      * @param displayName
      * @param icon
      * @return
@@ -142,13 +148,13 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(RNToolWindowFactory.TOOL_WINDOW_ID);
         if (window != null) {
             Content existingContent = createConsoleTabContent(window, false, displayName, icon);
-            if(existingContent != null) {
+            if (existingContent != null) {
                 final JComponent existingComponent = existingContent.getComponent();
 
-                if(existingComponent instanceof  SimpleToolWindowPanel) {
-                    JComponent component = ((SimpleToolWindowPanel)existingComponent).getContent();
-                    if(component instanceof  RNConsoleImpl) {
-                        RNConsoleImpl rnConsole = (RNConsoleImpl)component;
+                if (existingComponent instanceof SimpleToolWindowPanel) {
+                    JComponent component = ((SimpleToolWindowPanel) existingComponent).getContent();
+                    if (component instanceof RNConsoleImpl) {
+                        RNConsoleImpl rnConsole = (RNConsoleImpl) component;
                         return rnConsole;
                     }
                 }
@@ -181,13 +187,13 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         consoleView.setDisplayName(displayName);
         content.setDisposer(consoleView);
 
-        if(icon != null) {
+        if (icon != null) {
             content.setIcon(icon);
             content.setPopupIcon(icon);
             content.putUserData(ToolWindow.SHOW_CONTENT_ICON, Boolean.TRUE);// Set to show tab icon
         }
 
-        if(firstInit) {
+        if (firstInit) {
             content.setCloseable(false);
             content.setDisplayName("Welcome");
             content.setDescription("");
@@ -217,9 +223,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 //        panel.setToolbar(toolbar.getComponent(), false);
 
 
-
         // welcome page don't show console action buttons
-        if(!firstInit) {
+        if (!firstInit) {
             // Create left console and normal toolbars
             DefaultActionGroup toolbarActions = new DefaultActionGroup();
             AnAction[]
@@ -231,7 +236,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             // Stop and close tab
             StopProcessAction stopProcessAction = new StopProcessAction("Stop process", "Stop process", null);
             consoleView.setStopProcessAction(stopProcessAction);
-            toolbarActions.add(stopProcessAction );
+            toolbarActions.add(stopProcessAction);
 
             content.setManager(toolWindow.getContentManager());
             toolbarActions.add(new CloseTabAction(content));
@@ -268,7 +273,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new NPMStartAction(this));
         group.add(new NPMInstallAction(this));
 
-        if(OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
+        if (OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
             // iOS
             group.addSeparator();
             group.add(new RunLinkAction(this));
@@ -309,19 +314,24 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     }
 
     @Override
-    public void focusLost(FocusEvent e) {}
+    public void focusLost(FocusEvent e) {
+    }
 
     @Override
-    public void projectOpened() {}
+    public void projectOpened() {
+    }
 
     @Override
-    public void projectClosed() {}
+    public void projectClosed() {
+    }
 
     @Override
-    public void initComponent() {}
+    public void initComponent() {
+    }
 
     @Override
-    public void disposeComponent() {}
+    public void disposeComponent() {
+    }
 
     @NotNull
     @Override
@@ -401,7 +411,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             } else {
                 try {
                     File dir = new File(npmLocation, "bundle-android");
-                    if(!dir.exists())
+                    if (!dir.exists())
                         dir.mkdir();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -441,7 +451,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             } else {
                 try {
                     File dir = new File(npmLocation, "bundle-ios");
-                    if(!dir.exists())
+                    if (!dir.exists())
                         dir.mkdir();
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -458,7 +468,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
     private static class RunIOSAction extends BaseRNConsoleNPMAction {
         public RunIOSAction(ReactNativeConsole terminal) {
-            super(terminal, "iOS Run Simulator", "Run on Default iOS Simulator", PluginIcons.IPhone);
+            super(terminal, "iOS Run Simulator", "Run on Default iOS Simulator", PluginIcons.IPhoneSimulator);
         }
 
         protected String command() {
@@ -473,7 +483,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         public boolean beforeAction() {
             RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
-            if(consoleView != null) {
+            if (consoleView != null) {
                 consoleView.print(
                         "If you were first running this command, make sure you have ios-deploy installed globally.\n" +
                                 "To install, please run in terminal with command: \n" +
@@ -484,6 +494,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             }
             return true;
         }
+
         protected String command() {
             return "react-native run-ios --device";
         }
@@ -496,54 +507,73 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         @Override
         public void actionPerformed(AnActionEvent e) {
-            ApplicationManager.getApplication().executeOnPooledThread(() -> {
-                java.util.List<IOSDeviceInfo> devices = IOSDevicesParser.getAllIOSDevicesList(false);
-                ApplicationManager.getApplication().invokeLater(() -> {
-                    if(devices == null) {
-                        NotificationUtils.errorMsgDialog("Sorry, no iOS simulator or physically connected iOS devices found!");
-                        return;
-                    }
+            // Running with background task and with a progress indicator
+            ProgressManager.getInstance().run(new Task.Backgroundable(getProject(), "Reading iOS devices list", false) {
+                public void run(@NotNull final ProgressIndicator indicator) {
+                    indicator.setText("RN Console:Loading the iOS devices list...");
+                    try {
+                        doRun(e);
+                    } catch (final Exception e) {
 
-                    int x = 0;
-                    int y = 0;
-                    InputEvent inputEvent = e.getInputEvent();
-                    if (inputEvent instanceof MouseEvent) {
-                        x = ((MouseEvent)inputEvent).getX();
-                        y = ((MouseEvent)inputEvent).getY();
+                        UIUtil.invokeLaterIfNeeded(() -> Messages.showErrorDialog(getProject(), e.getMessage(), getTitle()));
                     }
-                    showDevicesPopup(inputEvent.getComponent(), x, y, createGearPopupGroup(devices));
-                });
+                }
+            });
 
+//            ApplicationManager.getApplication().executeOnPooledThread(() -> {
+//
+//            });
+
+        }
+
+        void doRun(AnActionEvent e) {
+            java.util.List<IOSDeviceInfo> devices = IOSDevicesParser.getAllIOSDevicesList(false);
+            ApplicationManager.getApplication().invokeLater(() -> {
+                if (devices == null) {
+                    NotificationUtils.errorMsgDialog("Sorry, no iOS simulator or physically connected iOS devices found!");
+                    return;
+                }
+
+                int x = 0;
+                int y = 0;
+                InputEvent inputEvent = e.getInputEvent();
+                if (inputEvent instanceof MouseEvent) {
+                    x = ((MouseEvent) inputEvent).getX();
+                    y = ((MouseEvent) inputEvent).getY();
+                }
+                showDevicesPopup(inputEvent.getComponent(), x, y, createGearPopupGroup(devices));
             });
 
         }
+
         private void showDevicesPopup(Component component, int x, int y, DefaultActionGroup defaultActionGroup) {
             ActionPopupMenu popupMenu =
                     ((ActionManagerImpl) ActionManager.getInstance())
-                            .createActionPopupMenu(ToolWindowContentUi.POPUP_PLACE, defaultActionGroup, new MenuItemPresentationFactory(true));
+                            .createActionPopupMenu(ToolWindowContentUi.POPUP_PLACE, defaultActionGroup,
+                                    new MenuItemPresentationFactory(false));// don't set forceHide to true, otherwise icons will be hidden in menu item
             popupMenu.getComponent().show(component, x, y);
         }
 
+        // Generate a ios device list
         private DefaultActionGroup createGearPopupGroup(java.util.List<IOSDeviceInfo> devices) {
-
             DefaultActionGroup group = new DefaultActionGroup();
             devices.forEach(iosDeviceInfo -> {
-                if(iosDeviceInfo != null) {
+                if (iosDeviceInfo != null) {
                     String deviceName = iosDeviceInfo.name + " " + iosDeviceInfo.version;
-                    group.add(new BaseRNConsoleAction(super.terminal, deviceName, "Run on iOS device: '" + deviceName + "'", PluginIcons.IPhoneDevice) {
+                    group.add(new BaseRNConsoleAction(super.terminal, deviceName, "Run on iOS device: '" + deviceName + "'",
+                            iosDeviceInfo.simulator? PluginIcons.IPhoneSimulator
+                            : PluginIcons.IPhoneDevice) {
                         @Override
                         public void doAction(AnActionEvent anActionEvent) {
-                            NotificationUtils.infoNotification(deviceName);
-                                RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
-                                consoleView.runRawNPMCI(RNPathUtil.getExecuteFullPathSingle("react-native"),"run-ios",
-                                        iosDeviceInfo.simulator ? "--simulator": "--device",
-                                         iosDeviceInfo.name );
+                            RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
+                            consoleView.runRawNPMCI(RNPathUtil.getExecuteFullPathSingle("react-native"), "run-ios",
+                                    iosDeviceInfo.simulator ? "--simulator" : "--device",
+                                    iosDeviceInfo.name);
                         }
                     });
 
                 }
             });
-
 
 
             return group;
@@ -564,6 +594,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             return "react-native link";
         }
     }
+
     // NPM Run start Task
     private static class NPMStartAction extends BaseRNConsoleNPMAction {
         public NPMStartAction(ReactNativeConsole terminal) {
@@ -574,6 +605,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             return "npm run start";
         }
     }
+
     // NPM Run start Task
     private static class NPMInstallAction extends BaseRNConsoleNPMAction {
         public NPMInstallAction(ReactNativeConsole terminal) {
@@ -624,6 +656,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
     /**
      * Reloading JavaScript on Android device, tested on Samsung and MOTO XStyle only.
+     *
      * @since 1.0.6
      */
     private static class AndroidRefreshAction extends BaseRNConsoleRunAction {
