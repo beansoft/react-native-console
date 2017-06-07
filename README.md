@@ -68,7 +68,7 @@ react-native bundle --platform android/ios --dev false<br/><br/>
 
 #### ScreenShot
 
-<img src="https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/ReactNativeConsole.png" width="570" height="384" alt="图片名称" align=center />
+<img src="https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/ReactNativeConsole.png" width="492" height="281" alt="图片名称" align=center />
 
 #### Demo Gif
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
