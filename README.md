@@ -19,6 +19,8 @@ OneClick run following commands:<br/>
 react-native run-android<br/>
 react-native link<br/>
 react-native run-ios<br/>
+run with physical iOS device<br/>
+list all iOS devices(include monitor and physical) and run target one <br/>
 npm run start<br/>
 npm install<br/>
 Open dev menu on Android device(adb shell input keyevent 82)<br/>
@@ -46,6 +48,8 @@ Only tested on Mac OSX and Windows with WebStorm/IDEA/Android Studio.<br/>
 react-native run-android<br/>
 react-native link<br/>
 react-native run-ios<br/>
+一键iOS真机运行<br/>
+列出所有iOS设备(包括模拟器和真机设备)并选中运行<br/>
 npm run start<br/>
 npm install<br/>
 安卓设备上打开开发菜单(adb shell input keyevent 82)<br/>
