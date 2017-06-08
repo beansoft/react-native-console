@@ -488,8 +488,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                         "If you were first running this command, make sure you have ios-deploy installed globally.\n" +
                                 "To install, please run in terminal with command: \n" +
                                 "npm install -g ios-deploy\n" +
-                                "And now please connect your iPhone to USB and enable developer mode.\n" +
-                                "Note: This command can only install on iOS device and need manually launch the app.\n\n",
+                                "And now please connect your iPhone to USB and enable developer mode.\n\n",
                         ConsoleViewContentType.SYSTEM_OUTPUT);
             }
             return true;

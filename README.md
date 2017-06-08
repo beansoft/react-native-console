@@ -20,7 +20,7 @@ react-native run-android<br/>
 react-native link<br/>
 react-native run-ios<br/>
 run with physical iOS device<br/>
-list all iOS devices(include monitor and physical) and run target one <br/>
+list all iOS devices(include simulator and physical) and run target one <br/>
 npm run start<br/>
 npm install<br/>
 Open dev menu on Android device(adb shell input keyevent 82)<br/>

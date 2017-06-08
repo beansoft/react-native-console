@@ -32,7 +32,7 @@ public class ShowRNConsoleAction extends BaseAction {
     public void actionPerformed() {
         ReactNativeConsole.getInstance(currentProject).initAndActive();
 
-        new GearAction().actionPerformed(anActionEvent);
+//        new GearAction().actionPerformed(anActionEvent);
 //        System.out.println(
 //                System.getProperty("user.home"));
 //        System.getProperties().list(System.out);
