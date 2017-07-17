@@ -410,9 +410,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                 NotificationUtils.packageJsonNotFound();
             } else {
                 try {
-                    File dir = new File(npmLocation, "bundle-android");
-                    if (!dir.exists())
-                        dir.mkdir();
+                    File f = new File(npmLocation, "android/app/src/main/assets/index.android.bundle");
+                    if (f.exists())
+                        f.delete();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -422,7 +422,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         protected String command() {
-            return "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./bundle-android/index.android.bundle --assets-dest ./bundle-android";
+            return "react-native bundle --platform android --entry-file index.android.js --reset-cache --bundle-output android/app/src/main/assets/index.android.bundle --dev false --assets-dest android/app/src/main/res/";
+//            return "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./bundle-android/index.android.bundle --assets-dest ./bundle-android";
         }
     }
 
@@ -450,9 +451,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                 NotificationUtils.packageJsonNotFound();
             } else {
                 try {
-                    File dir = new File(npmLocation, "bundle-ios");
+                    File dir = new File(npmLocation, "ios/bundle");
                     if (!dir.exists())
-                        dir.mkdir();
+                        dir.mkdirs();
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -462,7 +463,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         protected String command() {
-            return "react-native bundle --platform ios --dev false --entry-file index.ios.js --bundle-output ./bundle-ios/index.ios.bundle --assets-dest ./bundle-ios";
+            return "react-native bundle --platform ios --entry-file index.ios.js --reset-cache --bundle-output ios/bundle/main.jsbundle --dev false --assets-dest ios/bundle/";
         }
     }
 

@@ -3,8 +3,9 @@ package com.github.beansoftapp.reatnative.idea.utils;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.project.Project;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
-import javax.annotation.Nullable;
 import java.io.File;
 import java.io.FileFilter;
 import java.nio.charset.Charset;
@@ -164,6 +165,7 @@ public class RNPathUtil {
      * @param workDirectory - only used on windows for gradlew.bat
      * @return GeneralCommandLine
      */
+    @NotNull
     public static GeneralCommandLine createFullPathCommandLine(String shell,
                                                                @Nullable String workDirectory) {
         String[] cmds = shell.split(" ");

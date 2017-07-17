@@ -7,7 +7,6 @@ import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.impl.ConsoleState;
 import com.intellij.execution.impl.ConsoleViewImpl;
-import com.intellij.execution.impl.ExecutionManagerImpl;
 import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
@@ -180,7 +179,8 @@ public class RNConsoleImpl extends ConsoleViewImpl {
     /* process command line, will very simple console view and tool window */
     private void processCommandline(GeneralCommandLine commandLine) throws ExecutionException {
         if(myProcessHandler != null) {
-            ExecutionManagerImpl.stopProcess(myProcessHandler);
+            myProcessHandler.destroyProcess();
+//            ExecutionManagerImpl.stopProcess(myProcessHandler); // New Android Studio doesn't have this method anymore
             clear();
             myProcessHandler = null;
         }
@@ -216,7 +216,8 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         super.dispose();
         if(myProcessHandler != null && !myProcessHandler.isProcessTerminated() ) {
             System.out.println("Terminate process of tab " + displayName + ", cmd:" + myGeneralCommandLine);
-            ExecutionManagerImpl.stopProcess(myProcessHandler);
+//            ExecutionManagerImpl.stopProcess(myProcessHandler);
+            myProcessHandler.destroyProcess();
             myProcessHandler = null;
         }
     }
