@@ -39,9 +39,10 @@ import java.util.regex.Pattern;
 
 
 /**
- * A React Native terminal.
+ * A React Native terminal. not used so far.
  * Created by beansoft@126.com on 2017/3/15.
  */
+@Deprecated
 public class ReactNativeTerminal implements FocusListener, ProjectComponent {
 
     private JBTabbedTerminalWidget myTerminalWidget;

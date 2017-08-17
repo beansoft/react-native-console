@@ -268,15 +268,18 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new AndroidBundleAction(this));
 
 
-        // NPM
+        // NPM, yarn and test
         group.addSeparator();
         group.add(new NPMStartAction(this));
         group.add(new NPMInstallAction(this));
+        group.add(new RunLinkAction(this));
+        group.add(new YarnAction(this));
+        group.add(new JestAction(this));
 
         if (OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
             // iOS
             group.addSeparator();
-            group.add(new RunLinkAction(this));
+
             group.add(new RunIOSAction(this));
             group.add(new NPMiOSLogsAction(this));
             group.add(new IOSBundleAction(this));
@@ -287,7 +290,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         // General
         group.addSeparator();
         group.add(new DebugUiAction(this));
-        // TODO npm init, jest
 
         content.setPreferredFocusableComponent(consoleView.getComponent());
 
@@ -592,6 +594,26 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         protected String command() {
             return "react-native link";
+        }
+    }
+
+    private static class YarnAction extends BaseRNConsoleNPMAction {
+        public YarnAction(ReactNativeConsole terminal) {
+            super(terminal, "yarn", "yarn", PluginIcons.yarn);
+        }
+
+        protected String command() {
+            return "yarn";
+        }
+    }
+
+    private static class JestAction extends BaseRNConsoleNPMAction {
+        public JestAction(ReactNativeConsole terminal) {
+            super(terminal, "npm test", "run Jest test", PluginIcons.Jest);
+        }
+
+        protected String command() {
+            return "npm test";
         }
     }
 

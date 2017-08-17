@@ -11,7 +11,9 @@ import javax.swing.*;
  * Created by beansoft on 17/4/1.
  */
 public class PluginIcons {
-
+    public static final Icon yarn = load("/icons/yarn.png");
+    public static final Icon newWatch = load("/icons/newWatch.png");
+    public static final Icon Jest = load("/icons/jest.png");
     public static final Icon FreelineIcon = load("/icons/ReactNative.png");
     public static final Icon OpenTerminal = load("/icons/OpenTerminal.png");
     public static final Icon Execute = intellijLoad("/actions/execute.png");
@@ -33,7 +35,7 @@ public class PluginIcons {
 
     public static final Icon IPhoneSimulator = load("/icons/iphone_simulator.png");
     public static final Icon Apple = load("/icons/apple.png");
-    public static final Icon React = load("/icons/ReactNative.png");
+    public static final Icon React = load("/icons/jsx_16.png");
     public static final Icon ResourceBundle = intellijLoad("/nodes/resourceBundle.png");
     public static final Icon Archive = intellijLoad("/fileTypes/archive.png");
     public static final Icon Export = intellijLoad("/actions/export.png");
