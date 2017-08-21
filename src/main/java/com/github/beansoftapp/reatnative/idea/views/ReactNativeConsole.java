@@ -29,10 +29,14 @@ import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener;
 import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
 import com.intellij.ui.content.Content;
+import com.intellij.ui.content.ContentFactory;
 import com.intellij.ui.content.ContentManager;
 import com.intellij.ui.content.impl.ContentImpl;
 import com.intellij.util.ui.UIUtil;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.plugins.terminal.AbstractTerminalRunner;
+import org.jetbrains.plugins.terminal.JBTabbedTerminalWidget;
+import org.jetbrains.plugins.terminal.LocalTerminalDirectRunner;
 
 import javax.swing.*;
 import java.awt.*;
@@ -71,6 +75,54 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
+    /**
+     * Create a terminal panel
+     *
+     * @param terminalRunner
+     * @param toolWindow
+     * @return
+     */
+    private Content createTerminalInContentPanel(@NotNull AbstractTerminalRunner terminalRunner, @NotNull final ToolWindow toolWindow) {
+        SimpleToolWindowPanel panel = new SimpleToolWindowPanel(true);
+        Content content = ContentFactory.SERVICE.getInstance().createContent(panel, "TestTerminal", false);
+        content.setCloseable(true);
+        JBTabbedTerminalWidget myTerminalWidget = terminalRunner.createTerminalWidget(content);
+        panel.setContent(myTerminalWidget.getComponent());
+        panel.addFocusListener(this);
+
+        new Thread(() -> {
+            try {
+                // Wait 0.5 second for the terminal to show up, no wait works ok on WebStorm but not on Android Studio
+                Thread.currentThread().sleep(500L);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            // Below code without ApplicationManager.getApplication().invokeLater() will throw exception
+            // : IDEA Access is allowed from event dispatch thread only.
+            ApplicationManager.getApplication().invokeLater(() -> {
+                if (myTerminalWidget.getCurrentSession() != null) {
+                    myTerminalWidget.getCurrentSession().getTerminalStarter().sendString("ls\n");
+                }
+            });
+        }).start();
+
+//        ApplicationManager.getApplication().invokeLater(() -> {
+//            if (myTerminalWidget.getCurrentSession() != null) {
+//                myTerminalWidget.getCurrentSession().getTerminalStarter().sendString("ls\n");
+//            }
+//        });
+
+
+//        createToolbar(terminalRunner, myTerminalWidget, toolWindow, panel);// west toolbar
+
+//        ActionToolbar toolbar = createTopToolbar(terminalRunner, myTerminalWidget, toolWindow);
+//        toolbar.setTargetComponent(panel);
+//        panel.setToolbar(toolbar.getComponent(), false);
+
+        content.setPreferredFocusableComponent(myTerminalWidget.getComponent());
+        return content;
+    }
+
     public void initTerminal(final ToolWindow toolWindow) {
         toolWindow.setToHideOnEmptyContent(true);
         toolWindow.setStripeTitle("RN Console");
@@ -78,6 +130,14 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         Content content = createConsoleTabContent(toolWindow, true, "Welcome", null);
 //        toolWindow.getContentManager().addContent(content);
 //        toolWindow.getContentManager().addContent(new ContentImpl(new JButton("Test"), "Build2", false));
+
+        // ======= test a terminal create ======
+        LocalTerminalDirectRunner terminalRunner = LocalTerminalDirectRunner.createTerminalRunner(myProject);
+        Content testTerminalContent = createTerminalInContentPanel(terminalRunner, toolWindow);
+        toolWindow.getContentManager().addContent(testTerminalContent);
+//        SimpleTerminal term  = new SimpleTerminal();
+//        term.sendString("ls\n");
+//        toolWindow.getContentManager().addContent(new ContentImpl(term.getComponent(), "terminal", false));
         toolWindow.setShowStripeButton(true);// if set to false, then sometimes the window will be hidden from the dock area for ever 2017-05-26
 //        toolWindow.setTitle(" - ");
         ((ToolWindowManagerEx) ToolWindowManager.getInstance(this.myProject)).addToolWindowManagerListener(new ToolWindowManagerListener() {
