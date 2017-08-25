@@ -200,8 +200,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     /**
      * 获取 RN Console实例.
      *
-     * @param displayName
-     * @param icon
+     * @param displayName - the tab's display name must be unique.
+     * @param icon        - used to set a tab icon, not used for search
      * @return
      */
     public RNConsoleImpl getRNConsole(String displayName, Icon icon) {
@@ -332,9 +332,10 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.addSeparator();
         group.add(new NPMStartAction(this));
         group.add(new NPMInstallAction(this));
-        group.add(new RunLinkAction(this));
+        group.add(new RNLinkAction(this));
         group.add(new YarnAction(this));
         group.add(new JestAction(this));
+        group.add(new ReWatchManAction(this));
 
         if (OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
             // iOS
@@ -465,8 +466,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         public boolean beforeAction() {
-            String path = getProject().getBasePath();
-            String npmLocation = RNPathUtil.getRNProjectPath(getProject(), path);
+
+            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
 
             if (npmLocation == null) {
                 NotificationUtils.packageJsonNotFound();
@@ -506,8 +507,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         public boolean beforeAction() {
-            String path = getProject().getBasePath();
-            String npmLocation = RNPathUtil.getRNProjectPath(getProject(), path);
+            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
 
             if (npmLocation == null) {
                 NotificationUtils.packageJsonNotFound();
@@ -562,6 +562,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
+    /** Show all iso devices, includes simuators, and let the user choose one item to run */
     private static class RunIOSDevicesAction extends BaseRNConsoleNPMAction {
         public RunIOSDevicesAction(ReactNativeConsole terminal) {
             super(terminal, "iOS Choose Devices", "Run on a Selected iOS Device", PluginIcons.IPhoneDevices);
@@ -603,11 +604,12 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                     x = ((MouseEvent) inputEvent).getX();
                     y = ((MouseEvent) inputEvent).getY();
                 }
-                showDevicesPopup(inputEvent.getComponent(), x, y, createGearPopupGroup(devices));
+                showDevicesPopup(inputEvent.getComponent(), x, y, createDevicesPopupGroup(devices));
             });
 
         }
 
+        // Show a ios device list popup menu
         private void showDevicesPopup(Component component, int x, int y, DefaultActionGroup defaultActionGroup) {
             ActionPopupMenu popupMenu =
                     ((ActionManagerImpl) ActionManager.getInstance())
@@ -617,23 +619,24 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         // Generate a ios device list
-        private DefaultActionGroup createGearPopupGroup(java.util.List<IOSDeviceInfo> devices) {
+        private DefaultActionGroup createDevicesPopupGroup(java.util.List<IOSDeviceInfo> devices) {
             DefaultActionGroup group = new DefaultActionGroup();
             devices.forEach(iosDeviceInfo -> {
                 if (iosDeviceInfo != null) {
                     String deviceName = iosDeviceInfo.name + " " + iosDeviceInfo.version;
                     group.add(new BaseRNConsoleAction(super.terminal, deviceName, "Run on iOS device: '" + deviceName + "'",
-                            iosDeviceInfo.simulator? PluginIcons.IPhoneSimulator
-                            : PluginIcons.IPhoneDevice) {
+                            iosDeviceInfo.simulator ? PluginIcons.IPhoneSimulator
+                                    : PluginIcons.IPhoneDevice) {
                         @Override
                         public void doAction(AnActionEvent anActionEvent) {
                             RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
-                            consoleView.runRawNPMCI(RNPathUtil.getExecuteFullPathSingle("react-native"), "run-ios",
+                            consoleView.runRawNPMCI(
+                                    RNPathUtil.getExecuteFullPathSingle("react-native"),
+                                    "run-ios",
                                     iosDeviceInfo.simulator ? "--simulator" : "--device",
                                     iosDeviceInfo.name);
                         }
                     });
-
                 }
             });
 
@@ -647,8 +650,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
-    private static class RunLinkAction extends BaseRNConsoleNPMAction {
-        public RunLinkAction(ReactNativeConsole terminal) {
+    private static class RNLinkAction extends BaseRNConsoleNPMAction {
+        public RNLinkAction(ReactNativeConsole terminal) {
             super(terminal, "RN link", "react-native link", PluginIcons.Lightning);
         }
 
@@ -674,6 +677,23 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         protected String command() {
             return "npm test";
+        }
+    }
+
+    private static class ReWatchManAction extends BaseRNConsoleNPMAction {
+        public ReWatchManAction(ReactNativeConsole terminal) {
+            super(terminal, "re-watch project", "re-watch", PluginIcons.Jest);
+        }
+
+//        @Override
+//        public void doAction(AnActionEvent anActionEvent) {
+//            beforeAction();
+//            terminal.runNPMCI(command(), getText(), getIcon());
+//            afterAction();
+//        }
+
+        protected String command() {
+            return "watchman watch-del .;watchman watch-project .";
         }
     }
 

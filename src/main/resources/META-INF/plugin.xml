@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -25,7 +25,9 @@
       react-native log-android<br/>
       react-native log-ios<br/>
       gradlew assembleRelease<br/>
-      react-native bundle --platform android/ios --dev false<br/><br/>
+      react-native bundle --platform android/ios --dev false<br/>
+      yarn<br/>
+      jest<br/><br/>
 
       New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
 

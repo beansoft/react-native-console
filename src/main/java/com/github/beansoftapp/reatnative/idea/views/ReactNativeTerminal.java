@@ -514,8 +514,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
         @Override
         public void doAction(AnActionEvent anActionEvent) {
             Project project = anActionEvent.getData(PlatformDataKeys.PROJECT);
-            String path = project.getBasePath();
-            npmLocation = RNPathUtil.getRNProjectPath(project, path);
+            npmLocation = RNPathUtil.getRNProjectPath(project);
 
 //            pythonLocation = Utils.getPythonLocation();
             if (npmLocation == null) {

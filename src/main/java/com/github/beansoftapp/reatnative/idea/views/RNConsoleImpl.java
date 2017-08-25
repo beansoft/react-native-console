@@ -25,6 +25,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class RNConsoleImpl extends ConsoleViewImpl {
 
+    // Rerun current command
     private class RerunAction extends AnAction {
         public RerunAction() {
             super("Rerun", "Rerun",
@@ -55,10 +56,10 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         }
     }
 
-    protected ProcessHandler myProcessHandler;
-    protected GeneralCommandLine myGeneralCommandLine;
+    private ProcessHandler myProcessHandler;
+    private GeneralCommandLine myGeneralCommandLine;
 
-    protected StopProcessAction myStopProcessAction;
+    private StopProcessAction myStopProcessAction;
 
     private String displayName;// Friendly display name
 
@@ -137,7 +138,7 @@ public class RNConsoleImpl extends ConsoleViewImpl {
      * @param command
      */
     public void runGradleCI(String command) {
-        String path = getProject().getBasePath();
+        String path = RNPathUtil.getRNProjectPath(getProject());
         String gradleLocation = RNPathUtil.getAndroidProjectPath(path);
         if (gradleLocation == null) {
             NotificationUtils.gradleFileNotFound();
@@ -151,8 +152,7 @@ public class RNConsoleImpl extends ConsoleViewImpl {
      * @param command
      */
     public void runNPMCI(String command) {
-        String path = getProject().getBasePath();
-        String npmLocation = RNPathUtil.getRNProjectPath(getProject(), path);
+        String npmLocation = RNPathUtil.getRNProjectPath(getProject());
 
         if (npmLocation == null) {
             NotificationUtils.packageJsonNotFound();
@@ -166,8 +166,7 @@ public class RNConsoleImpl extends ConsoleViewImpl {
      * @param command
      */
     public void runRawNPMCI(String... command) {
-        String path = getProject().getBasePath();
-        String npmLocation = RNPathUtil.getRNProjectPath(getProject(), path);
+        String npmLocation = RNPathUtil.getRNProjectPath(getProject());
 
         if (npmLocation == null) {
             NotificationUtils.packageJsonNotFound();

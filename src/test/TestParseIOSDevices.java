@@ -7,6 +7,7 @@ import com.google.gson.Gson;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.util.ExecUtil;
+import org.junit.Assert;
 import org.junit.Test;
 
 import javax.script.ScriptEngine;
@@ -50,7 +51,7 @@ public class TestParseIOSDevices {
     }
 
     @Test
-    public void testExec() {
+    public void parseCurrentPathFromRNConsoleJsonFile() {
         //        System.out.println(
 //                System.getProperty("user.home"));
 //        System.getProperties().list(System.out);
@@ -85,7 +86,11 @@ public class TestParseIOSDevices {
 //            engine.put("regex", )
             String regex = "/(.*?) \\((.*?)\\) \\[(.*?)\\]/";
             String[] value = (String[])engine.eval("Java.to(line.match(" + regex + "),\"java.lang.String[]\" );");
-            System.out.println(value);
+            System.out.println(value.length);
+            System.out.println(value[1]);
+            String[] result = {"刘长炯 微信号weblogic (10.3.2) [46a5432f8fdea99a6186a927e8da5db7a51854ac]",
+                    "刘长炯 微信号weblogic", "10.3.2", "46a5432f8fdea99a6186a927e8da5db7a51854ac"};
+            Assert.assertArrayEquals("result shold match", result, value);
 //            Collection<Object> val = value.values();
 //            if(value.isArray()) {
 //                System.out.println(value.getMember("1"));

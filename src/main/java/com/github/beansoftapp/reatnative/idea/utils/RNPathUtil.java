@@ -1,5 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.utils;
 
+import com.google.gson.Gson;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.project.Project;
@@ -8,10 +9,13 @@ import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
 import java.io.FileFilter;
+import java.io.FileReader;
+import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Utils for find some dirs.
@@ -20,14 +24,56 @@ import java.util.List;
 public class RNPathUtil {
     static String PACKAGE_JSON = "package.json";
     static String GRADLE_FILE = "build.gradle";
+    static String RN_CONSOLE_FILE = ".idea" + File.separator + ".rnconsole";
+    // add rnconsole config file to .idea project @since 1.0.8
+
+    /**
+     * Get the real react native project root path.
+     * @param project
+     * @return
+     */
+    private static String getRNProjectRootPathFromConfig(Project project) {
+        String path = project.getBasePath();
+        File file = new File(path, RN_CONSOLE_FILE);
+        if (file.exists()) {
+            String p = parseCurrentPathFromRNConsoleJsonFile(file);
+            if(p != null) {
+                return new File(path, p).getAbsolutePath();
+            }
+            return null;
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Parse current path from given rn console file.
+     * @param f file
+     * @return
+     */
+    public static String parseCurrentPathFromRNConsoleJsonFile(File f) {
+        try {
+            Map m = new Gson().fromJson(new FileReader(f), Map.class);
+            return (String) m.get("currentPath");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 
     /**
      * 获取React Native的根目录, 在Android Studio中运行时可能会在android的上一级目录.
      *
-     * @param inputDir
      * @return
      */
-    public static String getRNProjectPath(Project project, String inputDir) {
+    public static String getRNProjectPath(Project project) {
+        String realPath = getRNProjectRootPathFromConfig(project);
+        if(realPath != null) {
+            System.out.println("realPath=" + realPath);
+            return realPath;
+        }
+
+        String inputDir = project.getBasePath();
         File file = new File(inputDir, PACKAGE_JSON);
         if (file.exists()) {
             return inputDir;
