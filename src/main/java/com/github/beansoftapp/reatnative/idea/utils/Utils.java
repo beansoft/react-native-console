@@ -71,7 +71,7 @@ public final class Utils {
                     desktop.browse(uri);
             } catch (IOException ioe) {
                 ioe.printStackTrace();
-            } catch (URISyntaxException e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
