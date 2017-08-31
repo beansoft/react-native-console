@@ -23,7 +23,7 @@ public class PluginIcons {
     public static final Icon Lightning = intellijLoad("/actions/lightning.png");
     public static final Icon Suspend = intellijLoad("/actions/suspend.png");
     public static final Icon StartDebugger = intellijLoad("/actions/startDebugger.png");
-    public static final Icon OpenChromeDebugger = load("/icons/chrome.png");
+    public static final Icon OpenChromeDebugger = load("/icons/chrome16.png");
     public static final Icon QuickfixBulb = intellijLoad("/actions/quickfixBulb.png");
     public static final Icon GC = intellijLoad("/actions/gc.png");
 

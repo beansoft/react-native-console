@@ -775,7 +775,7 @@ public class ReactNativeTerminal implements FocusListener, ProjectComponent {
             String url = Messages.showInputDialog(anActionEvent.getData(PlatformDataKeys.PROJECT),
                     "input url",
                     "open debugger-ui",
-                    new ImageIcon(anActionEvent.getData(PlatformDataKeys.PROJECT) + "/resources/icons/chrome.png"),
+                    new ImageIcon(anActionEvent.getData(PlatformDataKeys.PROJECT) + "/resources/icons/chrome16.png"),
                     "http://localhost:8081/debugger-ui",
                     new InputValidator() {
                         @Override
