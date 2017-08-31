@@ -12,6 +12,7 @@ import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.icons.AllIcons;
+import com.intellij.ide.actions.ShowFilePathAction;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
@@ -23,6 +24,8 @@ import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.InputValidator;
 import com.intellij.openapi.ui.Messages;
+import com.intellij.openapi.util.SystemInfo;
+import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
@@ -132,9 +135,10 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 //        toolWindow.getContentManager().addContent(new ContentImpl(new JButton("Test"), "Build2", false));
 
         // ======= test a terminal create ======
-        LocalTerminalDirectRunner terminalRunner = LocalTerminalDirectRunner.createTerminalRunner(myProject);
-        Content testTerminalContent = createTerminalInContentPanel(terminalRunner, toolWindow);
-        toolWindow.getContentManager().addContent(testTerminalContent);
+//        LocalTerminalDirectRunner terminalRunner = LocalTerminalDirectRunner.createTerminalRunner(myProject);
+//        Content testTerminalContent = createTerminalInContentPanel(terminalRunner, toolWindow);
+//        toolWindow.getContentManager().addContent(testTerminalContent);
+
 //        SimpleTerminal term  = new SimpleTerminal();
 //        term.sendString("ls\n");
 //        toolWindow.getContentManager().addContent(new ContentImpl(term.getComponent(), "terminal", false));
@@ -335,7 +339,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new RNLinkAction(this));
         group.add(new YarnAction(this));
         group.add(new JestAction(this));
-        group.add(new ReWatchManAction(this));
+//        group.add(new ReWatchManAction(this));// TODO in next version
 
         if (OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
             // iOS
@@ -346,6 +350,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             group.add(new IOSBundleAction(this));
             group.add(new RunIOSDeviceAction(this));
             group.add(new RunIOSDevicesAction(this));
+            group.add(new LocateInFinderAction(this));
         }
 
         // General
@@ -536,6 +541,34 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         protected String command() {
             return "react-native run-ios";
+        }
+    }
+
+    // Show NPM project in finder/explorer
+    private static class LocateInFinderAction extends BaseRNConsoleAction {
+        public LocateInFinderAction(ReactNativeConsole terminal) {
+            super(terminal, getActionName(), getActionName(), PluginIcons.Folder);
+        }
+
+        public void doAction(AnActionEvent anActionEvent) {
+            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
+
+            if (npmLocation != null) {
+                ShowFilePathAction.openFile(new File(npmLocation + File.separatorChar + "package.json"));
+            }
+        }
+
+//        @Override
+//        public void update(AnActionEvent e) {
+//            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
+//            Presentation presentation = e.getPresentation();
+//            presentation.setText(getActionName());
+//            presentation.setEnabled(npmLocation != null);
+//        }
+
+        @NotNull
+        public static String getActionName() {
+            return SystemInfo.isMac ? "Reveal Project in Finder" : "Show Project in " + ShowFilePathAction.getFileManagerName();
         }
     }
 

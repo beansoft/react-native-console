@@ -39,7 +39,7 @@ public class RNUtil {
 
 
     public static void runGradleCI(Project project, String... params) {
-        String path = project.getBasePath();
+        String path = RNPathUtil.getRNProjectPath(project);
         String gradleLocation = RNPathUtil.getAndroidProjectPath(path);
         if (gradleLocation == null) {
             NotificationUtils.gradleFileNotFound();

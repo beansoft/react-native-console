@@ -196,6 +196,18 @@
         </action>
         -->
 
+
+        <!-- id must be diff to IDEA default -->
+        <action id="Plugin_ReactNative_JumpToLastChange" class="com.github.beansoftapp.reatnative.idea.actions.JumpToLastEditAction"
+                icon="/icons/last_edit_pos.gif" text="Last Edit Location" description="Last Edit Location">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+        </action>
+
+        <action id="Plugin_ReactNative_RevealIn" class="com.github.beansoftapp.reatnative.idea.actions.RevealFileAction"
+                icon="/icons/folder.png">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+        </action>
+
     </actions>
 
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
