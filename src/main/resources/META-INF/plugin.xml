@@ -27,7 +27,11 @@
       gradlew assembleRelease<br/>
       react-native bundle --platform android/ios --dev false<br/>
       yarn<br/>
-      jest<br/><br/>
+      jest<br/>
+      Last Edit Location(main toolbar)<br/>
+      Reveal file in Finder/Explorer(main toolbar)<br/>
+      Reveal project folder in Finder/Explorer<br/>
+      <br/>
 
       New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
 
@@ -51,9 +55,14 @@
       react-native log-android<br/>
       react-native log-ios<br/>
       gradlew assembleRelease<br/>
-      react-native bundle --platform android/ios --dev false<br/><br/>
+      react-native bundle --platform android/ios --dev false<br/>
+      yarn<br/>
+      jest<br/>
+      最近编辑位置(主工具栏)<br/>
+      在Finder/Explorer中显示文件(main toolbar)<br/>
+      在Finder/Explorer中显示项目目录<br/><br/>
 
-      新功能: 一键重新执行, 重用执行窗口, 可读性强的图标和标题, 执行结果支持查找.<br/>
+      最近更新: 一键重新执行, 重用执行窗口, 可读性强的图标和标题, 执行结果支持查找.<br/>
 
       自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
       <br/>
@@ -76,7 +85,13 @@
 
     <change-notes><![CDATA[
       <ul>
-         <li>
+        <li>
+          <b>1.0.8</b><br/>
+          iOS New Feature only:
+          run with physical iOS device<br/>
+          list all iOS devices(include simulator and physical) and run target one
+        </li>
+        <li>
           <b>1.0.7</b><br/>
           iOS New Feature only:
           run with physical iOS device<br/>
@@ -148,7 +163,7 @@
 
         <!-- ReactNative Run Configuration Type define TODO-->
         <!--<configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"-->
-                           <!--id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>-->
+        <!--id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>-->
 
 
         <!-- ReactNative project UI service -->
@@ -164,19 +179,18 @@
     <actions>
 
         <!--<group id="react" text="react-native console" description="react-native console" icon="/icons/ReactNative.png"-->
-               <!--popup="true">-->
+        <!--popup="true">-->
 
-            <!--<add-to-group group-id="ToolsMenu" anchor="first"/>-->
+        <!--<add-to-group group-id="ToolsMenu" anchor="first"/>-->
 
 
-
-            <!--&lt;!&ndash;-->
-            <!--<action id="Plugin_ReactNative_Run_Update"-->
-                    <!--class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"-->
-                    <!--text="Check ReactNative Console Update"-->
-                    <!--description="Check Update">-->
-            <!--</action>-->
-            <!--&ndash;&gt;-->
+        <!--&lt;!&ndash;-->
+        <!--<action id="Plugin_ReactNative_Run_Update"-->
+        <!--class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"-->
+        <!--text="Check ReactNative Console Update"-->
+        <!--description="Check Update">-->
+        <!--</action>-->
+        <!--&ndash;&gt;-->
 
 
         <!--</group>-->
@@ -198,8 +212,9 @@
 
 
         <!-- id must be diff to IDEA default -->
-        <action id="Plugin_ReactNative_JumpToLastChange" class="com.github.beansoftapp.reatnative.idea.actions.JumpToLastEditAction"
-                icon="/icons/last_edit_pos.gif" text="Last Edit Location" description="Last Edit Location">
+        <action id="Plugin_ReactNative_JumpToLastChange"
+                class="com.github.beansoftapp.reatnative.idea.actions.JumpToLastEditAction"
+                icon="/icons/last_edit_pos.png" text="Last Edit Location" description="Last Edit Location">
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
@@ -219,7 +234,8 @@
 
         <component>
             <interface-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</interface-class>
-            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal</implementation-class>
+            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeTerminal
+            </implementation-class>
         </component>
     </project-components>
 

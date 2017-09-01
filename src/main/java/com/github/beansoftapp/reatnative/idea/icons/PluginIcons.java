@@ -11,7 +11,7 @@ import javax.swing.*;
  * Created by beansoft on 17/4/1.
  */
 public class PluginIcons {
-    public static final Icon LastEditLocation = load("/icons/last_edit_pos.gif");
+//    public static final Icon LastEditLocation = load("/icons/last_edit_pos.png");
     public static final Icon Folder = load("/icons/folder.png");
     public static final Icon yarn = load("/icons/yarn.png");
     public static final Icon newWatch = load("/icons/newWatch.png");
