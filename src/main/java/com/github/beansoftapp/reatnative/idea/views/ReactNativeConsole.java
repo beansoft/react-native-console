@@ -1,52 +1,39 @@
 package com.github.beansoftapp.reatnative.idea.views;
 
 import com.github.beansoftapp.reatnative.idea.actions.*;
+import com.github.beansoftapp.reatnative.idea.actions.console.*;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
-import com.github.beansoftapp.reatnative.idea.models.ios.IOSDeviceInfo;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.Utils;
-import com.github.beansoftapp.reatnative.idea.utils.ios.IOSDevicesParser;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.actions.ShowFilePathAction;
 import com.intellij.openapi.actionSystem.*;
-import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
-import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ProjectComponent;
-import com.intellij.openapi.progress.ProgressIndicator;
-import com.intellij.openapi.progress.ProgressManager;
-import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.InputValidator;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.util.SystemInfo;
-import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener;
-import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import com.intellij.ui.content.ContentManager;
 import com.intellij.ui.content.impl.ContentImpl;
-import com.intellij.util.ui.UIUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.plugins.terminal.AbstractTerminalRunner;
 import org.jetbrains.plugins.terminal.JBTabbedTerminalWidget;
-import org.jetbrains.plugins.terminal.LocalTerminalDirectRunner;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import java.awt.event.InputEvent;
-import java.awt.event.MouseEvent;
 import java.io.File;
 import java.util.Arrays;
 import java.util.regex.Pattern;
@@ -340,6 +327,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new YarnAction(this));
         group.add(new JestAction(this));
 //        group.add(new ReWatchManAction(this));// TODO in next version
+        group.add(new RunNPMScriptsAction(this));
 
         if (OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
             // iOS
@@ -434,67 +422,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
-    private static class AndroidDebugApkAction extends BaseRNConsoleAndroidAction {
-        public AndroidDebugApkAction(ReactNativeConsole terminal) {
-            super(terminal, "Debug APK", "Generate Debug APK file", PluginIcons.StartDebugger);
-        }
-
-        protected String command() {
-            if (OSUtils.isWindows()) {// https://github.com/beansoftapp/react-native-console/issues/8
-                return "gradlew.bat assembleDebug";
-            }
-            return "." + File.separator + "gradlew assembleDebug";
-        }
-    }
-
-    /**
-     * 物理设备, 转发请求.
-     * If you're on a physical device connected to the same machine,
-     * run 'adb reverse tcp:8081 tcp:8081' to forward requests from your device
-     */
-    private static class AdbForwardAction extends BaseRNConsoleRunAction {
-        public AdbForwardAction(ReactNativeConsole terminal) {
-            super(terminal, "Forward Android Request",
-                    "forward Android device request to this machine", PluginIcons.Link);
-        }
-
-        @Override
-        protected String command() {
-            return "adb reverse tcp:8081 tcp:8081";
-        }
-    }
-
-    private static class AndroidBundleAction extends BaseRNConsoleNPMAction {
-        public AndroidBundleAction(ReactNativeConsole terminal) {
-            super(terminal, "Android RN Bundle",
-                    "Create Release React Native Bundle File for Android ", PluginIcons.Deploy);
-        }
-
-        public boolean beforeAction() {
-
-            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
-
-            if (npmLocation == null) {
-                NotificationUtils.packageJsonNotFound();
-            } else {
-                try {
-                    File f = new File(npmLocation, "android/app/src/main/assets/index.android.bundle");
-                    if (f.exists())
-                        f.delete();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            return true;
-        }
-
-        protected String command() {
-            return "react-native bundle --platform android --entry-file index.android.js --reset-cache --bundle-output android/app/src/main/assets/index.android.bundle --dev false --assets-dest android/app/src/main/res/";
-//            return "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./bundle-android/index.android.bundle --assets-dest ./bundle-android";
-        }
-    }
-
     private static class RunAndroidAction extends BaseRNConsoleNPMAction {
         public RunAndroidAction(ReactNativeConsole terminal) {
             super(terminal, "Debug Android", "react-native run-android", PluginIcons.Android);
@@ -569,186 +496,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         @NotNull
         public static String getActionName() {
             return SystemInfo.isMac ? "Reveal Project in Finder" : "Show Project in " + ShowFilePathAction.getFileManagerName();
-        }
-    }
-
-    private static class RunIOSDeviceAction extends BaseRNConsoleNPMAction {
-        public RunIOSDeviceAction(ReactNativeConsole terminal) {
-            super(terminal, "iOS Run Device", "Run on Physical iOS Device", PluginIcons.IPhoneDevice);
-        }
-
-        public boolean beforeAction() {
-            RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
-            if (consoleView != null) {
-                consoleView.print(
-                        "If you were first running this command, make sure you have ios-deploy installed globally.\n" +
-                                "To install, please run in terminal with command: \n" +
-                                "npm install -g ios-deploy\n" +
-                                "And now please connect your iPhone to USB and enable developer mode.\n\n",
-                        ConsoleViewContentType.SYSTEM_OUTPUT);
-            }
-            return true;
-        }
-
-        protected String command() {
-            return "react-native run-ios --device";
-        }
-    }
-
-    /** Show all iso devices, includes simuators, and let the user choose one item to run */
-    private static class RunIOSDevicesAction extends BaseRNConsoleNPMAction {
-        public RunIOSDevicesAction(ReactNativeConsole terminal) {
-            super(terminal, "iOS Choose Devices", "Run on a Selected iOS Device", PluginIcons.IPhoneDevices);
-        }
-
-        @Override
-        public void actionPerformed(AnActionEvent e) {
-            // Running with background task and with a progress indicator
-            ProgressManager.getInstance().run(new Task.Backgroundable(getProject(), "Reading iOS devices list", false) {
-                public void run(@NotNull final ProgressIndicator indicator) {
-                    indicator.setText("RN Console:Loading the iOS devices list...");
-                    try {
-                        doRun(e);
-                    } catch (final Exception e) {
-
-                        UIUtil.invokeLaterIfNeeded(() -> Messages.showErrorDialog(getProject(), e.getMessage(), getTitle()));
-                    }
-                }
-            });
-
-//            ApplicationManager.getApplication().executeOnPooledThread(() -> {
-//
-//            });
-
-        }
-
-        void doRun(AnActionEvent e) {
-            java.util.List<IOSDeviceInfo> devices = IOSDevicesParser.getAllIOSDevicesList(false);
-            ApplicationManager.getApplication().invokeLater(() -> {
-                if (devices == null) {
-                    NotificationUtils.errorMsgDialog("Sorry, no iOS simulator or physically connected iOS devices found!");
-                    return;
-                }
-
-                int x = 0;
-                int y = 0;
-                InputEvent inputEvent = e.getInputEvent();
-                if (inputEvent instanceof MouseEvent) {
-                    x = ((MouseEvent) inputEvent).getX();
-                    y = ((MouseEvent) inputEvent).getY();
-                }
-                showDevicesPopup(inputEvent.getComponent(), x, y, createDevicesPopupGroup(devices));
-            });
-
-        }
-
-        // Show a ios device list popup menu
-        private void showDevicesPopup(Component component, int x, int y, DefaultActionGroup defaultActionGroup) {
-            ActionPopupMenu popupMenu =
-                    ((ActionManagerImpl) ActionManager.getInstance())
-                            .createActionPopupMenu(ToolWindowContentUi.POPUP_PLACE, defaultActionGroup,
-                                    new MenuItemPresentationFactory(false));// don't set forceHide to true, otherwise icons will be hidden in menu item
-            popupMenu.getComponent().show(component, x, y);
-        }
-
-        // Generate a ios device list
-        private DefaultActionGroup createDevicesPopupGroup(java.util.List<IOSDeviceInfo> devices) {
-            DefaultActionGroup group = new DefaultActionGroup();
-            devices.forEach(iosDeviceInfo -> {
-                if (iosDeviceInfo != null) {
-                    String deviceName = iosDeviceInfo.name + " " + iosDeviceInfo.version;
-                    group.add(new BaseRNConsoleAction(super.terminal, deviceName, "Run on iOS device: '" + deviceName + "'",
-                            iosDeviceInfo.simulator ? PluginIcons.IPhoneSimulator
-                                    : PluginIcons.IPhoneDevice) {
-                        @Override
-                        public void doAction(AnActionEvent anActionEvent) {
-                            RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
-                            consoleView.runRawNPMCI(
-                                    RNPathUtil.getExecuteFullPathSingle("react-native"),
-                                    "run-ios",
-                                    iosDeviceInfo.simulator ? "--simulator" : "--device",
-                                    iosDeviceInfo.name);
-                        }
-                    });
-                }
-            });
-
-
-            return group;
-        }
-
-        @Override
-        protected String command() {
-            return null;
-        }
-    }
-
-    private static class RNLinkAction extends BaseRNConsoleNPMAction {
-        public RNLinkAction(ReactNativeConsole terminal) {
-            super(terminal, "RN link", "react-native link", PluginIcons.Lightning);
-        }
-
-        protected String command() {
-            return "react-native link";
-        }
-    }
-
-    private static class YarnAction extends BaseRNConsoleNPMAction {
-        public YarnAction(ReactNativeConsole terminal) {
-            super(terminal, "yarn", "yarn", PluginIcons.yarn);
-        }
-
-        protected String command() {
-            return "yarn";
-        }
-    }
-
-    private static class JestAction extends BaseRNConsoleNPMAction {
-        public JestAction(ReactNativeConsole terminal) {
-            super(terminal, "npm test", "run Jest test", PluginIcons.Jest);
-        }
-
-        protected String command() {
-            return "npm test";
-        }
-    }
-
-    private static class ReWatchManAction extends BaseRNConsoleNPMAction {
-        public ReWatchManAction(ReactNativeConsole terminal) {
-            super(terminal, "re-watch project", "re-watch", PluginIcons.Jest);
-        }
-
-//        @Override
-//        public void doAction(AnActionEvent anActionEvent) {
-//            beforeAction();
-//            terminal.runNPMCI(command(), getText(), getIcon());
-//            afterAction();
-//        }
-
-        protected String command() {
-            return "watchman watch-del .;watchman watch-project .";
-        }
-    }
-
-    // NPM Run start Task
-    private static class NPMStartAction extends BaseRNConsoleNPMAction {
-        public NPMStartAction(ReactNativeConsole terminal) {
-            super(terminal, "React Packager", "start node server(npm run start)", PluginIcons.Execute);
-        }
-
-        protected String command() {
-            return "npm run start";
-        }
-    }
-
-    // NPM Run start Task
-    private static class NPMInstallAction extends BaseRNConsoleNPMAction {
-        public NPMInstallAction(ReactNativeConsole terminal) {
-            super(terminal, "npm install", "npm install", PluginIcons.Install);
-        }
-
-        protected String command() {
-            return "npm install";
         }
     }
 
