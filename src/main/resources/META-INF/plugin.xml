@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -11,6 +11,7 @@
 
       <h2>Features</h2><br/>
       One-Click run following commands:<br/>
+      list and run scripts in package.json<br>
       react-native run-android<br/>
       react-native link<br/>
       react-native run-ios<br/>
@@ -42,6 +43,7 @@
 
       <h2>功能</h2>
       一键运行下列功能:<br/>
+      列出并执行package.json中的scripts定义<br>
       react-native run-android<br/>
       react-native link<br/>
       react-native run-ios<br/>
@@ -88,6 +90,10 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.0.9</b><br/>
+          list and run scripts in package.json
+        </li>
         <li>
           <b>1.0.8</b><br/>
           yarn<br/>

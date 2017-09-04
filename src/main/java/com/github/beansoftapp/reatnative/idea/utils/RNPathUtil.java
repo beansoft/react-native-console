@@ -22,7 +22,7 @@ import java.util.Map;
  * Created by beansoft on 2017/3/14.
  */
 public class RNPathUtil {
-    static String PACKAGE_JSON = "package.json";
+    public static final String PACKAGE_JSON = "package.json";
     static String GRADLE_FILE = "build.gradle";
     static String RN_CONSOLE_FILE = ".idea" + File.separator + ".rnconsole";
     // add rnconsole config file to .idea project @since 1.0.8

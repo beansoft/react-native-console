@@ -44,7 +44,7 @@ public abstract class BaseRNConsoleAction extends DumbAwareAction {
     public void actionPerformed(AnActionEvent e) {
 //            DocumentUtil.saveDocument();
         dataContext = e.getDataContext();
-        project = (Project)e.getData(CommonDataKeys.PROJECT);
+        project = e.getProject();
 
         doAction(e);
     }

@@ -3,22 +3,14 @@ package com.github.beansoftapp.reatnative.idea.views;
 import com.github.beansoftapp.reatnative.idea.actions.*;
 import com.github.beansoftapp.reatnative.idea.actions.console.*;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
-import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
-import com.github.beansoftapp.reatnative.idea.utils.Utils;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.ui.ConsoleViewContentType;
-import com.intellij.icons.AllIcons;
-import com.intellij.ide.actions.ShowFilePathAction;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.InputValidator;
-import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.util.SystemInfo;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
@@ -34,9 +26,7 @@ import org.jetbrains.plugins.terminal.JBTabbedTerminalWidget;
 import javax.swing.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-import java.io.File;
 import java.util.Arrays;
-import java.util.regex.Pattern;
 
 /**
  * A React Native Console with console view as process runner, no more depends on terminal widget,
@@ -395,191 +385,4 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         return "ReactNativeConsole";
     }
 
-    /**
-     * Open help message.
-     */
-    private static class HelpAction extends BaseRNConsoleAction {
-        public HelpAction(ReactNativeConsole terminal) {
-            super(terminal, "Help", "Show RN Console docs online", PluginIcons.Help);
-        }
-
-        @Override
-        public void doAction(AnActionEvent anActionEvent) {
-            Utils.openUrl("https://github.com/beansoftapp/react-native-console");
-        }
-    }
-
-    private static class AndroidReleaseApkAction extends BaseRNConsoleAndroidAction {
-        public AndroidReleaseApkAction(ReactNativeConsole terminal) {
-            super(terminal, "Release APK", "Generate Release APK file", PluginIcons.Archive);
-        }
-
-        protected String command() {
-            if (OSUtils.isWindows()) {// https://github.com/beansoftapp/react-native-console/issues/8
-                return "gradlew.bat assembleRelease";
-            }
-            return "." + File.separator + "gradlew assembleRelease";
-        }
-    }
-
-    private static class RunAndroidAction extends BaseRNConsoleNPMAction {
-        public RunAndroidAction(ReactNativeConsole terminal) {
-            super(terminal, "Debug Android", "react-native run-android", PluginIcons.Android);
-        }
-
-        protected String command() {
-            return "react-native run-android";
-        }
-    }
-
-    private static class IOSBundleAction extends BaseRNConsoleNPMAction {
-        public IOSBundleAction(ReactNativeConsole terminal) {
-            super(terminal, "iOS RN Bundle",
-                    "Create Release React Native Bundle File for iOS", PluginIcons.Deploy);
-        }
-
-        public boolean beforeAction() {
-            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
-
-            if (npmLocation == null) {
-                NotificationUtils.packageJsonNotFound();
-            } else {
-                try {
-                    File dir = new File(npmLocation, "ios/bundle");
-                    if (!dir.exists())
-                        dir.mkdirs();
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-            return true;
-        }
-
-        protected String command() {
-            return "react-native bundle --platform ios --entry-file index.ios.js --reset-cache --bundle-output ios/bundle/main.jsbundle --dev false --assets-dest ios/bundle/";
-        }
-    }
-
-    private static class RunIOSAction extends BaseRNConsoleNPMAction {
-        public RunIOSAction(ReactNativeConsole terminal) {
-            super(terminal, "iOS Run Simulator", "Run on Default iOS Simulator", PluginIcons.IPhoneSimulator);
-        }
-
-        protected String command() {
-            return "react-native run-ios";
-        }
-    }
-
-    // Show NPM project in finder/explorer
-    private static class LocateInFinderAction extends BaseRNConsoleAction {
-        public LocateInFinderAction(ReactNativeConsole terminal) {
-            super(terminal, getActionName(), getActionName(), PluginIcons.Folder);
-        }
-
-        public void doAction(AnActionEvent anActionEvent) {
-            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
-
-            if (npmLocation != null) {
-                ShowFilePathAction.openFile(new File(npmLocation + File.separatorChar + "package.json"));
-            }
-        }
-
-//        @Override
-//        public void update(AnActionEvent e) {
-//            String npmLocation = RNPathUtil.getRNProjectPath(getProject());
-//            Presentation presentation = e.getPresentation();
-//            presentation.setText(getActionName());
-//            presentation.setEnabled(npmLocation != null);
-//        }
-
-        @NotNull
-        public static String getActionName() {
-            return SystemInfo.isMac ? "Reveal Project in Finder" : "Show Project in " + ShowFilePathAction.getFileManagerName();
-        }
-    }
-
-    // view android log
-    private static class NPMAndroidLogsAction extends BaseRNConsoleNPMAction {
-        public NPMAndroidLogsAction(ReactNativeConsole terminal) {
-            super(terminal, "log-android", "react-native log-android", PluginIcons.TrackTests);
-        }
-
-        protected String command() {
-            return "adb logcat *:S ReactNative:V ReactNativeJS:V";
-        }
-    }
-
-    // view ios log, we have GUI version: /Applications/Utilities/Console.app/Contents/MacOS/Console /var/log/system.log or
-    // syslog -w 100(see: https://developer.apple.com/legacy/library/documentation/Darwin/Reference/ManPages/man1/syslog.1.html
-    // and https://discussions.apple.com/thread/2285049?start=0&tstart=0, and the source code of RN logIOS.js shows:
-    // syslog -w -F std '-d', logDir(logDir is the active device dir var: xcrun simctl list devices --json, the status should be:
-    // device.availability === '(available)' && device.state === 'Booted', so the final solution is just using RN built-in command
-    private static class NPMiOSLogsAction extends BaseRNConsoleNPMAction {
-        public NPMiOSLogsAction(ReactNativeConsole terminal) {
-            super(terminal, "log-ios", "react-native log-ios", PluginIcons.TrackTests);
-        }
-
-        protected String command() {
-            return "react-native log-ios";
-        }
-    }
-
-    private static class AndroidDevMenuAction extends BaseRNConsoleRunAction {
-        public AndroidDevMenuAction(ReactNativeConsole terminal) {
-            super(terminal, "Android Dev Menu", "Open Android Dev Menu", PluginIcons.DevMenu);
-        }
-
-        @Override
-        protected String command() {
-            return "adb shell input keyevent 82";
-        }
-    }
-
-    /**
-     * Reloading JavaScript on Android device, tested on Samsung and MOTO XStyle only.
-     *
-     * @since 1.0.6
-     */
-    private static class AndroidRefreshAction extends BaseRNConsoleRunAction {
-        public AndroidRefreshAction(ReactNativeConsole terminal) {
-            super(terminal, "Android Reload JS", "Android Reloading JavaScript(beta)", AllIcons.Actions.Refresh);
-        }
-
-        @Override
-        protected String command() {
-            return "adb shell input keyevent 82 20 66 66";//First toggle menu, then press down key to select first menu item
-            // - Relead, final press enter will execute the action
-        }
-    }
-
-    private static class DebugUiAction extends BaseRNConsoleAction {
-        public DebugUiAction(ReactNativeConsole terminal) {
-            super(terminal, "open debugger-ui", "open debugger-ui", PluginIcons.OpenChromeDebugger);
-        }
-
-        public void doAction(AnActionEvent anActionEvent) {
-            String url = Messages.showInputDialog(anActionEvent.getData(PlatformDataKeys.PROJECT),
-                    "input url",
-                    "open debugger-ui",
-                    new ImageIcon(anActionEvent.getData(PlatformDataKeys.PROJECT) + "/resources/icons/chrome16.png"),
-                    "http://localhost:8081/debugger-ui",
-                    new InputValidator() {
-                        @Override
-                        public boolean checkInput(String url) {
-                            Pattern pattern = Pattern
-                                    .compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
-
-                            return pattern.matcher(url).matches();
-                        }
-
-                        @Override
-                        public boolean canClose(String s) {
-                            return true;
-                        }
-                    });
-
-            Utils.openUrl(url);
-        }
-    }
 }

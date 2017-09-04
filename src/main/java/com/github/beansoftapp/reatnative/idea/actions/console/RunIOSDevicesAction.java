@@ -1,6 +1,7 @@
 package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
+import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleActionGroup;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleNPMAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.models.ios.IOSDeviceInfo;
@@ -9,10 +10,7 @@ import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.ios.IOSDevicesParser;
 import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.openapi.actionSystem.ActionManager;
-import com.intellij.openapi.actionSystem.ActionPopupMenu;
-import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.actionSystem.DefaultActionGroup;
+import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
 import com.intellij.openapi.application.ApplicationManager;
@@ -29,15 +27,26 @@ import java.awt.event.InputEvent;
 import java.awt.event.MouseEvent;
 
 /** Show all iso devices, includes simuators, and let the user choose one item to run */
-public class RunIOSDevicesAction extends BaseRNConsoleNPMAction {
+public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
     public RunIOSDevicesAction(ReactNativeConsole terminal) {
         super(terminal, "iOS Choose Devices", "Run on a Selected iOS Device", PluginIcons.IPhoneDevices);
+        setPopup(true);
+    }
+
+    /**
+     * @return true if {@link #actionPerformed(AnActionEvent)} should be called, in this mode method
+     * AnAction[] getChildren(@Nullable AnActionEvent e)
+     * will be ignored.
+     * 默认可点击
+     */
+    public boolean canBePerformed(DataContext context) {
+        return true;
     }
 
     @Override
     public void actionPerformed(AnActionEvent e) {
         // Running with background task and with a progress indicator
-        ProgressManager.getInstance().run(new Task.Backgroundable(getProject(), "Reading iOS devices list", false) {
+        ProgressManager.getInstance().run(new Task.Backgroundable(e.getProject(), "Reading iOS devices list", false) {
             public void run(@NotNull final ProgressIndicator indicator) {
                 indicator.setText("RN Console:Loading the iOS devices list...");
                 try {
@@ -110,8 +119,4 @@ public class RunIOSDevicesAction extends BaseRNConsoleNPMAction {
         return group;
     }
 
-    @Override
-    protected String command() {
-        return null;
-    }
 }

@@ -4,6 +4,7 @@ import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleNPMAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 
+@Deprecated
 public class ReWatchManAction extends BaseRNConsoleNPMAction {
     public ReWatchManAction(ReactNativeConsole terminal) {
         super(terminal, "re-watch project", "re-watch", PluginIcons.Jest);

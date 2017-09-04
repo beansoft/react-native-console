@@ -1,5 +1,5 @@
 {
-  "name": "cn.pilipa.corpapp",
+  "name": "testapp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -16,24 +16,7 @@
     "nt-transmit-transparently": "^1.0.7",
     "react": "^15.4.2",
     "react-native": "^0.42.0",
-    "react-native-alert": "github:pilipa-cn/react-native-alert#v1.0.1",
-    "react-native-animatable": "^1.1.0",
-    "react-native-blur": "^2.0.0",
-    "react-native-device-info": "^0.10.2",
-    "react-native-image-crop-picker": "github:pilipa-cn/react-native-image-crop-picker#v0.14.2",
-    "react-native-image-pan-zoom": "^2.0.1",
-    "react-native-modal-datetime-picker": "github:pilipa-cn/react-native-modal-datetime-picker#v4.8.0-pilipa",
-    "react-native-navigation": "github:pilipa-cn/react-native-navigation#1.1.135",
-    "react-native-parabolic": "^1.1.1",
-    "react-native-picker": "^4.0.19",
-    "react-native-pull": "^2.0.2",
-    "react-native-root-toast": "^1.1.2",
-    "react-native-scrollable-tab-view": "github:pilipa-cn/react-native-scrollable-tab-view#v0.7.4-pilipa-2",
-    "react-native-swiper": "^1.5.4",
-    "react-native-sww-activity-indicator": "^1.0.4",
-    "react-native-tab-navigator": "^0.3.3",
-    "react-native-vector-icons": "^4.1.1",
-    "realm": "^1.2.0"
+    "react-native-alert": "github:pilipa-cn/react-native-alert#v1.0.1"
   },
   "devDependencies": {
     "babel-jest": "*",
@@ -73,14 +56,5 @@
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-navigation)/"
     ]
-  },
-  "description": "噼里啪企业App",
-  "main": "index.android.js",
-  "author": "liuchangjiong",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@bitbucket.org/pilipa/corpapp.git"
-  },
-  "homepage": "https://bitbucket.org/pilipa/corpapp#readme"
+  }
 }
