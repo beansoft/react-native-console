@@ -13,7 +13,7 @@ Or<br/>you can munally install jar file react-native-console.jar as a plugin to 
 Now just restart and enjoy!
 
 <h2>Features</h2>
-
+list and run scripts in package.json<br>
 One-Click run following commands:<br/>
 react-native run-android<br/>
 react-native link<br/>
@@ -59,6 +59,7 @@ Java 8 required to run the IDE.<br/>
 
 <h2>功能</h2>
 一键运行下列功能:<br/>
+列出并执行package.json中的scripts定义<br>
 react-native run-android<br/>
 react-native link<br/>
 react-native run-ios<br/>
