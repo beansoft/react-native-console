@@ -12,6 +12,6 @@ public class NPMParserTest {
     public void parseScripts() {
         java.util.List<String> devices = NPMParser.parseScripts(new File("src/test/package.json"));
         System.out.println(devices);
-        Assert.assertTrue(devices.contains("configureJPush"));
+        Assert.assertTrue(devices.contains("rewatchman"));
     }
 }
