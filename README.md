@@ -12,7 +12,20 @@ Or<br/>you can munally install jar file react-native-console.jar as a plugin to 
 
 Now just restart and enjoy!
 
-<h2>Features</h2>
+
+
+## Settings
+Specify js project work directory rather than root directory, eg ./jsapp , you must create a file named .idea/.rnconsole, which content should like this:
+```json
+{
+  currentPath: './jsapp'
+}
+```
+
+after that all npm commands will use this as the working dir.
+
+
+## Features## 
 list and run scripts in package.json<br>
 One-Click run following commands:<br/>
 react-native run-android<br/>
@@ -35,13 +48,7 @@ jest<br/>
 Last Edit Location(main toolbar)<br/>
 Reveal file in Finder/Explorer(main toolbar)<br/>
 Reveal project folder in Finder/Explorer<br/>
-Specify js project work directory, eg ./jsapp (optional, you must create a file named `.rnconsole` in .idea folder, which content should like this:
 
-```json
-{
-  currentPath: './jsapp'
-}
-```
 
 after that all npm commands will use this as working dir)<br/>
 <br/>
