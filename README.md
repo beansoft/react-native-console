@@ -10,9 +10,11 @@ then you can install this plugin there.<br/>
 
 Or<br/>you can munally install jar file react-native-console.jar as a plugin to your IDE. And the plugin home page is here: https://plugins.jetbrains.com/plugin/9564-react-native-console<br/><br/>
 
-Now just restart and enjoy!
+Now restart IDEA and enjoy!
 
 
+#### Note
+Java 8 required to run the IDE.<br/>
 
 ## Settings
 Specify js project work directory rather than root directory, eg ./jsapp , you must create a file named .idea/.rnconsole, which content should like this:
@@ -48,20 +50,11 @@ jest<br/>
 Last Edit Location(main toolbar)<br/>
 Reveal file in Finder/Explorer(main toolbar)<br/>
 Reveal project folder in Finder/Explorer<br/>
-
-
-after that all npm commands will use this as working dir)<br/>
-<br/>
-​    
 New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
-​    
 Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio),
 thus the command will auto execute in the correct folder<br/>
 
 
-
-#### Note
-Java 8 required to run the IDE.<br/>
 
 
 <h2>功能</h2>
