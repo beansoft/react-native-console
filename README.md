@@ -98,7 +98,7 @@ jest<br/>
 
 #### ScreenShot
 
-<img src="https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/ReactNativeConsole.png" width="492" height="281" alt="图片名称" align=center />
+<img src="https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/ReactNativeConsole.png" width="612" height="149" alt="ScreenShot" align=center />
 
 #### Demo Gif
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
