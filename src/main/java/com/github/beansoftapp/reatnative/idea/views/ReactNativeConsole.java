@@ -6,10 +6,12 @@ import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
+import com.intellij.execution.impl.ConsoleViewImpl;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ProjectComponent;
+import com.intellij.openapi.editor.actions.ScrollToTheEndToolbarAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
@@ -26,7 +28,9 @@ import org.jetbrains.plugins.terminal.JBTabbedTerminalWidget;
 import javax.swing.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * A React Native Console with console view as process runner, no more depends on terminal widget,
@@ -270,6 +274,21 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             DefaultActionGroup toolbarActions = new DefaultActionGroup();
             AnAction[]
                     consoleActions = consoleView.createConsoleActions();// 必须在 consoleView.getComponent() 调用后组件真正初始化之后调用
+            // resort console actions to move scroll to end and clear to top
+            List<AnAction> resortActions = new ArrayList<>();
+            if(consoleActions != null) {
+                for (AnAction action : consoleActions) {
+                    if (action instanceof ScrollToTheEndToolbarAction || action instanceof ConsoleViewImpl.ClearAllAction) {
+                        resortActions.add(action);
+                    }
+                }
+
+                for (AnAction action : consoleActions) {
+                    if (!(action instanceof ScrollToTheEndToolbarAction || action instanceof ConsoleViewImpl.ClearAllAction)) {
+                        resortActions.add(action);
+                    }
+                }
+            }
 
             // Rerun current command
             toolbarActions.add(consoleView.getReRunAction());
@@ -283,7 +302,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             toolbarActions.add(new CloseTabAction(content));
             toolbarActions.addSeparator();
             // Built in console action
-            toolbarActions.addAll((AnAction[]) Arrays.copyOf(consoleActions, consoleActions.length));
+            toolbarActions.addAll(resortActions.toArray(new AnAction[0]));
             ActionToolbar toolbar = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) toolbarActions, false);
             toolbar.setTargetComponent(consoleView.getComponent());
             panel.setToolbar(toolbar.getComponent(), true);
