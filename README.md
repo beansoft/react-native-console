@@ -16,7 +16,7 @@ Now restart IDEA and enjoy!
 #### Note
 Java 8 required to run the IDE.<br/>
 
-## Settings
+## Settings(Optional, only need if js project dir can't be auto find)
 Specify js project work directory rather than root directory, eg ./jsapp , you must create a file named .idea/.rnconsole, which content should like this:
 ```json
 {
@@ -80,7 +80,7 @@ jest<br/>
 最近编辑位置(主工具栏)<br/>
 在Finder/Explorer中显示文件(main toolbar)<br/>
 在Finder/Explorer中显示项目目录<br/>
-指定JS项目工作目录, 例如 ./jsapp (可选, 必须在.idea目录创建文件 `.rnconsole` , 内容和下面类似:
+指定JS项目工作目录, 例如 ./jsapp (**可选**, 必须在.idea目录创建文件 `.rnconsole` , 内容和下面类似:
 
 ```json
 {
