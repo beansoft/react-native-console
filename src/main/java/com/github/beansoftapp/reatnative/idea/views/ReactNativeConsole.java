@@ -1,6 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.views;
 
-import com.github.beansoftapp.reatnative.idea.actions.*;
+import com.github.beansoftapp.reatnative.idea.actions.CloseTabAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.*;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
@@ -28,8 +28,8 @@ import org.jetbrains.plugins.terminal.JBTabbedTerminalWidget;
 import javax.swing.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.InputEvent;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -56,6 +56,20 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         ToolWindow toolWindow = getToolWindow();
         if (!toolWindow.isActive()) {
             toolWindow.activate(null);
+        }
+    }
+
+    public void initAndActiveRunRefresh(InputEvent e) {
+        ToolWindow toolWindow = getToolWindow();
+        if (!toolWindow.isActive()) {
+            toolWindow.activate(new Runnable() {
+                @Override
+                public void run() {
+                    ActionManager.getInstance().tryToExecute(new AndroidRefreshAction(ReactNativeConsole.this), e, null, ActionPlaces.UNKNOWN, true);
+                }
+            });
+        } else {
+            ActionManager.getInstance().tryToExecute(new AndroidRefreshAction(this), e, null, ActionPlaces.UNKNOWN, true);
         }
     }
 

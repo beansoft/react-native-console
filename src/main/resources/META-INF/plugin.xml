@@ -214,6 +214,16 @@
             <add-to-group group-id="ToolsMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
         </action>
+
+        <action id="Plugin_ReactNative_Android_Refresh" class="com.github.beansoftapp.reatnative.idea.actions.ShowConsoleRefreshAnrdoidAction"
+                text="Android Reload JS" description="Android Reload JS">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl F2"/>
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <add-to-group group-id="ChangesViewPopupMenu" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+        </action>
+
         <!--
         <action id="UpdateModuleAAR" class="com.github.beansoftapp.reatnative.idea.actions.UpdageModuleAARAction"
                 icon="/icons/libraryModule.png">

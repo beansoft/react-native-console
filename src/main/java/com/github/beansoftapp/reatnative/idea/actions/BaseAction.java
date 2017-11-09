@@ -29,7 +29,7 @@ public abstract class BaseAction extends AnAction {
     }
 
     @Override
-    public final void actionPerformed(AnActionEvent anActionEvent) {
+    public void actionPerformed(AnActionEvent anActionEvent) {
 //        DocumentUtil.saveDocument();
         this.anActionEvent = anActionEvent;
         this.currentProject = PlatformDataKeys.PROJECT.getData(anActionEvent.getDataContext());
