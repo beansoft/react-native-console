@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.0.9</version>
+    <version>1.1.0</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">刘长炯</vendor>
 
     <description><![CDATA[
@@ -11,6 +11,7 @@
 
       <h2>Features</h2><br/>
       One-Click run following commands:<br/>
+      Ctrl + F2 to reload android js bundle<br>
       list and run scripts in package.json<br>
       react-native run-android<br/>
       react-native link<br/>
@@ -43,6 +44,7 @@
 
       <h2>功能</h2>
       一键运行下列功能:<br/>
+      Ctrl + F2 安卓设备重新加载JS bundle<br>
       列出并执行package.json中的scripts定义<br>
       react-native run-android<br/>
       react-native link<br/>
@@ -85,11 +87,17 @@
       <b>ISSUES</b><br/>
       <a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a><br/><br/>
 
-      <img src="https://plugins.jetbrains.com/files/9564/screenshot_17061.png" width='552' height='201' /><br/><br/>
+      <img src="https://download.plugins.jetbrains.com/9564/screenshot_17392.png" width='552' height='201' /><br/><br/>
     ]]></description>
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.1.0</b><br/>
+          Add tips for Linux users to fix can't found adb issue<br/>
+          Fix log-android unicode/Chinese display issue on Windows<br/>
+          Add android refresh JS short cut key: ctrl+F2
+        </li>
         <li>
           <b>1.0.9</b><br/>
           list and run scripts in package.json

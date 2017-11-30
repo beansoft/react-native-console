@@ -261,19 +261,16 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             content.setPopupIcon(PluginIcons.React);
             content.putUserData(ToolWindow.SHOW_CONTENT_ICON, Boolean.TRUE);
             consoleView.print(
-                    "Welcome to React Native Console, now please click one button on top toolbar to start." +
-                            "\n\n" +
-                            "WARNING: if click one button for twice, then the console will be reused and\n" +
-                            "the first running process will be terminated automatically then run the command again.\n",
+                    "Welcome to React Native Console, now please click one button on top toolbar to start.\n",
                     ConsoleViewContentType.SYSTEM_OUTPUT);
             consoleView.print(
                     "Click here for more info and issue, suggestion:\n",
                     ConsoleViewContentType.NORMAL_OUTPUT);
             consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console",
                     new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
-            if(SystemInfoRt.isLinux || SystemInfoRt.isMac) {
+            if(SystemInfoRt.isLinux) {
                 consoleView.print(
-                        "\n\nLinux Users PLEASE README FIRST ===========\nIf you found issue when click on the \"Debug Android\" button, error message: \n" +
+                        "\n\n===========Linux Users PLEASE README FIRST ===========\nIf you found issue when click on the \"Debug Android\" button, error message: \n" +
                                 " \"SDK location not found \", please fix it like this :\n" +
                                 "add a android local config file:\n" +
                                 "yourapp/android/local.properties\n" +

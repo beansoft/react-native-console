@@ -1,4 +1,4 @@
-# React Native Console
+# React Native Console v1.1.0
 an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native commands in embed terminal, supports Mac and Windows.
 
 #### Installation
@@ -25,6 +25,24 @@ Specify js project work directory rather than root directory, eg ./jsapp , you m
 ```
 
 after that all npm commands will use this as the working dir.
+
+## Linux Users PLEASE README FIRST
+
+If you found issue when click on the "Debug Android" button, error message: 
+ "SDK location not found ", please fix it like this :
+add a android local config file:
+yourapp/android/local.properties
+`sdk.dir=/Users/xxxx/Documents/Java/android-sdk-macosx`
+let sdk.dir point to your ANDROID_HOME environment 
+if can't find adb, try this shell command:
+
+```sh
+sudo ln -s ~/Android/Sdk/platform-tools/adb /usr/bin/adb
+```
+
+
+More info please ref this issue:
+https://github.com/beansoftapp/react-native-console/issues/17
 
 
 ## Features## 
