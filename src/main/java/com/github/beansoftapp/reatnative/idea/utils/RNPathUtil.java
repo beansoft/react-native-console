@@ -216,6 +216,7 @@ public class RNPathUtil {
                                                                @Nullable String workDirectory) {
         String[] cmds = shell.split(" ");
         String exeFullPath;
+        GeneralCommandLine commandLine = null;
         if (cmds.length > 1) {
             String exePath = cmds[0];
 
@@ -236,14 +237,19 @@ public class RNPathUtil {
             cmdList.remove(0);
             cmdList.add(0, exeFullPath);
 
-            return new GeneralCommandLine(cmdList);
+            commandLine = new GeneralCommandLine(cmdList);
+
         } else {
             exeFullPath = getExecuteFileFullPath(shell);
             if (exeFullPath == null) {
                 exeFullPath = shell;
             }
 
-            return new GeneralCommandLine(exeFullPath);
+            commandLine = new GeneralCommandLine(exeFullPath);
         }
+
+        commandLine.setCharset(Charset.forName("UTF-8"));// fix adb output on windows can't be read as UTF-8 causes Chinese not displayed
+
+        return commandLine;
     }
 }

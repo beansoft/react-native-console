@@ -13,6 +13,7 @@ import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.editor.actions.ScrollToTheEndToolbarAction;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.util.SystemInfoRt;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
@@ -270,6 +271,21 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                     ConsoleViewContentType.NORMAL_OUTPUT);
             consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console",
                     new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
+            if(SystemInfoRt.isLinux || SystemInfoRt.isMac) {
+                consoleView.print(
+                        "\n\nLinux Users PLEASE README FIRST ===========\nIf you found issue when click on the \"Debug Android\" button, error message: \n" +
+                                " \"SDK location not found \", please fix it like this :\n" +
+                                "add a android local config file:\n" +
+                                "yourapp/android/local.properties\n" +
+                                "sdk.dir=/Users/xxxx/Documents/Java/android-sdk-macosx\n" +
+                                "let sdk.dir point to your ANDROID_HOME environment \n" +
+                                "if can't find adb, try this shell command:\n" +
+                                "sudo ln -s ~/Android/Sdk/platform-tools/adb /usr/bin/adb\n" +
+                                "More info please ref this issue:\n",
+                        ConsoleViewContentType.LOG_WARNING_OUTPUT);
+                consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console/issues/17",
+                        new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console/issues/17"));
+            }
         }
 
         panel.setContent(consoleView.getComponent());

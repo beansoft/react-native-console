@@ -1,3 +1,5 @@
+import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
+import com.intellij.util.EnvironmentUtil;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -35,4 +37,13 @@ public class RNPathUtilTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void testLinuxPathEnv() {
+        System.out.println("System PATH env:" + System.getenv("PATH"));
+        System.out.println("System PATH env by IDEA:" + EnvironmentUtil.getValue("PATH"));
+        System.out.println("JAVA_HOME:" + System.getenv("JAVA_HOME"));
+        System.out.println("adb:" + RNPathUtil.getExecuteFullPathSingle("adb"));
+    }
+
 }
