@@ -12,11 +12,16 @@ import com.intellij.openapi.ui.Messages;
 import javax.swing.*;
 import java.util.regex.Pattern;
 
+// Open chrome debugger ui
 public class DebugUiAction extends BaseRNConsoleAction {
+    private static final Pattern pattern = Pattern
+            .compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
+
     public DebugUiAction(ReactNativeConsole terminal) {
         super(terminal, "open debugger-ui", "open debugger-ui", PluginIcons.OpenChromeDebugger);
     }
 
+    @Override
     public void doAction(AnActionEvent anActionEvent) {
         String url = Messages.showInputDialog(anActionEvent.getData(PlatformDataKeys.PROJECT),
                 "input url",
@@ -26,9 +31,6 @@ public class DebugUiAction extends BaseRNConsoleAction {
                 new InputValidator() {
                     @Override
                     public boolean checkInput(String url) {
-                        Pattern pattern = Pattern
-                                .compile("^([hH][tT]{2}[pP]://|[hH][tT]{2}[pP][sS]://)(([A-Za-z0-9-~]+).)+([A-Za-z0-9-~\\/])+$");
-
                         return pattern.matcher(url).matches();
                     }
 

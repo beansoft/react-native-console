@@ -21,9 +21,10 @@ public abstract class BaseRNConsoleRunAction extends BaseRNConsoleAction {
 
     @Override
     public void doAction(AnActionEvent anActionEvent) {
-        beforeAction();
-        terminal.executeShell(command(), null, getText(), getIcon());
-        afterAction();
+        if(beforeAction()) {
+            terminal.executeShell(command(), null, getText(), getIcon());
+            afterAction();
+        }
     }
 
     // Some action before execute commands, eg mkdir through API or shell

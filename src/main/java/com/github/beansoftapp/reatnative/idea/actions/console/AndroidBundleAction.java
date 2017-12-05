@@ -14,6 +14,7 @@ public class AndroidBundleAction extends BaseRNConsoleNPMAction {
                 "Create Release React Native Bundle File for Android ", PluginIcons.Deploy);
     }
 
+    @Override
     public boolean beforeAction() {
 
         String npmLocation = RNPathUtil.getRNProjectPath(getProject());
@@ -23,8 +24,9 @@ public class AndroidBundleAction extends BaseRNConsoleNPMAction {
         } else {
             try {
                 File f = new File(npmLocation, "android/app/src/main/assets/index.android.bundle");
-                if (f.exists())
+                if (f.exists()) {
                     f.delete();
+                }
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -33,6 +35,7 @@ public class AndroidBundleAction extends BaseRNConsoleNPMAction {
         return true;
     }
 
+    @Override
     protected String command() {
         return "react-native bundle --platform android --entry-file index.android.js --reset-cache --bundle-output android/app/src/main/assets/index.android.bundle --dev false --assets-dest android/app/src/main/res/";
 //            return "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./bundle-android/index.android.bundle --assets-dest ./bundle-android";

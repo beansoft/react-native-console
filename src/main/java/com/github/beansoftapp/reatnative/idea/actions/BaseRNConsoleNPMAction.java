@@ -21,8 +21,9 @@ public abstract class BaseRNConsoleNPMAction extends BaseRNConsoleRunAction {
 
     @Override
     public void doAction(AnActionEvent anActionEvent) {
-        beforeAction();
-        terminal.runNPMCI(command(), getText(), getIcon());
-        afterAction();
+        if(beforeAction()) {
+            terminal.runNPMCI(command(), getText(), getIcon());
+            afterAction();
+        }
     }
 }

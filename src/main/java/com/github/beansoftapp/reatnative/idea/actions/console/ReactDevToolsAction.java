@@ -1,6 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.actions.console;
 
-import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleNPMAction;
+import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleRunAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
@@ -9,35 +9,38 @@ import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
 
-public class RunIOSDeviceAction extends BaseRNConsoleNPMAction {
-    private static final String EXEC = "react-native run-ios --device";
-    private static final String IOS_DEPLOY = "ios-deploy";
-
+/**
+ * Open react-devtools
+ *
+ * @version 1.1.1 2017-12-05
+ */
+public class ReactDevToolsAction extends BaseRNConsoleRunAction {
+    private static final String EXEC = "react-devtools";
     private String cmd = EXEC;
 
-    public RunIOSDeviceAction(ReactNativeConsole terminal) {
-        super(terminal, "iOS Run Device", "Run on Physical iOS Device", PluginIcons.IPhoneDevice);
+    public ReactDevToolsAction(ReactNativeConsole terminal) {
+        super(terminal, "react-devtools",
+                "run ReactDevTools", PluginIcons.React);
     }
 
     @Override
     public boolean beforeAction() {
-        String exePath = RNPathUtil.getExecuteFileFullPath(IOS_DEPLOY);
-
-        if (exePath == null || IOS_DEPLOY.equals(RNPathUtil.getExecuteFileFullPath(IOS_DEPLOY))) {
+        String exePath = RNPathUtil.getExecuteFileFullPath(EXEC);
+        if (exePath == null || EXEC.equals(RNPathUtil.getExecuteFileFullPath(EXEC))) {
 //            GlobalPropertyBasedDoNotAskOption dontAsk = new GlobalPropertyBasedDoNotAskOption("react-devtools.to.show"); // TODO no use so far
             int options = Messages.showIdeaMessageDialog(getProject(),
-                    "Would you like to install ios-deploy globally now?\n" +
+                    "Would you like to install react-devtools globally now?\n" +
                             "This might take one or two minutes without any console update, please wait for the final result.\n" +
                             "After that, you'll need to click this button again.",
-                    "Can Not Found Ios-Deploy", new String[]{"Yes", "No"}, 0,
-                    PluginIcons.IPhoneDevice, new DialogWrapper.DoNotAskOption.Adapter() {
+                    "Can Not Found React-Devtools", new String[]{"Yes", "No"}, 0,
+                    PluginIcons.React, new DialogWrapper.DoNotAskOption.Adapter() {
                         @Override
                         public void rememberChoice(boolean b, int i) {
 
                         }
                     });
             if (options == 0) {
-                cmd = "npm install -g ios-deploy";
+                cmd = "npm install -g react-devtools";
                 return true;
             } else {
                 RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
@@ -45,10 +48,9 @@ public class RunIOSDeviceAction extends BaseRNConsoleNPMAction {
                 if (consoleView != null) {
                     consoleView.clear();
                     consoleView.print(
-                            "Can't found " + IOS_DEPLOY + ", if you were first running this command, make sure you have ios-deploy installed globally.\n" +
-                                    "To install, please run in terminal with command: \n" +
-                                    "npm install -g ios-deploy\n" +
-                                    "And now please connect your iPhone to USB and enable developer mode.\n\n",
+                            "Can't found " + EXEC + ", if you were first running this command, make sure you have react-devtools installed globally.\n" +
+                                    "To install by yourself, please run in terminal with command: \n" +
+                                    "npm install -g react-devtools\n\n",
                             ConsoleViewContentType.ERROR_OUTPUT);
 
                 }
