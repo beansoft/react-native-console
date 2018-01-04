@@ -52,7 +52,19 @@
     </workspaceTree>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="" />
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunMiscScriptsAction.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/icons/add.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/icons/add@2x.png" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.iml" afterPath="$PROJECT_DIR$/react-native-console.iml" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.jar" afterPath="$PROJECT_DIR$/react-native-console.jar" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReactDevToolsAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReactDevToolsAction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -60,6 +72,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -69,63 +84,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RNPathUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java">
+      <file leaf-file-name="RunIOSDeviceAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="82" column="52" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="52" />
+            <state relative-caret-position="-16">
+              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
-                <element signature="e#2585#2621#0" expanded="true" />
-                <element signature="e#2585#2621#0" expanded="true" />
-                <element signature="e#2585#2621#0" expanded="true" />
-                <marker date="1503649194000" expanded="true" signature="2318:2828" ph="{...}" />
+                <element signature="e#1074#1137#1" expanded="true" />
+                <element signature="e#1147#2990#0" expanded="true" />
+                <element signature="e#1170#1234#0" expanded="true" />
+                <element signature="e#1170#1234#0" expanded="true" />
+                <element signature="e#1147#2990#0" expanded="true" />
+                <element signature="e#1395#2076#1" expanded="true" />
+                <element signature="e#1440#1452#0" expanded="true" />
+                <element signature="e#1474#1743#0" expanded="true" />
+                <element signature="e#1474#1743#0" expanded="true" />
+                <element signature="e#1793#1818#0" expanded="true" />
+                <element signature="e#1793#1818#0" expanded="true" />
+                <element signature="e#2089#2979#0" expanded="true" />
+                <element signature="e#2089#2979#0" expanded="true" />
+                <element signature="e#2226#2298#1" expanded="true" />
+                <element signature="e#2276#2285#0" expanded="true" />
+                <element signature="e#2287#2296#0" expanded="true" />
+                <element signature="e#2451#2849#0" expanded="true" />
+                <element signature="e#2451#2849#0" expanded="true" />
+                <element signature="e#2451#2849#0" expanded="true" />
+                <element signature="e#2451#2849#0" expanded="true" />
+                <element signature="e#2451#2849#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml">
+      <file leaf-file-name="RunIOSDevicesAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="folder.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/icons/folder.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PluginIcons.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JumpToLastEditAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/JumpToLastEditAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RevealFileAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/RevealFileAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
+            <state relative-caret-position="-701">
+              <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -134,59 +129,72 @@
       <file leaf-file-name="ReactNativeConsole.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11235">
-              <caret line="834" column="22" lean-forward="false" selection-start-line="834" selection-start-column="22" selection-end-line="834" selection-end-column="22" />
+            <state relative-caret-position="220">
+              <caret line="385" column="42" lean-forward="false" selection-start-line="385" selection-start-column="42" selection-end-line="385" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunNPMScriptsAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunNPMScriptsAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="29" column="77" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="77" />
               <folding>
-                <marker date="1504167631000" expanded="false" signature="6212:6231" ph="contentManager" />
-                <marker date="1504167631000" expanded="false" signature="22606:22618" ph="val" />
-                <marker date="1504167631000" expanded="false" signature="22636:22653" ph="presentation" />
-                <marker date="1504167631000" expanded="false" signature="22682:22690" ph="text = " />
-                <marker date="1504167631000" expanded="false" signature="22705:22706" ph="" />
-                <marker date="1504167631000" expanded="true" signature="29556:29574" ph="{...}" />
+                <element signature="e#2329#2348#0" expanded="true" />
+                <element signature="e#2329#2348#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Utils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/Utils.java">
+      <file leaf-file-name="RunMiscScriptsAction.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunMiscScriptsAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+            <state relative-caret-position="105">
+              <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
               <folding>
-                <element signature="e#504#527#1" expanded="true" />
-                <element signature="e#564#584#0" expanded="true" />
-                <element signature="e#590#625#0" expanded="true" />
-                <element signature="e#590#625#0" expanded="true" />
-                <element signature="e#840#860#0" expanded="true" />
-                <element signature="e#866#899#0" expanded="true" />
-                <element signature="e#866#899#0" expanded="true" />
-                <element signature="e#941#965#0" expanded="true" />
-                <element signature="e#997#1069#1" expanded="true" />
-                <element signature="e#1043#1067#0" expanded="true" />
-                <element signature="e#1565#1585#0" expanded="true" />
-                <element signature="e#1591#1636#0" expanded="true" />
-                <element signature="e#1591#1636#0" expanded="true" />
-                <element signature="e#1779#1802#1" expanded="true" />
-                <element signature="e#1819#1842#1" expanded="true" />
-                <element signature="e#1863#1891#0" expanded="true" />
-                <element signature="e#1925#1945#0" expanded="true" />
-                <element signature="e#1981#2042#0" expanded="true" />
-                <element signature="e#1981#2042#0" expanded="true" />
+                <element signature="e#2058#2765#1" expanded="true" />
+                <element signature="e#2782#3074#0" expanded="true" />
+                <element signature="e#2782#3074#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseRNConsoleAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAction.java">
+      <file leaf-file-name="PluginIcons.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="150">
+              <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="28" />
               <folding>
-                <element signature="e#1208#1209#0" expanded="true" />
-                <element signature="e#1238#1239#0" expanded="true" />
+                <element signature="e#4149#4150#0" expanded="true" />
+                <element signature="e#4212#4213#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReactDevToolsAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReactDevToolsAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+              <folding>
+                <element signature="e#2963#2964#0" expanded="true" />
+                <element signature="e#2989#2990#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RNPathUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1770">
+              <caret line="135" column="47" lean-forward="false" selection-start-line="135" selection-start-column="25" selection-end-line="135" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,18 +210,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>System.</find>
-      <find>System.ou</find>
-      <find>System.out</find>
-      <find>PATTERN_ACTIVITY_NAME</find>
-      <find>xcrun</find>
-      <find>Pattern</find>
-      <find>Array</find>
-      <find>NativeArray</find>
-      <find>clear</find>
-      <find>invokeLat</find>
-      <find>invokeLaterIfNeeded</find>
-      <find>i</find>
       <find>invoke</find>
       <find>invokeLa</find>
       <find>invokeLater</find>
@@ -232,7 +228,22 @@
       <find>terminal</find>
       <find>&quot;ls</find>
       <find>rewatch</find>
+      <find />
+      <find>npm install</find>
+      <find>Gson</find>
+      <find>.rnconsole</find>
+      <find>package.json</find>
+      <find>actions</find>
+      <find>customActions</find>
+      <find>myStopProcessAction</find>
+      <find>GearAction</find>
+      <find>mac</find>
+      <find>Welcome</find>
+      <find>npm install -g</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -256,43 +267,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/OSUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseAction.java" />
-        <option value="/Applications/Android Studio.app/Contents/lib/openapi.jar!/com/intellij/execution/ui/actions/CloseAction.class" />
-        <option value="$PROJECT_DIR$/src/main/java/Test.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/GradleSyncUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ActionUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RunnerUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/CloseTabAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNToolWindowFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseConsoleAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/RNRunAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNRunAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAndroidAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAction.java" />
-        <option value="$PROJECT_DIR$/temp/devices.json" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices/Devices.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices/DeviceItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices/IOSDeviceInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices/Simulators.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/Simulators.java" />
-        <option value="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/js/JSExecTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleRunAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/IOSDeviceInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/ios/IOSDevicesParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/js/JSExec.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowRNConsoleAction.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$APPLICATION_HOME_DIR$/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/AbstractTerminalRunner.class" />
-        <option value="$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/execution/impl/ConsoleViewImpl.class" />
         <option value="$APPLICATION_HOME_DIR$/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/JBTabbedTerminalWidget.class" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleTerminal.java" />
         <option value="$APPLICATION_HOME_DIR$/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/LocalTerminalDirectRunner.class" />
         <option value="$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/execution/util/ExecUtil.class" />
         <option value="$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" />
         <option value="$PROJECT_DIR$/src/test/TestParseIOSDevices.java" />
         <option value="$PROJECT_DIR$/src/test/RNPathUtilTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java" />
@@ -302,13 +281,51 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/LocateInFinderAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/JumpToLastEditAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/RevealFileAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeTerminal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/npm/NPMParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleActionGroup.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReWatchManAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/LocateInFinderAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidReleaseApkAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/IOSBundleAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMiOSLogsAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMAndroidLogsAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/HelpAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidDevMenuAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunNPMScriptsAction.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/test/package.json" />
+        <option value="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java" />
+        <option value="$PROJECT_DIR$/src/test/WordpressFileRenamer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowConsoleRefreshAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowConsoleRefreshAnrdoidAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidBundleAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleRunAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/storage/GlobalPropertyBasedDoNotAskOption.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReactDevToolsAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunMiscScriptsAction.java" />
       </list>
     </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -319,8 +336,8 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="737" />
+    <option name="width" value="1440" />
+    <option name="height" value="840" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -339,13 +356,43 @@
             <id>Android Lint for Kotlin</id>
           </State>
           <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
+          </State>
+          <State>
             <id>Internationalization issuesJava</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
           </State>
           <State>
             <id>Java</id>
           </State>
           <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 7Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
             <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -364,13 +411,15 @@
       <showLibraryContents />
       <hideEmptyPackages />
       <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource Scope="true" ProjectPane="true" />
       <sortByType />
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -378,40 +427,12 @@
               <item name="react-native-console" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-native-console" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="react-native-console" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-console" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-native-console" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-console" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-native-console" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-console" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-native-console" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-console" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -419,8 +440,8 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="Plu&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Fr&#9;FILE&#9;file:///Users/beansoft/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/views/FreelineTerminal.java&#10;FileUtil&#9;PSI&#9;JAVA://com.intellij.openapi.util.io.FileUtil&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;JSON&#9;PSI&#9;JAVA://com.google.gson.JsonArray&#10;TabbedTerminalWidget&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/jediterm-pty-2.5.jar!/com/jediterm/terminal/ui/TabbedTerminalWidget.class&#10;Plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;NativeArray&#9;PSI&#9;JAVA://jdk.nashorn.internal.objects.NativeArray&#10;ScriptUtils&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptUtils&#10;ScriptObjectMi&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptObjectMirror&#10;Pattern&#9;PSI&#9;JAVA://java.util.regex.Pattern&#10;Notif&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/NotificationUtils.java&#10;JsonObject&#9;PSI&#9;JAVA://com.google.gson.JsonObject&#10;Gson&#9;PSI&#9;JAVA://com.google.gson.Gson&#10;Icon&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Simple&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java&#10;SimpleToolWindowPanel&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/openapi.jar!/com/intellij/openapi/ui/SimpleToolWindowPanel.class&#10;ConsoleViewImpl&#9;PSI&#9;JAVA://com.intellij.execution.testframework.ui.TestsConsoleViewImpl&#10;ToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Terminal&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/TerminalView.class&#10;TerminalToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Feed&#9;PSI&#9;JAVA://com.antfortune.freeline.idea.actions.FeedbackAction&#10;TerminalOptions&#9;null&#9;null" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="SearchEverywhereHistoryKey" value="Debug&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java&#10;RNPath&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;KeyStroke&#9;PSI&#9;JAVA://javax.swing.KeyStroke&#10;Refresh&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java&#10;NPMParser&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/npm/NPMParser.java&#10;FileUtil&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class&#10;Plu&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Fr&#9;FILE&#9;file:///Users/beansoft/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/views/FreelineTerminal.java&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;JSON&#9;PSI&#9;JAVA://com.google.gson.JsonArray&#10;TabbedTerminalWidget&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/jediterm-pty-2.5.jar!/com/jediterm/terminal/ui/TabbedTerminalWidget.class&#10;Plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;NativeArray&#9;PSI&#9;JAVA://jdk.nashorn.internal.objects.NativeArray&#10;ScriptUtils&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptUtils&#10;ScriptObjectMi&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptObjectMirror&#10;Pattern&#9;PSI&#9;JAVA://java.util.regex.Pattern&#10;Notif&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/NotificationUtils.java&#10;JsonObject&#9;PSI&#9;JAVA://com.google.gson.JsonObject&#10;Gson&#9;PSI&#9;JAVA://com.google.gson.Gson&#10;Icon&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Simple&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java&#10;SimpleToolWindowPanel&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/openapi.jar!/com/intellij/openapi/ui/SimpleToolWindowPanel.class&#10;ConsoleViewImpl&#9;PSI&#9;JAVA://com.intellij.execution.testframework.ui.TestsConsoleViewImpl&#10;ToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Terminal&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/TerminalView.class&#10;TerminalToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Feed&#9;PSI&#9;JAVA://com.antfortune.freeline.idea.actions.FeedbackAction&#10;TerminalOptions&#9;null&#9;null" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.runner" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="302" />
@@ -443,6 +464,9 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="PsiViewer.ProjectComponent">
     <option name="HIGHLIGHT" value="false" />
@@ -453,22 +477,24 @@
     <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
-      <recent name="$PROJECT_DIR$/src/test" />
-      <recent name="$PROJECT_DIR$/screenshot" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.beansoftapp.reatnative.idea.actions" />
-      <recent name="" />
-      <recent name="com.github.beansoftapp.reatnative.idea.views" />
-      <recent name="com.github.beansoftapp.reatnative.idea.utils" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
+      <recent name="com.github.beansoftapp.reatnative.idea.storage" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions" />
+      <recent name="" />
+      <recent name="com.github.beansoftapp.reatnative.idea.views" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
+      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/screenshot" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils" />
     </key>
   </component>
   <component name="Regex">
@@ -495,37 +521,12 @@
     </option>
   </component>
   <component name="RunManager" selected="Plugin.Plugin">
-    <configuration name="JSExecTest.jsMatchExpr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.github.beansoftapp.reatnative.idea.utils.js.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="react-native-console" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.github.beansoftapp.reatnative.idea.utils.js" />
-      <option name="MAIN_CLASS_NAME" value="com.github.beansoftapp.reatnative.idea.utils.js.JSExecTest" />
-      <option name="METHOD_NAME" value="jsMatchExpr" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="react-native-console" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" value="" />
-      <alternative-path path="IntelliJ IDEA Community Edition IC-172.3757.52" alternative-path-enabled="true" />
-      <predefined_log_file id="idea.log" enabled="true" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
     </configuration>
     <configuration name="SimpleTerminal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -546,14 +547,47 @@
       <module name="react-native-console" />
       <envs />
     </configuration>
-    <configuration name="TestParseIOSDevices.testJS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordpressFileRenamer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="WordpressFileRenamer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="react-native-console" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="NPMParserTest.parseScripts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.github.beansoftapp.reatnative.idea.utils.npm.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="react-native-console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestParseIOSDevices" />
-      <option name="METHOD_NAME" value="testJS" />
+      <option name="PACKAGE_NAME" value="com.github.beansoftapp.reatnative.idea.utils.npm.test" />
+      <option name="MAIN_CLASS_NAME" value="com.github.beansoftapp.reatnative.idea.utils.npm.test.NPMParserTest" />
+      <option name="METHOD_NAME" value="parseScripts" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -566,14 +600,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TestParseIOSDevices.testJSFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestParseIOSDevices.testJS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="react-native-console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestParseIOSDevices" />
-      <option name="METHOD_NAME" value="testJSFunction" />
+      <option name="METHOD_NAME" value="testJS" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -606,27 +640,6 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -658,12 +671,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="freeline-studio-plugin" />
       <envs />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="react-native-console" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -698,6 +705,19 @@
       <envs />
       <properties />
       <listeners />
+    </configuration>
+    <configuration name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="react-native-console" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <alternative-path path="IntelliJ IDEA IU-173.3727.127" alternative-path-enabled="false" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="react-native-console" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
@@ -818,18 +838,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Plugin.Plugin" />
       <item index="1" class="java.lang.String" itemvalue="Application.SimpleTerminal" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJS" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJSFunction" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JSExecTest.jsMatchExpr" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testgetAllIOSDevicesList" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WordpressFileRenamer" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJS" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testgetAllIOSDevicesList" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.NPMParserTest.parseScripts" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJS" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testgetAllIOSDevicesList" />
-        <item index="2" class="java.lang.String" itemvalue="Application.SimpleTerminal" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.JSExecTest.jsMatchExpr" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJSFunction" />
+        <item index="0" class="java.lang.String" itemvalue="Application.WordpressFileRenamer" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.NPMParserTest.parseScripts" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJS" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testgetAllIOSDevicesList" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SimpleTerminal" />
       </list>
     </recent_temporary>
   </component>
@@ -849,6 +869,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1489562294444</updated>
+      <workItem from="1512186274160" duration="301000" />
+      <workItem from="1512186597713" duration="559000" />
+      <workItem from="1512453667389" duration="8117000" />
+      <workItem from="1512470128449" duration="61000" />
+      <workItem from="1512523426644" duration="1943000" />
+      <workItem from="1515043966181" duration="2116000" />
     </task>
     <task id="LOCAL-00001" summary="doc fix and bug fix: all commands execute in new tab">
       <created>1490075639052</created>
@@ -1032,40 +1058,127 @@
       <option name="project" value="LOCAL" />
       <updated>1504250770244</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="release 1.0.8">
+      <created>1504254179926</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1504254179926</updated>
+    </task>
+    <task id="LOCAL-00028" summary="release 1.0.9, list and run scripts in package.json">
+      <created>1504503306027</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1504503306027</updated>
+    </task>
+    <task id="LOCAL-00029" summary="update readme">
+      <created>1504503715277</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1504503715277</updated>
+    </task>
+    <task id="LOCAL-00030" summary="update test code">
+      <created>1504503857372</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1504503857372</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add wp rename code">
+      <created>1505375370459</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1505375370459</updated>
+    </task>
+    <task id="LOCAL-00032" summary="reorder console built in actions, move scroll to end and clear console to leading">
+      <created>1505719524462</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1505719524462</updated>
+    </task>
+    <task id="LOCAL-00033" summary="add android refresh shortcut key">
+      <created>1510209690509</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1510209690510</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update jar for test">
+      <created>1510209744292</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1510209744292</updated>
+    </task>
+    <task id="LOCAL-00035" summary="fix windows android  log can't display unicode, add linux tips">
+      <created>1512019241974</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1512019241974</updated>
+    </task>
+    <task id="LOCAL-00036" summary="1.1.0 release">
+      <created>1512031488934</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1512031488934</updated>
+    </task>
+    <task id="LOCAL-00037" summary="update vendor">
+      <created>1512031888752</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1512031888752</updated>
+    </task>
+    <task id="LOCAL-00038" summary="add react devtools and improve UI interaction">
+      <created>1512469650239</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1512469650239</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestParseIOSDevices_testJS - 2017.08.25 at 11h 58m 33s.xml">
-      <configuration name="TestParseIOSDevices.testJS" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 10h 56m 09s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testJS - 2017.08.25 at 11h 59m 10s.xml">
-      <configuration name="TestParseIOSDevices.testJS" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 10h 58m 22s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testJS - 2017.08.25 at 11h 59m 51s.xml">
-      <configuration name="TestParseIOSDevices.testJS" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 01m 03s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testJS - 2017.08.25 at 12h 00m 14s.xml">
-      <configuration name="TestParseIOSDevices.testJS" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 01m 24s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testJS - 2017.08.25 at 12h 09m 03s.xml">
-      <configuration name="TestParseIOSDevices.testJS" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 03m 52s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testJS - 2017.08.25 at 12h 09m 17s.xml">
-      <configuration name="TestParseIOSDevices.testJS" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 04m 18s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testgetAllIOSDevicesList - 2017.06.06 at 17h 52m 49s.xml">
-      <configuration name="TestParseIOSDevices.testgetAllIOSDevicesList" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 04m 37s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testgetAllIOSDevicesList - 2017.06.06 at 17h 53m 15s.xml">
-      <configuration name="TestParseIOSDevices.testgetAllIOSDevicesList" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 04m 54s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestParseIOSDevices_testgetAllIOSDevicesList - 2017.06.06 at 18h 20m 54s.xml">
-      <configuration name="TestParseIOSDevices.testgetAllIOSDevicesList" configurationId="JUnit" />
+    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 46m 32s.xml">
+      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestParseIOSDevices_testgetAllIOSDevicesList - 2017.08.25 at 11h 56m 36s.xml">
       <configuration name="TestParseIOSDevices.testgetAllIOSDevicesList" configurationId="JUnit" />
     </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13097000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1077,24 +1190,26 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="833" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="843" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3211781" sideWeight="0.49025974" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22268908" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21655172" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3207283" sideWeight="0.49025974" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896653" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37621024" sideWeight="0.52288985" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3603352" sideWeight="0.48354793" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3090909" sideWeight="0.47270116" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35064936" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3751724" sideWeight="0.47711015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4110345" sideWeight="0.47496423" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34896553" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25822604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45251396" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2413793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27539343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21793103" sideWeight="0.48497853" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2446352" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1106,12 +1221,12 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58899677" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58899677" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Armory" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7358643" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5145631" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5145631" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896653" sideWeight="0.49713877" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896653" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1119,35 +1234,40 @@
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896653" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37621024" sideWeight="0.52288985" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58899677" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2413793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58899677" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2446352" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44537815" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Armory" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7358643" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3211781" sideWeight="0.49025974" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Armory" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7358643" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22268908" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21655172" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3207283" sideWeight="0.49025974" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5145631" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5145631" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3603352" sideWeight="0.48354793" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31005585" sideWeight="0.47270116" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896653" sideWeight="0.49713877" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35064936" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25822604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45251396" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3751724" sideWeight="0.47711015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4121715" sideWeight="0.47496423" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896653" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34896553" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27539343" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21793103" sideWeight="0.48497853" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -1181,18 +1301,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="doc fix and bug fix: all commands execute in new tab" />
-    <MESSAGE value="new ui and new functions." />
-    <MESSAGE value="new ui prototype." />
-    <MESSAGE value="update readme" />
-    <MESSAGE value="save new code" />
-    <MESSAGE value="fix tool window id issue" />
-    <MESSAGE value="update some logic" />
-    <MESSAGE value="refactor, fix bugs, add tabs with icon" />
-    <MESSAGE value="bug fix: windows command run fail." />
-    <MESSAGE value="1.0.6 version, android reload js" />
-    <MESSAGE value="fix bug https://github.com/beansoftapp/react-native-console/issues/8" />
-    <MESSAGE value="update plugin" />
     <MESSAGE value="add ios devices" />
     <MESSAGE value="1.0.7, new version with iOS features." />
     <MESSAGE value="1.0.7 release" />
@@ -1206,7 +1314,19 @@
     <MESSAGE value="update chrome icon to retina" />
     <MESSAGE value="fix npe" />
     <MESSAGE value="update icon" />
-    <option name="LAST_COMMIT_MESSAGE" value="update icon" />
+    <MESSAGE value="release 1.0.8" />
+    <MESSAGE value="release 1.0.9, list and run scripts in package.json" />
+    <MESSAGE value="update readme" />
+    <MESSAGE value="update test code" />
+    <MESSAGE value="add wp rename code" />
+    <MESSAGE value="reorder console built in actions, move scroll to end and clear console to leading" />
+    <MESSAGE value="add android refresh shortcut key" />
+    <MESSAGE value="update jar for test" />
+    <MESSAGE value="fix windows android  log can't display unicode, add linux tips" />
+    <MESSAGE value="1.1.0 release" />
+    <MESSAGE value="update vendor" />
+    <MESSAGE value="add react devtools and improve UI interaction" />
+    <option name="LAST_COMMIT_MESSAGE" value="add react devtools and improve UI interaction" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1227,7 +1347,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="47" />
+      <option name="time" value="49" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
@@ -1240,167 +1360,66 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/js/JSExecTest.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/execution/actions/StopProcessAction.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="131">
+          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/ios/IOSDevicesParser.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/AnAction.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-139">
-          <caret line="27" column="38" lean-forward="false" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+        <state relative-caret-position="-1521">
+          <caret line="61" column="22" lean-forward="false" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.12.jar!/org/junit/Assert.class">
+    <entry file="file://$PROJECT_DIR$/src/test/WordpressFileRenamer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="122" column="23" lean-forward="false" selection-start-line="122" selection-start-column="23" selection-end-line="122" selection-end-column="23" />
+        <state relative-caret-position="30">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/execution/util/ExecUtil.class">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" lean-forward="false" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/CustomShortcutSet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/javax/swing/KeyStroke.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="171" column="46" lean-forward="false" selection-start-line="171" selection-start-column="46" selection-end-line="171" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/CloseTabAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/AnActionEvent.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/gson-2.5.jar!/com/google/gson/JsonArray.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/siyeh/ig/portability/mediatype/ApplicationMediaType.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="60" column="4" lean-forward="false" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="148" column="13" lean-forward="false" selection-start-line="148" selection-start-column="13" selection-end-line="148" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/common-io-3.2.1.jar!/com/twelvemonkeys/io/FileUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6600">
-          <caret line="28" column="19" lean-forward="false" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/FileReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="70" column="11" lean-forward="false" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/io/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1141">
-          <caret line="91" column="19" lean-forward="false" selection-start-line="91" selection-start-column="19" selection-end-line="91" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/.rnconsole" />
-    <entry file="file://$USER_HOME$/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/views/FreelineTerminal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="87" column="16" lean-forward="false" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/TestParseIOSDevices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="58" column="86" lean-forward="false" selection-start-line="58" selection-start-column="86" selection-end-line="58" selection-end-column="86" />
-          <folding>
-            <element signature="e#893#967#1" expanded="true" />
-            <element signature="e#3679#3781#1" expanded="true" />
-            <element signature="e#3882#4065#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/actions/FreelineRunAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="31" column="59" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="31" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/RNPathUtilTest.java" />
-    <entry file="file://$PROJECT_DIR$/screenshot/rnconsole.gif">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="189" column="0" lean-forward="false" selection-start-line="189" selection-start-column="0" selection-end-line="189" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNUtil.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowRNConsoleAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="41" column="59" lean-forward="false" selection-start-line="41" selection-start-column="59" selection-end-line="41" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/DataContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/vfs/VirtualFile.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="54" column="32" lean-forward="false" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/module/Module.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="24" column="32" lean-forward="true" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/CommonDataKeys.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="23" column="45" lean-forward="false" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/libraryModule.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/UpdageModuleAARAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <caret line="32" column="27" lean-forward="false" selection-start-line="32" selection-start-column="27" selection-end-line="32" selection-end-column="27" />
         </state>
       </provider>
     </entry>
@@ -1411,201 +1430,347 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowRNConsoleAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/AnAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="164" column="27" lean-forward="false" selection-start-line="164" selection-start-column="27" selection-end-line="164" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/actions/JumpToLastEditAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-33">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/LocateInFinderAction.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowConsoleRefreshAnrdoidAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="11" column="68" lean-forward="true" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleRunAction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/OSUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="63" lean-forward="false" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+        <state relative-caret-position="75">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAction.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/util/EnvironmentUtil.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding>
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/ide/actions/ShowFilePathAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="89" column="50" lean-forward="false" selection-start-line="89" selection-start-column="50" selection-end-line="89" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/folder@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/JumpToLastEditAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="168">
+          <caret line="226" column="22" lean-forward="false" selection-start-line="226" selection-start-column="12" selection-end-line="226" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/RevealFileAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-          <folding />
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace (Conflicted copy from beansoft的MacBook Pro on 2017-03-16).xml">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/execution/process/ProcessHandler.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="46" lean-forward="true" selection-start-line="12" selection-start-column="46" selection-end-line="12" selection-end-column="46" />
+        <state relative-caret-position="1879">
+          <caret line="170" column="44" lean-forward="false" selection-start-line="170" selection-start-column="44" selection-end-line="170" selection-end-column="44" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/markdown-navigator/profiles_settings.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/StreamUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/execution/process/OSProcessHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RunnerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="26" column="13" lean-forward="false" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="14" column="54" lean-forward="false" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="23" column="42" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/npm/NPMParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/react-native-console.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/chrome16@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/chrome.png" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeTerminal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="777" column="110" lean-forward="false" selection-start-line="777" selection-start-column="110" selection-end-line="777" selection-end-column="110" />
-          <folding>
-            <element signature="e#28878#28959#0" expanded="true" />
-            <element signature="e#28878#28959#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="20" column="24" lean-forward="false" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/apple@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/iphone_simulator@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11235">
-          <caret line="834" column="22" lean-forward="false" selection-start-line="834" selection-start-column="22" selection-end-line="834" selection-end-column="22" />
-          <folding>
-            <marker date="1504167631000" expanded="false" signature="6212:6231" ph="contentManager" />
-            <marker date="1504167631000" expanded="false" signature="22606:22618" ph="val" />
-            <marker date="1504167631000" expanded="false" signature="22636:22653" ph="presentation" />
-            <marker date="1504167631000" expanded="false" signature="22682:22690" ph="text = " />
-            <marker date="1504167631000" expanded="false" signature="22705:22706" ph="" />
-            <marker date="1504167631000" expanded="true" signature="29556:29574" ph="{...}" />
-          </folding>
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/Utils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AdbForwardAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/jsx_16_dark.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/jsx_16@2x_dark.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/jsx_16.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidBundleAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5">
+          <caret line="17" column="19" lean-forward="false" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="167" column="16" lean-forward="false" selection-start-line="167" selection-start-column="16" selection-end-line="167" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/RNPathUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="72" column="38" lean-forward="false" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="38" />
+          <caret line="45" column="47" lean-forward="false" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/execution/ui/ConsoleViewContentType.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="33" column="65" lean-forward="false" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/execution/impl/ConsoleViewImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="73" column="16" lean-forward="false" selection-start-line="73" selection-start-column="16" selection-end-line="73" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/Messages.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12743">
+          <caret line="1061" column="25" lean-forward="false" selection-start-line="1061" selection-start-column="25" selection-end-line="1061" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/DialogWrapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="2240" column="38" lean-forward="false" selection-start-line="2240" selection-start-column="38" selection-end-line="2240" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/storage/GlobalPropertyBasedDoNotAskOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="77" lean-forward="true" selection-start-line="29" selection-start-column="77" selection-end-line="29" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleRunAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="28" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="28" />
           <folding>
-            <element signature="e#504#527#1" expanded="true" />
-            <element signature="e#564#584#0" expanded="true" />
-            <element signature="e#590#625#0" expanded="true" />
-            <element signature="e#590#625#0" expanded="true" />
-            <element signature="e#840#860#0" expanded="true" />
-            <element signature="e#866#899#0" expanded="true" />
-            <element signature="e#866#899#0" expanded="true" />
-            <element signature="e#941#965#0" expanded="true" />
-            <element signature="e#997#1069#1" expanded="true" />
-            <element signature="e#1043#1067#0" expanded="true" />
-            <element signature="e#1565#1585#0" expanded="true" />
-            <element signature="e#1591#1636#0" expanded="true" />
-            <element signature="e#1591#1636#0" expanded="true" />
-            <element signature="e#1779#1802#1" expanded="true" />
-            <element signature="e#1819#1842#1" expanded="true" />
-            <element signature="e#1863#1891#0" expanded="true" />
-            <element signature="e#1925#1945#0" expanded="true" />
-            <element signature="e#1981#2042#0" expanded="true" />
-            <element signature="e#1981#2042#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="false" />
+            <element signature="e#1032#1033#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="39" column="20" lean-forward="false" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding>
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1173#1174#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="82" column="52" lean-forward="false" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="52" />
+        <state relative-caret-position="1770">
+          <caret line="135" column="47" lean-forward="false" selection-start-line="135" selection-start-column="25" selection-end-line="135" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
-            <element signature="e#2585#2621#0" expanded="true" />
-            <element signature="e#2585#2621#0" expanded="true" />
-            <element signature="e#2585#2621#0" expanded="true" />
-            <marker date="1503649194000" expanded="true" signature="2318:2828" ph="{...}" />
+            <element signature="e#1074#1137#1" expanded="true" />
+            <element signature="e#1147#2990#0" expanded="true" />
+            <element signature="e#1170#1234#0" expanded="true" />
+            <element signature="e#1170#1234#0" expanded="true" />
+            <element signature="e#1147#2990#0" expanded="true" />
+            <element signature="e#1395#2076#1" expanded="true" />
+            <element signature="e#1440#1452#0" expanded="true" />
+            <element signature="e#1474#1743#0" expanded="true" />
+            <element signature="e#1474#1743#0" expanded="true" />
+            <element signature="e#1793#1818#0" expanded="true" />
+            <element signature="e#1793#1818#0" expanded="true" />
+            <element signature="e#2089#2979#0" expanded="true" />
+            <element signature="e#2089#2979#0" expanded="true" />
+            <element signature="e#2226#2298#1" expanded="true" />
+            <element signature="e#2276#2285#0" expanded="true" />
+            <element signature="e#2287#2296#0" expanded="true" />
+            <element signature="e#2451#2849#0" expanded="true" />
+            <element signature="e#2451#2849#0" expanded="true" />
+            <element signature="e#2451#2849#0" expanded="true" />
+            <element signature="e#2451#2849#0" expanded="true" />
+            <element signature="e#2451#2849#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/last_edit_pos@2x.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        <state relative-caret-position="-701">
+          <caret line="30" column="11" lean-forward="false" selection-start-line="30" selection-start-column="11" selection-end-line="30" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/folder.png">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/icons/plus.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleActionGroup.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="88" column="18" lean-forward="false" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
+        <state relative-caret-position="75">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReactDevToolsAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="54" column="64" lean-forward="false" selection-start-line="54" selection-start-column="64" selection-end-line="54" selection-end-column="64" />
+          <folding>
+            <element signature="e#2963#2964#0" expanded="true" />
+            <element signature="e#2989#2990#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="385" column="42" lean-forward="false" selection-start-line="385" selection-start-column="42" selection-end-line="385" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunNPMScriptsAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="29" column="77" lean-forward="false" selection-start-line="29" selection-start-column="74" selection-end-line="29" selection-end-column="77" />
+          <folding>
+            <element signature="e#2329#2348#0" expanded="true" />
+            <element signature="e#2329#2348#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="40" column="19" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="40" selection-end-column="19" />
+          <folding>
+            <element signature="e#1079#1777#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/icons/AllIcons.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="192" column="110" lean-forward="false" selection-start-line="192" selection-start-column="94" selection-end-line="192" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" column="28" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="e#4149#4150#0" expanded="true" />
+            <element signature="e#4212#4213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunMiscScriptsAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="21" column="37" lean-forward="false" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+          <folding>
+            <element signature="e#2058#2765#1" expanded="true" />
+            <element signature="e#2782#3074#0" expanded="true" />
+            <element signature="e#2782#3074#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1649,7 +1814,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>Android Studio AI-162.3764568</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1666,6 +1831,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

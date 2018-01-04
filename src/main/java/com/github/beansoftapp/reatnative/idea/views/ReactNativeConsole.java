@@ -382,6 +382,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new DebugUiAction(this));
         group.add(new ReactDevToolsAction(this));
 
+        group.addSeparator();
+        group.add(new RunMiscScriptsAction(this));
+
         content.setPreferredFocusableComponent(consoleView.getComponent());
 
         toolWindow.getContentManager().addContent(content);

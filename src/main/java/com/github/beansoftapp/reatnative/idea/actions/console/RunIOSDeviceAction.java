@@ -6,9 +6,13 @@ import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.execution.ui.ConsoleViewContentType;
+import com.intellij.icons.AllIcons;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
 
+/**
+ * @author beansoft
+ */
 public class RunIOSDeviceAction extends BaseRNConsoleNPMAction {
     private static final String EXEC = "react-native run-ios --device";
     private static final String IOS_DEPLOY = "ios-deploy";
@@ -30,7 +34,7 @@ public class RunIOSDeviceAction extends BaseRNConsoleNPMAction {
                             "This might take one or two minutes without any console update, please wait for the final result.\n" +
                             "After that, you'll need to click this button again.",
                     "Can Not Found Ios-Deploy", new String[]{"Yes", "No"}, 0,
-                    PluginIcons.IPhoneDevice, new DialogWrapper.DoNotAskOption.Adapter() {
+                    AllIcons.General.QuestionDialog, new DialogWrapper.DoNotAskOption.Adapter() {
                         @Override
                         public void rememberChoice(boolean b, int i) {
 
