@@ -1,4 +1,4 @@
-# React Native Console v1.1.0
+# React Native Console v1.1.1
 an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native commands in embed terminal, supports Mac and Windows.
 
 #### Installation
@@ -46,32 +46,10 @@ https://github.com/beansoftapp/react-native-console/issues/17
 
 
 ## Features## 
-list and run scripts in package.json<br>
-One-Click run following commands:<br/>
-react-native run-android<br/>
-react-native link<br/>
-react-native run-ios<br/>
-run with physical iOS device<br/>
-list all iOS devices(include simulator and physical) and run target one <br/>
-npm run start<br/>
-npm install<br/>
-Open dev menu on Android device(adb shell input keyevent 82)<br/>
-forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>
-Android Reloading JavaScript<br/>
-open React Native debugger ui(Chrome browser required)<br/>
-react-native log-android<br/>
-react-native log-ios<br/>
-gradlew assembleRelease<br/>
-react-native bundle --platform android/ios --dev false<br/>
-yarn<br/>
-jest<br/>
-Last Edit Location(main toolbar)<br/>
-Reveal file in Finder/Explorer(main toolbar)<br/>
-Reveal project folder in Finder/Explorer<br/>
+list and run scripts in package.json<br>One-Click run following commands:<br/>Ctrl + F2 to reload android js bundle<br>list and run scripts in package.json<br>react-native run-android<br/>react-native link<br/>react-native run-ios<br/>run with physical iOS device<br/>list all iOS devices(include simulator and physical) and run target one <br/>npm run start<br/>npm install<br/>Open dev menu on Android device(adb shell input keyevent 82)<br/>forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>Android Reloading JavaScript<br/>open React Native debugger ui(Chrome browser required)<br/>react-native log-android<br/>react-native log-ios<br/>gradlew assembleRelease<br/>react-native bundle --platform android/ios --dev false<br/>yarn<br/>jest<br/>react-native uninstall<br/>react-native start<br/>gradlew clean<br/>react-native react-native-git-upgrade<br/>yarn add project, dev, global dependencies<br/>npm add project, dev, global dependencies<br/>auto install and run react-devtools<br/>Last Edit Location(main toolbar)<br/>Reveal file in Finder/Explorer(main toolbar)<br/>Reveal project folder in Finder/Explorer<br/><br/>
 New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
 Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio),
 thus the command will auto execute in the correct folder<br/>
-
 
 
 
@@ -95,6 +73,14 @@ gradlew assembleRelease<br/>
 react-native bundle --platform android/ios --dev false<br/>
 yarn<br/>
 jest<br/>
+react-native uninstall<br/>
+react-native start<br/>
+gradlew clean<br/>
+react-native react-native-git-upgrade<br/>
+yarn 添加项目, 开发和全局依赖<br/>
+npm 添加项目, 开发和全局依赖<br/>
+自动安装运行 react-devtools<br/>
+
 最近编辑位置(主工具栏)<br/>
 在Finder/Explorer中显示文件(main toolbar)<br/>
 在Finder/Explorer中显示项目目录<br/>
