@@ -6,7 +6,7 @@ import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 
 public class RNLinkAction extends BaseRNConsoleNPMAction {
     public RNLinkAction(ReactNativeConsole terminal) {
-        super(terminal, "RN link", "react-native link", PluginIcons.Lightning);
+        super(terminal, "react-native link", "react-native link links all native dependencies (updates native build files)", PluginIcons.Lightning);
     }
 
     protected String command() {

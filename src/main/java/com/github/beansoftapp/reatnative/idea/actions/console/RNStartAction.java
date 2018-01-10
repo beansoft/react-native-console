@@ -4,14 +4,13 @@ import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleNPMAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 
-// NPM Run start Task
-public class NPMInstallAction extends BaseRNConsoleNPMAction {
-    public NPMInstallAction(ReactNativeConsole terminal) {
-        super(terminal, "npm install", "npm install dependencies", PluginIcons.Install);
+// React Native start React Packager Task
+public class RNStartAction extends BaseRNConsoleNPMAction {
+    public RNStartAction(ReactNativeConsole terminal) {
+        super(terminal, "React Packager", "starts the React packager webserver(react-native start)", PluginIcons.Execute);
     }
 
-    @Override
     protected String command() {
-        return "npm install";
+        return "react-native start";
     }
 }

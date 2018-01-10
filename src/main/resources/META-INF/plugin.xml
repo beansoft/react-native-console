@@ -1,12 +1,12 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
     <h2>React Native Console</h2>
-      an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command in embed console tab<br/><br/>
+      an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command<br/><br/>
       <a href='https://github.com/beansoftapp/react-native-console'>https://github.com/beansoftapp/react-native-console</a><br/><br/>
 
       <h2>Features</h2><br/>
@@ -30,6 +30,13 @@
       react-native bundle --platform android/ios --dev false<br/>
       yarn<br/>
       jest<br/>
+      react-native uninstall<br/>
+      react-native start<br/>
+      gradlew clean<br/>
+      react-native react-native-git-upgrade<br/>
+      yarn add project, dev, global dependencies<br/>
+      npm add project, dev, global dependencies<br/>
+      auto install and run react-devtools<br/>
       Last Edit Location(main toolbar)<br/>
       Reveal file in Finder/Explorer(main toolbar)<br/>
       Reveal project folder in Finder/Explorer<br/>
@@ -63,6 +70,13 @@
       react-native bundle --platform android/ios --dev false<br/>
       yarn<br/>
       jest<br/>
+      react-native uninstall<br/>
+      react-native start<br/>
+      gradlew clean<br/>
+      react-native react-native-git-upgrade<br/>
+      yarn 添加项目, 开发和全局依赖<br/>
+      npm 添加项目, 开发和全局依赖<br/>
+      自动安装运行 react-devtools<br/>
       最近编辑位置(主工具栏)<br/>
       在Finder/Explorer中显示文件(main toolbar)<br/>
       在Finder/Explorer中显示项目目录<br/>
@@ -93,6 +107,17 @@
     <change-notes><![CDATA[
       <ul>
         <li>
+          <b>1.1.1</b><br/>
+          Refactor UI buttons<br/>
+          Add react-native uninstall<br/>
+          Add react-native start<br/>
+          Add gradlew clean<br/>
+          Add react-native react-native-git-upgrade<br/>
+          Add react-devtools<br/>
+          Support yarn add project, dev, global dependencies<br/>
+          Support npm add project, dev, global dependencies<br/>
+        </li>
+        <li>
           <b>1.1.0</b><br/>
           Add tips for Linux users to fix can't found adb issue<br/>
           Fix log-android unicode/Chinese display issue on Windows<br/>
@@ -117,39 +142,9 @@
           run with physical iOS device<br/>
           list all iOS devices(include simulator and physical) and run target one
         </li>
-        <li>
-          <b>1.0.6.1</b><br/>
-          Bug fix: genreate debug and release apk failed on Windows.
-        </li>
-        <li>
-          <b>1.0.6</b><br/>
-          New Feature: Android Reloading JavaScript;
-          Bug fix: terminate running process when close tab or window.
-        </li>
-        <li>
-          <b>1.0.5</b><br/>
-          Critical bug fix: windows command run fail with npm, react-native and gradlew.
-        </li>
-         <li>
-          <b>1.0.4</b><br/>
-          A major update on the command execution system, now support one-click rerun commands, reuse console window,
-           tabs with title and icon, search in console output.
-          Fix an ios log view bug.
-        </li>
-        <li>
-          <b>1.0.3</b><br/>
-          Removed unused files to reduce plugin file size.
-          Add logs view function.
-          Main buttons will be shown horizontal, easier to find.
-        </li>
-        <li>
-          <b>1.0.2</b><br/>
-          Bug fix, now all commands execute in new tab, to avoid that first terminal command not finished, the following commands not executed. Also update source code link to fix the 404 issue.
-        </li>
-        <li>
-          <b>1.0.1</b><br/>
-          update source code link
-        </li>
+
+       ...
+
         <li>
           <b>1.0.0</b><br/>
           add React Native ToolWindow and let you easily run some commands without type a key.

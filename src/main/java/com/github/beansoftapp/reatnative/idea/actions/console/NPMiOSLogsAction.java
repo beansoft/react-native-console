@@ -11,7 +11,7 @@ import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 // device.availability === '(available)' && device.state === 'Booted', so the final solution is just using RN built-in command
 public class NPMiOSLogsAction extends BaseRNConsoleNPMAction {
     public NPMiOSLogsAction(ReactNativeConsole terminal) {
-        super(terminal, "log-ios", "react-native log-ios", PluginIcons.TrackTests);
+        super(terminal, "log-ios", "react-native log-ios starts iOS device syslog tail", PluginIcons.TrackTests);
     }
 
     protected String command() {

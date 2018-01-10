@@ -7,7 +7,7 @@ import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 // view android log
 public class NPMAndroidLogsAction extends BaseRNConsoleNPMAction {
     public NPMAndroidLogsAction(ReactNativeConsole terminal) {
-        super(terminal, "log-android", "react-native log-android", PluginIcons.TrackTests);
+        super(terminal, "log-android", "react-native log-android starts adb logcat", PluginIcons.TrackTests);
     }
 
     protected String command() {

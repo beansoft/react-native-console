@@ -11,7 +11,7 @@ import java.io.File;
 public class IOSBundleAction extends BaseRNConsoleNPMAction {
     public IOSBundleAction(ReactNativeConsole terminal) {
         super(terminal, "iOS RN Bundle",
-                "Create Release React Native Bundle File for iOS", PluginIcons.Deploy);
+                "builds the Release javascript bundle for offline use of iOS", PluginIcons.Deploy);
     }
 
     public boolean beforeAction() {

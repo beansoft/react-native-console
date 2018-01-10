@@ -353,16 +353,19 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new AndroidReleaseApkAction(this));
         group.add(new AndroidDebugApkAction(this));
         group.add(new AndroidBundleAction(this));
-
+        group.add(new AndroidCleanAction(this));
 
         // NPM, yarn and test
         group.addSeparator();
+        group.add(new RNStartAction(this));
         group.add(new NPMStartAction(this));
         group.add(new NPMInstallAction(this));
-        group.add(new RNLinkAction(this));
+        group.add(new RunRNScriptsAction(this));
+
         group.add(new YarnAction(this));
         group.add(new JestAction(this));
 //        group.add(new ReWatchManAction(this));// TODO in next version
+
         group.add(new RunNPMScriptsAction(this));
 
         if (OSUtils.isMacOSX() || OSUtils.isMacOS()) {// Only show on Mac OS
@@ -374,15 +377,13 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             group.add(new IOSBundleAction(this));
             group.add(new RunIOSDeviceAction(this));
             group.add(new RunIOSDevicesAction(this));
-            group.add(new LocateInFinderAction(this));
         }
 
         // General
         group.addSeparator();
+        group.add(new LocateInFinderAction(this));
         group.add(new DebugUiAction(this));
         group.add(new ReactDevToolsAction(this));
-
-        group.addSeparator();
         group.add(new RunMiscScriptsAction(this));
 
         content.setPreferredFocusableComponent(consoleView.getComponent());

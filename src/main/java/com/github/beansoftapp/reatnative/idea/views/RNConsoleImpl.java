@@ -100,7 +100,6 @@ public class RNConsoleImpl extends ConsoleViewImpl {
 
     /**
      * 执行shell
-     * 利用terminal换行即执行原理
      *
      * @param shell
      */

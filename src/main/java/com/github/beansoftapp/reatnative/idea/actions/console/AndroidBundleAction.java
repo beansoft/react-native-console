@@ -11,7 +11,7 @@ import java.io.File;
 public class AndroidBundleAction extends BaseRNConsoleNPMAction {
     public AndroidBundleAction(ReactNativeConsole terminal) {
         super(terminal, "Android RN Bundle",
-                "Create Release React Native Bundle File for Android ", PluginIcons.Deploy);
+                "builds the Release javascript bundle for offline use of Android ", PluginIcons.Deploy);
     }
 
     @Override

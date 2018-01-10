@@ -69,7 +69,6 @@ public class RNPathUtil {
     public static String getRNProjectPath(Project project) {
         String realPath = getRNProjectRootPathFromConfig(project);
         if(realPath != null) {
-            System.out.println("realPath=" + realPath);
             return realPath;
         }
 

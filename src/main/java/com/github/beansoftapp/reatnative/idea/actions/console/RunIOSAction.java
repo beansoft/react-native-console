@@ -6,7 +6,7 @@ import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 
 public class RunIOSAction extends BaseRNConsoleNPMAction {
     public RunIOSAction(ReactNativeConsole terminal) {
-        super(terminal, "iOS Run Simulator", "Run on Default iOS Simulator", PluginIcons.IPhoneSimulator);
+        super(terminal, "iOS Run Simulator", "builds your app and starts it on iOS simulator", PluginIcons.IPhoneSimulator);
     }
 
     protected String command() {

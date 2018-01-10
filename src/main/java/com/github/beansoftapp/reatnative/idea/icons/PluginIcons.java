@@ -1,19 +1,22 @@
 package com.github.beansoftapp.reatnative.idea.icons;
 
+import com.github.beansoftapp.reatnative.swing.OverlayIcon;
 import com.intellij.icons.AllIcons;
 import com.intellij.openapi.util.IconLoader;
-//import icons.AndroidIcons;
 
 import javax.swing.*;
+
+//import icons.AndroidIcons;
 
 /**
  * Icons used by plugin.
  * Created by beansoft on 17/4/1.
  */
 public class PluginIcons {
-//    public static final Icon LastEditLocation = load("/icons/last_edit_pos.png");
-public static final Icon Add = load("/icons/add.png");
-//    public static final Icon Plus = load("/icons/plus.png");
+    //    public static final Icon LastEditLocation = load("/icons/last_edit_pos.png");
+    public static final Icon AddGreen = load("/icons/add_green.png");
+    public static final Icon Add = load("/icons/add.png");
+    //    public static final Icon Plus = load("/icons/plus.png");
     public static final Icon Npm = load("/icons/npm_16.png");
     public static final Icon Folder = load("/icons/folder.png");
     public static final Icon yarn = load("/icons/yarn.png");
@@ -23,6 +26,9 @@ public static final Icon Add = load("/icons/add.png");
     public static final Icon OpenTerminal = load("/icons/OpenTerminal.png");
     public static final Icon Execute = intellijLoad("/actions/execute.png");
     public static final Icon Install = intellijLoad("/actions/install.png");
+    public static final Icon Uninstall = AllIcons.Actions.Uninstall;
+    public static final Icon Up = AllIcons.Actions.MoveUp;
+    public static final Icon RESET_TO_EMPTY = AllIcons.Actions.Reset_to_empty;
     public static final Icon Lightning = intellijLoad("/actions/lightning.png");
     public static final Icon Suspend = intellijLoad("/actions/suspend.png");
     public static final Icon StartDebugger = intellijLoad("/actions/startDebugger.png");
@@ -33,6 +39,10 @@ public static final Icon Add = load("/icons/add.png");
     public static final Icon EditConfig = intellijLoad("/actions/edit.png");
     public static final Icon DevMenu = load("/general/gearPlain.png");
     public static final Icon Link = load("/icons/link.png");
+    public static final Icon UnLink = AllIcons.Actions.Delete;
+    public static final Icon New = AllIcons.Actions.New;
+    public static final Icon Reset = AllIcons.Actions.Reset;
+
     public static final Icon Android = load("/icons/android.png");
     public static final Icon LibraryModule = load("/icons/libraryModule.png");
     public static final Icon IPhoneDevice = load("/icons/iPhone.png");
@@ -60,6 +70,8 @@ public static final Icon Add = load("/icons/add.png");
     public static final Icon ICON_ACTION_RUN = FreelineIcon;
     /* Tool window icon */
     public static final Icon ICON_TOOL_WINDOW = OpenTerminal;
+
+    public static Icon NPMStart = new OverlayIcon(Npm).add(Execute);
 
     private static Icon load(String path) {
         try {
