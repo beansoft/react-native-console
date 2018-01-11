@@ -1,4 +1,4 @@
-# React Native Console v1.1.1
+# React Native Console v1.1.2
 an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native commands in embed terminal, supports Mac and Windows.
 
 #### Installation

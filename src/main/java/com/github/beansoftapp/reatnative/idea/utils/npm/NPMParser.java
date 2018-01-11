@@ -1,14 +1,11 @@
 package com.github.beansoftapp.reatnative.idea.utils.npm;
 
-import com.github.beansoftapp.reatnative.idea.models.ios.Simulators;
 import com.google.gson.Gson;
-import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.intellij.openapi.util.io.FileUtil;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -19,17 +16,23 @@ import java.util.Map;
 public class NPMParser {
     public static final List<String> parseScripts(File f) {
         List<String> list = new ArrayList<>();
+        if(!f.exists()) {
+            return list;
+        }
+
         try {
             JsonObject result = new Gson().fromJson(FileUtil.loadFile(f, "UTF-8"), JsonObject.class);
             JsonObject scripts = result.getAsJsonObject("scripts");
+            if(scripts == null) {
+                return list;// Fix NPE when there is an empty or no scripts package.json file
+            }
             for (Map.Entry<String, JsonElement> obj:
                     scripts.entrySet()) {
                 list.add(obj.getKey());
             }
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
-
 
         return list;
     }
