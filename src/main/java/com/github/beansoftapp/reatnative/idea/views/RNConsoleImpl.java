@@ -15,7 +15,6 @@ import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.util.registry.Registry;
 import com.intellij.psi.search.GlobalSearchScope;
 import org.jetbrains.annotations.NotNull;
 
@@ -52,7 +51,8 @@ public class RNConsoleImpl extends ConsoleViewImpl {
 
         @Override
         public boolean isDumbAware() {
-            return Registry.is("dumb.aware.run.configurations");
+//            return Registry.is("dumb.aware.run.configurations");
+            return true;
         }
     }
 

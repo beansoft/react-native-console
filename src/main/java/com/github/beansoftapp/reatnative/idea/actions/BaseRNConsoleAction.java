@@ -2,7 +2,6 @@ package com.github.beansoftapp.reatnative.idea.actions;
 
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.project.DumbAwareAction;
 import com.intellij.openapi.project.Project;
@@ -47,6 +46,11 @@ public abstract class BaseRNConsoleAction extends DumbAwareAction {
         project = e.getProject();
 
         doAction(e);
+    }
+
+    @Override
+    public boolean isDumbAware() {
+        return true;
     }
 
     public abstract void doAction(AnActionEvent anActionEvent);

@@ -1,22 +1,15 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
-import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
-import com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser;
-import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.ActionGroup;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.actionSystem.DataContext;
-import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.*;
-import java.io.File;
 
-/** Base action group */
+/** Base action group, allow execute during an index */
 public class BaseRNConsoleActionGroup extends ActionGroup {
     protected ReactNativeConsole terminal;
     public BaseRNConsoleActionGroup(ReactNativeConsole terminal, String text, String description, Icon icon) {
@@ -24,6 +17,10 @@ public class BaseRNConsoleActionGroup extends ActionGroup {
         this.terminal = terminal;
     }
 
+    @Override
+    public boolean isDumbAware() {
+        return true;
+    }
 
     @NotNull
     @Override

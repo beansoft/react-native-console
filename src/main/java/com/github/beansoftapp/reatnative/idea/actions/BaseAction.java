@@ -16,7 +16,9 @@ import javax.swing.*;
 import java.io.File;
 
 /**
- * Created by pengwei on 16/9/11.
+ * Base action with DumbAware enabled, allow to run during index.
+ * @author beansoft
+ * @date 2018-01-16
  */
 public abstract class BaseAction extends AnAction {
 
@@ -26,6 +28,11 @@ public abstract class BaseAction extends AnAction {
 
     public BaseAction(Icon icon) {
         super(icon);
+    }
+
+    @Override
+    public boolean isDumbAware() {
+        return true;
     }
 
     @Override
