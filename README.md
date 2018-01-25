@@ -1,5 +1,5 @@
-# React Native Console v1.1.2
-an IDEA/WebStorm/Android Studio Plugin for One-Click run React Native commands in embed terminal, supports Mac and Windows.
+# React Native Console v1.1.3
+An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the must have WebStorm plugin for React Native developers.
 
 #### Installation
 First, please setup your React Native dev env:
@@ -102,7 +102,7 @@ npm 添加项目, 开发和全局依赖<br/>
 
 #### ScreenShot
 
-<img src="https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/ReactNativeConsole.png" width="612" height="149" alt="ScreenShot" align=center />
+<img src="https://plugins.jetbrains.com/files/9564/screenshot_17784.png" width="675" height="167" alt="ScreenShot" align=center />
 
 #### Demo Gif
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
