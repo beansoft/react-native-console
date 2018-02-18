@@ -6,6 +6,7 @@ import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
+import com.intellij.execution.filters.HyperlinkInfoBase;
 import com.intellij.execution.impl.ConsoleViewImpl;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.openapi.actionSystem.*;
@@ -18,11 +19,13 @@ import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener;
+import com.intellij.ui.awt.RelativePoint;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import com.intellij.ui.content.ContentManager;
 import com.intellij.ui.content.impl.ContentImpl;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import org.jetbrains.plugins.terminal.AbstractTerminalRunner;
 import org.jetbrains.plugins.terminal.JBTabbedTerminalWidget;
 
@@ -75,6 +78,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     }
 
     /**
+     * @deprecated
      * Create a terminal panel
      *
      * @param terminalRunner
@@ -268,6 +272,18 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                     ConsoleViewContentType.NORMAL_OUTPUT);
             consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console",
                     new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
+
+            consoleView.print(
+                    "\n\nJs project work directory is not root directory? ",
+                    ConsoleViewContentType.NORMAL_OUTPUT);
+            consoleView.printHyperlink("CLICK HERE to EDIT",
+                    new HyperlinkInfoBase() {
+                        @Override
+                        public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
+                            EditJsAppPathAction.doEditJsProjectPath(project);
+                        }
+                    });
+
             if(SystemInfoRt.isLinux) {
                 consoleView.print(
                         "\n\n===========Linux Users PLEASE README FIRST ===========\nIf you found issue when click on the \"Debug Android\" button, error message: \n" +
@@ -345,6 +361,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         // Android
         group.addSeparator();
+        group.add(new EditJsAppPathAction(this));
+        group.addSeparator();
+
         group.add(new AndroidDevMenuAction(this));
         group.add(new AndroidRefreshAction(this));
         group.add(new AdbForwardAction(this));

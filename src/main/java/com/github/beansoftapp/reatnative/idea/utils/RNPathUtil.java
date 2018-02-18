@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.util.io.FileUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -12,10 +13,7 @@ import java.io.FileFilter;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Utils for find some dirs.
@@ -32,7 +30,7 @@ public class RNPathUtil {
      * @param project
      * @return
      */
-    private static String getRNProjectRootPathFromConfig(Project project) {
+    public static String getRNProjectRootPathFromConfig(Project project) {
         String path = project.getBasePath();
         File file = new File(path, RN_CONSOLE_FILE);
         if (file.exists()) {
@@ -47,6 +45,37 @@ public class RNPathUtil {
     }
 
     /**
+     * Get the original react native project root path from config file.
+     * @param project
+     * @return
+     */
+    public static String getRNProjectRawRootPathFromConfig(Project project) {
+        String path = project.getBasePath();
+        File file = new File(path, RN_CONSOLE_FILE);
+        if (file.exists()) {
+            String p = parseCurrentPathFromRNConsoleJsonFile(file);
+            if(p != null) {
+                return p;
+            }
+            return null;
+        } else {
+            return null;
+        }
+    }
+
+    /**
+     * Get the real react native project root path.
+     * @param project
+     * @param jsAppPath root project of js project
+     * @return
+     */
+    public static void saveRNProjectRootPathToConfig(Project project, String jsAppPath) {
+        String path = project.getBasePath();
+        File file = new File(path, RN_CONSOLE_FILE);
+        saveCurrentPathToRNConsoleJsonFile(file, jsAppPath);
+    }
+
+    /**
      * Parse current path from given rn console file.
      * @param f file
      * @return
@@ -58,6 +87,18 @@ public class RNPathUtil {
         } catch (IOException e) {
             e.printStackTrace();
             return null;
+        }
+    }
+
+    public static void saveCurrentPathToRNConsoleJsonFile(File f, String jsAppPath) {
+        try {
+            Map m = new HashMap();
+            m.put("currentPath", jsAppPath);
+            String json = new Gson().toJson(m, Map.class);
+            System.out.println("json=" + json);
+            FileUtil.writeToFile(f, json);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 

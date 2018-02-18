@@ -73,6 +73,8 @@ public class PluginIcons {
 
     public static Icon NPMStart = new OverlayIcon(Npm).add(Execute);
 
+    public static final Icon EditFolder = AllIcons.Modules.EditFolder;
+
     private static Icon load(String path) {
         try {
             return IconLoader.getIcon(path, PluginIcons.class);

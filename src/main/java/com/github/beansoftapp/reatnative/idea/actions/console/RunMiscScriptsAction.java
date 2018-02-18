@@ -7,7 +7,6 @@ import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 /**
  * 2018-01-04
  * Dependencies management for yarn and npm
- * TODO dev depencies and global deps
  * @author beansoft
  * run misc add commands */
 public class RunMiscScriptsAction extends BaseRunNPMScriptsAction {
