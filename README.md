@@ -1,4 +1,4 @@
-# React Native Console v1.1.3
+# React Native Console v1.1.4
 An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the must have WebStorm plugin for React Native developers.
 
 #### Installation
@@ -17,7 +17,8 @@ Now restart IDEA and enjoy!
 Java 8 required to run the IDE.<br/>
 
 ## Settings(Optional, only need if js project dir can't be auto find)
-Specify js project work directory rather than root directory, eg ./jsapp , you must create a file named .idea/.rnconsole, which content should like this:
+Specify js project work directory rather than root directory, eg ./jsapp , now can from welcome screen or toolbar to edit this property. And the final value is stored in a file named .idea/.rnconsole, which content should like this:
+
 ```json
 {
   currentPath: './jsapp'
@@ -84,7 +85,7 @@ npm 添加项目, 开发和全局依赖<br/>
 最近编辑位置(主工具栏)<br/>
 在Finder/Explorer中显示文件(main toolbar)<br/>
 在Finder/Explorer中显示项目目录<br/>
-指定JS项目工作目录, 例如 ./jsapp (**可选**, 必须在.idea目录创建文件 `.rnconsole` , 内容和下面类似:
+指定JS项目工作目录, 例如 ./jsapp, 通过欢迎屏幕或者工具栏按钮 (**可选**, 设置后在.idea目录创建文件 `.rnconsole` , 内容和下面类似:
 
 ```json
 {
@@ -95,7 +96,7 @@ npm 添加项目, 开发和全局依赖<br/>
 之后所有的 npm 命令都会用这个目录作为启动目录<br/>
 <br/>
 
-最近更新: 一键重新执行, 重用执行窗口, 可读性强的图标和标题, 执行结果支持查找.<br/>
+最近更新: 指定JS项目工作目录, 例如 ./jsapp, 可通过欢迎屏幕或者工具栏按钮来完成.<br/>
 
 自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
 <br/>

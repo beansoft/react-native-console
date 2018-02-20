@@ -22,7 +22,8 @@ import java.util.*;
 public class RNPathUtil {
     public static final String PACKAGE_JSON = "package.json";
     static String GRADLE_FILE = "build.gradle";
-    static String RN_CONSOLE_FILE = ".idea" + File.separator + ".rnconsole";
+    static String _IDEA_DIR = ".idea" + File.separator;
+    static String RN_CONSOLE_FILE = _IDEA_DIR + ".rnconsole";
     // add rnconsole config file to .idea project @since 1.0.8
 
     /**
@@ -71,6 +72,11 @@ public class RNPathUtil {
      */
     public static void saveRNProjectRootPathToConfig(Project project, String jsAppPath) {
         String path = project.getBasePath();
+        File ideaFolder = new File(path, _IDEA_DIR);
+        if(!ideaFolder.exists()) {
+            ideaFolder.mkdirs();
+        }
+
         File file = new File(path, RN_CONSOLE_FILE);
         saveCurrentPathToRNConsoleJsonFile(file, jsAppPath);
     }

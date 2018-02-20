@@ -274,7 +274,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                     new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
 
             consoleView.print(
-                    "\n\nJs project work directory is not root directory? ",
+                    "\n\nJs project working directory is not root directory? ",
                     ConsoleViewContentType.NORMAL_OUTPUT);
             consoleView.printHyperlink("CLICK HERE to EDIT",
                     new HyperlinkInfoBase() {

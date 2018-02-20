@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.3</version>
+    <version>1.1.4</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -40,7 +40,7 @@
       Last Edit Location(main toolbar)<br/>
       Reveal file in Finder/Explorer(main toolbar)<br/>
       Reveal project folder in Finder/Explorer<br/>
-      Specify js project work directory, eg ./jsapp (optional, see https://github.com/beansoftapp/react-native-console for more info)<br/>
+      Specify js project work directory, eg ./jsapp, from welcome screen or toolbar (optional, see https://github.com/beansoftapp/react-native-console for more info)<br/>
       <br/>
 
       New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
@@ -80,7 +80,7 @@
       最近编辑位置(主工具栏)<br/>
       在Finder/Explorer中显示文件(main toolbar)<br/>
       在Finder/Explorer中显示项目目录<br/>
-      指定JS项目工作目录, 例如 ./jsapp (可选, 更多信息参考 https://github.com/beansoftapp/react-native-console)<br/>
+      指定JS项目工作目录, 例如 ./jsapp, 通过欢迎屏幕或者工具栏按钮 (可选, 更多信息参考 https://github.com/beansoftapp/react-native-console)<br/>
       <br/>
 
       最近更新: 一键重新执行, 重用执行窗口, 可读性强的图标和标题, 执行结果支持查找.<br/>
@@ -106,6 +106,10 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.1.4</b><br/>
+          Now can from welcome screen or toolbar to specify js project work directory, eg ./jsapp, <br/>
+        </li>
         <li>
           <b>1.1.3</b><br/>
           Fix Bug Update failed for ActionGroup: Rerun, which cause the plugin crash.

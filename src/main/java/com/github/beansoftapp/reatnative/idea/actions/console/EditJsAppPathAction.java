@@ -28,10 +28,14 @@ public class EditJsAppPathAction extends BaseRNConsoleAction {
         doEditJsProjectPath(getProject());
     }
 
+    /**
+     * Edit given project's js project work directory
+     * @param project
+     */
     public static void doEditJsProjectPath(Project project) {
         String path = Messages.showInputDialog(project,
-                "Specify js project work directory rather than root directory, eg ./jsapp\nThe value is stored in file .idea/.rnconsole",
-                "input js working directory",
+                "Specify js project working directory rather than root directory, eg ./jsapp\nThe value is stored in file .idea/.rnconsole",
+                "Input js working directory",
                 PluginIcons.EditFolder,
                 RNPathUtil.getRNProjectRawRootPathFromConfig(project),
                 new InputValidator() {
