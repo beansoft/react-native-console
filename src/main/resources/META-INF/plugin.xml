@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.4</version>
+    <version>1.1.5</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -107,6 +107,11 @@
     <change-notes><![CDATA[
       <ul>
         <li>
+          <b>1.1.5</b><br/>
+         fix issue https://github.com/beansoftapp/react-native-console/issues/24 , now bundle command will support both index.js
+         and legacy index.android.js/index.ios.js <br/>
+        </li>
+        <li>
           <b>1.1.4</b><br/>
           Now can from welcome screen or toolbar to specify js project work directory, eg ./jsapp, <br/>
         </li>
@@ -185,8 +190,10 @@
     <depends>org.jetbrains.plugins.terminal</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- 注意 id 中不能有空格! RNToolWindowFactory中的ID定义也一样! -->
-        <toolWindow id="ReactNative" anchor="bottom" icon="/icons/ReactNative.png"
+        <!-- 注意 id 中不能有空格! RNToolWindowFactory.java中的ID定义也一样!
+        Warning: the tool window id should't cotains any space char, same ID value constraint in file RNToolWindowFactory.java
+        -->
+        <toolWindow id="RNConsole" anchor="bottom" icon="/icons/ReactNative.png"
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->

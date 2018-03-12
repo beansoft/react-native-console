@@ -37,7 +37,9 @@ public class AndroidBundleAction extends BaseRNConsoleNPMAction {
 
     @Override
     protected String command() {
-        return "react-native bundle --platform android --entry-file index.android.js --reset-cache --bundle-output android/app/src/main/assets/index.android.bundle --dev false --assets-dest android/app/src/main/res/";
+        return "react-native bundle --platform android --entry-file "
+                + RNPathUtil.getIndexJSFilePath(getProject(), "index.android.js") +
+                " --reset-cache --bundle-output android/app/src/main/assets/index.android.bundle --dev false --assets-dest android/app/src/main/res/";
 //            return "react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output ./bundle-android/index.android.bundle --assets-dest ./bundle-android";
     }
 }

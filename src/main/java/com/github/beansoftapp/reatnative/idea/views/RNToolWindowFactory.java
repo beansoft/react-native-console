@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
  */
 public class RNToolWindowFactory implements ToolWindowFactory, DumbAware {
 
-    public static final String TOOL_WINDOW_ID = "ReactNative";
+    public static final String TOOL_WINDOW_ID = "RNConsole";
 
     public RNToolWindowFactory() {
     }

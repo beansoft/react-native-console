@@ -1,5 +1,5 @@
-# React Native Console v1.1.4
-An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the must have WebStorm plugin for React Native developers.
+# React Native Console v1.1.5
+An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the No.1 WebStorm plugin for React Native developers
 
 #### Installation
 First, please setup your React Native dev env:
@@ -53,6 +53,8 @@ Auto detect React Native package.json or build.gradle in current folder and pare
 thus the command will auto execute in the correct folder<br/>
 
 
+
+>————— Below is Chinese introduction —————
 
 <h2>功能</h2>
 一键运行下列功能:<br/>

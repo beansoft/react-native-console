@@ -31,7 +31,7 @@ public class RNPathUtil {
      * @param project
      * @return
      */
-    public static String getRNProjectRootPathFromConfig(Project project) {
+    private static String getRNProjectRootPathFromConfig(Project project) {
         String path = project.getBasePath();
         File file = new File(path, RN_CONSOLE_FILE);
         if (file.exists()) {
@@ -86,7 +86,7 @@ public class RNPathUtil {
      * @param f file
      * @return
      */
-    public static String parseCurrentPathFromRNConsoleJsonFile(File f) {
+    private static String parseCurrentPathFromRNConsoleJsonFile(File f) {
         try {
             Map m = new Gson().fromJson(new FileReader(f), Map.class);
             return (String) m.get("currentPath");
@@ -96,7 +96,7 @@ public class RNPathUtil {
         }
     }
 
-    public static void saveCurrentPathToRNConsoleJsonFile(File f, String jsAppPath) {
+    private static void saveCurrentPathToRNConsoleJsonFile(File f, String jsAppPath) {
         try {
             Map m = new HashMap();
             m.put("currentPath", jsAppPath);
@@ -109,7 +109,9 @@ public class RNPathUtil {
     }
 
     /**
-     * 获取React Native的根目录, 在Android Studio中运行时可能会在android的上一级目录.
+     * Get the real React Native project root path of current project file, when running in Android Studio,
+     * this path might be the parent dir of 'android/'.
+     * 获取的根目录, 在Android Studio中运行时可能会在android的上一级目录.
      *
      * @return
      */
@@ -137,17 +139,18 @@ public class RNPathUtil {
     }
 
     /**
-     * 获取React Native的根目录, 在Android Studio中运行时可能会在android的上一级目录.
+     * Get the real android project root path, which contains build.gradle file.
      *
-     * @param inputDir
+     * @param inputDir root search dir
      * @return
      */
     public static String getAndroidProjectPath(String inputDir) {
         File file = new File(inputDir, GRADLE_FILE);
+        // Search root
         if (file.exists()) {
             return inputDir;
         } else {
-
+            // search sub folders which might contains build.gradle file
             File[] subfolders = new File(inputDir).listFiles(new FileFilter() {
                 @Override
                 public boolean accept(File pathname) {
@@ -170,6 +173,8 @@ public class RNPathUtil {
 
         return null;
     }
+
+
 
     /**
      * Get the full path of an exe file by the IDEA platform.
@@ -220,28 +225,36 @@ public class RNPathUtil {
         return fullPath;
     }
 
+    /**
+     * Get the root React Native project entry js file name, from RN 0.40, it's in file index.js, old version will
+     * be index.android.js or index.ios.js
+     *
+     * @param project current project
+     * @param defaultFileName default file name to find
+     *
+     * @return js entry file name for bundle exec
+     */
+    public static String getIndexJSFilePath(Project project, String defaultFileName) {
+        String npmLocation = RNPathUtil.getRNProjectPath(project);
+
+        if (npmLocation == null) {
+            return defaultFileName;
+        }
+
+        File file = new File(npmLocation, defaultFileName);
+        if (file.exists()) {
+            return defaultFileName;
+        } else {
+            return "index.js";// for newest RN version
+        }
+    }
+
     public static String getExecuteFullPathSingle(String exeName) {
         List<File> fromPath = PathEnvironmentVariableUtil.findAllExeFilesInPath(exeName);
         if (fromPath != null && fromPath.size() > 0) {
             return fromPath.get(0).toString();
         }
         return null;
-    }
-
-    public static String createAdbCommand(String args) {
-        String adbFullPath = getExecuteFileFullPath("adb");
-        if (adbFullPath != null) {
-            return adbFullPath + " " + args;
-        }
-        return "adb" + " " + args;
-    }
-
-    public static String createCommand(String exe, String args) {
-        String adbFullPath = getExecuteFileFullPath(exe);
-        if (adbFullPath != null) {
-            return adbFullPath + " " + args;
-        }
-        return exe + " " + args;
     }
 
 

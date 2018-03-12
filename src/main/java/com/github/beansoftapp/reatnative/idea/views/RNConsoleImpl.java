@@ -99,7 +99,7 @@ public class RNConsoleImpl extends ConsoleViewImpl {
     }
 
     /**
-     * 执行shell
+     * Execute some shell with giving working directory.
      *
      * @param shell
      */
