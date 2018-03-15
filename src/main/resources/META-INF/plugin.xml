@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.5</version>
+    <version>1.1.6</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -106,6 +106,10 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+          <b>1.1.6</b><br/>
+         fix an regression bug in ios bundle command which was introduced in 1.1.5<br/>
+        </li>
         <li>
           <b>1.1.5</b><br/>
          fix issue https://github.com/beansoftapp/react-native-console/issues/24 , now bundle command will support both index.js

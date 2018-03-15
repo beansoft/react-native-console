@@ -35,6 +35,6 @@ public class IOSBundleAction extends BaseRNConsoleNPMAction {
     protected String command() {
         return "react-native bundle --platform ios --entry-file "
                 + RNPathUtil.getIndexJSFilePath(getProject(), "index.ios.js") +
-                " --reset-cache --bundle-output ios/bundle/ main.jsbundle --dev false --assets-dest ios/bundle/";
+                " --reset-cache --bundle-output ios/bundle/main.jsbundle --dev false --assets-dest ios/bundle/";
     }
 }
