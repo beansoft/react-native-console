@@ -392,6 +392,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             group.addSeparator();
 
             group.add(new RunIOSAction(this));
+            group.add(new RunRNDebuggerAction(this));
             group.add(new NPMiOSLogsAction(this));
             group.add(new IOSBundleAction(this));
             group.add(new RunIOSDeviceAction(this));
