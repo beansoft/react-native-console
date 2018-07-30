@@ -11,6 +11,7 @@ import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
 
 /**
+ * Run on Physical iOS Device
  * @author beansoft
  */
 public class RunIOSDeviceAction extends BaseRNConsoleNPMAction {

@@ -1,4 +1,4 @@
-# React Native Console v1.1.5
+# React Native Console v1.1.7
 An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the No.1 WebStorm plugin for React Native developers
 
 #### Installation
@@ -47,7 +47,11 @@ https://github.com/beansoftapp/react-native-console/issues/17
 
 
 ## Features## 
-list and run scripts in package.json<br>One-Click run following commands:<br/>Ctrl + F2 to reload android js bundle<br>list and run scripts in package.json<br>react-native run-android<br/>react-native link<br/>react-native run-ios<br/>run with physical iOS device<br/>list all iOS devices(include simulator and physical) and run target one <br/>npm run start<br/>npm install<br/>Open dev menu on Android device(adb shell input keyevent 82)<br/>forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>Android Reloading JavaScript<br/>open React Native debugger ui(Chrome browser required)<br/>react-native log-android<br/>react-native log-ios<br/>gradlew assembleRelease<br/>react-native bundle --platform android/ios --dev false<br/>yarn<br/>jest<br/>react-native uninstall<br/>react-native start<br/>gradlew clean<br/>react-native react-native-git-upgrade<br/>yarn add project, dev, global dependencies<br/>npm add project, dev, global dependencies<br/>auto install and run react-devtools<br/>Last Edit Location(main toolbar)<br/>Reveal file in Finder/Explorer(main toolbar)<br/>Reveal project folder in Finder/Explorer<br/><br/>
+list and run scripts in package.json<br>One-Click run following commands:<br/>
+
+run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)
+
+Ctrl + F2 to reload android js bundle<br>list and run scripts in package.json<br>react-native run-android<br/>react-native link<br/>react-native run-ios<br/>run with physical iOS device<br/>list all iOS devices(include simulator and physical) and run target one <br/>npm run start<br/>npm install<br/>Open dev menu on Android device(adb shell input keyevent 82)<br/>forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>Android Reloading JavaScript<br/>open React Native debugger ui(Chrome browser required)<br/>react-native log-android<br/>react-native log-ios<br/>gradlew assembleRelease<br/>react-native bundle --platform android/ios --dev false<br/>yarn<br/>jest<br/>react-native uninstall<br/>react-native start<br/>gradlew clean<br/>react-native react-native-git-upgrade<br/>yarn add project, dev, global dependencies<br/>npm add project, dev, global dependencies<br/>auto install and run react-devtools<br/>Last Edit Location(main toolbar)<br/>Reveal file in Finder/Explorer(main toolbar)<br/>Reveal project folder in Finder/Explorer<br/><br/>
 New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
 Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio),
 thus the command will auto execute in the correct folder<br/>
@@ -58,7 +62,9 @@ thus the command will auto execute in the correct folder<br/>
 
 <h2>功能</h2>
 一键运行下列功能:<br/>
-列出并执行package.json中的scripts定义<br>
+
+运行 React Native Debugger https://github.com/jhen0409/react-native-debugger(仅支持Mac)列出并执行package.json中的scripts定义<br>
+
 react-native run-android<br/>
 react-native link<br/>
 react-native run-ios<br/>
@@ -103,9 +109,15 @@ npm 添加项目, 开发和全局依赖<br/>
 自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
 <br/>
 
+####Contributors
+
+https://github.com/beansoftapp beansoft@126.com
+
+https://github.com/troublediehard dmportenko@gmail.com
+
 #### ScreenShot
 
-<img src="https://plugins.jetbrains.com/files/9564/screenshot_17784.png" width="675" height="167" alt="ScreenShot" align=center />
+![](https://plugins.jetbrains.com/files/9564/screenshot_17784.png)
 
 #### Demo Gif
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)

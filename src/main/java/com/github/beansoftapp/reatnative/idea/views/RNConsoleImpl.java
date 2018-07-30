@@ -19,7 +19,7 @@ import com.intellij.psi.search.GlobalSearchScope;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * A React Native Console, which can reuse window and execute commands.
+ * A React Native Console, which can reuse console and execute commands. With rerun supports.
  * Created by beansoft on 2017/5/25.
  */
 public class RNConsoleImpl extends ConsoleViewImpl {
@@ -174,7 +174,7 @@ public class RNConsoleImpl extends ConsoleViewImpl {
         }
     }
 
-    /* process command line, will very simple console view and tool window */
+    /* process command line, with very simple console view and tool window */
     private void processCommandline(GeneralCommandLine commandLine) throws ExecutionException {
         if(myProcessHandler != null) {
             myProcessHandler.destroyProcess();
@@ -199,11 +199,11 @@ public class RNConsoleImpl extends ConsoleViewImpl {
 //        });
     }
 
-    /* process attach to console,show the log */
+    /* process attach to console, show the shell execution log */
     // TODO: 2016/9/14 0014 need refactor console method
     private void processConsole(ProcessHandler processHandler) {
         attachToProcess(processHandler);
-        processHandler.startNotify();// Don't call this, the command content will not be shown
+        processHandler.startNotify();// If not call this, the command content will not be shown
     }
 
     /**

@@ -18,7 +18,7 @@ public class RNToolWindowFactory implements ToolWindowFactory, DumbAware {
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
-//        ReactNativeTerminal.getInstance(project).initTerminal(toolWindow);
-        ReactNativeConsole.getInstance(project).initTerminal(toolWindow);
+//        ReactNativeTerminal.getInstance(project).init(toolWindow);
+        ReactNativeConsole.getInstance(project).init(toolWindow);
     }
 }

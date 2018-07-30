@@ -39,7 +39,7 @@ import java.util.List;
 /**
  * A React Native Console with console view as process runner, no more depends on terminal widget,
  * thus tabs could be reused.
- * Created by beansoft@126.com on 17/4/27.
+ * Created by beansoft@126.com on 2017/4/27.
  */
 public class ReactNativeConsole implements FocusListener, ProjectComponent {
     private Project myProject;
@@ -79,7 +79,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
     /**
      * @deprecated
-     * Create a terminal panel
+     * Create a terminal panel, for test purpose only.
      *
      * @param terminalRunner
      * @param toolWindow
@@ -126,7 +126,11 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         return content;
     }
 
-    public void initTerminal(final ToolWindow toolWindow) {
+    /**
+     * Init and show this console.
+     * @param toolWindow
+     */
+    public void init(final ToolWindow toolWindow) {
         toolWindow.setToHideOnEmptyContent(true);
         toolWindow.setStripeTitle("RN Console");
         toolWindow.setIcon(PluginIcons.React);
@@ -155,7 +159,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                 if (window != null) {
                     boolean visible = window.isVisible();
                     if (visible && toolWindow.getContentManager().getContentCount() == 0) {
-                        initTerminal(window);
+                        init(window);
                     }
                 }
             }
@@ -164,9 +168,11 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     }
 
     /**
-     * 执行shell
+     * Execute some shell and get outputs
      *
-     * @param shell
+     * @param shell the command
+     * @param displayName the name to display on tab
+     * @param icon the icon on tab
      */
     public void executeShell(String shell, String workDirectory, String displayName, Icon icon) {
         RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
@@ -176,10 +182,11 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     }
 
     /**
-     * 执行shell
-     * 利用terminal换行即执行原理
+     * Run gradle commands.
      *
-     * @param shell
+     * @param shell the gradle command
+     * @param displayName the name to display on tab
+     * @param icon the icon on tab
      */
     public void runGradleCI(String shell, String displayName, Icon icon) {
         RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
@@ -189,10 +196,11 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     }
 
     /**
-     * 执行shell
-     * 利用terminal换行即执行原理
+     * Run npm commands.
      *
-     * @param shell
+     * @param shell the gradle command
+     * @param displayName the name to display on tab
+     * @param icon the icon on tab
      */
     public void runNPMCI(String shell, String displayName, Icon icon) {
         RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
@@ -202,7 +210,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     }
 
     /**
-     * 获取 RN Console实例.
+     * Get the RN Console instance.
      *
      * @param displayName - the tab's display name must be unique.
      * @param icon        - used to set a tab icon, not used for search
@@ -286,7 +294,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
             if(SystemInfoRt.isLinux) {
                 consoleView.print(
-                        "\n\n===========Linux Users PLEASE README FIRST ===========\nIf you found issue when click on the \"Debug Android\" button, error message: \n" +
+                        "\n\n===========Linux Users PLEASE README FIRST ===========\nIf you found issue when click " +
+                                "on the \"Debug Android\" button, error message: \n" +
                                 " \"SDK location not found \", please fix it like this :\n" +
                                 "add a android local config file:\n" +
                                 "yourapp/android/local.properties\n" +
@@ -316,7 +325,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             // Create left console and normal toolbars
             DefaultActionGroup toolbarActions = new DefaultActionGroup();
             AnAction[]
-                    consoleActions = consoleView.createConsoleActions();// 必须在 consoleView.getComponent() 调用后组件真正初始化之后调用
+                    consoleActions = consoleView.createConsoleActions();
+            // createConsoleActions() Must be called after consoleView.getComponent() was invoked, after the component really inited, otherwise will got NPE
+
             // resort console actions to move scroll to end and clear to top
             List<AnAction> resortActions = new ArrayList<>();
             if(consoleActions != null) {
@@ -432,22 +443,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
     @Override
     public void focusLost(FocusEvent e) {
-    }
-
-    @Override
-    public void projectOpened() {
-    }
-
-    @Override
-    public void projectClosed() {
-    }
-
-    @Override
-    public void initComponent() {
-    }
-
-    @Override
-    public void disposeComponent() {
     }
 
     @NotNull

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -11,6 +11,7 @@
 
       <h2>Features</h2><br/>
       One-Click run following commands:<br/>
+      run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)<br>
       Ctrl + F2 to reload android js bundle<br>
       list and run scripts in package.json<br>
       react-native run-android<br/>
@@ -51,6 +52,7 @@
 
       <h2>功能</h2>
       一键运行下列功能:<br/>
+      运行 React Native Debugger https://github.com/jhen0409/react-native-debugger(仅支持Mac)<br>
       Ctrl + F2 安卓设备重新加载JS bundle<br>
       列出并执行package.json中的scripts定义<br>
       react-native run-android<br/>
@@ -89,7 +91,9 @@
       <br/>
 
       <br/><b>Contributors</b><br/>
-      <a href='https://github.com/beansoftapp'>beansoft@126.com</a>
+      <a href='https://github.com/beansoftapp'>beansoft@126.com</a><br>
+      <a href='https://github.com/troublediehard'>dmportenko@gmail.com</a>
+
 
       <br/><b>Installation</b><br/>
       First, please setup your React Native dev env:
@@ -101,11 +105,15 @@
       <b>ISSUES</b><br/>
       <a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a><br/><br/>
 
-      <img src="https://download.plugins.jetbrains.com/9564/screenshot_17392.png" width='552' height='201' /><br/><br/>
+      <img src="https://plugins.jetbrains.com/files/9564/screenshot_17784.png" width='552' height='201' /><br/><br/>
     ]]></description>
 
     <change-notes><![CDATA[
       <ul>
+      <li>
+         <b>1.1.7</b><br/>
+         run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)<br/>
+        </li>
         <li>
           <b>1.1.6</b><br/>
          fix an regression bug in ios bundle command which was introduced in 1.1.5<br/>
@@ -138,31 +146,6 @@
           Add react-devtools<br/>
           Support yarn add project, dev, global dependencies<br/>
           Support npm add project, dev, global dependencies<br/>
-        </li>
-        <li>
-          <b>1.1.0</b><br/>
-          Add tips for Linux users to fix can't found adb issue<br/>
-          Fix log-android unicode/Chinese display issue on Windows<br/>
-          Add android refresh JS short cut key: ctrl+F2
-        </li>
-        <li>
-          <b>1.0.9</b><br/>
-          list and run scripts in package.json
-        </li>
-        <li>
-          <b>1.0.8</b><br/>
-          yarn<br/>
-          jest<br/>
-          Last Edit Location(main toolbar)<br/>
-          Reveal file in Finder/Explorer(main toolbar)<br/>
-          Reveal project folder in Finder/Explorer<br/>
-          Specify js project work directory, eg ./jsapp (optional, see https://github.com/beansoftapp/react-native-console for more info)
-        </li>
-        <li>
-          <b>1.0.7</b><br/>
-          iOS New Feature only:
-          run with physical iOS device<br/>
-          list all iOS devices(include simulator and physical) and run target one
         </li>
 
        ...
