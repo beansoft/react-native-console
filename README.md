@@ -1,7 +1,7 @@
 # React Native Console v1.1.7
 An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the No.1 WebStorm plugin for React Native developers
 
-#### Installation
+## Installation
 First, please setup your React Native dev env:
 https://facebook.github.io/react-native/docs/getting-started.html
 
@@ -13,7 +13,7 @@ Or<br/>you can munally install jar file react-native-console.jar as a plugin to 
 Now restart IDEA and enjoy!
 
 
-#### Note
+## Note
 Java 8 required to run the IDE.<br/>
 
 ## Settings(Optional, only need if js project dir can't be auto find)
@@ -46,7 +46,7 @@ More info please ref this issue:
 https://github.com/beansoftapp/react-native-console/issues/17
 
 
-## Features## 
+## Features
 list and run scripts in package.json<br>One-Click run following commands:<br/>
 
 run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)
@@ -60,7 +60,7 @@ thus the command will auto execute in the correct folder<br/>
 
 >————— Below is Chinese introduction —————
 
-<h2>功能</h2>
+##功能
 一键运行下列功能:<br/>
 
 运行 React Native Debugger https://github.com/jhen0409/react-native-debugger(仅支持Mac)列出并执行package.json中的scripts定义<br>
@@ -107,19 +107,18 @@ npm 添加项目, 开发和全局依赖<br/>
 最近更新: 指定JS项目工作目录, 例如 ./jsapp, 可通过欢迎屏幕或者工具栏按钮来完成.<br/>
 
 自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
-<br/>
 
-####Contributors
+##Contributors
 
 https://github.com/beansoftapp beansoft@126.com
 
 https://github.com/troublediehard dmportenko@gmail.com
 
-#### ScreenShot
+## ScreenShot
 
 ![](https://plugins.jetbrains.com/files/9564/screenshot_17784.png)
 
-#### Demo Gif
+## Demo Gif
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
 
 
