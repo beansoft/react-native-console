@@ -61,6 +61,9 @@ thus the command will auto execute in the correct folder<br/>
 >————— Below is Chinese introduction —————
 
 ##功能
+
+
+
 一键运行下列功能:<br/>
 
 运行 React Native Debugger https://github.com/jhen0409/react-native-debugger(仅支持Mac)列出并执行package.json中的scripts定义<br>
@@ -108,7 +111,11 @@ npm 添加项目, 开发和全局依赖<br/>
 
 自动在当前目录和父级目录检测 React Native的package.json文件位置(比如在Android Studio中只开发Java代码时), 这样所有的npm相关的命令都会自动在正确的目录执行<br/>
 
+
+
 ##Contributors
+
+
 
 https://github.com/beansoftapp beansoft@126.com
 
