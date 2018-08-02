@@ -445,6 +445,30 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     public void focusLost(FocusEvent e) {
     }
 
+    /* ========= below 4 methods must be keeped otherwise old version IDEA 2016.3 will crash
+    see: https://github.com/beansoftapp/react-native-console/issues/26
+    ERROR - ij.components.ComponentManager - com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole.disposeComponent()V
+java.lang.AbstractMethodError: com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole.disposeComponent()V
+     */
+
+    @Override
+    public void projectOpened() {
+    }
+
+    @Override
+    public void projectClosed() {
+    }
+
+    @Override
+    public void initComponent() {
+    }
+
+    @Override
+    public void disposeComponent() {
+    }
+
+    // ========== end old version support
+
     @NotNull
     @Override
     public String getComponentName() {

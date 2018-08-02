@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.7</version>
+    <version>1.1.8</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -110,7 +110,11 @@
 
     <change-notes><![CDATA[
       <ul>
-      <li>
+         <li>
+         <b>1.1.8</b><br/>
+         fix plugin crash regression bug introduced with v1.1.7 on IDEA 2016.3 https://github.com/beansoftapp/react-native-console/issues/26<br/>
+        </li>
+        <li>
          <b>1.1.7</b><br/>
          run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)<br/>
         </li>
