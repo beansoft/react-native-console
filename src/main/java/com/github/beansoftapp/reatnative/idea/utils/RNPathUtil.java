@@ -96,9 +96,27 @@ public class RNPathUtil {
         }
     }
 
+    /**
+     * Parse config from given rn console file.
+     * @param f file
+     * @return
+     */
+    private static Map parseConfigFromRNConsoleJsonFile(File f) {
+        Map newMap = new HashMap();
+
+        try {
+            Map m = new Gson().fromJson(new FileReader(f), Map.class);
+            newMap.putAll(m);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return newMap;
+    }
+
     private static void saveCurrentPathToRNConsoleJsonFile(File f, String jsAppPath) {
         try {
-            Map m = new HashMap();
+            Map m = parseConfigFromRNConsoleJsonFile(f);
             m.put("currentPath", jsAppPath);
             String json = new Gson().toJson(m, Map.class);
             System.out.println("json=" + json);
