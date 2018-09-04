@@ -24,6 +24,7 @@ import java.util.Arrays;
 /**
  * Created by beansoft on 17/4/1.
  */
+@Deprecated
 public class RunnerUtil {
 
     public static final ConsoleView showHelperProcessRunContent(String header, OSProcessHandler runHandler, Project project, Executor defaultExecutor) {

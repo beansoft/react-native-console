@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.8</version>
+    <version>1.1.9</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -42,6 +42,7 @@
       Reveal file in Finder/Explorer(main toolbar)<br/>
       Reveal project folder in Finder/Explorer<br/>
       Specify js project work directory, eg ./jsapp, from welcome screen or toolbar (optional, see https://github.com/beansoftapp/react-native-console for more info)<br/>
+      Modify Metro Bundler port(need React Native 0.56+)<br/>
       <br/>
 
       New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
@@ -83,6 +84,7 @@
       在Finder/Explorer中显示文件(main toolbar)<br/>
       在Finder/Explorer中显示项目目录<br/>
       指定JS项目工作目录, 例如 ./jsapp, 通过欢迎屏幕或者工具栏按钮 (可选, 更多信息参考 https://github.com/beansoftapp/react-native-console)<br/>
+      修改 Metro Bundler 端口(需要 React Native 0.56+)<br/>
       <br/>
 
       最近更新: 一键重新执行, 重用执行窗口, 可读性强的图标和标题, 执行结果支持查找.<br/>
@@ -110,6 +112,10 @@
 
     <change-notes><![CDATA[
       <ul>
+         <li>
+         <b>1.1.9</b><br/>
+         allow custom metro port, fix https://github.com/beansoftapp/react-native-console/issues/27<br/>
+        </li>
          <li>
          <b>1.1.8</b><br/>
          fix plugin crash regression bug introduced with v1.1.7 on IDEA 2016.3 https://github.com/beansoftapp/react-native-console/issues/26<br/>

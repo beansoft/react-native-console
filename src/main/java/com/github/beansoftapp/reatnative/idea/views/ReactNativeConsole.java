@@ -292,6 +292,17 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                         }
                     });
 
+            consoleView.print(
+                    "\n\nModify metro port in React Native 0.56+? ",
+                    ConsoleViewContentType.NORMAL_OUTPUT);
+            consoleView.printHyperlink("CLICK HERE to VIEW/EDIT",
+                    new HyperlinkInfoBase() {
+                        @Override
+                        public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
+                            EditMetroPortAction.doEditPort(project);
+                        }
+                    });
+
             if(SystemInfoRt.isLinux) {
                 consoleView.print(
                         "\n\n===========Linux Users PLEASE README FIRST ===========\nIf you found issue when click " +

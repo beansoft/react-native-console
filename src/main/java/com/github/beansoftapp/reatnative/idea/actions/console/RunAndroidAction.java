@@ -10,6 +10,6 @@ public class RunAndroidAction extends BaseRNConsoleNPMAction {
     }
 
     protected String command() {
-        return "react-native run-android";
+        return "react-native run-android" + getMetroPortParams();
     }
 }

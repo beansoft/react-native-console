@@ -6,6 +6,8 @@ import org.junit.Test;
 import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
+import java.io.File;
+import java.util.Map;
 
 /**
  * Test of RNPathUtil
@@ -44,6 +46,13 @@ public class RNPathUtilTest {
         System.out.println("System PATH env by IDEA:" + EnvironmentUtil.getValue("PATH"));
         System.out.println("JAVA_HOME:" + System.getenv("JAVA_HOME"));
         System.out.println("adb:" + RNPathUtil.getExecuteFullPathSingle("adb"));
+    }
+
+    @Test
+    public void testParseConfigFromRNConsoleJsonFile() {
+        System.out.println(new File(".").getAbsolutePath());
+        Map map = RNPathUtil.parseConfigFromRNConsoleJsonFile(new File(RNPathUtil.RN_CONSOLE));
+        System.out.println(map);
     }
 
 }

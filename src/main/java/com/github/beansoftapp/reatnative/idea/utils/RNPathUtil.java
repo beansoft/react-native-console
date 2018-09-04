@@ -20,10 +20,12 @@ import java.util.*;
  * Created by beansoft on 2017/3/14.
  */
 public class RNPathUtil {
+    public static final String RN_CONSOLE = ".rnconsole";
     public static final String PACKAGE_JSON = "package.json";
-    static String GRADLE_FILE = "build.gradle";
-    static String _IDEA_DIR = ".idea" + File.separator;
-    static String RN_CONSOLE_FILE = _IDEA_DIR + ".rnconsole";
+    public static final String KEY_METRO_PORT = "metroPort";
+    public static String GRADLE_FILE = "build.gradle";
+    public static String _IDEA_DIR = ".idea" + File.separator;
+    public static String RN_CONSOLE_FILE = _IDEA_DIR + RN_CONSOLE;
     // add rnconsole config file to .idea project @since 1.0.8
 
     /**
@@ -65,20 +67,35 @@ public class RNPathUtil {
     }
 
     /**
-     * Get the real react native project root path.
+     * Save the real react native project root path.
      * @param project
      * @param jsAppPath root project of js project
-     * @return
      */
     public static void saveRNProjectRootPathToConfig(Project project, String jsAppPath) {
+        saveCurrentPathToRNConsoleJsonFile(initConfigFileDir(project), jsAppPath);
+    }
+
+    /**
+     * Ensure get the config file created.
+     * @param project
+     * @return config file
+     */
+    private static File initConfigFileDir(Project project) {
         String path = project.getBasePath();
         File ideaFolder = new File(path, _IDEA_DIR);
         if(!ideaFolder.exists()) {
             ideaFolder.mkdirs();
         }
+        return new File(path, RN_CONSOLE_FILE);
+    }
 
-        File file = new File(path, RN_CONSOLE_FILE);
-        saveCurrentPathToRNConsoleJsonFile(file, jsAppPath);
+    /**
+     * Save the react native metro port.
+     * @param project
+     * @param port metro port
+     */
+    public static void saveRNMetroPortToConfig(Project project, String port) {
+        saveMetroPortToRNConsoleJsonFile(initConfigFileDir(project), port);
     }
 
     /**
@@ -88,9 +105,24 @@ public class RNPathUtil {
      */
     private static String parseCurrentPathFromRNConsoleJsonFile(File f) {
         try {
-            Map m = new Gson().fromJson(new FileReader(f), Map.class);
+            Map m = parseConfigFromRNConsoleJsonFile(f);
             return (String) m.get("currentPath");
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * Parse current path from given rn console file.
+     * @param f file
+     * @return
+     */
+    private static String parseMetroPortFromRNConsoleJsonFile(File f) {
+        try {
+            Map m = parseConfigFromRNConsoleJsonFile(f);
+            return (String) m.get(KEY_METRO_PORT);
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -101,7 +133,7 @@ public class RNPathUtil {
      * @param f file
      * @return
      */
-    private static Map parseConfigFromRNConsoleJsonFile(File f) {
+    public static Map parseConfigFromRNConsoleJsonFile(File f) {
         Map newMap = new HashMap();
 
         try {
@@ -125,6 +157,38 @@ public class RNPathUtil {
             e.printStackTrace();
         }
     }
+
+    private static void saveMetroPortToRNConsoleJsonFile(File f, String port) {
+        try {
+            Map m = parseConfigFromRNConsoleJsonFile(f);
+            m.put(KEY_METRO_PORT, port);
+            String json = new Gson().toJson(m, Map.class);
+            System.out.println("json=" + json);
+            FileUtil.writeToFile(f, json);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Get the react native metro port.
+     * @param project
+     * @return
+     */
+    public static String getRNMetroPortFromConfig(Project project) {
+        String path = project.getBasePath();
+        File file = new File(path, RN_CONSOLE_FILE);
+        if (file.exists()) {
+            String p = parseMetroPortFromRNConsoleJsonFile(file);
+            if(p != null && !p.trim().equalsIgnoreCase("8081")) {
+                return p;
+            }
+            return null;
+        } else {
+            return null;
+        }
+    }
+
 
     /**
      * Get the real React Native project root path of current project file, when running in Android Studio,

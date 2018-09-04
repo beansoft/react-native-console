@@ -10,6 +10,6 @@ public class RunIOSAction extends BaseRNConsoleNPMAction {
     }
 
     protected String command() {
-        return "react-native run-ios";
+        return "react-native run-ios" + getMetroPortParams();
     }
 }

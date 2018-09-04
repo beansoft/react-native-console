@@ -11,6 +11,6 @@ public class RNStartAction extends BaseRNConsoleNPMAction {
     }
 
     protected String command() {
-        return "react-native start";
+        return "react-native start" + getMetroPortParams();
     }
 }

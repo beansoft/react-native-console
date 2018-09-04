@@ -1,7 +1,9 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
+import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.util.text.StringUtil;
 
 import javax.swing.*;
 
@@ -17,6 +19,18 @@ public abstract class BaseRNConsoleNPMAction extends BaseRNConsoleRunAction {
 
     public BaseRNConsoleNPMAction(ReactNativeConsole terminal, String text, String description, Icon icon) {
         super(terminal, text, description, icon);
+    }
+
+    // Add metro port config since RN 0.56.0
+    protected String getMetroPortParams() {
+        String port = RNPathUtil.getRNMetroPortFromConfig(project);
+        if(!StringUtil.isEmpty(port)) {
+            port = " --port " + port;
+        } else {
+            port = "";
+        }
+
+        return port;
     }
 
     @Override
