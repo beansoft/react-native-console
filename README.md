@@ -1,4 +1,4 @@
-# React Native Console v1.1.7
+# React Native Console v1.1.9
 An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the No.1 WebStorm plugin for React Native developers
 
 ## Installation
@@ -115,6 +115,7 @@ npm 添加项目, 开发和全局依赖<br/>
 
 ##Contributors
 
+https://github.com/facebook/react-native/commit/33d710e8c58ef1dc69816a59ac1cf390894e7cb9
 
 
 https://github.com/beansoftapp beansoft@126.com
