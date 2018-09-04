@@ -52,7 +52,7 @@
     </workspaceTree>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="">
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="1.1.7">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -74,14 +74,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RNConsoleImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java">
+      <file leaf-file-name="EditJsAppPathAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="177" column="17" lean-forward="false" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
+            <state relative-caret-position="346">
+              <caret line="58" column="17" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="58" selection-end-column="17" />
               <folding>
-                <element signature="e#1437#1438#0" expanded="true" />
-                <element signature="e#1468#1469#0" expanded="true" />
+                <element signature="e#1284#1407#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,22 +89,136 @@
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="160" column="110" lean-forward="false" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="110" />
+            <state relative-caret-position="454">
+              <caret line="112" column="27" lean-forward="true" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RunRNDebuggerAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNDebuggerAction.java">
+      <file leaf-file-name="RNPathUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="225">
+              <caret line="177" column="41" lean-forward="false" selection-start-line="177" selection-start-column="41" selection-end-line="177" selection-end-column="41" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1961#1962#0" expanded="true" />
-                <element signature="e#2045#2046#0" expanded="true" />
+                <element signature="e#1276#1312#1" expanded="true" />
+                <element signature="e#1290#1311#0" expanded="true" />
+                <element signature="e#1321#1365#1" expanded="true" />
+                <element signature="e#1407#1462#1" expanded="true" />
+                <element signature="e#1514#1549#0" expanded="true" />
+                <element signature="e#1861#1897#1" expanded="true" />
+                <element signature="e#1875#1896#0" expanded="true" />
+                <element signature="e#1906#1950#1" expanded="true" />
+                <element signature="e#1992#2047#1" expanded="true" />
+                <element signature="e#2699#2735#1" expanded="true" />
+                <element signature="e#2713#2734#0" expanded="true" />
+                <element signature="e#2744#2788#1" expanded="true" />
+                <element signature="e#3399#3443#1" expanded="true" />
+                <element signature="e#3463#3492#0" expanded="true" />
+                <element signature="e#3504#3593#0" expanded="true" />
+                <element signature="e#3504#3593#0" expanded="true" />
+                <element signature="e#3805#3849#1" expanded="true" />
+                <element signature="e#3869#3899#0" expanded="true" />
+                <element signature="e#3878#3899#0" expanded="true" />
+                <element signature="e#3878#3899#0" expanded="true" />
+                <element signature="e#3911#4000#0" expanded="true" />
+                <element signature="e#3911#4000#0" expanded="true" />
+                <element signature="e#4181#4208#1" expanded="true" />
+                <element signature="e#4236#4294#1" expanded="true" />
+                <element signature="e#4544#4588#1" expanded="true" />
+                <element signature="e#4646#4692#1" expanded="true" />
+                <element signature="e#4974#5018#1" expanded="true" />
+                <element signature="e#5031#5058#0" expanded="true" />
+                <element signature="e#5031#5058#0" expanded="true" />
+                <element signature="e#5031#5058#0" expanded="true" />
+                <element signature="e#5072#5118#1" expanded="true" />
+                <element signature="e#5464#5500#1" expanded="true" />
+                <element signature="e#5478#5499#0" expanded="true" />
+                <element signature="e#5509#5553#1" expanded="true" />
+                <element signature="e#5562#5831#0" expanded="true" />
+                <element signature="e#5562#5831#0" expanded="true" />
+                <element signature="e#5595#5648#1" expanded="true" />
+                <element signature="e#5661#5754#0" expanded="true" />
+                <element signature="e#5661#5754#0" expanded="true" />
+                <element signature="e#6164#6222#1" expanded="true" />
+                <element signature="e#6302#6342#1" expanded="true" />
+                <element signature="e#6320#6341#0" expanded="true" />
+                <element signature="e#6351#6396#1" expanded="true" />
+                <element signature="e#7086#7130#1" expanded="true" />
+                <element signature="e#7314#7547#1" expanded="true" />
+                <element signature="e#7461#7462#0" expanded="true" />
+                <element signature="e#7490#7512#0" expanded="true" />
+                <element signature="e#7530#7531#0" expanded="true" />
+                <element signature="e#7608#7616#0" expanded="true" />
+                <element signature="e#7669#7690#0" expanded="true" />
+                <element signature="e#7800#7821#0" expanded="true" />
+                <element signature="e#8434#8460#1" expanded="true" />
+                <element signature="e#8473#8492#0" expanded="true" />
+                <element signature="e#10473#10531#1" expanded="true" />
+                <element signature="e#10623#10674#1" expanded="true" />
+                <element signature="e#10905#10986#1" expanded="true" />
+                <element signature="e#11211#11283#1" expanded="true" />
+                <element signature="e#11747#11780#1" expanded="true" />
+                <element signature="e#11817#11855#1" expanded="true" />
+                <element signature="e#11899#11924#1" expanded="true" />
+                <element signature="e#11938#11979#1" expanded="true" />
+                <element signature="e#11961#11978#0" expanded="true" />
+                <element signature="e#12273#12292#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NPMStartAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditMetroPortAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+              <folding>
+                <element signature="e#1086#1300#0" expanded="true" />
+                <element signature="e#1086#1300#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunIOSAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+              <folding>
+                <element signature="e#575#620#0" expanded="true" />
+                <element signature="e#600#620#0" expanded="true" />
+                <element signature="e#575#620#0" expanded="true" />
+                <element signature="e#626#627#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RunAndroidAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="64" />
+              <folding>
+                <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#596#645#0" expanded="true" />
+                <element signature="e#625#645#0" expanded="true" />
+                <element signature="e#596#645#0" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,9 +227,31 @@
       <file leaf-file-name="BaseRNConsoleNPMAction.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-              <folding />
+            <state relative-caret-position="375">
+              <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+              <folding>
+                <element signature="e#868#927#1" expanded="true" />
+                <element signature="e#936#1055#0" expanded="true" />
+                <element signature="e#936#1055#0" expanded="true" />
+                <element signature="e#987#1004#0" expanded="true" />
+                <element signature="e#987#1004#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RNStartAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNStartAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+              <folding>
+                <element signature="e#600#601#0" expanded="true" />
+                <element signature="e#617#660#0" expanded="true" />
+                <element signature="e#640#660#0" expanded="true" />
+                <element signature="e#617#660#0" expanded="true" />
+                <element signature="e#666#667#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,231 +259,15 @@
       <file leaf-file-name="ReactNativeConsole.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="218" column="18" lean-forward="false" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
+            <state relative-caret-position="372">
+              <caret line="301" column="52" lean-forward="false" selection-start-line="301" selection-start-column="52" selection-end-line="301" selection-end-column="52" />
               <folding>
-                <element signature="e#2463#2503#1" expanded="true" />
-                <element signature="e#2487#2502#0" expanded="true" />
-                <element signature="e#2512#2590#0" expanded="true" />
-                <element signature="e#2517#2538#0" expanded="true" />
-                <element signature="e#2512#2590#0" expanded="true" />
-                <element signature="e#2662#2702#1" expanded="true" />
-                <element signature="e#2686#2701#0" expanded="true" />
-                <element signature="e#2711#3185#0" expanded="true" />
-                <element signature="e#2716#2737#0" expanded="true" />
-                <element signature="e#2711#3185#0" expanded="true" />
-                <element signature="e#2872#2899#0" expanded="true" />
-                <element signature="e#3065#3092#0" expanded="true" />
-                <element signature="e#3504#3566#1" expanded="true" />
-                <element signature="e#3575#3674#1" expanded="true" />
-                <element signature="e#3593#3629#0" expanded="true" />
-                <element signature="e#3683#3709#0" expanded="true" />
-                <element signature="e#3683#3709#0" expanded="true" />
-                <element signature="e#3719#3806#1" expanded="true" />
-                <element signature="e#3815#3864#0" expanded="true" />
-                <element signature="e#3832#3863#0" expanded="true" />
-                <element signature="e#3815#3864#0" expanded="true" />
-                <element signature="e#4135#4218#0" expanded="true" />
-                <element signature="e#4135#4218#0" expanded="true" />
-                <element signature="e#4409#4444#0" expanded="true" />
-                <element signature="e#4481#4648#0" expanded="true" />
-                <element signature="e#4553#4589#0" expanded="true" />
-                <element signature="e#4481#4648#0" expanded="true" />
-                <element signature="e#4553#4610#0" expanded="true" />
-                <element signature="e#4622#4628#0" expanded="true" />
-                <element signature="e#4481#4648#0" expanded="true" />
-                <element signature="e#5251#5322#0" expanded="true" />
-                <element signature="e#5290#5321#0" expanded="true" />
-                <element signature="e#5251#5322#0" expanded="true" />
-                <element signature="e#5491#5531#0" expanded="true" />
-                <element signature="e#5491#5531#0" expanded="true" />
-                <element signature="e#5541#5580#0" expanded="true" />
-                <element signature="e#5541#5580#0" expanded="true" />
-                <element signature="e#5590#5627#0" expanded="true" />
-                <element signature="e#5590#5627#0" expanded="true" />
-                <element signature="e#5637#5714#1" expanded="true" />
-                <element signature="e#6428#6464#0" expanded="true" />
-                <element signature="e#6428#6464#0" expanded="true" />
-                <element signature="e#6611#6680#0" expanded="true" />
-                <element signature="e#6611#6680#0" expanded="true" />
-                <element signature="e#6926#7037#1" expanded="true" />
-                <element signature="e#7096#7133#1" expanded="true" />
-                <element signature="e#7114#7132#0" expanded="true" />
-                <element signature="e#7154#7285#0" expanded="true" />
-                <element signature="e#7169#7199#0" expanded="true" />
-                <element signature="e#7169#7217#0" expanded="true" />
-                <element signature="e#7154#7285#0" expanded="true" />
-                <element signature="e#7659#7717#1" expanded="true" />
-                <element signature="e#7726#7818#0" expanded="true" />
-                <element signature="e#7726#7818#0" expanded="true" />
-                <element signature="e#7726#7818#0" expanded="true" />
-                <element signature="e#8087#8145#1" expanded="true" />
-                <element signature="e#8154#8230#0" expanded="true" />
-                <element signature="e#8154#8230#0" expanded="true" />
-                <element signature="e#8154#8230#0" expanded="true" />
-                <element signature="e#8493#8551#1" expanded="true" />
-                <element signature="e#8560#8633#0" expanded="true" />
-                <element signature="e#8560#8633#0" expanded="true" />
-                <element signature="e#8560#8633#0" expanded="true" />
-                <element signature="e#8933#9044#1" expanded="true" />
-                <element signature="e#9087#9171#1" expanded="true" />
-                <element signature="e#9231#9299#1" expanded="true" />
-                <element signature="e#9268#9298#0" expanded="true" />
-                <element signature="e#9317#9696#0" expanded="true" />
-                <element signature="e#9317#9696#0" expanded="true" />
-                <element signature="e#9395#9475#1" expanded="true" />
-                <element signature="e#9418#9461#0" expanded="true" />
-                <element signature="e#9418#9461#0" expanded="true" />
-                <element signature="e#9418#9474#0" expanded="true" />
-                <element signature="e#9496#9678#0" expanded="true" />
-                <element signature="e#9496#9678#0" expanded="true" />
-                <element signature="e#9562#9614#1" expanded="true" />
-                <element signature="e#9588#9613#0" expanded="true" />
-                <element signature="e#10029#10098#1" expanded="true" />
-                <element signature="e#10067#10097#0" expanded="true" />
-                <element signature="e#10107#10179#1" expanded="true" />
-                <element signature="e#10231#10281#0" expanded="true" />
-                <element signature="e#10231#10281#0" expanded="true" />
-                <element signature="e#10338#10400#1" expanded="true" />
-                <element signature="e#10409#10473#1" expanded="true" />
-                <element signature="e#10483#10509#0" expanded="true" />
-                <element signature="e#10483#10509#0" expanded="true" />
-                <element signature="e#10519#10582#1" expanded="true" />
-                <element signature="e#10591#10630#0" expanded="true" />
-                <element signature="e#10591#10630#0" expanded="true" />
-                <element signature="e#10640#10672#0" expanded="true" />
-                <element signature="e#10640#10672#0" expanded="true" />
-                <element signature="e#10715#10736#0" expanded="true" />
-                <element signature="e#10715#10736#0" expanded="true" />
-                <element signature="e#10750#10776#0" expanded="true" />
-                <element signature="e#10750#10776#0" expanded="true" />
-                <element signature="e#10897#13592#0" expanded="true" />
-                <element signature="e#10897#13592#0" expanded="true" />
-                <element signature="e#10926#10953#0" expanded="true" />
-                <element signature="e#10926#10953#0" expanded="true" />
-                <element signature="e#10967#11000#0" expanded="true" />
-                <element signature="e#10967#11000#0" expanded="true" />
-                <element signature="e#11014#11040#0" expanded="true" />
-                <element signature="e#11014#11040#0" expanded="true" />
-                <element signature="e#11054#11088#0" expanded="true" />
-                <element signature="e#11054#11088#0" expanded="true" />
-                <element signature="e#11102#11141#0" expanded="true" />
-                <element signature="e#11102#11141#0" expanded="true" />
-                <element signature="e#11271#11360#0" expanded="true" />
-                <element signature="e#11472#11523#0" expanded="true" />
-                <element signature="e#11832#11890#0" expanded="true" />
-                <element signature="e#12032#12329#0" expanded="true" />
-                <element signature="e#12328#12329#0" expanded="true" />
-                <element signature="e#12345#13582#0" expanded="true" />
-                <element signature="e#12345#13582#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#12431#13275#0" expanded="true" />
-                <element signature="e#13602#13646#0" expanded="true" />
-                <element signature="e#13619#13645#0" expanded="true" />
-                <element signature="e#13602#13646#0" expanded="true" />
-                <element signature="e#14051#16153#0" expanded="true" />
-                <element signature="e#14051#16153#0" expanded="true" />
-                <element signature="e#14136#14197#1" expanded="true" />
-                <element signature="e#14210#14293#1" expanded="true" />
-                <element signature="e#14541#14590#1" expanded="true" />
-                <element signature="e#14572#14589#0" expanded="true" />
-                <element signature="e#14648#14904#0" expanded="true" />
-                <element signature="e#14653#14668#0" expanded="true" />
-                <element signature="e#14648#14904#0" expanded="true" />
-                <element signature="e#14709#14886#0" expanded="true" />
-                <element signature="e#14709#14886#0" expanded="true" />
-                <element signature="e#14838#14863#0" expanded="true" />
-                <element signature="e#14838#14863#0" expanded="true" />
-                <element signature="e#14922#15181#0" expanded="true" />
-                <element signature="e#14927#14942#0" expanded="true" />
-                <element signature="e#14922#15181#0" expanded="true" />
-                <element signature="e#14983#15163#0" expanded="true" />
-                <element signature="e#14983#15163#0" expanded="true" />
-                <element signature="e#15115#15140#0" expanded="true" />
-                <element signature="e#15115#15140#0" expanded="true" />
-                <element signature="e#15265#15293#0" expanded="true" />
-                <element signature="e#15385#15483#1" expanded="true" />
-                <element signature="e#15496#15547#0" expanded="true" />
-                <element signature="e#15496#15547#0" expanded="true" />
-                <element signature="e#15613#15663#0" expanded="true" />
-                <element signature="e#15632#15662#0" expanded="true" />
-                <element signature="e#15613#15663#0" expanded="true" />
-                <element signature="e#15895#16015#1" expanded="true" />
-                <element signature="e#15919#15946#0" expanded="true" />
-                <element signature="e#15978#16006#0" expanded="true" />
-                <element signature="e#16028#16082#0" expanded="true" />
-                <element signature="e#16055#16081#0" expanded="true" />
-                <element signature="e#16028#16082#0" expanded="true" />
-                <element signature="e#16113#16135#0" expanded="true" />
-                <element signature="e#16187#16239#1" expanded="true" />
-                <element signature="e#16248#16363#1" expanded="true" />
-                <element signature="e#16277#16304#0" expanded="true" />
-                <element signature="e#16336#16355#0" expanded="true" />
-                <element signature="e#16372#16431#0" expanded="true" />
-                <element signature="e#16404#16430#0" expanded="true" />
-                <element signature="e#16372#16431#0" expanded="true" />
-                <element signature="e#16458#16485#0" expanded="true" />
-                <element signature="e#17581#18022#0" expanded="true" />
-                <element signature="e#17585#17603#0" expanded="true" />
-                <element signature="e#17607#17624#0" expanded="true" />
-                <element signature="e#17581#18022#0" expanded="true" />
-                <element signature="e#18278#18344#0" expanded="true" />
-                <element signature="e#18317#18343#0" expanded="true" />
-                <element signature="e#18278#18344#0" expanded="true" />
-                <element signature="e#18355#18385#0" expanded="true" />
-                <element signature="e#18415#18457#0" expanded="true" />
-                <element signature="e#18415#18457#0" expanded="true" />
-                <element signature="e#18672#18787#1" expanded="true" />
-                <element signature="e#18796#19222#0" expanded="true" />
-                <element signature="e#18796#19222#0" expanded="true" />
-                <element signature="e#18856#18919#1" expanded="true" />
-                <element signature="e#18888#18918#0" expanded="true" />
-                <element signature="e#18936#19010#1" expanded="true" />
-                <element signature="e#18959#18994#0" expanded="true" />
-                <element signature="e#18959#19009#0" expanded="true" />
-                <element signature="e#19027#19123#0" expanded="true" />
-                <element signature="e#19027#19123#0" expanded="true" />
-                <element signature="e#19027#19123#0" expanded="true" />
-                <element signature="e#19138#19212#0" expanded="true" />
-                <element signature="e#19138#19212#0" expanded="true" />
+                <element signature="e#12384#12431#0" expanded="true" />
+                <element signature="e#12578#12866#0" expanded="true" />
+                <element signature="e#12865#12866#0" expanded="true" />
+                <element signature="e#20577#20578#0" expanded="true" />
+                <element signature="e#20620#20621#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RNToolWindowFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNToolWindowFactory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="21" column="48" lean-forward="false" selection-start-line="21" selection-start-column="48" selection-end-line="21" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseRNConsoleRunAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleRunAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunIOSDeviceAction.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="66" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -364,11 +283,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>actions</find>
-      <find>customActions</find>
-      <find>myStopProcessAction</find>
-      <find>GearAction</find>
-      <find>mac</find>
       <find>npm install -g</find>
       <find>uninstall</find>
       <find>Clean</find>
@@ -394,6 +308,11 @@
       <find>install</find>
       <find>.app</find>
       <find>contribu</find>
+      <find>CLICK HERE to EDIT</find>
+      <find>&quot;package.json&quot;</find>
+      <find>PACKAGE_JSON</find>
+      <find>.rnconsole</find>
+      <find>isEmpty</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -424,10 +343,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/HelpAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidDevMenuAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunNPMScriptsAction.java" />
-        <option value="$PROJECT_DIR$/src/test/package.json" />
         <option value="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/WordpressFileRenamer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java" />
@@ -436,7 +351,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleRunAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/storage/GlobalPropertyBasedDoNotAskOption.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMUnInstallAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/util/OverlayIcon.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/swing/IconLoader.java" />
@@ -445,14 +359,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNUnInstallAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMAndroidLogsAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMiOSLogsAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidCleanAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRunNPMScriptsAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMInstallAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNUpgradeAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReactDevToolsAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNStartAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNLinkAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNScriptsAction.java" />
@@ -463,17 +374,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunMiscScriptsAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/JsAppPathAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidBundleAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNToolWindowFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/IOSBundleAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeTerminal.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNDebuggerAction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java" />
+        <option value="$PROJECT_DIR$/src/test/RNPathUtilTest.java" />
+        <option value="$PROJECT_DIR$/.rnconsole" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RunnerUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNStartAction.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" />
       </list>
     </option>
@@ -494,7 +413,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="845" />
+    <option name="height" value="844" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -726,6 +645,8 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -737,9 +658,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -747,7 +666,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="SearchEverywhereHistoryKey" value="RNPa&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Path&#9;FILE&#9;file://D:/pilipa/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Registry&#9;PSI&#9;JAVA://com.intellij.openapi.util.registry.Registry&#10;Executors&#9;PSI&#9;JAVA://java.util.concurrent.Executors&#10;RNConsoleImpl&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java&#10;NPMParser&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser&#10;RNLin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNLinkAction.java&#10;NpmSta&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java&#10;AllIc&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;ReactDe&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.actions.console.ReactDevToolsAction&#10;Plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;IconLoader&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/openapi/util/IconLoader.class&#10;AllIcons&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;Debug&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java&#10;RNPath&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;KeyStroke&#9;PSI&#9;JAVA://javax.swing.KeyStroke&#10;Refresh&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java&#10;FileUtil&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class&#10;Plu&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Fr&#9;FILE&#9;file:///Users/beansoft/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/views/FreelineTerminal.java&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;JSON&#9;PSI&#9;JAVA://com.google.gson.JsonArray&#10;TabbedTerminalWidget&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/jediterm-pty-2.5.jar!/com/jediterm/terminal/ui/TabbedTerminalWidget.class&#10;NativeArray&#9;PSI&#9;JAVA://jdk.nashorn.internal.objects.NativeArray&#10;ScriptUtils&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptUtils&#10;ScriptObjectMi&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptObjectMirror&#10;Pattern&#9;PSI&#9;JAVA://java.util.regex.Pattern&#10;Notif&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/NotificationUtils.java&#10;JsonObject&#9;PSI&#9;JAVA://com.google.gson.JsonObject&#10;Gson&#9;PSI&#9;JAVA://com.google.gson.Gson&#10;Icon&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Simple&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java&#10;SimpleToolWindowPanel&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/openapi.jar!/com/intellij/openapi/ui/SimpleToolWindowPanel.class&#10;ConsoleViewImpl&#9;PSI&#9;JAVA://com.intellij.execution.testframework.ui.TestsConsoleViewImpl&#10;ToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Terminal&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/TerminalView.class&#10;TerminalToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Feed&#9;PSI&#9;JAVA://com.antfortune.freeline.idea.actions.FeedbackAction&#10;TerminalOptions&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/resources/META-INF/plugin.xml&#10;package.j&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/package.json&#10;RNPa&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Path&#9;FILE&#9;file://D:/pilipa/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Registry&#9;PSI&#9;JAVA://com.intellij.openapi.util.registry.Registry&#10;Executors&#9;PSI&#9;JAVA://java.util.concurrent.Executors&#10;RNConsoleImpl&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java&#10;NPMParser&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser&#10;RNLin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNLinkAction.java&#10;NpmSta&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java&#10;AllIc&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;ReactDe&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.actions.console.ReactDevToolsAction&#10;Plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;IconLoader&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/openapi/util/IconLoader.class&#10;AllIcons&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;Debug&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java&#10;RNPath&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;KeyStroke&#9;PSI&#9;JAVA://javax.swing.KeyStroke&#10;Refresh&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java&#10;FileUtil&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class&#10;Plu&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Fr&#9;FILE&#9;file:///Users/beansoft/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/views/FreelineTerminal.java&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;JSON&#9;PSI&#9;JAVA://com.google.gson.JsonArray&#10;TabbedTerminalWidget&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/jediterm-pty-2.5.jar!/com/jediterm/terminal/ui/TabbedTerminalWidget.class&#10;NativeArray&#9;PSI&#9;JAVA://jdk.nashorn.internal.objects.NativeArray&#10;ScriptUtils&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptUtils&#10;ScriptObjectMi&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptObjectMirror&#10;Pattern&#9;PSI&#9;JAVA://java.util.regex.Pattern&#10;Notif&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/NotificationUtils.java&#10;JsonObject&#9;PSI&#9;JAVA://com.google.gson.JsonObject&#10;Gson&#9;PSI&#9;JAVA://com.google.gson.Gson&#10;Icon&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Simple&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java&#10;SimpleToolWindowPanel&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/openapi.jar!/com/intellij/openapi/ui/SimpleToolWindowPanel.class&#10;ConsoleViewImpl&#9;PSI&#9;JAVA://com.intellij.execution.testframework.ui.TestsConsoleViewImpl&#10;ToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Terminal&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/TerminalView.class&#10;TerminalToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Feed&#9;PSI&#9;JAVA://com.antfortune.freeline.idea.actions.FeedbackAction&#10;TerminalOptions&#9;null&#9;null" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -784,10 +703,12 @@
     <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices" />
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
+      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/screenshot" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
@@ -796,12 +717,12 @@
       <recent name="com.github.beansoftapp.reatnative.idea.storage" />
       <recent name="" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/screenshot" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/" />
     </key>
   </component>
   <component name="Regex">
@@ -907,14 +828,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TestParseIOSDevices.testJS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="react-native-console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestParseIOSDevices" />
-      <option name="METHOD_NAME" value="testJS" />
+      <option name="MAIN_CLASS_NAME" value="RNPathUtilTest" />
+      <option name="METHOD_NAME" value="testParseConfigFromRNConsoleJsonFile" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -927,14 +848,14 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TestParseIOSDevices.testgetAllIOSDevicesList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestParseIOSDevices.testJS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="react-native-console" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestParseIOSDevices" />
-      <option name="METHOD_NAME" value="testgetAllIOSDevicesList" />
+      <option name="METHOD_NAME" value="testJS" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -1146,17 +1067,17 @@
       <item index="0" class="java.lang.String" itemvalue="Plugin.Plugin" />
       <item index="1" class="java.lang.String" itemvalue="Application.WordpressFileRenamer" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJS" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testgetAllIOSDevicesList" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.NPMParserTest.parseScripts" />
-      <item index="5" class="java.lang.String" itemvalue="Application.RunRNDebuggerAction" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.NPMParserTest.parseScripts" />
+      <item index="4" class="java.lang.String" itemvalue="Application.RunRNDebuggerAction" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.RunRNDebuggerAction" />
-        <item index="1" class="java.lang.String" itemvalue="Application.WordpressFileRenamer" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.NPMParserTest.parseScripts" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJS" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testgetAllIOSDevicesList" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
+        <item index="1" class="java.lang.String" itemvalue="Application.RunRNDebuggerAction" />
+        <item index="2" class="java.lang.String" itemvalue="Application.WordpressFileRenamer" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.NPMParserTest.parseScripts" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestParseIOSDevices.testJS" />
       </list>
     </recent_temporary>
   </component>
@@ -1199,27 +1120,13 @@
       <workItem from="1532513196295" duration="1650000" />
       <workItem from="1532599256831" duration="388000" />
       <workItem from="1532920474358" duration="3265000" />
-    </task>
-    <task id="LOCAL-00003" summary="new ui prototype.">
-      <created>1493294492634</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1493294492634</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update readme">
-      <created>1494213104532</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1494213104532</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update readme">
-      <created>1494213967493</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1494213967493</updated>
+      <workItem from="1533173807107" duration="531000" />
+      <workItem from="1533175188084" duration="1007000" />
+      <workItem from="1533176232777" duration="87000" />
+      <workItem from="1533719014980" duration="383000" />
+      <workItem from="1535618633384" duration="2033000" />
+      <workItem from="1535709564301" duration="1398000" />
+      <workItem from="1536044583820" duration="8018000" />
     </task>
     <task id="LOCAL-00006" summary="save new code">
       <created>1495711682293</created>
@@ -1543,28 +1450,31 @@
       <option name="project" value="LOCAL" />
       <updated>1532923659356</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="fix plugin crash regression bug introduced with v1.1.7 on IDEA 2016.3 fix https://github.com/beansoftapp/react-native-console/issues/26">
+      <created>1533176133745</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1533176133746</updated>
+    </task>
+    <task id="LOCAL-00053" summary="1.1.7">
+      <created>1535713518472</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1535713518473</updated>
+    </task>
+    <task id="LOCAL-00054" summary="1.1.8 fix https://github.com/beansoftapp/react-native-console/issues/27">
+      <created>1536053612396</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1536053612397</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 10h 56m 09s.xml">
-      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 10h 58m 22s.xml">
-      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 01m 03s.xml">
-      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 01m 24s.xml">
-      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 03m 52s.xml">
-      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 04m 18s.xml">
-      <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 04m 37s.xml">
       <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
@@ -1574,12 +1484,30 @@
     <history-entry file="NPMParserTest_parseScripts - 2017.09.04 at 11h 46m 32s.xml">
       <configuration name="NPMParserTest.parseScripts" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="RNPathUtilTest_testParseConfigFromRNConsoleJsonFile - 2018.09.04 at 15h 28m 19s.xml">
+      <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RNPathUtilTest_testParseConfigFromRNConsoleJsonFile - 2018.09.04 at 15h 31m 16s.xml">
+      <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RNPathUtilTest_testParseConfigFromRNConsoleJsonFile - 2018.09.04 at 15h 32m 10s.xml">
+      <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RNPathUtilTest_testParseConfigFromRNConsoleJsonFile - 2018.09.04 at 15h 32m 32s.xml">
+      <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RNPathUtilTest_testParseConfigFromRNConsoleJsonFile - 2018.09.04 at 15h 33m 47s.xml">
+      <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RNPathUtilTest_testParseConfigFromRNConsoleJsonFile - 2018.09.04 at 15h 36m 20s.xml">
+      <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="TestParseIOSDevices_testgetAllIOSDevicesList - 2017.08.25 at 11h 56m 36s.xml">
       <configuration name="TestParseIOSDevices.testgetAllIOSDevicesList" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59948000" />
+    <option name="totallyTimeSpent" value="73405000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1591,7 +1519,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="843" extended-state="6" />
+    <frame x="0" y="23" width="1440" height="844" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22268908" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1601,14 +1529,15 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4107884" sideWeight="0.52932763" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23658872" sideWeight="0.47711015" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45793104" sideWeight="0.4706724" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2603306" sideWeight="0.47711015" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.5647383" sideWeight="0.4706724" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34896553" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="RNConsole" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="RNConsole" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292011" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28969958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29399142" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33746555" sideWeight="0.48497853" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1628,46 +1557,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896653" sideWeight="0.49713877" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3375932" sideWeight="0.48497853" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4107884" sideWeight="0.52932763" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="RNConsole" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Regex" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.58899677" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25751072" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44506258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Armory" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7358643" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22268908" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="ReactNative" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30180806" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3207283" sideWeight="0.49025974" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5145631" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="PsiViewer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23658872" sideWeight="0.47711015" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45793104" sideWeight="0.4706724" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32896653" sideWeight="0.49713877" order="15" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34896553" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28969958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3375932" sideWeight="0.48497853" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1694,14 +1584,6 @@
               <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
                 <collection />
               </option>
-              <option name="COLUMN_ORDER">
-                <list>
-                  <option value="0" />
-                  <option value="1" />
-                  <option value="2" />
-                  <option value="3" />
-                </list>
-              </option>
             </State>
           </value>
         </entry>
@@ -1714,8 +1596,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="update chrome icon to retina" />
-    <MESSAGE value="update icon" />
     <MESSAGE value="release 1.0.8" />
     <MESSAGE value="release 1.0.9, list and run scripts in package.json" />
     <MESSAGE value="update test code" />
@@ -1738,8 +1618,10 @@
     <MESSAGE value="1.1.5 version" />
     <MESSAGE value="No new features, fix an regression bug in ios bundle command which was introduced in 1.1.5" />
     <MESSAGE value="run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)" />
+    <MESSAGE value="fix plugin crash regression bug introduced with v1.1.7 on IDEA 2016.3 fix https://github.com/beansoftapp/react-native-console/issues/26" />
     <MESSAGE value="1.1.7" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.1.7" />
+    <MESSAGE value="1.1.8 fix https://github.com/beansoftapp/react-native-console/issues/27" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.1.8 fix https://github.com/beansoftapp/react-native-console/issues/27" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1767,126 +1649,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNUpgradeAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/project/PossiblyDumbAware.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/actionSystem/AnAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="24" column="49" lean-forward="true" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/project/DumbAwareAction.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNScriptsAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/src.zip!/java/util/concurrent/Executors.java" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/openapi/util/registry/Registry.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="30" column="65" lean-forward="false" selection-start-line="30" selection-start-column="65" selection-end-line="30" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRunNPMScriptsAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="25" column="52" lean-forward="false" selection-start-line="25" selection-start-column="52" selection-end-line="25" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/CommonBundle.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/storage/GlobalPropertyBasedDoNotAskOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" column="71" lean-forward="false" selection-start-line="29" selection-start-column="58" selection-end-line="29" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/DialogWrapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="2237" column="19" lean-forward="false" selection-start-line="2237" selection-start-column="19" selection-end-line="2237" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunMiscScriptsAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="8" column="43" lean-forward="false" selection-start-line="8" selection-start-column="43" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/ide/util/PropertiesComponent.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNLinkAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/Messages.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="1061" column="25" lean-forward="false" selection-start-line="1061" selection-start-column="25" selection-end-line="1061" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/HelpAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNInstallAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1922,20 +1684,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="61" column="35" lean-forward="false" selection-start-line="61" selection-start-column="35" selection-end-line="61" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1964,13 +1712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RunnerUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="65" column="28" lean-forward="false" selection-start-line="65" selection-start-column="28" selection-end-line="65" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1982,13 +1723,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/swing/OverlayIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-105">
-          <caret line="15" column="11" lean-forward="false" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -2034,13 +1768,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="186" column="25" lean-forward="false" selection-start-line="186" selection-start-column="25" selection-end-line="186" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2048,11 +1775,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/execution/impl/ConsoleViewImpl.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-          <folding />
+        <state relative-caret-position="228">
+          <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNDebuggerAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1961#1962#0" expanded="false" />
+            <element signature="e#2045#2046#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2080,260 +1825,332 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java">
+    <entry file="file://$PROJECT_DIR$/src/test/TestParseIOSDevices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="218" column="18" lean-forward="false" selection-start-line="218" selection-start-column="18" selection-end-line="218" selection-end-column="18" />
+        <state relative-caret-position="151">
+          <caret line="58" column="41" lean-forward="false" selection-start-line="58" selection-start-column="41" selection-end-line="58" selection-end-column="41" />
           <folding>
-            <element signature="e#2463#2503#1" expanded="true" />
-            <element signature="e#2487#2502#0" expanded="true" />
-            <element signature="e#2512#2590#0" expanded="true" />
-            <element signature="e#2517#2538#0" expanded="true" />
-            <element signature="e#2512#2590#0" expanded="true" />
-            <element signature="e#2662#2702#1" expanded="true" />
-            <element signature="e#2686#2701#0" expanded="true" />
-            <element signature="e#2711#3185#0" expanded="true" />
-            <element signature="e#2716#2737#0" expanded="true" />
-            <element signature="e#2711#3185#0" expanded="true" />
-            <element signature="e#2872#2899#0" expanded="true" />
-            <element signature="e#3065#3092#0" expanded="true" />
-            <element signature="e#3504#3566#1" expanded="true" />
-            <element signature="e#3575#3674#1" expanded="true" />
-            <element signature="e#3593#3629#0" expanded="true" />
-            <element signature="e#3683#3709#0" expanded="true" />
-            <element signature="e#3683#3709#0" expanded="true" />
-            <element signature="e#3719#3806#1" expanded="true" />
-            <element signature="e#3815#3864#0" expanded="true" />
-            <element signature="e#3832#3863#0" expanded="true" />
-            <element signature="e#3815#3864#0" expanded="true" />
-            <element signature="e#4135#4218#0" expanded="true" />
-            <element signature="e#4135#4218#0" expanded="true" />
-            <element signature="e#4409#4444#0" expanded="true" />
-            <element signature="e#4481#4648#0" expanded="true" />
-            <element signature="e#4553#4589#0" expanded="true" />
-            <element signature="e#4481#4648#0" expanded="true" />
-            <element signature="e#4553#4610#0" expanded="true" />
-            <element signature="e#4622#4628#0" expanded="true" />
-            <element signature="e#4481#4648#0" expanded="true" />
-            <element signature="e#5251#5322#0" expanded="true" />
-            <element signature="e#5290#5321#0" expanded="true" />
-            <element signature="e#5251#5322#0" expanded="true" />
-            <element signature="e#5491#5531#0" expanded="true" />
-            <element signature="e#5491#5531#0" expanded="true" />
-            <element signature="e#5541#5580#0" expanded="true" />
-            <element signature="e#5541#5580#0" expanded="true" />
-            <element signature="e#5590#5627#0" expanded="true" />
-            <element signature="e#5590#5627#0" expanded="true" />
-            <element signature="e#5637#5714#1" expanded="true" />
-            <element signature="e#6428#6464#0" expanded="true" />
-            <element signature="e#6428#6464#0" expanded="true" />
-            <element signature="e#6611#6680#0" expanded="true" />
-            <element signature="e#6611#6680#0" expanded="true" />
-            <element signature="e#6926#7037#1" expanded="true" />
-            <element signature="e#7096#7133#1" expanded="true" />
-            <element signature="e#7114#7132#0" expanded="true" />
-            <element signature="e#7154#7285#0" expanded="true" />
-            <element signature="e#7169#7199#0" expanded="true" />
-            <element signature="e#7169#7217#0" expanded="true" />
-            <element signature="e#7154#7285#0" expanded="true" />
-            <element signature="e#7659#7717#1" expanded="true" />
-            <element signature="e#7726#7818#0" expanded="true" />
-            <element signature="e#7726#7818#0" expanded="true" />
-            <element signature="e#7726#7818#0" expanded="true" />
-            <element signature="e#8087#8145#1" expanded="true" />
-            <element signature="e#8154#8230#0" expanded="true" />
-            <element signature="e#8154#8230#0" expanded="true" />
-            <element signature="e#8154#8230#0" expanded="true" />
-            <element signature="e#8493#8551#1" expanded="true" />
-            <element signature="e#8560#8633#0" expanded="true" />
-            <element signature="e#8560#8633#0" expanded="true" />
-            <element signature="e#8560#8633#0" expanded="true" />
-            <element signature="e#8933#9044#1" expanded="true" />
-            <element signature="e#9087#9171#1" expanded="true" />
-            <element signature="e#9231#9299#1" expanded="true" />
-            <element signature="e#9268#9298#0" expanded="true" />
-            <element signature="e#9317#9696#0" expanded="true" />
-            <element signature="e#9317#9696#0" expanded="true" />
-            <element signature="e#9395#9475#1" expanded="true" />
-            <element signature="e#9418#9461#0" expanded="true" />
-            <element signature="e#9418#9461#0" expanded="true" />
-            <element signature="e#9418#9474#0" expanded="true" />
-            <element signature="e#9496#9678#0" expanded="true" />
-            <element signature="e#9496#9678#0" expanded="true" />
-            <element signature="e#9562#9614#1" expanded="true" />
-            <element signature="e#9588#9613#0" expanded="true" />
-            <element signature="e#10029#10098#1" expanded="true" />
-            <element signature="e#10067#10097#0" expanded="true" />
-            <element signature="e#10107#10179#1" expanded="true" />
-            <element signature="e#10231#10281#0" expanded="true" />
-            <element signature="e#10231#10281#0" expanded="true" />
-            <element signature="e#10338#10400#1" expanded="true" />
-            <element signature="e#10409#10473#1" expanded="true" />
-            <element signature="e#10483#10509#0" expanded="true" />
-            <element signature="e#10483#10509#0" expanded="true" />
-            <element signature="e#10519#10582#1" expanded="true" />
-            <element signature="e#10591#10630#0" expanded="true" />
-            <element signature="e#10591#10630#0" expanded="true" />
-            <element signature="e#10640#10672#0" expanded="true" />
-            <element signature="e#10640#10672#0" expanded="true" />
-            <element signature="e#10715#10736#0" expanded="true" />
-            <element signature="e#10715#10736#0" expanded="true" />
-            <element signature="e#10750#10776#0" expanded="true" />
-            <element signature="e#10750#10776#0" expanded="true" />
-            <element signature="e#10897#13592#0" expanded="true" />
-            <element signature="e#10897#13592#0" expanded="true" />
-            <element signature="e#10926#10953#0" expanded="true" />
-            <element signature="e#10926#10953#0" expanded="true" />
-            <element signature="e#10967#11000#0" expanded="true" />
-            <element signature="e#10967#11000#0" expanded="true" />
-            <element signature="e#11014#11040#0" expanded="true" />
-            <element signature="e#11014#11040#0" expanded="true" />
-            <element signature="e#11054#11088#0" expanded="true" />
-            <element signature="e#11054#11088#0" expanded="true" />
-            <element signature="e#11102#11141#0" expanded="true" />
-            <element signature="e#11102#11141#0" expanded="true" />
-            <element signature="e#11271#11360#0" expanded="true" />
-            <element signature="e#11472#11523#0" expanded="true" />
-            <element signature="e#11832#11890#0" expanded="true" />
-            <element signature="e#12032#12329#0" expanded="true" />
-            <element signature="e#12328#12329#0" expanded="true" />
-            <element signature="e#12345#13582#0" expanded="true" />
-            <element signature="e#12345#13582#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#12431#13275#0" expanded="true" />
-            <element signature="e#13602#13646#0" expanded="true" />
-            <element signature="e#13619#13645#0" expanded="true" />
-            <element signature="e#13602#13646#0" expanded="true" />
-            <element signature="e#14051#16153#0" expanded="true" />
-            <element signature="e#14051#16153#0" expanded="true" />
-            <element signature="e#14136#14197#1" expanded="true" />
-            <element signature="e#14210#14293#1" expanded="true" />
-            <element signature="e#14541#14590#1" expanded="true" />
-            <element signature="e#14572#14589#0" expanded="true" />
-            <element signature="e#14648#14904#0" expanded="true" />
-            <element signature="e#14653#14668#0" expanded="true" />
-            <element signature="e#14648#14904#0" expanded="true" />
-            <element signature="e#14709#14886#0" expanded="true" />
-            <element signature="e#14709#14886#0" expanded="true" />
-            <element signature="e#14838#14863#0" expanded="true" />
-            <element signature="e#14838#14863#0" expanded="true" />
-            <element signature="e#14922#15181#0" expanded="true" />
-            <element signature="e#14927#14942#0" expanded="true" />
-            <element signature="e#14922#15181#0" expanded="true" />
-            <element signature="e#14983#15163#0" expanded="true" />
-            <element signature="e#14983#15163#0" expanded="true" />
-            <element signature="e#15115#15140#0" expanded="true" />
-            <element signature="e#15115#15140#0" expanded="true" />
-            <element signature="e#15265#15293#0" expanded="true" />
-            <element signature="e#15385#15483#1" expanded="true" />
-            <element signature="e#15496#15547#0" expanded="true" />
-            <element signature="e#15496#15547#0" expanded="true" />
-            <element signature="e#15613#15663#0" expanded="true" />
-            <element signature="e#15632#15662#0" expanded="true" />
-            <element signature="e#15613#15663#0" expanded="true" />
-            <element signature="e#15895#16015#1" expanded="true" />
-            <element signature="e#15919#15946#0" expanded="true" />
-            <element signature="e#15978#16006#0" expanded="true" />
-            <element signature="e#16028#16082#0" expanded="true" />
-            <element signature="e#16055#16081#0" expanded="true" />
-            <element signature="e#16028#16082#0" expanded="true" />
-            <element signature="e#16113#16135#0" expanded="true" />
-            <element signature="e#16187#16239#1" expanded="true" />
-            <element signature="e#16248#16363#1" expanded="true" />
-            <element signature="e#16277#16304#0" expanded="true" />
-            <element signature="e#16336#16355#0" expanded="true" />
-            <element signature="e#16372#16431#0" expanded="true" />
-            <element signature="e#16404#16430#0" expanded="true" />
-            <element signature="e#16372#16431#0" expanded="true" />
-            <element signature="e#16458#16485#0" expanded="true" />
-            <element signature="e#17581#18022#0" expanded="true" />
-            <element signature="e#17585#17603#0" expanded="true" />
-            <element signature="e#17607#17624#0" expanded="true" />
-            <element signature="e#17581#18022#0" expanded="true" />
-            <element signature="e#18278#18344#0" expanded="true" />
-            <element signature="e#18317#18343#0" expanded="true" />
-            <element signature="e#18278#18344#0" expanded="true" />
-            <element signature="e#18355#18385#0" expanded="true" />
-            <element signature="e#18415#18457#0" expanded="true" />
-            <element signature="e#18415#18457#0" expanded="true" />
-            <element signature="e#18672#18787#1" expanded="true" />
-            <element signature="e#18796#19222#0" expanded="true" />
-            <element signature="e#18796#19222#0" expanded="true" />
-            <element signature="e#18856#18919#1" expanded="true" />
-            <element signature="e#18888#18918#0" expanded="true" />
-            <element signature="e#18936#19010#1" expanded="true" />
-            <element signature="e#18959#18994#0" expanded="true" />
-            <element signature="e#18959#19009#0" expanded="true" />
-            <element signature="e#19027#19123#0" expanded="true" />
-            <element signature="e#19027#19123#0" expanded="true" />
-            <element signature="e#19027#19123#0" expanded="true" />
-            <element signature="e#19138#19212#0" expanded="true" />
-            <element signature="e#19138#19212#0" expanded="true" />
+            <element signature="e#2204#2303#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/com/intellij/execution/impl/ConsoleViewImpl.class">
+    <entry file="file://$PROJECT_DIR$/.rnconsole">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="71" column="16" lean-forward="false" selection-start-line="71" selection-start-column="16" selection-end-line="71" selection-end-column="16" />
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="true" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNDebuggerAction.java">
+    <entry file="file://$PROJECT_DIR$/src/test/RNPathUtilTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="314">
+          <caret line="53" column="52" lean-forward="false" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1961#1962#0" expanded="true" />
-            <element signature="e#2045#2046#0" expanded="true" />
+            <element signature="e#2089#2120#0" expanded="true" />
+            <element signature="e#2131#2218#1" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/swing/OverlayIcon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="92" column="1" lean-forward="true" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
-            <folding>
-              <marker date="1532922573509" expanded="true" signature="1072:1100" ph="{&quot;currentPath&quot;: './jsapp'...}" />
-              <marker date="1532922573509" expanded="true" signature="4351:4379" ph="{&quot;currentPath&quot;: './jsapp'...}" />
-            </folding>
-          </first_editor>
-          <second_editor />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/CloseTabAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/LogUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/GradleSyncHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="11" column="16" lean-forward="false" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+          <folding>
+            <element signature="e#475#524#0" expanded="true" />
+            <element signature="e#475#524#0" expanded="true" />
+            <element signature="e#475#524#0" expanded="true" />
+            <element signature="e#475#524#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RunnerUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-385">
+          <caret line="26" column="11" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/storage/GlobalPropertyBasedDoNotAskOption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/StreamUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNUIManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="2295">
           <caret line="177" column="17" lean-forward="false" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="301" column="52" lean-forward="false" selection-start-line="301" selection-start-column="52" selection-end-line="301" selection-end-column="52" />
           <folding>
-            <element signature="e#1437#1438#0" expanded="true" />
-            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#12384#12431#0" expanded="true" />
+            <element signature="e#12578#12866#0" expanded="true" />
+            <element signature="e#12865#12866#0" expanded="true" />
+            <element signature="e#20577#20578#0" expanded="true" />
+            <element signature="e#20620#20621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+          <folding>
+            <element signature="e#575#620#0" expanded="true" />
+            <element signature="e#600#620#0" expanded="true" />
+            <element signature="e#575#620#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="64" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="64" />
+          <folding>
+            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#596#645#0" expanded="true" />
+            <element signature="e#625#645#0" expanded="true" />
+            <element signature="e#596#645#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNStartAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="42" lean-forward="true" selection-start-line="7" selection-start-column="42" selection-end-line="7" selection-end-column="42" />
+          <folding>
+            <element signature="e#600#601#0" expanded="true" />
+            <element signature="e#617#660#0" expanded="true" />
+            <element signature="e#640#660#0" expanded="true" />
+            <element signature="e#617#660#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="32" column="20" lean-forward="true" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
+          <folding>
+            <element signature="e#868#927#1" expanded="true" />
+            <element signature="e#936#1055#0" expanded="true" />
+            <element signature="e#936#1055#0" expanded="true" />
+            <element signature="e#987#1004#0" expanded="true" />
+            <element signature="e#987#1004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
+          <folding>
+            <element signature="e#941#965#0" expanded="true" />
+            <element signature="e#997#1069#1" expanded="true" />
+            <element signature="e#1043#1067#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1393#1394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/InputValidator.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/openapi.jar!/com/intellij/openapi/ui/Messages.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="1061" column="218" lean-forward="false" selection-start-line="1061" selection-start-column="218" selection-end-line="1061" selection-end-column="218" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="58" column="17" lean-forward="true" selection-start-line="40" selection-start-column="16" selection-end-line="58" selection-end-column="17" />
+          <folding>
+            <element signature="e#1284#1407#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="36" column="61" lean-forward="true" selection-start-line="36" selection-start-column="61" selection-end-line="36" selection-end-column="61" />
+          <folding>
+            <element signature="e#1086#1300#0" expanded="true" />
+            <element signature="e#1086#1300#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="58" lean-forward="false" selection-start-line="18" selection-start-column="58" selection-end-line="18" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="177" column="41" lean-forward="false" selection-start-line="177" selection-start-column="41" selection-end-line="177" selection-end-column="41" />
+          <folding>
+            <element signature="e#1276#1312#1" expanded="true" />
+            <element signature="e#1290#1311#0" expanded="true" />
+            <element signature="e#1321#1365#1" expanded="true" />
+            <element signature="e#1407#1462#1" expanded="true" />
+            <element signature="e#1514#1549#0" expanded="true" />
+            <element signature="e#1861#1897#1" expanded="true" />
+            <element signature="e#1875#1896#0" expanded="true" />
+            <element signature="e#1906#1950#1" expanded="true" />
+            <element signature="e#1992#2047#1" expanded="true" />
+            <element signature="e#2699#2735#1" expanded="true" />
+            <element signature="e#2713#2734#0" expanded="true" />
+            <element signature="e#2744#2788#1" expanded="true" />
+            <element signature="e#3399#3443#1" expanded="true" />
+            <element signature="e#3463#3492#0" expanded="true" />
+            <element signature="e#3504#3593#0" expanded="true" />
+            <element signature="e#3504#3593#0" expanded="true" />
+            <element signature="e#3805#3849#1" expanded="true" />
+            <element signature="e#3869#3899#0" expanded="true" />
+            <element signature="e#3878#3899#0" expanded="true" />
+            <element signature="e#3878#3899#0" expanded="true" />
+            <element signature="e#3911#4000#0" expanded="true" />
+            <element signature="e#3911#4000#0" expanded="true" />
+            <element signature="e#4181#4208#1" expanded="true" />
+            <element signature="e#4236#4294#1" expanded="true" />
+            <element signature="e#4544#4588#1" expanded="true" />
+            <element signature="e#4646#4692#1" expanded="true" />
+            <element signature="e#4974#5018#1" expanded="true" />
+            <element signature="e#5031#5058#0" expanded="true" />
+            <element signature="e#5031#5058#0" expanded="true" />
+            <element signature="e#5031#5058#0" expanded="true" />
+            <element signature="e#5072#5118#1" expanded="true" />
+            <element signature="e#5464#5500#1" expanded="true" />
+            <element signature="e#5478#5499#0" expanded="true" />
+            <element signature="e#5509#5553#1" expanded="true" />
+            <element signature="e#5562#5831#0" expanded="true" />
+            <element signature="e#5562#5831#0" expanded="true" />
+            <element signature="e#5595#5648#1" expanded="true" />
+            <element signature="e#5661#5754#0" expanded="true" />
+            <element signature="e#5661#5754#0" expanded="true" />
+            <element signature="e#6164#6222#1" expanded="true" />
+            <element signature="e#6302#6342#1" expanded="true" />
+            <element signature="e#6320#6341#0" expanded="true" />
+            <element signature="e#6351#6396#1" expanded="true" />
+            <element signature="e#7086#7130#1" expanded="true" />
+            <element signature="e#7314#7547#1" expanded="true" />
+            <element signature="e#7461#7462#0" expanded="true" />
+            <element signature="e#7490#7512#0" expanded="true" />
+            <element signature="e#7530#7531#0" expanded="true" />
+            <element signature="e#7608#7616#0" expanded="true" />
+            <element signature="e#7669#7690#0" expanded="true" />
+            <element signature="e#7800#7821#0" expanded="true" />
+            <element signature="e#8434#8460#1" expanded="true" />
+            <element signature="e#8473#8492#0" expanded="true" />
+            <element signature="e#10473#10531#1" expanded="true" />
+            <element signature="e#10623#10674#1" expanded="true" />
+            <element signature="e#10905#10986#1" expanded="true" />
+            <element signature="e#11211#11283#1" expanded="true" />
+            <element signature="e#11747#11780#1" expanded="true" />
+            <element signature="e#11817#11855#1" expanded="true" />
+            <element signature="e#11899#11924#1" expanded="true" />
+            <element signature="e#11938#11979#1" expanded="true" />
+            <element signature="e#11961#11978#0" expanded="true" />
+            <element signature="e#12273#12292#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="160" column="110" lean-forward="false" selection-start-line="160" selection-start-column="20" selection-end-line="160" selection-end-column="110" />
+        <state relative-caret-position="454">
+          <caret line="112" column="27" lean-forward="true" selection-start-line="112" selection-start-column="27" selection-end-line="112" selection-end-column="27" />
           <folding />
         </state>
       </provider>
