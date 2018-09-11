@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.1.9</version>
+    <version>1.2.0</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -112,6 +112,10 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+         <b>1.2.0</b><br/>
+         add android reload js button to main toolbar , fix https://github.com/beansoftapp/react-native-console/issues/28<br/>
+        </li>
          <li>
          <b>1.1.9</b><br/>
          allow custom metro port, fix https://github.com/beansoftapp/react-native-console/issues/27<br/>
@@ -237,6 +241,7 @@
 
         <action id="Plugin_ReactNative_Android_Refresh" class="com.github.beansoftapp.reatnative.idea.actions.ShowConsoleRefreshAnrdoidAction"
                 text="Android Reload JS" description="Android Reload JS">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl F2"/>
             <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
