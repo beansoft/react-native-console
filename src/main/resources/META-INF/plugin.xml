@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -112,6 +112,10 @@
 
     <change-notes><![CDATA[
       <ul>
+        <li>
+         <b>1.2.1</b><br/>
+         add some scripts for gradle command, for internal usage.<br/>
+        </li>
         <li>
          <b>1.2.0</b><br/>
          add android reload js button to main toolbar , fix https://github.com/beansoftapp/react-native-console/issues/28<br/>

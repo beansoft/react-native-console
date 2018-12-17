@@ -66,6 +66,7 @@ public class PluginIcons {
     public static final Icon Console = IconLoader.getIcon("/debugger/console.png"); // 16x16
     public static final Icon Console_log = IconLoader.getIcon("/debugger/console_log.png"); // 16x16
     public static final Icon RealDevice = IconLoader.getIcon("/icons/real_device.png"); // 16x16
+    public static final Icon Gradle = IconLoader.getIcon("/icons/gradle.png"); // 16x16
 
     /* Run action icon */
     public static final Icon ICON_ACTION_RUN = FreelineIcon;
