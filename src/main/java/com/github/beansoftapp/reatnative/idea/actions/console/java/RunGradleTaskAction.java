@@ -31,7 +31,7 @@ public class RunGradleTaskAction extends BaseRNConsoleActionGroup {
         if (e == null) return EMPTY_ARRAY;
         final Project project = e.getProject();
         if (project == null) return EMPTY_ARRAY;
-        String[] devices = {"build", "test", "bootJar", "checkstyleMain", "spotbugsMain"};
+        String[] devices = {"build", "integTest", "test", "bootJar", "checkstyleMain", "spotbugsMain"};
         if (devices == null || devices.length == 0) return EMPTY_ARRAY;
         final AnAction[] actions = new AnAction[devices.length];
 
