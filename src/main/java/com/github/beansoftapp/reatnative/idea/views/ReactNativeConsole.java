@@ -30,7 +30,6 @@ import com.github.beansoftapp.reatnative.idea.actions.console.RunNPMScriptsActio
 import com.github.beansoftapp.reatnative.idea.actions.console.RunRNDebuggerAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunRNScriptsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.YarnAction;
-import com.github.beansoftapp.reatnative.idea.actions.console.java.RunGradleTaskAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.intellij.execution.actions.StopProcessAction;
@@ -44,7 +43,6 @@ import com.intellij.openapi.actionSystem.ActionPlaces;
 import com.intellij.openapi.actionSystem.ActionToolbar;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
-import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.editor.actions.ScrollToTheEndToolbarAction;
 import com.intellij.openapi.project.Project;
@@ -55,13 +53,10 @@ import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener;
 import com.intellij.ui.awt.RelativePoint;
 import com.intellij.ui.content.Content;
-import com.intellij.ui.content.ContentFactory;
 import com.intellij.ui.content.ContentManager;
 import com.intellij.ui.content.impl.ContentImpl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.jetbrains.plugins.terminal.AbstractTerminalRunner;
-import org.jetbrains.plugins.terminal.JBTabbedTerminalWidget;
 
 import javax.swing.*;
 import java.awt.event.FocusEvent;
@@ -111,54 +106,6 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
     }
 
-    /**
-     * @deprecated
-     * Create a terminal panel, for test purpose only.
-     *
-     * @param terminalRunner
-     * @param toolWindow
-     * @return
-     */
-    private Content createTerminalInContentPanel(@NotNull AbstractTerminalRunner terminalRunner, @NotNull final ToolWindow toolWindow) {
-        SimpleToolWindowPanel panel = new SimpleToolWindowPanel(true);
-        Content content = ContentFactory.SERVICE.getInstance().createContent(panel, "TestTerminal", false);
-        content.setCloseable(true);
-        JBTabbedTerminalWidget myTerminalWidget = terminalRunner.createTerminalWidget(content);
-        panel.setContent(myTerminalWidget.getComponent());
-        panel.addFocusListener(this);
-
-        new Thread(() -> {
-            try {
-                // Wait 0.5 second for the terminal to show up, no wait works ok on WebStorm but not on Android Studio
-                Thread.currentThread().sleep(500L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            // Below code without ApplicationManager.getApplication().invokeLater() will throw exception
-            // : IDEA Access is allowed from event dispatch thread only.
-            ApplicationManager.getApplication().invokeLater(() -> {
-                if (myTerminalWidget.getCurrentSession() != null) {
-                    myTerminalWidget.getCurrentSession().getTerminalStarter().sendString("ls\n");
-                }
-            });
-        }).start();
-
-//        ApplicationManager.getApplication().invokeLater(() -> {
-//            if (myTerminalWidget.getCurrentSession() != null) {
-//                myTerminalWidget.getCurrentSession().getTerminalStarter().sendString("ls\n");
-//            }
-//        });
-
-
-//        createToolbar(terminalRunner, myTerminalWidget, toolWindow, panel);// west toolbar
-
-//        ActionToolbar toolbar = createTopToolbar(terminalRunner, myTerminalWidget, toolWindow);
-//        toolbar.setTargetComponent(panel);
-//        panel.setToolbar(toolbar.getComponent(), false);
-
-        content.setPreferredFocusableComponent(myTerminalWidget.getComponent());
-        return content;
-    }
 
     /**
      * Init and show this console.
@@ -463,8 +410,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new RunMiscScriptsAction(this));
 
         // Gradle
-        group.addSeparator();
-        group.add(new RunGradleTaskAction(this));
+//        group.addSeparator();
+//        group.add(new RunGradleTaskAction(this));
 
         content.setPreferredFocusableComponent(consoleView.getComponent());
 
