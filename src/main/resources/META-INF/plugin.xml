@@ -70,6 +70,8 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <br>1.3.0
+        <br>- fix package.json scripts name with whitespace didn't work, https://github.com/beansoftapp/react-native-console/issues/31
         <br>1.3
         <br>- fix support of Jetbrains 2018.3+
         <br>1.2.0

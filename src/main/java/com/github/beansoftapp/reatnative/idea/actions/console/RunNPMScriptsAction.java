@@ -2,26 +2,17 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleActionGroup;
-import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleNPMAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
-import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser;
 import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.execution.testframework.sm.runner.history.actions.ImportTestsFromHistoryAction;
-import com.intellij.openapi.actionSystem.*;
-import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
-import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
-import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.awt.*;
-import java.awt.event.InputEvent;
-import java.awt.event.MouseEvent;
 import java.io.File;
 
 /** Show all package.json scripts, and let the user choose one item to run */
@@ -49,7 +40,7 @@ public class RunNPMScriptsAction extends BaseRNConsoleActionGroup {
                 public void doAction(AnActionEvent anActionEvent) {
                     RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
                     consoleView.runNPMCI(
-                            "npm run " + scriptName);
+                            "npm run \"" + scriptName + "\"");
                 }
             };
         }

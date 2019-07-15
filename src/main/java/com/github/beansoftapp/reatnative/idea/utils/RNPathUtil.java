@@ -5,6 +5,7 @@ import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.io.FileUtil;
+import com.intellij.util.execution.ParametersListUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -13,7 +14,11 @@ import java.io.FileFilter;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Utils for find some dirs.
@@ -378,7 +383,12 @@ public class RNPathUtil {
             cmdList.remove(0);
             cmdList.add(0, exeFullPath);
 
-            commandLine = new GeneralCommandLine(cmdList);
+            commandLine = new GeneralCommandLine(exeFullPath);
+
+            // Fix param with quotes issue, see com.intellij.diff.tools.external.ExternalDiffToolUtil, https://github.com/beansoftapp/react-native-console/issues/31
+            List<String> parameters = ParametersListUtil.parse(shell.substring(exePath.length()), false);
+
+            commandLine.addParameters(parameters);
 
         } else {
             exeFullPath = getExecuteFileFullPath(shell);
