@@ -58,6 +58,15 @@ public class NotificationUtils {
     }
 
     /**
+     * show a info Notification
+     *
+     * @param message
+     */
+    public static void warning(final String message) {
+        showNotification(message, NotificationType.WARNING);
+    }
+
+    /**
      * python提示
      */
     public static void pythonNotFound() {

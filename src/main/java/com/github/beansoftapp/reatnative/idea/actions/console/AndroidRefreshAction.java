@@ -29,7 +29,7 @@ public class AndroidRefreshAction extends BaseRNConsoleRunAction// implements Sh
     @Override
     protected String command() {
         return "adb shell input keyevent 82 20 66 66";//First toggle menu, then press down key to select first menu item
-        // - Relead, final press enter will execute the action
+        // - Reload, final press enter will execute the action
     }
 
 //    @Override

@@ -30,6 +30,7 @@ import com.github.beansoftapp.reatnative.idea.actions.console.RunNPMScriptsActio
 import com.github.beansoftapp.reatnative.idea.actions.console.RunRNDebuggerAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunRNScriptsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.YarnAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.java.OpenCurrentActivityAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.intellij.execution.actions.StopProcessAction;
@@ -95,12 +96,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     public void initAndActiveRunRefresh(InputEvent e) {
         ToolWindow toolWindow = getToolWindow();
         if (!toolWindow.isActive()) {
-            toolWindow.activate(new Runnable() {
-                @Override
-                public void run() {
-                    ActionManager.getInstance().tryToExecute(new AndroidRefreshAction(ReactNativeConsole.this), e, null, ActionPlaces.UNKNOWN, true);
-                }
-            });
+            toolWindow.activate(() -> ActionManager.getInstance().tryToExecute(new AndroidRefreshAction(ReactNativeConsole.this), e, null, ActionPlaces.UNKNOWN, true));
         } else {
             ActionManager.getInstance().tryToExecute(new AndroidRefreshAction(this), e, null, ActionPlaces.UNKNOWN, true);
         }
@@ -362,11 +358,13 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
         group.add(new HelpAction(this));
 
-        // Android
+
+        // Config
         group.addSeparator();
         group.add(new EditJsAppPathAction(this));
         group.addSeparator();
 
+      // Android
         group.add(new AndroidDevMenuAction(this));
         group.add(new AndroidRefreshAction(this));
         group.add(new AdbForwardAction(this));
@@ -376,6 +374,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new AndroidDebugApkAction(this));
         group.add(new AndroidBundleAction(this));
         group.add(new AndroidCleanAction(this));
+        group.add(new OpenCurrentActivityAction(this));
 
         // NPM, yarn and test
         group.addSeparator();

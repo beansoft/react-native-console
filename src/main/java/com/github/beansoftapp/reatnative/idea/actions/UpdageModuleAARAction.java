@@ -16,13 +16,13 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
 import com.github.beansoftapp.reatnative.idea.utils.RNUtil;
-import com.intellij.compiler.actions.CompileActionBase;
+//import com.intellij.compiler.actions.CompileActionBase;
 import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.project.Project;
 
-public class UpdageModuleAARAction extends CompileActionBase {
+public abstract class UpdageModuleAARAction extends AnAction {
   private static final Logger LOG = Logger.getInstance("#com.intellij.compiler.actions.MakeModuleAction");
 
   protected void doAction(DataContext dataContext, Project project) {

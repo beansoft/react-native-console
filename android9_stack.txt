@@ -1,0 +1,138 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+
+  Stack #1: type=standard mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+    Task id #6
+    mBounds=Rect(0, 0 - 0, 0)
+    mMinWidth=-1
+    mMinHeight=-1
+    mLastNonFullscreenBounds=null
+    * TaskRecord{1e361c5 #6 A=cn.pilipa.custapp U=0 StackId=1 sz=1}
+      userId=0 effectiveUid=u0a70 mCallingUid=u0a26 mUserSetupComplete=true mCallingPackage=com.android.launcher3
+      affinity=cn.pilipa.custapp
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=cn.pilipa.custapp/.MainActivity}
+      realActivity=cn.pilipa.custapp/.MainActivity
+      autoRemoveRecents=false isPersistable=true numFullscreen=1 activityType=1
+      rootWasReset=true mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{a8d5302 u0 cn.pilipa.custapp/.MainActivity t6}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      mRootProcess=ProcessRecord{39bf6a 3043:cn.pilipa.custapp/u0a70}
+      stackId=1
+      hasBeenVisible=true mResizeMode=RESIZE_MODE_RESIZEABLE mSupportsPictureInPicture=false isResizeable=true lastActiveTime=330259 (inactive for 429s)
+      * Hist #0: ActivityRecord{a8d5302 u0 cn.pilipa.custapp/.MainActivity t6}
+          packageName=cn.pilipa.custapp processName=cn.pilipa.custapp
+          launchedFromUid=10026 launchedFromPackage=com.android.launcher3 userId=0
+          app=ProcessRecord{39bf6a 3043:cn.pilipa.custapp/u0a70}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=cn.pilipa.custapp/.MainActivity bnds=[843,1072][1045,1354] }
+          frontOfTask=true task=TaskRecord{1e361c5 #6 A=cn.pilipa.custapp U=0 StackId=1 sz=1}
+          taskAffinity=cn.pilipa.custapp
+          realActivity=cn.pilipa.custapp/.MainActivity
+          baseDir=/data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/base.apk
+          dataDir=/data/user/0/cn.pilipa.custapp
+          splitDir=[/data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_dependencies_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_resources_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_0_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_1_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_2_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_3_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_4_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_5_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_6_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_7_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_8_apk.apk, /data/app/cn.pilipa.custapp-rJI3v9-vbwgznhZ-swLimg==/split_lib_slice_9_apk.apk]
+          stateNotNeeded=false componentSpecified=true mActivityType=standard
+          compat={420dpi} labelRes=0x7f0d0029 icon=0x7f0c0002 theme=0x7f0e0007
+          mLastReportedConfigurations:
+           mGlobalConfig={1.0 310mcc270mnc [en_US] ldltr sw411dp w411dp h659dp 420dpi nrml port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 1794) mWindowingMode=fullscreen mActivityType=undefined} s.6}
+           mOverrideConfig={1.0 310mcc270mnc [en_US] ldltr sw411dp w411dp h659dp 420dpi nrml port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 1794) mAppBounds=Rect(0, 0 - 1080, 1794) mWindowingMode=fullscreen mActivityType=standard} s.6}
+          CurrentConfiguration={1.0 310mcc270mnc [en_US] ldltr sw411dp w411dp h659dp 420dpi nrml port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 1794) mAppBounds=Rect(0, 0 - 1080, 1794) mWindowingMode=fullscreen mActivityType=standard} s.6}
+          taskDescription: label="null" icon=null iconResource=0 iconFilename=null primaryColor=fff5f5f5
+           backgroundColor=fffafafa
+           statusBarColor=ff757575
+           navigationBarColor=ff000000
+          launchFailed=false launchCount=1 lastLaunchTime=-7m9s369ms
+          haveState=false icicle=null
+          state=RESUMED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_SHOWN
+          fullscreen=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=standard
+          waitingVisible=false nowVisible=true lastVisibleTime=-6m55s648ms
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+
+    Running activities (most recent first):
+      TaskRecord{1e361c5 #6 A=cn.pilipa.custapp U=0 StackId=1 sz=1}
+        Run #0: ActivityRecord{a8d5302 u0 cn.pilipa.custapp/.MainActivity t6}
+
+    mResumedActivity: ActivityRecord{a8d5302 u0 cn.pilipa.custapp/.MainActivity t6}
+
+  Stack #0: type=home mode=fullscreen
+  isSleeping=false
+  mBounds=Rect(0, 0 - 0, 0)
+
+    Task id #5
+    mBounds=Rect(0, 0 - 0, 0)
+    mMinWidth=-1
+    mMinHeight=-1
+    mLastNonFullscreenBounds=null
+    * TaskRecord{8f8d71a #5 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+      userId=0 effectiveUid=u0a26 mCallingUid=0 mUserSetupComplete=true mCallingPackage=null
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.Launcher}
+      realActivity=com.android.launcher3/.Launcher
+      autoRemoveRecents=false isPersistable=true numFullscreen=1 activityType=2
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false mLockTaskAuth=LOCK_TASK_AUTH_PINNABLE
+      Activities=[ActivityRecord{1362e31 u0 com.android.launcher3/.Launcher t5}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      mRootProcess=ProcessRecord{b99b24b 2646:com.android.launcher3/u0a26}
+      stackId=0
+      hasBeenVisible=true mResizeMode=RESIZE_MODE_RESIZEABLE mSupportsPictureInPicture=false isResizeable=true lastActiveTime=329320 (inactive for 430s)
+      * Hist #0: ActivityRecord{1362e31 u0 com.android.launcher3/.Launcher t5}
+          packageName=com.android.launcher3 processName=com.android.launcher3
+          launchedFromUid=0 launchedFromPackage=null userId=0
+          app=ProcessRecord{b99b24b 2646:com.android.launcher3/u0a26}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.android.launcher3/.Launcher }
+          frontOfTask=true task=TaskRecord{8f8d71a #5 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+          taskAffinity=null
+          realActivity=com.android.launcher3/.Launcher
+          baseDir=/system/priv-app/Launcher3QuickStep/Launcher3QuickStep.apk
+          dataDir=/data/user/0/com.android.launcher3
+          stateNotNeeded=true componentSpecified=false mActivityType=home
+          compat={420dpi} labelRes=0x7f110035 icon=0x7f08001b theme=0x7f120002
+          mLastReportedConfigurations:
+           mGlobalConfig={1.0 310mcc270mnc [en_US] ldltr sw411dp w411dp h659dp 420dpi nrml port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=Rect(0, 0 - 1080, 1794) mWindowingMode=fullscreen mActivityType=undefined} s.6}
+           mOverrideConfig={1.0 310mcc270mnc [en_US] ldltr sw411dp w411dp h659dp 420dpi nrml port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 1794) mAppBounds=Rect(0, 0 - 1080, 1794) mWindowingMode=fullscreen mActivityType=home} s.6}
+          CurrentConfiguration={1.0 310mcc270mnc [en_US] ldltr sw411dp w411dp h659dp 420dpi nrml port finger qwerty/v/v dpad/v winConfig={ mBounds=Rect(0, 0 - 1080, 1794) mAppBounds=Rect(0, 0 - 1080, 1794) mWindowingMode=fullscreen mActivityType=home} s.6}
+          OverrideConfiguration={0.0 ?mcc?mnc ?localeList ?layoutDir ?swdp ?wdp ?hdp ?density ?lsize ?long ?ldr ?wideColorGamut ?orien ?uimode ?night ?touch ?keyb/?/? ?nav/? winConfig={ mBounds=Rect(0, 0 - 0, 0) mAppBounds=null mWindowingMode=undefined mActivityType=home}}
+          taskDescription: label="null" icon=null iconResource=0 iconFilename=null primaryColor=fff5f5f5
+           backgroundColor=fffafafa
+           statusBarColor=0
+           navigationBarColor=0
+          launchFailed=false launchCount=0 lastLaunchTime=-8m50s527ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=3740]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=false sleeping=false idle=true mStartingWindowState=STARTING_WINDOW_NOT_SHOWN
+          fullscreen=true noDisplay=false immersive=false launchMode=2
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=home
+          waitingVisible=false nowVisible=false lastVisibleTime=-8m48s235ms
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          mLastReportedMultiWindowMode=false mLastReportedPictureInPictureMode=false
+
+    Running activities (most recent first):
+      TaskRecord{8f8d71a #5 I=com.android.launcher3/.Launcher U=0 StackId=0 sz=1}
+        Run #0: ActivityRecord{1362e31 u0 com.android.launcher3/.Launcher t5}
+
+    mLastPausedActivity: ActivityRecord{1362e31 u0 com.android.launcher3/.Launcher t5}
+
+  ResumedActivity: ActivityRecord{a8d5302 u0 cn.pilipa.custapp/.MainActivity t6}
+  mFocusedStack=ActivityStack{5c5f428 stackId=1 type=standard mode=fullscreen visible=true translucent=false, 1 tasks} mLastFocusedStack=ActivityStack{5c5f428 stackId=1 type=standard mode=fullscreen visible=true translucent=false, 1 tasks}
+  mCurTaskIdForUser={0=6}
+  mUserStackInFront={}
+  displayId=0 stacks=2
+   mHomeStack=ActivityStack{49d5541 stackId=0 type=home mode=fullscreen visible=false translucent=true, 1 tasks}
+  isHomeRecentsComponent=true  KeyguardController:
+    mKeyguardShowing=false
+    mAodShowing=false
+    mKeyguardGoingAway=false
+    mOccluded=false
+    mDismissingKeyguardActivity=null
+    mDismissalRequested=false
+    mVisibilityTransactionDepth=0
+  LockTaskController
+    mLockTaskModeState=NONE
+    mLockTaskModeTasks=
+    mLockTaskPackages (userId:packages)=
+      u0:[]

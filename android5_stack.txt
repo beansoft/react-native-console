@@ -1,0 +1,174 @@
+ACTIVITY MANAGER ACTIVITIES (dumpsys activity activities)
+Display #0 (activities from top to bottom):
+  Stack #1:
+    Task id #486
+    * TaskRecord{385889 #486 A=cn.pilipa.custapp U=0 sz=1}
+      userId=0 effectiveUid=u0a428 mCallingUid=u0a428 mCallingPackage=cn.pilipa.custapp
+      affinity=cn.pilipa.custapp
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10200000 cmp=cn.pilipa.custapp/.MainActivity}
+      realActivity=cn.pilipa.custapp/.MainActivity
+      autoRemoveRecents=false isPersistable=true numFullscreen=1 taskType=0 mTaskToReturnTo=1
+      rootWasReset=true mNeverRelinquishIdentity=true mReuseTask=false
+      Activities=[ActivityRecord{28ecd0af u0 cn.pilipa.custapp/com.reactnativenavigation.controllers.NavigationActivity t486}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      lastThumbnail=android.graphics.Bitmap@2f4e5cc6 lastThumbnailFile=/data/system/recent_images/486_task_thumbnail.png
+      hasBeenVisible=true firstActiveTime=1565164473055 lastActiveTime=1565164478286 lastActiveElapsedTime=459606825 (inactive for 36s)
+      isSecretMode=false
+      * Hist #0: ActivityRecord{28ecd0af u0 cn.pilipa.custapp/com.reactnativenavigation.controllers.NavigationActivity t486}
+          packageName=cn.pilipa.custapp processName=cn.pilipa.custapp
+          launchedFromUid=10428 launchedFromPackage=cn.pilipa.custapp userId=0
+          app=ProcessRecord{34b92bd7 14664:cn.pilipa.custapp/u0a428}
+          Intent { act=android.intent.action.VIEW flg=0x10008000 cmp=cn.pilipa.custapp/com.reactnativenavigation.controllers.NavigationActivity (has extras) }
+          frontOfTask=true task=TaskRecord{385889 #486 A=cn.pilipa.custapp U=0 sz=1}
+          taskAffinity=cn.pilipa.custapp
+          realActivity=cn.pilipa.custapp/com.reactnativenavigation.controllers.NavigationActivity
+          baseDir=/data/app/cn.pilipa.custapp-1/base.apk
+          dataDir=/data/data/cn.pilipa.custapp
+          stateNotNeeded=false componentSpecified=false mActivityType=0
+          compat={320dpi} labelRes=0x7f080052 icon=0x7f02011d theme=0x7f0a00b1
+          config={0 1.0 themeSeq=0 460mcc3mnc zh_CN ?layoutDir sw360dp w360dp h615dp 320dpi nrml long port finger -keyb/v/h -nav/h mkbd/? s.5}
+          taskDescription: iconFilename=null label="null" color=fff5f5f5
+          launchFailed=false launchCount=1 lastLaunchTime=-36s95ms
+          haveState=false icicle=null
+          state=RESUMED stopped=false delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=true sleeping=false idle=true
+          fullscreen=true noDisplay=false immersive=false launchMode=0
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          waitingVisible=false nowVisible=true lastVisibleTime=-35s491ms
+          mIsLastShownWhenLocked=false
+    Task id #484
+    * TaskRecord{18d91cef #484 I=com.android.settings/.Settings$WifiApSettingsActivity U=0 sz=1}
+      userId=0 effectiveUid=1000 mCallingUid=1000 mCallingPackage=android
+      intent={flg=0x14800000 cmp=com.android.settings/.Settings$WifiApSettingsActivity}
+      origActivity=com.android.settings/.wifi.mobileap.WifiApSettings
+      realActivity=com.android.settings/.Settings$WifiApSettingsActivity
+      autoRemoveRecents=false isPersistable=false numFullscreen=1 taskType=0 mTaskToReturnTo=1
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false
+      Activities=[ActivityRecord{11da46a7 u0 com.android.settings/.wifi.mobileap.WifiApSettings t484}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      lastThumbnail=android.graphics.Bitmap@b1c53fc lastThumbnailFile=/data/system/recent_images/484_task_thumbnail.png
+      hasBeenVisible=true firstActiveTime=1565010174543 lastActiveTime=1565053729784 lastActiveElapsedTime=348846891 (inactive for 110784s)
+      isSecretMode=false
+      * Hist #0: ActivityRecord{11da46a7 u0 com.android.settings/.wifi.mobileap.WifiApSettings t484}
+          packageName=com.android.settings processName=com.android.settings
+          launchedFromUid=1000 launchedFromPackage=android userId=0
+          app=ProcessRecord{9711f3b 24157:com.android.settings/1000}
+          Intent { flg=0x14800000 cmp=com.android.settings/.wifi.mobileap.WifiApSettings }
+          frontOfTask=true task=TaskRecord{18d91cef #484 I=com.android.settings/.Settings$WifiApSettingsActivity U=0 sz=1}
+          taskAffinity=null
+          realActivity=com.android.settings/.wifi.mobileap.WifiApSettings
+          baseDir=/system/priv-app/SecSettings2/SecSettings2.apk
+          dataDir=/data/data/com.android.settings
+          stateNotNeeded=false componentSpecified=false mActivityType=0
+          compat={320dpi} labelRes=0x7f0a055c icon=0x7f020284 theme=0x7f0b00c5
+          config={0 1.0 themeSeq=0 460mcc3mnc zh_CN ?layoutDir sw360dp w360dp h615dp 320dpi nrml long port finger -keyb/v/h -nav/h mkbd/? s.5}
+          taskDescription: iconFilename=null label="null" color=ff00a5c4
+          launchFailed=false launchCount=0 lastLaunchTime=-5h13m8s833ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=3992]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=false sleeping=false idle=true
+          fullscreen=true noDisplay=false immersive=false launchMode=1
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=APPLICATION_ACTIVITY_TYPE
+          waitingVisible=false nowVisible=false lastVisibleTime=-5h13m8s9ms
+          mIsLastShownWhenLocked=false
+
+    Running activities (most recent first):
+      TaskRecord{385889 #486 A=cn.pilipa.custapp U=0 sz=1}
+        Run #1: ActivityRecord{28ecd0af u0 cn.pilipa.custapp/com.reactnativenavigation.controllers.NavigationActivity t486}
+      TaskRecord{18d91cef #484 I=com.android.settings/.Settings$WifiApSettingsActivity U=0 sz=1}
+        Run #0: ActivityRecord{11da46a7 u0 com.android.settings/.wifi.mobileap.WifiApSettings t484}
+
+    mResumedActivity: ActivityRecord{28ecd0af u0 cn.pilipa.custapp/com.reactnativenavigation.controllers.NavigationActivity t486}
+
+  Stack #0:
+    Task id #471
+    * TaskRecord{22845ad0 #471 A=net.suckga.iLauncher2.LauncherActivity U=0 sz=1}
+      userId=0 effectiveUid=u0a160 mCallingUid=u0a35 mCallingPackage=com.android.systemui
+      affinity=net.suckga.iLauncher2.LauncherActivity
+      intent={act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=net.suckga.iLauncher2/.LauncherActivity}
+      realActivity=net.suckga.iLauncher2/.LauncherActivity
+      autoRemoveRecents=false isPersistable=true numFullscreen=1 taskType=1 mTaskToReturnTo=0
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false
+      Activities=[ActivityRecord{16b70225 u0 net.suckga.iLauncher2/.LauncherActivity t471}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      lastThumbnail=null lastThumbnailFile=/data/system/recent_images/471_task_thumbnail.png
+      hasBeenVisible=true firstActiveTime=1564704942954 lastActiveTime=1565164472962 lastActiveElapsedTime=459601501 (inactive for 41s)
+      isSecretMode=false
+      * Hist #0: ActivityRecord{16b70225 u0 net.suckga.iLauncher2/.LauncherActivity t471}
+          packageName=net.suckga.iLauncher2 processName=net.suckga.iLauncher2
+          launchedFromUid=0 launchedFromPackage=null userId=0
+          app=ProcessRecord{12e63ac9 1567:net.suckga.iLauncher2/u0a160}
+          Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000000 cmp=net.suckga.iLauncher2/.LauncherActivity }
+          frontOfTask=true task=TaskRecord{22845ad0 #471 A=net.suckga.iLauncher2.LauncherActivity U=0 sz=1}
+          taskAffinity=net.suckga.iLauncher2.LauncherActivity
+          realActivity=net.suckga.iLauncher2/.LauncherActivity
+          baseDir=/data/app/net.suckga.iLauncher2-1/base.apk
+          dataDir=/data/user/0/net.suckga.iLauncher2
+          stateNotNeeded=false componentSpecified=false mActivityType=1
+          compat={320dpi} labelRes=0x7f0a0010 icon=0x7f02003a theme=0x7f0b0014
+          config={0 1.0 themeSeq=0 460mcc3mnc zh_CN ?layoutDir sw360dp w360dp h615dp 320dpi nrml long port finger -keyb/v/h -nav/h mkbd/? s.5}
+          taskDescription: iconFilename=null label="null" color=ffe6e6e6
+          launchFailed=false launchCount=0 lastLaunchTime=-16h35m54s58ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=1548]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=false sleeping=false idle=true
+          fullscreen=true noDisplay=false immersive=false launchMode=2
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=HOME_ACTIVITY_TYPE
+          waitingVisible=false nowVisible=false lastVisibleTime=-1h9m43s380ms
+          mIsLastShownWhenLocked=false
+
+    Task id #473
+    * TaskRecord{326675ce #473 A=com.android.systemui U=0 sz=1}
+      userId=0 effectiveUid=u0a35 mCallingUid=u0a35 mCallingPackage=com.android.systemui
+      affinity=com.android.systemui
+      intent={act=com.android.systemui.recents.SHOW_RECENTS flg=0x10800000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[68,223][653,808]}
+      realActivity=com.android.systemui/.recents.RecentsActivity
+      autoRemoveRecents=false isPersistable=false numFullscreen=1 taskType=2 mTaskToReturnTo=0
+      rootWasReset=false mNeverRelinquishIdentity=true mReuseTask=false
+      Activities=[ActivityRecord{1424e888 u0 com.android.systemui/.recents.RecentsActivity t473}]
+      askedCompatMode=false inRecents=true isAvailable=true
+      lastThumbnail=null lastThumbnailFile=/data/system/recent_images/473_task_thumbnail.png
+      hasBeenVisible=true firstActiveTime=1564803213889 lastActiveTime=1565140129459 lastActiveElapsedTime=435255533 (inactive for 24384s)
+      isSecretMode=false
+      * Hist #0: ActivityRecord{1424e888 u0 com.android.systemui/.recents.RecentsActivity t473}
+          packageName=com.android.systemui processName=com.android.systemui.recents_imagewallpaper
+          launchedFromUid=10035 launchedFromPackage=com.android.systemui userId=0
+          app=ProcessRecord{287a1dd9 1364:com.android.systemui.recents_imagewallpaper/u0a35}
+          Intent { act=com.android.systemui.recents.SHOW_RECENTS flg=0x10800000 cmp=com.android.systemui/.recents.RecentsActivity bnds=[68,223][653,808] }
+          frontOfTask=true task=TaskRecord{326675ce #473 A=com.android.systemui U=0 sz=1}
+          taskAffinity=com.android.systemui
+          realActivity=com.android.systemui/.recents.RecentsActivity
+          baseDir=/system/priv-app/SystemUI/SystemUI.apk
+          dataDir=/data/data/com.android.systemui
+          stateNotNeeded=true componentSpecified=false mActivityType=2
+          compat={320dpi} labelRes=0x7f0a026d icon=0x7f020134 theme=0x7f110015
+          config={0 1.0 themeSeq=0 460mcc3mnc zh_CN ?layoutDir sw360dp w360dp h615dp 320dpi nrml long port finger -keyb/v/h -nav/h mkbd/? s.5}
+          taskDescription: iconFilename=null label="null" color=ffe6e6e6
+          launchFailed=false launchCount=0 lastLaunchTime=-14h24m3s926ms
+          haveState=true icicle=Bundle[mParcelledData.dataSize=3312]
+          state=STOPPED stopped=true delayedResume=false finishing=false
+          keysPaused=false inHistory=true visible=false sleeping=false idle=true
+          fullscreen=true noDisplay=false immersive=false launchMode=3
+          frozenBeforeDestroy=false forceNewConfig=false
+          mActivityType=RECENTS_ACTIVITY_TYPE
+          waitingVisible=false nowVisible=false lastVisibleTime=-1h9m44s333ms
+          mIsLastShownWhenLocked=false
+
+    Running activities (most recent first):
+      TaskRecord{22845ad0 #471 A=net.suckga.iLauncher2.LauncherActivity U=0 sz=1}
+        Run #1: ActivityRecord{16b70225 u0 net.suckga.iLauncher2/.LauncherActivity t471}
+      TaskRecord{326675ce #473 A=com.android.systemui U=0 sz=1}
+        Run #0: ActivityRecord{1424e888 u0 com.android.systemui/.recents.RecentsActivity t473}
+
+    mLastPausedActivity: ActivityRecord{16b70225 u0 net.suckga.iLauncher2/.LauncherActivity t471}
+
+  mFocusedActivity: ActivityRecord{28ecd0af u0 cn.pilipa.custapp/com.reactnativenavigation.controllers.NavigationActivity t486}
+  mFocusedStack=ActivityStack{5eda08e stackId=1, 2 tasks} mLastFocusedStack=ActivityStack{5eda08e stackId=1, 2 tasks}
+  mSleepTimeout=false
+  mCurTaskId=486
+  mUserStackInFront={}
+  mActivityContainers={0=ActivtyContainer{0}A zone=0, 1=ActivtyContainer{1}A zone=0}
+  mCurrentUser=0
