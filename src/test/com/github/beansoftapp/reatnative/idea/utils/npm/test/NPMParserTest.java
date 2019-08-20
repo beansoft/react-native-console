@@ -1,6 +1,5 @@
 package com.github.beansoftapp.reatnative.idea.utils.npm.test;
 
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser;
 import org.junit.Assert;
 import org.junit.Test;

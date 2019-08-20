@@ -1,4 +1,4 @@
-package com.github.beansoftapp.reatnative.idea.models.ios;
+package com.github.beansoftapp.reatnative.idea.entity.ios;
 
 /**
  * An iOS device item info, see parseIOSDevicesList.js of RN.

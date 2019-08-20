@@ -2,11 +2,11 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.utils.IdeaMessages;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.ui.Messages;
 
 /**
  * Edit metro port.
@@ -29,9 +29,9 @@ public class EditMetroPortAction extends BaseRNConsoleAction {
      * @param project
      */
     public static void doEditPort(Project project) {
-        String port = Messages.showInputDialog(project,
+        String port = IdeaMessages.showInputDialog(project,
                 "Current port is " + RNPathUtil.getRNMetroPortFromConfig(project) +
-                        "\nEdit metro port, input empty value or click cancel button to disable it.\nThe value is stored in file .idea/.rnconsole",
+                        "\nEdit metro port, input empty value to disable it.\nThe value is stored in file .idea/.rnconsole",
                 "Edit Metro Port",
                 PluginIcons.EditFolder,
                 RNPathUtil.getRNMetroPortFromConfig(project),

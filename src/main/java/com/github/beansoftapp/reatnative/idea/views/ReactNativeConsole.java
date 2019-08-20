@@ -22,6 +22,7 @@ import com.github.beansoftapp.reatnative.idea.actions.console.NPMiOSLogsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RNStartAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.ReactDevToolsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunAndroidAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunAndroidDevicesAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSDeviceAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSDevicesAction;
@@ -31,8 +32,11 @@ import com.github.beansoftapp.reatnative.idea.actions.console.RunRNDebuggerActio
 import com.github.beansoftapp.reatnative.idea.actions.console.RunRNScriptsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.YarnAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.java.OpenCurrentActivityAction;
+import com.github.beansoftapp.reatnative.idea.entity.ProjectConfig;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.utils.IdeaMessages;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
+import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.filters.HyperlinkInfoBase;
@@ -48,6 +52,7 @@ import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.editor.actions.ScrollToTheEndToolbarAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.SystemInfoRt;
+import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
@@ -104,7 +109,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 
 
     /**
-     * Init and show this console.
+     * Init and show this console pane.
      * @param toolWindow
      */
     public void init(final ToolWindow toolWindow) {
@@ -125,6 +130,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
 //        toolWindow.getContentManager().addContent(new ContentImpl(term.getComponent(), "terminal", false));
         toolWindow.setShowStripeButton(true);// if set to false, then sometimes the window will be hidden from the dock area for ever 2017-05-26
 //        toolWindow.setTitle(" - ");
+        // TODO Change to Eventbus
         ((ToolWindowManagerEx) ToolWindowManager.getInstance(this.myProject)).addToolWindowManagerListener(new ToolWindowManagerListener() {
             @Override
             public void toolWindowRegistered(@NotNull String s) {
@@ -258,27 +264,71 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console",
                     new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
 
-            consoleView.print(
-                    "\n\nJs project working directory is not root directory? ",
-                    ConsoleViewContentType.NORMAL_OUTPUT);
-            consoleView.printHyperlink("CLICK HERE to EDIT",
-                    new HyperlinkInfoBase() {
-                        @Override
-                        public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
-                            EditJsAppPathAction.doEditJsProjectPath(project);
-                        }
-                    });
+            consoleView.printHyperlink(
+                    "\n\nEdit Js project working directory (Optional, if it's not under root directory)",
+                new HyperlinkInfoBase() {
+                    @Override
+                    public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
+                        EditJsAppPathAction.doEditJsProjectPath(project);
+                    }
+                });
 
-            consoleView.print(
-                    "\n\nModify metro port in React Native 0.56+? ",
-                    ConsoleViewContentType.NORMAL_OUTPUT);
-            consoleView.printHyperlink("CLICK HERE to VIEW/EDIT",
-                    new HyperlinkInfoBase() {
-                        @Override
-                        public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
-                            EditMetroPortAction.doEditPort(project);
+
+            consoleView.printHyperlink("\n\nEdit metro port in React Native 0.56+(Optional, default value 8081)",
+                new HyperlinkInfoBase() {
+                    @Override
+                    public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
+                        EditMetroPortAction.doEditPort(project);
+                    }
+                });
+
+            consoleView.printHyperlink("\n\nEdit react-native run-android command options of this project",
+                new HyperlinkInfoBase() {
+                    @Override
+                    public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
+                        ProjectConfig projectConfig = RNPathUtil.parseConfigFromRNConsoleJsonFile(project);
+                        String value = projectConfig.getAndroidParam();
+                        if(StringUtil.isEmpty(value)) {
+                            value = "<empty>";
                         }
-                    });
+
+                        String androidConfig = IdeaMessages.showInputDialog(project,
+                            "Current options are " + value +
+                                ".\nEdit run-android command options, eg: --appIdSuffix debug. Input empty value to disable it.\nThe value is stored in file .idea/.rnconsole",
+                            "Edit Run-Android Command Options",
+                            PluginIcons.Android,
+                            projectConfig.getAndroidParam(),
+                            null);
+
+                        projectConfig.setAndroidParam(androidConfig);
+
+                        RNPathUtil.saveProjectConfig(project, projectConfig);
+                    }
+                });
+
+            consoleView.printHyperlink("\n\nEdit react-native run-ios command options of this project",
+                new HyperlinkInfoBase() {
+                    @Override
+                    public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
+                        ProjectConfig projectConfig = RNPathUtil.parseConfigFromRNConsoleJsonFile(project);
+                        String value = projectConfig.getIosParam();
+                        if(StringUtil.isEmpty(value)) {
+                            value = "<empty>";
+                        }
+
+                        String androidConfig = IdeaMessages.showInputDialog(project,
+                            "Current options are " + value +
+                                ".\nEdit run-ios command options, eg: --project-path \"./app/ios\". Input empty value to disable it.\nThe value is stored in file .idea/.rnconsole",
+                            "Edit Run-IOS Command Options",
+                            PluginIcons.IPhoneDevice,
+                            projectConfig.getIosParam(),
+                            null);
+
+                        projectConfig.setIosParam(androidConfig);
+
+                        RNPathUtil.saveProjectConfig(project, projectConfig);
+                    }
+                });
 
             if(SystemInfoRt.isLinux) {
                 consoleView.print(
@@ -292,7 +342,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                                 "if can't find adb, try this shell command:\n" +
                                 "sudo ln -s ~/Android/Sdk/platform-tools/adb /usr/bin/adb\n" +
                                 "More info please ref this issue:\n",
-                        ConsoleViewContentType.LOG_WARNING_OUTPUT);
+                        ConsoleViewContentType.SYSTEM_OUTPUT);
                 consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console/issues/17",
                         new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console/issues/17"));
             }
@@ -375,6 +425,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new AndroidBundleAction(this));
         group.add(new AndroidCleanAction(this));
         group.add(new OpenCurrentActivityAction(this));
+        group.add(new RunAndroidDevicesAction(this));
 
         // NPM, yarn and test
         group.addSeparator();

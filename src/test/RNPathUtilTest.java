@@ -1,3 +1,4 @@
+import com.github.beansoftapp.reatnative.idea.entity.ProjectConfig;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.intellij.util.EnvironmentUtil;
 import org.junit.Assert;
@@ -7,7 +8,6 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import java.io.File;
-import java.util.Map;
 
 /**
  * Test of RNPathUtil
@@ -51,7 +51,7 @@ public class RNPathUtilTest {
     @Test
     public void testParseConfigFromRNConsoleJsonFile() {
         System.out.println(new File(".").getAbsolutePath());
-        Map map = RNPathUtil.parseConfigFromRNConsoleJsonFile(new File(RNPathUtil.RN_CONSOLE));
+        ProjectConfig map = RNPathUtil.parseConfigFromRNConsoleJsonFile(new File(RNPathUtil.RN_CONSOLE));
         System.out.println(map);
     }
 

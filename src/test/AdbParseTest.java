@@ -1,3 +1,4 @@
+import com.github.pedrovgs.androidwifiadb.adb.ADB;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -188,5 +189,11 @@ public class AdbParseTest {
         break;
       }
     }
+  }
+
+  @Test
+  public void testParseAndroid() {
+    ADB adb = new ADB();
+    System.out.println(adb.getDevicesConnectedByUSB());
   }
 }

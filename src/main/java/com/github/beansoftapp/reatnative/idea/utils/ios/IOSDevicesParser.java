@@ -1,6 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.utils.ios;
 
-import com.github.beansoftapp.reatnative.idea.models.ios.IOSDeviceInfo;
+import com.github.beansoftapp.reatnative.idea.entity.ios.IOSDeviceInfo;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.js.JSExec;

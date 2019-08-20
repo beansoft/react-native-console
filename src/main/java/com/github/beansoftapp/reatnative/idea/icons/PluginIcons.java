@@ -27,6 +27,7 @@ public class PluginIcons {
     public static final Icon Execute = intellijLoad("/actions/execute.png");
     public static final Icon Install = intellijLoad("/actions/install.png");
     public static final Icon Uninstall = AllIcons.Actions.Uninstall;
+    public static final Icon Error = AllIcons.Ide.Error;
     public static final Icon Up = AllIcons.Actions.MoveUp;
     public static final Icon RESET_TO_EMPTY = AllIcons.Actions.Reset_to_empty;
     public static final Icon Lightning = intellijLoad("/actions/lightning.png");
@@ -54,7 +55,7 @@ public class PluginIcons {
     public static final Icon React = load("/icons/jsx_16.png");
     public static final Icon ResourceBundle = intellijLoad("/nodes/resourceBundle.png");
     public static final Icon Archive = intellijLoad("/fileTypes/archive.png");
-    public static final Icon Export = intellijLoad("/actions/export.png");
+    public static final Icon Export = AllIcons.ToolbarDecorator.Export;
     public static final Icon Compile = load("/icons/compile.png");
     public static final Icon Undeploy = IconLoader.getIcon("/nodes/undeploy.png"); // 16x16
     public static final Icon Help_small = IconLoader.getIcon("/general/help_small.png"); // 16x16

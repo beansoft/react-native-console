@@ -1,5 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.utils;
 
+import com.github.beansoftapp.reatnative.idea.entity.ProjectConfig;
 import com.google.gson.Gson;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
@@ -16,9 +17,7 @@ import java.io.IOException;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Utils for find some dirs.
@@ -109,13 +108,8 @@ public class RNPathUtil {
      * @return
      */
     private static String parseCurrentPathFromRNConsoleJsonFile(File f) {
-        try {
-            Map m = parseConfigFromRNConsoleJsonFile(f);
-            return (String) m.get("currentPath");
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+        ProjectConfig m = parseConfigFromRNConsoleJsonFile(f);
+        return m.getCurrentPath();
     }
 
     /**
@@ -124,13 +118,17 @@ public class RNPathUtil {
      * @return
      */
     private static String parseMetroPortFromRNConsoleJsonFile(File f) {
-        try {
-            Map m = parseConfigFromRNConsoleJsonFile(f);
-            return (String) m.get(KEY_METRO_PORT);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return null;
-        }
+        ProjectConfig m = parseConfigFromRNConsoleJsonFile(f);
+        return m.getMetroPort();
+    }
+
+    /**
+     * Parse config from given rn console file in the project.
+     * @param project Project
+     * @return
+     */
+    public static ProjectConfig parseConfigFromRNConsoleJsonFile(Project project) {
+        return parseConfigFromRNConsoleJsonFile(initConfigFileDir(project));
     }
 
     /**
@@ -138,12 +136,11 @@ public class RNPathUtil {
      * @param f file
      * @return
      */
-    public static Map parseConfigFromRNConsoleJsonFile(File f) {
-        Map newMap = new HashMap();
+    public static synchronized ProjectConfig parseConfigFromRNConsoleJsonFile(File f) {
+        ProjectConfig newMap = new ProjectConfig();
 
         try {
-            Map m = new Gson().fromJson(new FileReader(f), Map.class);
-            newMap.putAll(m);
+            newMap = new Gson().fromJson(new FileReader(f), ProjectConfig.class);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -152,10 +149,21 @@ public class RNPathUtil {
     }
 
     private static void saveCurrentPathToRNConsoleJsonFile(File f, String jsAppPath) {
+        ProjectConfig m = parseConfigFromRNConsoleJsonFile(f);
+        m.setCurrentPath(jsAppPath);
+
+        saveProjectConfig(f, m);
+    }
+
+    // Save plugin configs to project file
+    public static void saveProjectConfig(Project project, ProjectConfig bean) {
+        saveProjectConfig(initConfigFileDir(project), bean);
+    }
+
+    // Save plugin configs to file
+    public static synchronized void saveProjectConfig(File f, ProjectConfig bean) {
         try {
-            Map m = parseConfigFromRNConsoleJsonFile(f);
-            m.put("currentPath", jsAppPath);
-            String json = new Gson().toJson(m, Map.class);
+            String json = new Gson().toJson(bean, ProjectConfig.class);
             System.out.println("json=" + json);
             FileUtil.writeToFile(f, json);
         } catch (IOException e) {
@@ -164,15 +172,10 @@ public class RNPathUtil {
     }
 
     private static void saveMetroPortToRNConsoleJsonFile(File f, String port) {
-        try {
-            Map m = parseConfigFromRNConsoleJsonFile(f);
-            m.put(KEY_METRO_PORT, port);
-            String json = new Gson().toJson(m, Map.class);
-            System.out.println("json=" + json);
-            FileUtil.writeToFile(f, json);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        ProjectConfig m = parseConfigFromRNConsoleJsonFile(f);
+        m.setMetroPort(port);
+
+        saveProjectConfig(f, m);
     }
 
     /**
@@ -181,17 +184,11 @@ public class RNPathUtil {
      * @return
      */
     public static String getRNMetroPortFromConfig(Project project) {
-        String path = project.getBasePath();
-        File file = new File(path, RN_CONSOLE_FILE);
-        if (file.exists()) {
-            String p = parseMetroPortFromRNConsoleJsonFile(file);
-            if(p != null && !p.trim().equalsIgnoreCase("8081")) {
-                return p;
-            }
-            return null;
-        } else {
-            return null;
+        String p = parseMetroPortFromRNConsoleJsonFile(initConfigFileDir(project));
+        if(p != null && !p.trim().equalsIgnoreCase("8081")) {
+            return p;
         }
+        return null;
     }
 
 
@@ -386,7 +383,7 @@ public class RNPathUtil {
             commandLine = new GeneralCommandLine(exeFullPath);
 
             // Fix param with quotes issue, see com.intellij.diff.tools.external.ExternalDiffToolUtil, https://github.com/beansoftapp/react-native-console/issues/31
-            List<String> parameters = ParametersListUtil.parse(shell.substring(exePath.length()), false);
+            List<String> parameters = ParametersListUtil.parse(shell.substring(exePath.length()), false);// keepQuotes: false
 
             commandLine.addParameters(parameters);
 

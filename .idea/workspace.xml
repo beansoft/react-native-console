@@ -53,9 +53,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="1.3.1">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidDevicesAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ProjectConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/IdeaMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/Device.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADBParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/CommandLine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/IOSDeviceInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ios/IOSDeviceInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/Simulators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ios/Simulators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/ios/IOSDevicesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/ios/IOSDevicesParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/AdbParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/AdbParseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RNPathUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RNPathUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestParseIOSDevices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestParseIOSDevices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -83,25 +105,20 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
-  </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
     <option name="FILTER_INFO" value="false" />
     <option name="FILTER_DEBUG" value="false" />
-    <option name="CUSTOM_FILTER" value="activityName=" />
+    <option name="CUSTOM_FILTER" value="" />
   </component>
   <component name="ProjectId" id="1OrQPsJrpNQvwAWKkZhVLfp3SVL" />
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -319,7 +336,7 @@
     </entry>
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
@@ -345,8 +362,9 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35040432" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -370,18 +388,18 @@
       <recent name="$PROJECT_DIR$/" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
       <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
       <recent name="com.github.beansoftapp.reatnative.idea.actions" />
       <recent name="com.github.beansoftapp.reatnative.swing" />
       <recent name="com.github.beansoftapp.reatnative.idea.storage" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/android" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
-      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
-      <recent name="$PROJECT_DIR$/src/test" />
     </key>
   </component>
   <component name="Regex">
@@ -414,20 +432,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RunRNDebuggerAction" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.github.beansoftapp.reatnative.idea.actions.console.RunRNDebuggerAction" />
-      <module name="react-native-console" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.beansoftapp.reatnative.idea.actions.console.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="WordpressFileRenamer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="WordpressFileRenamer" />
       <module name="react-native-console" />
@@ -438,6 +442,17 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdbParseTest.testParseAndroid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="react-native-console" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdbParseTest" />
+      <option name="METHOD_NAME" value="testParseAndroid" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -453,17 +468,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NPMParserTest.parseScripts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RNPathUtilTest.testLinuxPathEnv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="react-native-console" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.beansoftapp.reatnative.idea.utils.npm.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.github.beansoftapp.reatnative.idea.utils.npm.test" />
-      <option name="MAIN_CLASS_NAME" value="com.github.beansoftapp.reatnative.idea.utils.npm.test.NPMParserTest" />
-      <option name="METHOD_NAME" value="parseScripts" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RNPathUtilTest" />
+      <option name="METHOD_NAME" value="testLinuxPathEnv" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -548,7 +557,7 @@
       <module name="react-native-console" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <alternative-path path="IntelliJ IDEA Community Edition IC-192.5728.98" alternative-path-enabled="true" />
+      <alternative-path path="WebStorm WS-192.5728.87" alternative-path-enabled="true" />
       <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -565,21 +574,31 @@
     </configuration>
     <list>
       <item itemvalue="Application.WordpressFileRenamer" />
-      <item itemvalue="Application.RunRNDebuggerAction" />
-      <item itemvalue="JUnit.NPMParserTest.parseScripts" />
       <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
       <item itemvalue="JUnit.AdbParseTest.testParseDump" />
+      <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
       <item itemvalue="Plugin.Plugin" />
+      <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
+        <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
         <item itemvalue="JUnit.AdbParseTest.testParseDump" />
         <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
-        <item itemvalue="Application.RunRNDebuggerAction" />
         <item itemvalue="Application.WordpressFileRenamer" />
-        <item itemvalue="JUnit.NPMParserTest.parseScripts" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="allServicesViewState">
+      <serviceView>
+        <treeState>
+          <expand />
+          <select />
+        </treeState>
+      </serviceView>
+    </option>
   </component>
   <component name="StructureViewFactory">
     <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_ANONYMOUS" />
@@ -624,13 +643,9 @@
       <workItem from="1535618633384" duration="2033000" />
       <workItem from="1535709564301" duration="1398000" />
       <workItem from="1536044583820" duration="8018000" />
-    </task>
-    <task id="LOCAL-00008" summary="update some logic">
-      <created>1495713245990</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1495713245990</updated>
+      <workItem from="1565847112805" duration="23000" />
+      <workItem from="1565847148371" duration="450000" />
+      <workItem from="1565865784717" duration="203000" />
     </task>
     <task id="LOCAL-00009" summary="refactor, fix bugs, add tabs with icon">
       <created>1495779915838</created>
@@ -968,11 +983,15 @@
       <option name="project" value="LOCAL" />
       <updated>1565171094009</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="add jetbrains log">
+      <created>1565754168809</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1565754168810</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73405000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1026,7 +1045,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="update test code" />
     <MESSAGE value="add wp rename code" />
     <MESSAGE value="reorder console built in actions, move scroll to end and clear console to leading" />
     <MESSAGE value="add android refresh shortcut key" />
@@ -1051,15 +1069,70 @@
     <MESSAGE value="1.1.8 fix https://github.com/beansoftapp/react-native-console/issues/27" />
     <MESSAGE value="1.3 fix for IDEA 2019.x" />
     <MESSAGE value="1.3.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.3.1" />
+    <MESSAGE value="add jetbrains log" />
+    <option name="LAST_COMMIT_MESSAGE" value="add jetbrains log" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="94" width="1052" height="666" key="#Project_Structure" />
+    <state x="320" y="94" width="1052" height="666" key="#Project_Structure/2880.1800" />
+    <state x="458" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" />
+    <state x="458" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/2880.1800" />
+    <state x="102" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
+    <state x="102" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/2880.1800" />
+    <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser" />
+    <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser/2880.1800" />
+    <state x="684" y="148" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" />
+    <state x="684" y="148" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/2880.1800" />
+    <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" />
+    <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/2880.1800" />
+    <state x="316" y="25" key="CommitChangelistDialog2" />
+    <state x="316" y="25" key="CommitChangelistDialog2/2880.1800" />
+    <state x="482" y="140" key="DetectedRootsChooserDialog" />
+    <state x="482" y="140" key="DetectedRootsChooserDialog/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.0.bottom" />
+    <state width="1419" height="256" key="GridCell.Tab.0.bottom/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.0.center" />
+    <state width="1419" height="256" key="GridCell.Tab.0.center/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.0.left" />
+    <state width="1419" height="256" key="GridCell.Tab.0.left/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.0.right" />
+    <state width="1419" height="256" key="GridCell.Tab.0.right/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.1.bottom" />
+    <state width="1419" height="256" key="GridCell.Tab.1.bottom/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.1.center" />
+    <state width="1419" height="256" key="GridCell.Tab.1.center/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.1.left" />
+    <state width="1419" height="256" key="GridCell.Tab.1.left/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.1.right" />
+    <state width="1419" height="256" key="GridCell.Tab.1.right/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.2.bottom" />
+    <state width="1419" height="256" key="GridCell.Tab.2.bottom/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.2.center" />
+    <state width="1419" height="256" key="GridCell.Tab.2.center/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.2.left" />
+    <state width="1419" height="256" key="GridCell.Tab.2.left/2880.1800" />
+    <state width="1419" height="256" key="GridCell.Tab.2.right" />
+    <state width="1419" height="256" key="GridCell.Tab.2.right/2880.1800" />
+    <state x="213" y="78" key="SettingsEditor" />
+    <state x="213" y="78" key="SettingsEditor/2880.1800" />
+    <state x="404" y="152" key="Vcs.Push.Dialog" />
+    <state x="404" y="152" key="Vcs.Push.Dialog/2880.1800" />
+    <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" />
+    <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/2880.1800" />
+    <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />
+    <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/2880.1800" />
+    <state x="383" y="118" width="673" height="618" key="find.popup" />
+    <state x="383" y="118" width="673" height="618" key="find.popup/2880.1800" />
+    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup" />
+    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup/2880.1800" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/TestParseIOSDevices.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="42" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseAction.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="44" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

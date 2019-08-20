@@ -3,13 +3,17 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleActionGroup;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
-import com.github.beansoftapp.reatnative.idea.entity.ios.IOSDeviceInfo;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
-import com.github.beansoftapp.reatnative.idea.utils.ios.IOSDevicesParser;
 import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.openapi.actionSystem.*;
+import com.github.pedrovgs.androidwifiadb.Device;
+import com.github.pedrovgs.androidwifiadb.adb.ADB;
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionPopupMenu;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
 import com.intellij.openapi.application.ApplicationManager;
@@ -24,11 +28,16 @@ import org.jetbrains.annotations.NotNull;
 import java.awt.*;
 import java.awt.event.InputEvent;
 import java.awt.event.MouseEvent;
+import java.util.Collection;
 
-/** Show all ios devices, includes simuators, and let the user choose one item to run */
-public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
-    public RunIOSDevicesAction(ReactNativeConsole terminal) {
-        super(terminal, "iOS Choose Devices", "Run on a Selected iOS Device", PluginIcons.IPhoneDevices);
+/**
+ * Show all connected android devices, includes simuators, and let the user choose one item to run
+ * @author beansoft
+ * @date 2019-8-20
+ */
+public class RunAndroidDevicesAction extends BaseRNConsoleActionGroup {
+    public RunAndroidDevicesAction(ReactNativeConsole terminal) {
+        super(terminal, "Android Choose Devices", "Run on a Selected Android Device", PluginIcons.Android);
         setPopup(true);
     }
 
@@ -45,9 +54,9 @@ public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
     @Override
     public void actionPerformed(AnActionEvent e) {
         // Running with background task and with a progress indicator
-        ProgressManager.getInstance().run(new Task.Backgroundable(e.getProject(), "Reading IOS Devices List", false) {
+        ProgressManager.getInstance().run(new Task.Backgroundable(e.getProject(), "Reading Android Devices List", false) {
             public void run(@NotNull final ProgressIndicator indicator) {
-                indicator.setText("RN Console:Loading the iOS devices list...");
+                indicator.setText("RN Console:Loading the Android devices list...");
                 try {
                     doRun(e);
                 } catch (final Exception e) {
@@ -56,18 +65,14 @@ public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
                 }
             }
         });
-
-//            ApplicationManager.getApplication().executeOnPooledThread(() -> {
-//
-//            });
-
     }
 
     void doRun(AnActionEvent e) {
-        java.util.List<IOSDeviceInfo> devices = IOSDevicesParser.getAllIOSDevicesList(false);
+        ADB adb = new ADB();
+        Collection<Device> devices = adb.getDevicesConnectedByUSB();
         ApplicationManager.getApplication().invokeLater(() -> {
-            if (devices == null) {
-                NotificationUtils.errorMsgDialog("Sorry, no iOS simulator or physically connected iOS devices found!");
+            if (devices == null || devices.size() == 0) {
+                NotificationUtils.errorMsgDialog("Sorry, no Android simulator or physically connected Android devices found!");
                 return;
             }
 
@@ -93,22 +98,28 @@ public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
     }
 
     // Generate a ios device list
-    private DefaultActionGroup createDevicesPopupGroup(java.util.List<IOSDeviceInfo> devices) {
+    private DefaultActionGroup createDevicesPopupGroup(Collection<Device> devices) {
         DefaultActionGroup group = new DefaultActionGroup();
         devices.forEach(iosDeviceInfo -> {
             if (iosDeviceInfo != null) {
-                String deviceName = iosDeviceInfo.name + " " + iosDeviceInfo.version;
-                group.add(new BaseRNConsoleAction(super.terminal, deviceName, "Run on iOS device: '" + deviceName + "'",
-                        iosDeviceInfo.simulator ? PluginIcons.IPhoneSimulator
-                                : PluginIcons.IPhoneDevice) {
+                String deviceName = iosDeviceInfo.getName();// + " " + (iosDeviceInfo.isConnected() ? "Connected" : "Disconnected");
+                group.add(new BaseRNConsoleAction(super.terminal, deviceName, "Run on Android device: '" + deviceName + "'",
+                    PluginIcons.Android
+                        //iosDeviceInfo.isConnected() ? PluginIcons.Android : PluginIcons.Error
+                ) {
                     @Override
                     public void doAction(AnActionEvent anActionEvent) {
+//                        if(!iosDeviceInfo.isConnected()) {
+//                            NotificationUtils.errorNotification(iosDeviceInfo.getName() + " is disconnected");
+//                            return;
+//                        }
+
                         RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
                         consoleView.runRawNPMCI(
                                 RNPathUtil.getExecuteFullPathSingle("react-native"),
-                                "run-ios",
-                                iosDeviceInfo.simulator ? "--simulator" : "--device",
-                                iosDeviceInfo.name);
+                                "run-android",
+                                "--deviceId",
+                                iosDeviceInfo.getId());
                     }
                 });
             }

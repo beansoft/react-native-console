@@ -1,4 +1,4 @@
-package com.github.beansoftapp.reatnative.idea.models.ios;
+package com.github.beansoftapp.reatnative.idea.entity.ios;
 
 import java.util.Map;
 

@@ -2,13 +2,13 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.utils.IdeaMessages;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.Utils;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.InputValidator;
-import com.intellij.openapi.ui.Messages;
 
 import java.io.File;
 
@@ -33,7 +33,7 @@ public class EditJsAppPathAction extends BaseRNConsoleAction {
      * @param project
      */
     public static void doEditJsProjectPath(Project project) {
-        String path = Messages.showInputDialog(project,
+        String path = IdeaMessages.showInputDialog(project,
                 "Specify js project working directory rather than root directory, eg ./jsapp\nThe value is stored in file .idea/.rnconsole",
                 "Input Js Working Directory",
                 PluginIcons.EditFolder,
