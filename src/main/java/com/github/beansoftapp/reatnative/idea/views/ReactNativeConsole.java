@@ -31,12 +31,11 @@ import com.github.beansoftapp.reatnative.idea.actions.console.RunNPMScriptsActio
 import com.github.beansoftapp.reatnative.idea.actions.console.RunRNDebuggerAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunRNScriptsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.YarnAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.hyperlink.EditRunAnroidOptions;
+import com.github.beansoftapp.reatnative.idea.actions.console.hyperlink.EditRuniOSOptions;
 import com.github.beansoftapp.reatnative.idea.actions.console.java.OpenCurrentActivityAction;
-import com.github.beansoftapp.reatnative.idea.entity.ProjectConfig;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
-import com.github.beansoftapp.reatnative.idea.utils.IdeaMessages;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.filters.HyperlinkInfoBase;
@@ -52,7 +51,6 @@ import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.editor.actions.ScrollToTheEndToolbarAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.SystemInfoRt;
-import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
 import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
@@ -259,7 +257,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                     "Welcome to React Native Console, now please click one button on top toolbar to start.\n",
                     ConsoleViewContentType.SYSTEM_OUTPUT);
             consoleView.print(
-                    "Click here for more info and issue, suggestion:\n",
+                    "Give a Star or Suggestion:\n",
                     ConsoleViewContentType.NORMAL_OUTPUT);
             consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console",
                     new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
@@ -283,52 +281,10 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
                 });
 
             consoleView.printHyperlink("\n\nEdit react-native run-android command options of this project",
-                new HyperlinkInfoBase() {
-                    @Override
-                    public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
-                        ProjectConfig projectConfig = RNPathUtil.parseConfigFromRNConsoleJsonFile(project);
-                        String value = projectConfig.getAndroidParam();
-                        if(StringUtil.isEmpty(value)) {
-                            value = "<empty>";
-                        }
-
-                        String androidConfig = IdeaMessages.showInputDialog(project,
-                            "Current options are " + value +
-                                ".\nEdit run-android command options, eg: --appIdSuffix debug. Input empty value to disable it.\nThe value is stored in file .idea/.rnconsole",
-                            "Edit Run-Android Command Options",
-                            PluginIcons.Android,
-                            projectConfig.getAndroidParam(),
-                            null);
-
-                        projectConfig.setAndroidParam(androidConfig);
-
-                        RNPathUtil.saveProjectConfig(project, projectConfig);
-                    }
-                });
+                new EditRunAnroidOptions());
 
             consoleView.printHyperlink("\n\nEdit react-native run-ios command options of this project",
-                new HyperlinkInfoBase() {
-                    @Override
-                    public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
-                        ProjectConfig projectConfig = RNPathUtil.parseConfigFromRNConsoleJsonFile(project);
-                        String value = projectConfig.getIosParam();
-                        if(StringUtil.isEmpty(value)) {
-                            value = "<empty>";
-                        }
-
-                        String androidConfig = IdeaMessages.showInputDialog(project,
-                            "Current options are " + value +
-                                ".\nEdit run-ios command options, eg: --project-path \"./app/ios\". Input empty value to disable it.\nThe value is stored in file .idea/.rnconsole",
-                            "Edit Run-IOS Command Options",
-                            PluginIcons.IPhoneDevice,
-                            projectConfig.getIosParam(),
-                            null);
-
-                        projectConfig.setIosParam(androidConfig);
-
-                        RNPathUtil.saveProjectConfig(project, projectConfig);
-                    }
-                });
+                new EditRuniOSOptions());
 
             if(SystemInfoRt.isLinux) {
                 consoleView.print(

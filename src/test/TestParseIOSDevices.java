@@ -82,14 +82,14 @@ public class TestParseIOSDevices {
         ScriptEngineManager manager = new ScriptEngineManager();
         ScriptEngine engine = manager.getEngineByName("javascript");
         try {
-            engine.put("line", "刘长炯 微信号weblogic (10.3.2) [46a5432f8fdea99a6186a927e8da5db7a51854ac]");
+            engine.put("line", "beansoft weblogic (10.3.2) [46a5432f8fdea99a6186a927e8da5db7a51854ac]");
 //            engine.put("regex", )
             String regex = "/(.*?) \\((.*?)\\) \\[(.*?)\\]/";
             String[] value = (String[])engine.eval("Java.to(line.match(" + regex + "),\"java.lang.String[]\" );");
             System.out.println(value.length);
             System.out.println(value[1]);
-            String[] result = {"刘长炯 微信号weblogic (10.3.2) [46a5432f8fdea99a6186a927e8da5db7a51854ac]",
-                    "刘长炯 微信号weblogic", "10.3.2", "46a5432f8fdea99a6186a927e8da5db7a51854ac"};
+            String[] result = {"beansoft weblogic (10.3.2) [46a5432f8fdea99a6186a927e8da5db7a51854ac]",
+                    "beansoft weblogic", "10.3.2", "46a5432f8fdea99a6186a927e8da5db7a51854ac"};
             Assert.assertArrayEquals("result shold match", result, value);
 //            Collection<Object> val = value.values();
 //            if(value.isArray()) {

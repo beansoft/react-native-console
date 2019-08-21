@@ -142,7 +142,7 @@ public class RNPathUtil {
         try {
             newMap = new Gson().fromJson(new FileReader(f), ProjectConfig.class);
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println(e);
         }
 
         return newMap;

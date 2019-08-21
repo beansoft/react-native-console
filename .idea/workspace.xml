@@ -52,32 +52,19 @@
     </workspaceTree>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="1.3.1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidDevicesAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ProjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/IdeaMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/Device.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADBParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/CommandLine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="1.3.2 with android devices support">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/hyperlink/EditRunAnroidOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/hyperlink/EditRuniOSOptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temp/plugin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-native-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/IOSDeviceInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ios/IOSDeviceInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/Simulators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ios/Simulators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.jar" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/ios/IOSDevicesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/ios/IOSDevicesParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADBParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADBParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/AdbParseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/AdbParseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RNPathUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RNPathUtilTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/TestParseIOSDevices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestParseIOSDevices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -388,11 +375,11 @@
       <recent name="$PROJECT_DIR$/" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
       <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
       <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
       <recent name="com.github.beansoftapp.reatnative.idea.actions" />
       <recent name="com.github.beansoftapp.reatnative.swing" />
-      <recent name="com.github.beansoftapp.reatnative.idea.storage" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
@@ -432,16 +419,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WordpressFileRenamer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="WordpressFileRenamer" />
-      <module name="react-native-console" />
+    <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="AdbParseTest.testADBgetDevicesConnectedByUSB" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="react-native-console" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="AdbParseTest" />
+      <option name="METHOD_NAME" value="testADBgetDevicesConnectedByUSB" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -479,11 +469,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestParseIOSDevices.testJS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="react-native-console" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="RNPathUtilTest" />
-      <option name="METHOD_NAME" value="testParseConfigFromRNConsoleJsonFile" />
+      <option name="MAIN_CLASS_NAME" value="TestParseIOSDevices" />
+      <option name="METHOD_NAME" value="testJS" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -573,20 +563,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.WordpressFileRenamer" />
-      <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
       <item itemvalue="JUnit.AdbParseTest.testParseDump" />
       <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
-      <item itemvalue="Plugin.Plugin" />
       <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
+      <item itemvalue="JUnit.AdbParseTest.testADBgetDevicesConnectedByUSB" />
+      <item itemvalue="JUnit.TestParseIOSDevices.testJS" />
+      <item itemvalue="Plugin.Plugin" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestParseIOSDevices.testJS" />
         <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
+        <item itemvalue="JUnit.AdbParseTest.testADBgetDevicesConnectedByUSB" />
         <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
         <item itemvalue="JUnit.AdbParseTest.testParseDump" />
-        <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
-        <item itemvalue="Application.WordpressFileRenamer" />
       </list>
     </recent_temporary>
   </component>
@@ -646,13 +636,6 @@
       <workItem from="1565847112805" duration="23000" />
       <workItem from="1565847148371" duration="450000" />
       <workItem from="1565865784717" duration="203000" />
-    </task>
-    <task id="LOCAL-00009" summary="refactor, fix bugs, add tabs with icon">
-      <created>1495779915838</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1495779915838</updated>
     </task>
     <task id="LOCAL-00010" summary="bug fix: windows command run fail.">
       <created>1495854339558</created>
@@ -990,7 +973,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565754168810</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="1.3.2 with android devices support">
+      <created>1566299730769</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1566299730770</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1045,7 +1035,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add wp rename code" />
     <MESSAGE value="reorder console built in actions, move scroll to end and clear console to leading" />
     <MESSAGE value="add android refresh shortcut key" />
     <MESSAGE value="update jar for test" />
@@ -1070,7 +1059,8 @@
     <MESSAGE value="1.3 fix for IDEA 2019.x" />
     <MESSAGE value="1.3.1" />
     <MESSAGE value="add jetbrains log" />
-    <option name="LAST_COMMIT_MESSAGE" value="add jetbrains log" />
+    <MESSAGE value="1.3.2 with android devices support" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.3.2 with android devices support" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="94" width="1052" height="666" key="#Project_Structure" />
@@ -1089,30 +1079,30 @@
     <state x="316" y="25" key="CommitChangelistDialog2/2880.1800" />
     <state x="482" y="140" key="DetectedRootsChooserDialog" />
     <state x="482" y="140" key="DetectedRootsChooserDialog/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.0.bottom" />
-    <state width="1419" height="256" key="GridCell.Tab.0.bottom/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.0.center" />
-    <state width="1419" height="256" key="GridCell.Tab.0.center/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.0.left" />
-    <state width="1419" height="256" key="GridCell.Tab.0.left/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.0.right" />
-    <state width="1419" height="256" key="GridCell.Tab.0.right/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.1.bottom" />
-    <state width="1419" height="256" key="GridCell.Tab.1.bottom/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.1.center" />
-    <state width="1419" height="256" key="GridCell.Tab.1.center/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.1.left" />
-    <state width="1419" height="256" key="GridCell.Tab.1.left/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.1.right" />
-    <state width="1419" height="256" key="GridCell.Tab.1.right/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.2.bottom" />
-    <state width="1419" height="256" key="GridCell.Tab.2.bottom/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.2.center" />
-    <state width="1419" height="256" key="GridCell.Tab.2.center/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.2.left" />
-    <state width="1419" height="256" key="GridCell.Tab.2.left/2880.1800" />
-    <state width="1419" height="256" key="GridCell.Tab.2.right" />
-    <state width="1419" height="256" key="GridCell.Tab.2.right/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.0.bottom" />
+    <state width="1419" height="257" key="GridCell.Tab.0.bottom/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.0.center" />
+    <state width="1419" height="257" key="GridCell.Tab.0.center/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.0.left" />
+    <state width="1419" height="257" key="GridCell.Tab.0.left/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.0.right" />
+    <state width="1419" height="257" key="GridCell.Tab.0.right/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.1.bottom" />
+    <state width="1419" height="257" key="GridCell.Tab.1.bottom/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.1.center" />
+    <state width="1419" height="257" key="GridCell.Tab.1.center/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.1.left" />
+    <state width="1419" height="257" key="GridCell.Tab.1.left/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.1.right" />
+    <state width="1419" height="257" key="GridCell.Tab.1.right/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.2.bottom" />
+    <state width="1419" height="257" key="GridCell.Tab.2.bottom/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.2.center" />
+    <state width="1419" height="257" key="GridCell.Tab.2.center/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.2.left" />
+    <state width="1419" height="257" key="GridCell.Tab.2.left/2880.1800" />
+    <state width="1419" height="257" key="GridCell.Tab.2.right" />
+    <state width="1419" height="257" key="GridCell.Tab.2.right/2880.1800" />
     <state x="213" y="78" key="SettingsEditor" />
     <state x="213" y="78" key="SettingsEditor/2880.1800" />
     <state x="404" y="152" key="Vcs.Push.Dialog" />
@@ -1121,6 +1111,8 @@
     <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/2880.1800" />
     <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />
     <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/2880.1800" />
+    <state x="459" y="190" key="extract.method.dialog" />
+    <state x="459" y="190" key="extract.method.dialog/2880.1800" />
     <state x="383" y="118" width="673" height="618" key="find.popup" />
     <state x="383" y="118" width="673" height="618" key="find.popup/2880.1800" />
     <state x="385" y="155" width="670" height="676" key="search.everywhere.popup" />

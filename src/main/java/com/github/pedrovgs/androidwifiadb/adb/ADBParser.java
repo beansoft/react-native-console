@@ -47,9 +47,12 @@ public class ADBParser {
       String line = splittedOutput[i];
       String[] deviceLine = line.split("\\t");
       String id = deviceLine[0].substring(0, deviceLine[0].indexOf(" "));
+      // Here some genymotion emulators will given ip address, so we'll keep it beansoft@126.com 2019-8-21
+      /*
       if (id.contains(IP_SEPARATOR)) {
         continue;
       }
+      */
       String name = parseDeviceName(line);
       Device device = new Device(name, id);
       devices.add(device);

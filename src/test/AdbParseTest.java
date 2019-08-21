@@ -1,4 +1,5 @@
 import com.github.pedrovgs.androidwifiadb.adb.ADB;
+import com.github.pedrovgs.androidwifiadb.adb.ADBParser;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -192,8 +193,18 @@ public class AdbParseTest {
   }
 
   @Test
-  public void testParseAndroid() {
+  public void testADBGetDevicesConnectedByUSB() {
     ADB adb = new ADB();
     System.out.println(adb.getDevicesConnectedByUSB());
   }
+
+  @Test
+  public void testParseAndroid() {
+    String s = "List of devices attached\n" +
+        "192.168.56.103:5555    device product:vbox86p model:Google_Nexus_5 device:vbox86p transport_id:1";
+    ADBParser adb = new ADBParser();
+    System.out.println(adb.parseGetDevicesOutput(s));
+  }
+
+
 }

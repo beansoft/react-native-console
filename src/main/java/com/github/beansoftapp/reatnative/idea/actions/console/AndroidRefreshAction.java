@@ -12,8 +12,9 @@ import static java.awt.event.KeyEvent.VK_Z;
 
 /**
  * Reloading JavaScript on Android device, tested on Samsung and MOTO XStyle only.
- *
+ * @version 2019-8-21 supports latest RN
  * @since 1.0.6
+ * @author beansoft
  */
 public class AndroidRefreshAction extends BaseRNConsoleRunAction// implements ShortcutProvider
 {
@@ -21,15 +22,18 @@ public class AndroidRefreshAction extends BaseRNConsoleRunAction// implements Sh
             VK_Z, InputEvent.CTRL_MASK|InputEvent.SHIFT_MASK ));
 
     public AndroidRefreshAction(ReactNativeConsole terminal) {
-        super(terminal, "Android Reload JS", "Android Reloading JavaScript(beta)", AllIcons.Actions.Refresh);
+        super(terminal, "Android Reload JS(Double Tap R key)", "Android Reloading JavaScript(beta)", AllIcons.Actions.Refresh);
 //        registerCustomShortcutSet(CustomShortcutSet.fromString("Ctrl Alt A"), getComponent(), parentDisposable);
         registerCustomShortcutSet(Android_REFRESH_SHORTCUT, null);
     }
 
     @Override
     protected String command() {
-        return "adb shell input keyevent 82 20 66 66";//First toggle menu, then press down key to select first menu item
+        //return "adb shell input keyevent 82 20 66 66";//First toggle menu, then press down key to select first menu item
         // - Reload, final press enter will execute the action
+
+        // For latest RN 0.59+, using this Double tap R on your keyboard to reload your app's code.
+        return "adb shell input keyevent 46 46";
     }
 
 //    @Override
