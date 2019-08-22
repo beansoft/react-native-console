@@ -1,5 +1,5 @@
-# React Native Console v1.3.1
-An IDEA/WebStorm/Android Studio Plugin for One-Click run React Native command, the No.1 WebStorm / IDEA plugin for React Native developers.
+# React Native Console v1.4
+An IDEA/WebStorm/Android Studio Plugin for run React Native commands, the No.1 WebStorm / IDEA plugin for React Native developers.
 
 
 
@@ -12,13 +12,14 @@ https://facebook.github.io/react-native/docs/getting-started.html
 Second, you can install it through your IDE, bring up  Preferences > Plugins > Browse repositories... , search for '**React Native Console**',
 then you can install this plugin there.<br/>
 
-Or<br/>you can munally install jar file react-native-console.jar as a plugin to your IDE. And the plugin home page is here: https://plugins.jetbrains.com/plugin/9564-react-native-console<br/><br/>
+Or
+you can munally install jar file react-native-console.jar as a plugin to your IDE. And the plugin home page is here: https://plugins.jetbrains.com/plugin/9564-react-native-console<br/><br/>
 
 Now restart IDEA and enjoy!
 
 
 ## Note
-Java 8+ required to run the IDE.<br/>
+Java 8 or plus required to run the IDE.<br/>
 
 ## Settings(Optional, only need if js project dir can't be auto find)
 Specify js project work directory rather than root directory, eg ./jsapp , now can from welcome screen or toolbar to edit this property. And the final value is stored in a file named .idea/.rnconsole, which content should like this:
@@ -51,12 +52,41 @@ https://github.com/beansoftapp/react-native-console/issues/17
 
 
 ## Features
-list and run scripts in package.json<br>One-Click run following commands:<br/>
-
-run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)<br>Open Current Activity source code in project(supports WebStorm, IDEA, Android Studio etc).<br>Ctrl + F2 to reload android js bundle<br>list and run scripts in package.json<br>react-native run-android<br/>react-native link<br/>react-native run-ios<br/>run with physical iOS device<br/>list all iOS devices(include simulator and physical) and run target one <br/>npm run start<br/>npm install<br/>Open dev menu on Android device(adb shell input keyevent 82)<br/>forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)<br/>Android Reloading JavaScript<br/>open React Native debugger ui(Chrome browser required)<br/>react-native log-android<br/>react-native log-ios<br/>gradlew assembleRelease<br/>react-native bundle --platform android/ios --dev false<br/>yarn<br/>jest<br/>react-native uninstall<br/>react-native start<br/>gradlew clean<br/>react-native react-native-git-upgrade<br/>yarn add project, dev, global dependencies<br/>npm add project, dev, global dependencies<br/>auto install and run react-devtools<br/>Last Edit Location(main toolbar)<br/>Reveal file in Finder/Explorer(main toolbar)<br/>Reveal project folder in Finder/Explorer<br/><br/>
-New: one-click rerun commands, reuse console window, tabs with title and icon, search in console output.<br/>
-Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio),
-thus the command will auto execute in the correct folder<br/>
+- open current Android activity source code in project
+- run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)
+- Ctrl + F2 to reload android js bundle
+- list and run scripts in package.json
+- react-native run-android
+- list all connected android devices(includes simulator and physical) and run as target
+- react-native link
+- react-native run-ios
+- run on physical iOS device
+- list all iOS devices(includes simulator and physical) and run as target
+- npm run start
+- npm install
+- Open dev menu on Android device(adb shell input keyevent 82)
+- forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)
+- Android Reloading JavaScript
+- open React Native debugger ui(Chrome browser required)
+- react-native log-android
+- react-native log-ios
+- gradlew assembleRelease
+- react-native bundle --platform android/ios --dev false
+- yarn
+- jest
+- react-native uninstall
+- react-native start
+- gradlew clean
+- react-native react-native-git-upgrade
+- yarn add project, dev, global dependencies
+- npm add project, dev, global dependencies
+- auto install and run react-devtools
+- Last Edit Location(main toolbar)
+- Reveal file in Finder/Explorer(main toolbar)
+- Reveal project folder in Finder/Explorer
+- Specify js project work directory, eg ./jsapp, from welcome screen or toolbar (optional, see https://github.com/beansoftapp/react-native-console for more info)
+- Modify Metro Bundler port(need React Native 0.56+)
+- Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio), thus the command will auto execute in the correct folder
 
 
 

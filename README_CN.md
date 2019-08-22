@@ -1,19 +1,20 @@
-# React Native Console v1.3.1
+# React Native Console v1.4
 一键执行React Native 命令的 IDEA/WebStorm/Android Studio 插件, 排名第一的 WebStorm / IDEA  React Native 开发插件
 
 ## 安装
 首先, 请按照官方文档搭建 React Native开发环境:
 https://facebook.github.io/react-native/docs/getting-started.html
 
-然后, 可以在开发工具中安装插件, 依次点开  Preferences > Plugins > Browse repositories... , 搜索  '**React Native Console**', 然后点击安装即可.<br/>
+然后, 可以在开发工具中安装插件, 依次点开  Preferences > Plugins > Browse repositories... , 搜索  '**React Native Console**', 
+然后点击安装即可.<br/>
 
-或者<br/>手工下载插件文件 react-native-console.jar 并在IDE的插件设置中选择 Install Plugin from disk. 插件中心的页面地址在这里: https://plugins.jetbrains.com/plugin/9564-react-native-console<br/><br/>
+或者<br/>手工下载插件文件 react-native-console.jar 并在IDE的插件设置中选择 Install Plugin from disk. 
+插件中心的页面地址在这里: https://plugins.jetbrains.com/plugin/9564-react-native-console<br/><br/>
 
-重启开发工具即可享受秒速体验!
-
+重启开发工具即可享受秒开体验!
 
 ## 注意事项
-需要 Java 8+版本运行开发工具.<br/>
+需要 Java 8或更高版本运行开发工具.<br/>
 
 ## 设置(可选, 仅当js工程目录无法自动招到时配置)
 当js项目的工作目录不在根目录时,例如 ./jsapp , 现在可以从欢迎页面 或者工具栏便捷的修改这个值. 最终的设置值存储于文件 .idea/.rnconsole, 示例内容如下:
