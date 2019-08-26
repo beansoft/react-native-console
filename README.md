@@ -1,7 +1,9 @@
-# React Native Console v1.4
+# React Native Console
+
 An IDEA/WebStorm/Android Studio Plugin for run React Native commands, the No.1 WebStorm / IDEA plugin for React Native developers.
 
-
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console)
 
 [Chinese Instruction Here](README_CN.m)
 

@@ -1,5 +1,7 @@
-# React Native Console v1.4
+# React Native Console
 一键执行React Native 命令的 IDEA/WebStorm/Android Studio 插件, 排名第一的 WebStorm / IDEA  React Native 开发插件
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console)
 
 ## 安装
 首先, 请按照官方文档搭建 React Native开发环境:
