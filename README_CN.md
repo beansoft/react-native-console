@@ -117,6 +117,6 @@ https://github.com/troublediehard dmportenko@gmail.com
 ## 演示动图
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
 
-本项目使用 JetBrains IDE开发.
+本项目使用免费的 [JetBrains.](https://www.jetbrains.com/?from=ReactNativeConsole) 开源许可开发.
 
 [![jetbrains](jetbrains.png)](https://www.jetbrains.com/?from=ReactNativeConsole)
