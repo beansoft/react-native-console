@@ -8,7 +8,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/test" isTestSource="true" />
     </content>
-    <orderEntry type="jdk" jdkName="WebStorm WS-173.4301.22" jdkType="IDEA JDK" />
+    <orderEntry type="jdk" jdkName="IntelliJ IDEA Community Edition IC-192.5728.98" jdkType="IDEA JDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library" scope="PROVIDED">
       <library>
@@ -38,5 +38,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="javaparser-core-3.15.2" level="project" />
   </component>
 </module>

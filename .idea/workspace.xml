@@ -52,10 +52,19 @@
     </workspaceTree>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="1.4 with adb devices support and run ios/android params, reload android js fix">
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="add download stats">
+      <change afterPath="$PROJECT_DIR$/.idea/.rnconsole" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javaparser_core_3_15_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/javaparser-core-3.15.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/java/JavaCodeCleanAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/FileUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove@2x_dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove_dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/CommentRemover.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_CN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -341,7 +350,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/icons" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -359,26 +368,26 @@
     <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/android" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions" />
-      <recent name="com.github.beansoftapp.reatnative.swing" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/android" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea" />
-      <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
     </key>
   </component>
   <component name="Regex">
@@ -411,6 +420,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommentRemover" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="CommentRemover" />
+      <module name="react-native-console" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -433,17 +450,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AdbParseTest" />
       <option name="METHOD_NAME" value="testParseAndroid" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdbParseTest.testParseDump" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="react-native-console" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AdbParseTest" />
-      <option name="METHOD_NAME" value="testParseDump" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -539,7 +545,7 @@
       <module name="react-native-console" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <alternative-path path="WebStorm WS-192.5728.87" alternative-path-enabled="true" />
+      <alternative-path path="$APPLICATION_HOME_DIR$" alternative-path-enabled="true" />
       <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -555,7 +561,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AdbParseTest.testParseDump" />
+      <item itemvalue="Application.CommentRemover" />
       <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
       <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
       <item itemvalue="JUnit.AdbParseTest.testADBgetDevicesConnectedByUSB" />
@@ -564,11 +570,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CommentRemover" />
         <item itemvalue="JUnit.TestParseIOSDevices.testJS" />
         <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
         <item itemvalue="JUnit.AdbParseTest.testADBgetDevicesConnectedByUSB" />
         <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
-        <item itemvalue="JUnit.AdbParseTest.testParseDump" />
       </list>
     </recent_temporary>
   </component>
@@ -628,34 +634,6 @@
       <workItem from="1565847112805" duration="23000" />
       <workItem from="1565847148371" duration="450000" />
       <workItem from="1565865784717" duration="203000" />
-    </task>
-    <task id="LOCAL-00011" summary="1.0.6 version, android reload js">
-      <created>1496153853422</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1496153853422</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fix bug https://github.com/beansoftapp/react-native-console/issues/8">
-      <created>1496286019829</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1496286019829</updated>
-    </task>
-    <task id="LOCAL-00013" summary="update plugin">
-      <created>1496286451347</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1496286451347</updated>
-    </task>
-    <task id="LOCAL-00014" summary="add ios devices">
-      <created>1496747649050</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1496747649050</updated>
     </task>
     <task id="LOCAL-00015" summary="1.0.7, new version with iOS features.">
       <created>1496808204089</created>
@@ -972,7 +950,35 @@
       <option name="project" value="LOCAL" />
       <updated>1566380483687</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="update readme">
+      <created>1566450439638</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1566450439639</updated>
+    </task>
+    <task id="LOCAL-00061" summary="add download stats">
+      <created>1566799175231</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1566799175232</updated>
+    </task>
+    <task id="LOCAL-00062" summary="update lic">
+      <created>1566804492115</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1566804492115</updated>
+    </task>
+    <task id="LOCAL-00063" summary="add download stats">
+      <created>1566818078396</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1566818078396</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1027,8 +1033,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add android refresh shortcut key" />
-    <MESSAGE value="update jar for test" />
     <MESSAGE value="fix windows android  log can't display unicode, add linux tips" />
     <MESSAGE value="1.1.0 release" />
     <MESSAGE value="update vendor" />
@@ -1036,7 +1040,6 @@
     <MESSAGE value="add deps mgmt" />
     <MESSAGE value="1.1.1 add almost all React Native commands support" />
     <MESSAGE value="update plugin jar" />
-    <MESSAGE value="update readme" />
     <MESSAGE value="fix npe" />
     <MESSAGE value="fix https://github.com/beansoftapp/react-native-console/issues/21" />
     <MESSAGE value="1.1.3" />
@@ -1052,7 +1055,10 @@
     <MESSAGE value="add jetbrains log" />
     <MESSAGE value="1.3.2 with android devices support" />
     <MESSAGE value="1.4 with adb devices support and run ios/android params, reload android js fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.4 with adb devices support and run ios/android params, reload android js fix" />
+    <MESSAGE value="update readme" />
+    <MESSAGE value="update lic" />
+    <MESSAGE value="add download stats" />
+    <option name="LAST_COMMIT_MESSAGE" value="add download stats" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="94" width="1052" height="666" key="#Project_Structure" />
@@ -1065,6 +1071,8 @@
     <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser/2880.1800" />
     <state x="684" y="148" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" />
     <state x="684" y="148" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/2880.1800" />
+    <state x="408" y="165" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" />
+    <state x="408" y="165" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/2880.1800" />
     <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" />
     <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/2880.1800" />
     <state x="316" y="25" key="CommitChangelistDialog2" />
@@ -1119,6 +1127,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseAction.java</url>
           <line>43</line>
           <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/java/OpenCurrentActivityAction.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="45" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
