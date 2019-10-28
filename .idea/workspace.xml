@@ -52,20 +52,10 @@
     </workspaceTree>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="add download stats">
-      <change afterPath="$PROJECT_DIR$/.idea/.rnconsole" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javaparser_core_3_15_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javaparser-core-3.15.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/java/JavaCodeCleanAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/FileUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove@2x.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove@2x_dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/remove_dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/CommentRemover.java" afterDir="false" />
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="java code cleanup">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-native-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/java/JavaCodeCleanAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/java/JavaCodeCleanAction.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -635,13 +625,6 @@
       <workItem from="1565847148371" duration="450000" />
       <workItem from="1565865784717" duration="203000" />
     </task>
-    <task id="LOCAL-00015" summary="1.0.7, new version with iOS features.">
-      <created>1496808204089</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1496808204089</updated>
-    </task>
     <task id="LOCAL-00016" summary="1.0.7 release">
       <created>1496814835880</created>
       <option name="number" value="00016" />
@@ -978,7 +961,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566818078396</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="java code cleanup">
+      <created>1571809626779</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1571809626780</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1033,7 +1023,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="fix windows android  log can't display unicode, add linux tips" />
     <MESSAGE value="1.1.0 release" />
     <MESSAGE value="update vendor" />
     <MESSAGE value="add react devtools and improve UI interaction" />
@@ -1058,7 +1047,8 @@
     <MESSAGE value="update readme" />
     <MESSAGE value="update lic" />
     <MESSAGE value="add download stats" />
-    <option name="LAST_COMMIT_MESSAGE" value="add download stats" />
+    <MESSAGE value="java code cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="java code cleanup" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="94" width="1052" height="666" key="#Project_Structure" />
