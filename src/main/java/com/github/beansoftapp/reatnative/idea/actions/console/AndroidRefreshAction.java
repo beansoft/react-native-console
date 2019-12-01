@@ -1,8 +1,14 @@
 package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleRunAction;
+import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
+import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
+import com.intellij.execution.ExecutionException;
+import com.intellij.execution.configurations.GeneralCommandLine;
+import com.intellij.execution.util.ExecUtil;
 import com.intellij.icons.AllIcons;
+import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CustomShortcutSet;
 
 import javax.swing.*;
@@ -11,7 +17,7 @@ import java.awt.event.InputEvent;
 import static java.awt.event.KeyEvent.VK_Z;
 
 /**
- * Reloading JavaScript on Android device, tested on Samsung and MOTO XStyle only.
+ * Reloading JavaScript on Android device, tested on most android devices.
  * @version 2019-8-21 supports latest RN
  * @since 1.0.6
  * @author beansoft
@@ -22,9 +28,20 @@ public class AndroidRefreshAction extends BaseRNConsoleRunAction// implements Sh
             VK_Z, InputEvent.CTRL_MASK|InputEvent.SHIFT_MASK ));
 
     public AndroidRefreshAction(ReactNativeConsole terminal) {
-        super(terminal, "Android Reload JS(Double Tap R key)", "Android Reloading JavaScript(beta)", AllIcons.Actions.Refresh);
+        super(terminal, "Android Reload JS(Double Tap R key)", "Android Reloading JavaScript", AllIcons.Actions.Refresh);
 //        registerCustomShortcutSet(CustomShortcutSet.fromString("Ctrl Alt A"), getComponent(), parentDisposable);
         registerCustomShortcutSet(Android_REFRESH_SHORTCUT, null);
+    }
+
+    @Override
+    public void doAction(AnActionEvent anActionEvent) {
+        GeneralCommandLine commandLine = RNPathUtil.createFullPathCommandLine(command(), null);
+        try {
+            ExecUtil.execAndGetOutput(commandLine);
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+            NotificationUtils.errorNotification( "Android Reload JS failed. Please check that adb is installed." );
+        }
     }
 
     @Override

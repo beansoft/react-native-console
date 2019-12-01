@@ -121,8 +121,8 @@
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
-        <!--<configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"-->
-        <!--id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>-->
+        <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"
+        id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
 
 
         <!-- ReactNative project UI service -->

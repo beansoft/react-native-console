@@ -2,8 +2,8 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleRunAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
-import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.icons.AllIcons;
@@ -44,7 +44,7 @@ public class ReactDevToolsAction extends BaseRNConsoleRunAction {
                 cmd = "npm install -g react-devtools";
                 return true;
             } else {
-                RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
+                RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
 
                 if (consoleView != null) {
                     consoleView.clear();

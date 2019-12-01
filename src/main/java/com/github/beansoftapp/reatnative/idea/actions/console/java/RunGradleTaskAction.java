@@ -3,8 +3,8 @@ package com.github.beansoftapp.reatnative.idea.actions.console.java;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleActionGroup;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
-import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -43,7 +43,7 @@ public class RunGradleTaskAction extends BaseRNConsoleActionGroup {
                 PluginIcons.Gradle) {
                 @Override
                 public void doAction(AnActionEvent anActionEvent) {
-                    RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
+                    RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                     consoleView.executeShell(
                         command(), inputDir);
                 }

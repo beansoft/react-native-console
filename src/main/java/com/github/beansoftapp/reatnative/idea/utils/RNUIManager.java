@@ -1,7 +1,5 @@
 package com.github.beansoftapp.reatnative.idea.utils;
 
-import com.intellij.execution.filters.TextConsoleBuilderFactory;
-import com.intellij.execution.ui.ConsoleView;
 import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.project.Project;
 
@@ -14,12 +12,12 @@ public class RNUIManager {
         return ServiceManager.getService(project, RNUIManager.class);
     }
 
-    private ConsoleView mFreeConsole;
-
-    public ConsoleView getConsoleView(Project project) {
-        if (mFreeConsole == null) {
-            mFreeConsole = TextConsoleBuilderFactory.getInstance().createBuilder(project).getConsole();
-        }
-        return mFreeConsole;
-    }
+//    private ConsoleView mFreeConsole;
+//
+//    public ConsoleView getConsoleView(Project project) {
+//        if (mFreeConsole == null) {
+//            mFreeConsole = TextConsoleBuilderFactory.getInstance().createBuilder(project).getConsole();
+//        }
+//        return mFreeConsole;
+//    }
 }

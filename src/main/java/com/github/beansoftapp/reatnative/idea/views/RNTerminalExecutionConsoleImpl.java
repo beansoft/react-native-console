@@ -6,8 +6,6 @@ import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.configurations.GeneralCommandLine;
-import com.intellij.execution.impl.ConsoleState;
-import com.intellij.execution.impl.ConsoleViewImpl;
 import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
@@ -17,14 +15,23 @@ import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import com.intellij.psi.search.GlobalSearchScope;
+import com.intellij.terminal.TerminalExecutionConsole;
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**
- * A React Native Console, which can reuse console and execute commands. With rerun supports.
- * Created by beansoft on 2017/5/25.
+ * A React Native Console for terminal execution, which can reuse console and execute commands. With rerun supports.
+ * @author beansoft
+ * @date 2019/12/1.
+ * TODO in dev
  */
-public class RNConsoleImpl extends ConsoleViewImpl implements RNConsole {
+public class RNTerminalExecutionConsoleImpl extends TerminalExecutionConsole implements RNConsole {
+    private Project myProject;
+
+    public RNTerminalExecutionConsoleImpl(@NotNull Project project, @Nullable ProcessHandler processHandler) {
+        super(project, processHandler);
+        this.myProject = project;
+    }
 
     // Rerun current command
     private class RerunAction extends AnAction {
@@ -65,17 +72,17 @@ public class RNConsoleImpl extends ConsoleViewImpl implements RNConsole {
 
     private String displayName;// Friendly display name
 
-    public RNConsoleImpl(@NotNull Project project, boolean viewer) {
-        super(project, viewer);
-    }
-
-    public RNConsoleImpl(@NotNull Project project, @NotNull GlobalSearchScope searchScope, boolean viewer, boolean usePredefinedMessageFilter) {
-        super(project, searchScope, viewer, usePredefinedMessageFilter);
-    }
-
-    protected RNConsoleImpl(@NotNull Project project, @NotNull GlobalSearchScope searchScope, boolean viewer, @NotNull ConsoleState initialState, boolean usePredefinedMessageFilter) {
-        super(project, searchScope, viewer, initialState, usePredefinedMessageFilter);
-    }
+//    public RNConsoleImpl(@NotNull Project project, boolean viewer) {
+//        super(project, viewer);
+//    }
+//
+//    public RNConsoleImpl(@NotNull Project project, @NotNull GlobalSearchScope searchScope, boolean viewer, boolean usePredefinedMessageFilter) {
+//        super(project, searchScope, viewer, usePredefinedMessageFilter);
+//    }
+//
+//    protected RNConsoleImpl(@NotNull Project project, @NotNull GlobalSearchScope searchScope, boolean viewer, @NotNull ConsoleState initialState, boolean usePredefinedMessageFilter) {
+//        super(project, searchScope, viewer, initialState, usePredefinedMessageFilter);
+//    }
 
     public AnAction getReRunAction() {
         return new RerunAction();
@@ -160,6 +167,10 @@ public class RNConsoleImpl extends ConsoleViewImpl implements RNConsole {
         } else {
             executeShell(command, npmLocation);
         }
+    }
+
+    private Project getProject() {
+        return myProject;
     }
 
     /**

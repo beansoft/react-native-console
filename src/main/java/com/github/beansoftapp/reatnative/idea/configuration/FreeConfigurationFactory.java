@@ -20,7 +20,7 @@ class FreeConfigurationFactory extends ConfigurationFactory {
     @NotNull
     @Override
     public RunConfiguration createTemplateConfiguration(@NotNull Project project) {
-        return new FreeRunConfiguration(project, this, "ReactNativeFactory");
+        return new FreeRunConfiguration(project, this, "ReactNativeConsoleRun");
     }
 
     @Override

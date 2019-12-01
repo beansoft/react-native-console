@@ -3,9 +3,9 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleActionGroup;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
-import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.github.pedrovgs.androidwifiadb.Device;
 import com.github.pedrovgs.androidwifiadb.adb.ADB;
@@ -114,7 +114,7 @@ public class RunAndroidDevicesAction extends BaseRNConsoleActionGroup {
 //                            return;
 //                        }
 
-                        RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
+                        RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                         consoleView.runRawNPMCI(
                                 RNPathUtil.getExecuteFullPathSingle("react-native"),
                                 "run-android",

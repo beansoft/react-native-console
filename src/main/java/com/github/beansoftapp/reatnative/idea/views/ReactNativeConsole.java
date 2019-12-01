@@ -34,21 +34,20 @@ import com.github.beansoftapp.reatnative.idea.actions.console.YarnAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.hyperlink.EditRunAnroidOptions;
 import com.github.beansoftapp.reatnative.idea.actions.console.hyperlink.EditRuniOSOptions;
 import com.github.beansoftapp.reatnative.idea.actions.console.java.OpenCurrentActivityAction;
+import com.github.beansoftapp.reatnative.idea.content.RNContentImpl;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.OSUtils;
 import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.filters.HyperlinkInfoBase;
-import com.intellij.execution.impl.ConsoleViewImpl;
 import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.openapi.actionSystem.ActionGroup;
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.ActionPlaces;
 import com.intellij.openapi.actionSystem.ActionToolbar;
-import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.components.ProjectComponent;
-import com.intellij.openapi.editor.actions.ScrollToTheEndToolbarAction;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.SystemInfoRt;
 import com.intellij.openapi.wm.ToolWindow;
@@ -58,7 +57,6 @@ import com.intellij.openapi.wm.ex.ToolWindowManagerListener;
 import com.intellij.ui.awt.RelativePoint;
 import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentManager;
-import com.intellij.ui.content.impl.ContentImpl;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -66,8 +64,6 @@ import javax.swing.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.InputEvent;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A React Native Console with console view as process runner, no more depends on terminal widget,
@@ -156,7 +152,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      * @param icon the icon on tab
      */
     public void executeShell(String shell, String workDirectory, String displayName, Icon icon) {
-        RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
+        RNConsole rnConsole = getRNConsole(displayName, icon);
         if (rnConsole != null) {
             rnConsole.executeShell(shell, workDirectory);
         }
@@ -170,7 +166,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      * @param icon the icon on tab
      */
     public void runGradleCI(String shell, String displayName, Icon icon) {
-        RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
+        RNConsole rnConsole = getRNConsole(displayName, icon);
         if (rnConsole != null) {
             rnConsole.runGradleCI(shell);
         }
@@ -184,7 +180,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      * @param icon the icon on tab
      */
     public void runNPMCI(String shell, String displayName, Icon icon) {
-        RNConsoleImpl rnConsole = getRNConsole(displayName, icon);
+        RNConsole rnConsole = getRNConsole(displayName, icon);
         if (rnConsole != null) {
             rnConsole.runNPMCI(shell);
         }
@@ -197,20 +193,20 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
      * @param icon        - used to set a tab icon, not used for search
      * @return
      */
-    public RNConsoleImpl getRNConsole(String displayName, Icon icon) {
+    public RNConsole getRNConsole(String displayName, Icon icon) {
         ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(RNToolWindowFactory.TOOL_WINDOW_ID);
         if (window != null) {
             Content existingContent = createConsoleTabContent(window, false, displayName, icon);
-            if (existingContent != null) {
-                final JComponent existingComponent = existingContent.getComponent();
-
-                if (existingComponent instanceof SimpleToolWindowPanel) {
-                    JComponent component = ((SimpleToolWindowPanel) existingComponent).getContent();
-                    if (component instanceof RNConsoleImpl) {
-                        RNConsoleImpl rnConsole = (RNConsoleImpl) component;
-                        return rnConsole;
-                    }
-                }
+            if (existingContent != null && existingContent instanceof RNContentImpl) {
+//                final JComponent existingComponent = existingContent.getComponent();
+//                if (existingComponent instanceof SimpleToolWindowPanel) {
+//                    JComponent component = ((SimpleToolWindowPanel) existingComponent).getContent();
+//                    if (component instanceof RNConsoleImpl) {
+//                        RNConsoleImpl rnConsole = (RNConsoleImpl) component;
+//                        return rnConsole;
+//                    }
+//                }
+                return ((RNContentImpl)existingContent).getRnConsole();
             }
         }
 
@@ -233,11 +229,14 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         }
 
         SimpleToolWindowPanel panel = new SimpleToolWindowPanel(true);
-        ContentImpl content = new ContentImpl(panel, displayName, true);
+
+        RNConsole consoleView = new RNConsoleImpl(myProject, false);
+        // set viewer to false allow user to interaction with the shell
+        consoleView.setDisplayName(displayName);
+
+        RNContentImpl content = new RNContentImpl(panel, displayName, true, consoleView);
 
         content.setCloseable(true);
-        RNConsoleImpl consoleView = new RNConsoleImpl(myProject, true);
-        consoleView.setDisplayName(displayName);
         content.setDisposer(consoleView);
 
         if (icon != null) {
@@ -318,25 +317,19 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         if (!firstInit) {
             // Create left console and normal toolbars
             DefaultActionGroup toolbarActions = new DefaultActionGroup();
-            AnAction[]
-                    consoleActions = consoleView.createConsoleActions();
+//            AnAction[]
+//                    consoleActions = consoleView.createConsoleActions();
             // createConsoleActions() Must be called after consoleView.getComponent() was invoked, after the component really inited, otherwise will got NPE
 
             // resort console actions to move scroll to end and clear to top
-            List<AnAction> resortActions = new ArrayList<>();
-            if(consoleActions != null) {
-                for (AnAction action : consoleActions) {
-                    if (action instanceof ScrollToTheEndToolbarAction || action instanceof ConsoleViewImpl.ClearAllAction) {
-                        resortActions.add(action);
-                    }
-                }
-
-                for (AnAction action : consoleActions) {
-                    if (!(action instanceof ScrollToTheEndToolbarAction || action instanceof ConsoleViewImpl.ClearAllAction)) {
-                        resortActions.add(action);
-                    }
-                }
-            }
+//            List<AnAction> resortActions = new ArrayList<>();
+//            if(consoleActions != null) {
+//                for (AnAction action : consoleActions) {
+//                    if (action instanceof ScrollToTheEndToolbarAction || action instanceof ConsoleViewImpl.ClearAllAction) {
+//                        resortActions.add(action);
+//                    }
+//                }
+//            }
 
             // Rerun current command
             toolbarActions.add(consoleView.getReRunAction());
@@ -350,7 +343,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             toolbarActions.add(new CloseTabAction(content));
             toolbarActions.addSeparator();
             // Built in console action
-            toolbarActions.addAll(resortActions.toArray(new AnAction[0]));
+            toolbarActions.addAll(consoleView.createConsoleActions());
             ActionToolbar toolbar = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) toolbarActions, false);
             toolbar.setTargetComponent(consoleView.getComponent());
             panel.setToolbar(toolbar.getComponent(), true);

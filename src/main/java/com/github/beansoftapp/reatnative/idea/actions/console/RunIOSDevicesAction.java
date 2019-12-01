@@ -2,14 +2,18 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleActionGroup;
-import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.entity.ios.IOSDeviceInfo;
+import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
+import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.ios.IOSDevicesParser;
-import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionPopupMenu;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
 import com.intellij.openapi.application.ApplicationManager;
@@ -103,7 +107,7 @@ public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
                                 : PluginIcons.IPhoneDevice) {
                     @Override
                     public void doAction(AnActionEvent anActionEvent) {
-                        RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
+                        RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                         consoleView.runRawNPMCI(
                                 RNPathUtil.getExecuteFullPathSingle("react-native"),
                                 "run-ios",

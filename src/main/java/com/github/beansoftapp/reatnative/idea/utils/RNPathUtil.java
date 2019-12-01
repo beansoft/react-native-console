@@ -4,8 +4,12 @@ import com.github.beansoftapp.reatnative.idea.entity.ProjectConfig;
 import com.google.gson.Gson;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.configurations.PathEnvironmentVariableUtil;
+import com.intellij.execution.configurations.PtyCommandLine;
 import com.intellij.openapi.project.Project;
+import com.intellij.openapi.util.SystemInfo;
 import com.intellij.openapi.util.io.FileUtil;
+import com.intellij.util.EnvironmentUtil;
+import com.intellij.util.ObjectUtils;
 import com.intellij.util.execution.ParametersListUtil;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -345,6 +349,24 @@ public class RNPathUtil {
     public static GeneralCommandLine cmdToGeneralCommandLine(String cmd) {
         GeneralCommandLine commandLine = new GeneralCommandLine(cmd.split(" "));
         commandLine.setCharset(Charset.forName("UTF-8"));
+        return commandLine;
+    }
+
+    protected GeneralCommandLine createDefaultTtyCommandLine() {
+        // here just run one command: python freeline.py
+        PtyCommandLine commandLine = new PtyCommandLine();
+        if (!SystemInfo.isWindows) {
+            commandLine.getEnvironment().put("TERM", "xterm-256color");
+        }
+//        commandLine.withConsoleMode(false);
+//        commandLine.withInitialColumns(120);
+//        ExecutionEnvironment environment = getEnvironment();
+//        commandLine.setWorkDirectory(environment.getProject().getBasePath());
+        String defaultShell = ObjectUtils.notNull(EnvironmentUtil.getValue("SHELL"), "/bin/sh");
+        commandLine.setExePath(defaultShell);
+//            commandLine.setExePath("npm");
+//            commandLine.addParameters("run-script");
+//            commandLine.addParameters("start");
         return commandLine;
     }
 

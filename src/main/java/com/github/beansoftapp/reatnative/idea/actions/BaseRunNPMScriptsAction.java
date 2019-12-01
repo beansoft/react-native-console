@@ -1,6 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
-import com.github.beansoftapp.reatnative.idea.views.RNConsoleImpl;
+import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -84,7 +84,7 @@ public class BaseRunNPMScriptsAction extends BaseRNConsoleActionGroup {
                                 }
                             });
                     if(packageName != null && packageName.trim().length() > 0) {
-                        RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
+                        RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                         consoleView.runNPMCI(
                                 commandTemplate.replace("$", packageName.trim()));
                     }
@@ -95,7 +95,7 @@ public class BaseRunNPMScriptsAction extends BaseRNConsoleActionGroup {
                     icon) {
                 @Override
                 public void doAction(AnActionEvent anActionEvent) {
-                        RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
+                    RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                         consoleView.runNPMCI(commandTemplate);
                 }
             };
