@@ -3,7 +3,7 @@ package com.github.beansoftapp.reatnative.idea.actions.console;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleActionGroup;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
-import com.github.beansoftapp.reatnative.idea.sh.ShTerminalRunner;
+import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
@@ -38,12 +38,12 @@ public class RunNPMScriptsAction extends BaseRNConsoleActionGroup {
                     PluginIcons.Npm) {
                 @Override
                 public void doAction(AnActionEvent anActionEvent) {
-//                    RNConsoleImpl consoleView = terminal.getRNConsole(getText(), getIcon());
-//                    consoleView.runNPMCI(
-//                            "npm run \"" + scriptName + "\"");
+                    RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
+                    consoleView.runNPMCI(
+                            "npm run \"" + scriptName + "\"");
 
-                    ShTerminalRunner runner = new ShTerminalRunner(project);
-                    runner.run("npm run \"" + scriptName + "\"\n", RNPathUtil.getRNProjectPath(project));
+//                    ShTerminalRunner runner = new ShTerminalRunner(project);
+//                    runner.run("npm run \"" + scriptName + "\"\n", RNPathUtil.getRNProjectPath(project));
                 }
             };
         }

@@ -11,7 +11,6 @@ import com.intellij.execution.configurations.RunConfiguration;
 import com.intellij.execution.configurations.RunConfigurationBase;
 import com.intellij.execution.configurations.RunProfileState;
 import com.intellij.execution.configurations.RuntimeConfigurationException;
-import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.process.KillableProcessHandler;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
@@ -88,8 +87,7 @@ class FreeRunConfiguration extends RunConfigurationBase {
             console.print(
                 "Give a Star or Suggestion:\n",
                 ConsoleViewContentType.NORMAL_OUTPUT);
-            console.printHyperlink("https://github.com/beansoftapp/react-native-console",
-                new BrowserHyperlinkInfo("https://github.com/beansoftapp/react-native-console"));
+
 
             processHandler.destroyProcess();
             return new DefaultExecutionResult(console, processHandler);
