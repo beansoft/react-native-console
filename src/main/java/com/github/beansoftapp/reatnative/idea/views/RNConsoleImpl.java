@@ -187,7 +187,7 @@ public class RNConsoleImpl extends ConsoleViewImpl implements RNConsole {
 
         if(commandLine.getWorkDirectory() != null) {
             print(
-                "Work directory: " + commandLine.getWorkDirectory().getAbsolutePath() + "\n" ,
+                "cd \"" + commandLine.getWorkDirectory().getAbsolutePath() + "\"\n" ,
                 ConsoleViewContentType.SYSTEM_OUTPUT);
         }
 

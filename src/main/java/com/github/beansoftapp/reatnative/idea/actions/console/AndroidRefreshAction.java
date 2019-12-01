@@ -1,14 +1,8 @@
 package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleRunAction;
-import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.execution.ExecutionException;
-import com.intellij.execution.configurations.GeneralCommandLine;
-import com.intellij.execution.util.ExecUtil;
 import com.intellij.icons.AllIcons;
-import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CustomShortcutSet;
 
 import javax.swing.*;
@@ -31,17 +25,6 @@ public class AndroidRefreshAction extends BaseRNConsoleRunAction// implements Sh
         super(terminal, "Android Reload JS(Double Tap R key)", "Android Reloading JavaScript", AllIcons.Actions.Refresh);
 //        registerCustomShortcutSet(CustomShortcutSet.fromString("Ctrl Alt A"), getComponent(), parentDisposable);
         registerCustomShortcutSet(Android_REFRESH_SHORTCUT, null);
-    }
-
-    @Override
-    public void doAction(AnActionEvent anActionEvent) {
-        GeneralCommandLine commandLine = RNPathUtil.createFullPathCommandLine(command(), null);
-        try {
-            ExecUtil.execAndGetOutput(commandLine);
-        } catch (ExecutionException e) {
-            e.printStackTrace();
-            NotificationUtils.errorNotification( "Android Reload JS failed. Please check that adb is installed." );
-        }
     }
 
     @Override

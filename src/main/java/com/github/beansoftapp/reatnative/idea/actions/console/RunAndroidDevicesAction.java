@@ -37,7 +37,7 @@ import java.util.Collection;
  */
 public class RunAndroidDevicesAction extends BaseRNConsoleActionGroup {
     public RunAndroidDevicesAction(ReactNativeConsole terminal) {
-        super(terminal, "Android Choose Devices", "Run on a Selected Android Device", PluginIcons.Android);
+        super(terminal, "Android Debug On Devices", "Run on a Selected Android Device", PluginIcons.Android);
         setPopup(true);
     }
 
@@ -103,7 +103,7 @@ public class RunAndroidDevicesAction extends BaseRNConsoleActionGroup {
         devices.forEach(iosDeviceInfo -> {
             if (iosDeviceInfo != null) {
                 String deviceName = iosDeviceInfo.getName();// + " " + (iosDeviceInfo.isConnected() ? "Connected" : "Disconnected");
-                group.add(new BaseRNConsoleAction(super.terminal, deviceName, "Run on Android device: '" + deviceName + "'",
+                group.add(new BaseRNConsoleAction(super.terminal, "Debug on " + deviceName, "Debug on Android device: '" + deviceName + "'",
                     PluginIcons.Android
                         //iosDeviceInfo.isConnected() ? PluginIcons.Android : PluginIcons.Error
                 ) {

@@ -9,8 +9,8 @@ import java.io.File;
 
 public class AndroidBundleAction extends BaseRNConsoleAndroidAction {
     public AndroidBundleAction(ReactNativeConsole terminal) {
-        super(terminal, "Android bundleReleaseJsAndAssets",
-                "builds the Release javascript bundle for Android ", PluginIcons.Deploy);
+        super(terminal, "Android bundleRelease",
+                "builds the Release with JS bundle for Android ", PluginIcons.Deploy);
     }
 
 //    @Override
@@ -45,8 +45,8 @@ public class AndroidBundleAction extends BaseRNConsoleAndroidAction {
 
     protected String command() {
         if (OSUtils.isWindows()) {// https://github.com/beansoftapp/react-native-console/issues/8
-            return "gradlew.bat bundleReleaseJsAndAssets";
+            return "gradlew.bat bundleRelease";
         }
-        return "." + File.separator + "gradlew bundleReleaseJsAndAssets";
+        return "." + File.separator + "gradlew bundleRelease";//bundleReleaseJsAndAssets https://github.com/beansoftapp/react-native-console/issues/38
     }
 }
