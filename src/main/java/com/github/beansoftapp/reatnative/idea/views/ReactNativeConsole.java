@@ -52,7 +52,6 @@ import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.SystemInfoRt;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowManager;
-import com.intellij.openapi.wm.ex.ToolWindowManagerEx;
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener;
 import com.intellij.ui.awt.RelativePoint;
 import com.intellij.ui.content.Content;
@@ -125,7 +124,8 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         toolWindow.setShowStripeButton(true);// if set to false, then sometimes the window will be hidden from the dock area for ever 2017-05-26
 //        toolWindow.setTitle(" - ");
         // TODO Change to Eventbus
-        ((ToolWindowManagerEx) ToolWindowManager.getInstance(this.myProject)).addToolWindowManagerListener(new ToolWindowManagerListener() {
+        myProject.getMessageBus().connect().subscribe(ToolWindowManagerListener.TOPIC, new ToolWindowManagerListener() {
+//        ((ToolWindowManagerEx) ToolWindowManager.getInstance(this.myProject)).addToolWindowManagerListener(new ToolWindowManagerListener() {
             @Override
             public void toolWindowRegistered(@NotNull String s) {
             }

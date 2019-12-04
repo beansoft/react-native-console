@@ -53,12 +53,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="1.4 with adb devices support and run ios/android params, reload android js fix">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/uninstall.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/uninstall_dark.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/verifyPlugin_mac.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_CN.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.jar" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/configuration/FreeConfigurationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/configuration/FreeConfigurationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,6 +86,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -100,221 +107,13 @@
     <option name="CUSTOM_FILTER" value="" />
   </component>
   <component name="ProjectId" id="1OrQPsJrpNQvwAWKkZhVLfp3SVL" />
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Ali-Check</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Correctness</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Correctness &gt; Messages</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Internationalization</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Internationalization &gt; Bidirectional Text</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Performance</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Security</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Usability</id>
-          </State>
-          <State>
-            <id>Android &gt; Lint &gt; Usability &gt; Icons</id>
-          </State>
-          <State>
-            <id>Android Lint for Kotlin</id>
-          </State>
-          <State>
-            <id>Bean Validation issues</id>
-          </State>
-          <State>
-            <id>CDI(Contexts and Dependency Injection) issues</id>
-          </State>
-          <State>
-            <id>CSS</id>
-          </State>
-          <State>
-            <id>Class structureJava</id>
-          </State>
-          <State>
-            <id>Code quality toolsCSS</id>
-          </State>
-          <State>
-            <id>Code quality toolsJavaScript</id>
-          </State>
-          <State>
-            <id>Code style issuesJava</id>
-          </State>
-          <State>
-            <id>Code style issuesJavaScript</id>
-          </State>
-          <State>
-            <id>CodeSpring CoreSpring</id>
-          </State>
-          <State>
-            <id>Control flow issuesJava</id>
-          </State>
-          <State>
-            <id>Finalization issuesJava</id>
-          </State>
-          <State>
-            <id>General</id>
-          </State>
-          <State>
-            <id>GeneralJavaScript</id>
-          </State>
-          <State>
-            <id>Google Web Toolkit issues</id>
-          </State>
-          <State>
-            <id>GrailsGroovy</id>
-          </State>
-          <State>
-            <id>Groovy</id>
-          </State>
-          <State>
-            <id>Guice Inspections</id>
-          </State>
-          <State>
-            <id>Initialization issuesJava</id>
-          </State>
-          <State>
-            <id>Internationalization issues</id>
-          </State>
-          <State>
-            <id>Internationalization issuesJava</id>
-          </State>
-          <State>
-            <id>Invalid elementsCSS</id>
-          </State>
-          <State>
-            <id>J2ME issuesJava</id>
-          </State>
-          <State>
-            <id>JSP Inspections</id>
-          </State>
-          <State>
-            <id>Java</id>
-          </State>
-          <State>
-            <id>JavaScript</id>
-          </State>
-          <State>
-            <id>JavaScript validity issuesJavaScript</id>
-          </State>
-          <State>
-            <id>Kotlin</id>
-          </State>
-          <State>
-            <id>Logging issuesJava</id>
-          </State>
-          <State>
-            <id>Numeric issuesJava</id>
-          </State>
-          <State>
-            <id>OSGi</id>
-          </State>
-          <State>
-            <id>Pattern Validation</id>
-          </State>
-          <State>
-            <id>Performance issuesJava</id>
-          </State>
-          <State>
-            <id>Plugin DevKit</id>
-          </State>
-          <State>
-            <id>Potentially confusing code constructsGroovy</id>
-          </State>
-          <State>
-            <id>Probable bugsJava</id>
-          </State>
-          <State>
-            <id>Probable bugsJavaScript</id>
-          </State>
-          <State>
-            <id>Properties FilesJava</id>
-          </State>
-          <State>
-            <id>Redundant constructsKotlin</id>
-          </State>
-          <State>
-            <id>SQL</id>
-          </State>
-          <State>
-            <id>Security issuesJava</id>
-          </State>
-          <State>
-            <id>Serialization issuesJava</id>
-          </State>
-          <State>
-            <id>Spring</id>
-          </State>
-          <State>
-            <id>Spring CoreSpring</id>
-          </State>
-          <State>
-            <id>Struts</id>
-          </State>
-          <State>
-            <id>Struts 1Struts</id>
-          </State>
-          <State>
-            <id>Struts 2Struts</id>
-          </State>
-          <State>
-            <id>Style issuesKotlin</id>
-          </State>
-          <State>
-            <id>TestNGJava</id>
-          </State>
-          <State>
-            <id>Threading issuesGroovy</id>
-          </State>
-          <State>
-            <id>Threading issuesJava</id>
-          </State>
-          <State>
-            <id>Thymeleaf</id>
-          </State>
-          <State>
-            <id>TypeScript</id>
-          </State>
-          <State>
-            <id>UI Form Problems</id>
-          </State>
-          <State>
-            <id>Validity issuesGroovy</id>
-          </State>
-          <State>
-            <id>Web Services</id>
-          </State>
-          <State>
-            <id>XML</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>Ali-Check</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
@@ -335,20 +134,23 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/resources/META-INF/plugin.xml&#10;package.j&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/package.json&#10;RNPa&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Path&#9;FILE&#9;file://D:/pilipa/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Registry&#9;PSI&#9;JAVA://com.intellij.openapi.util.registry.Registry&#10;Executors&#9;PSI&#9;JAVA://java.util.concurrent.Executors&#10;RNConsoleImpl&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java&#10;NPMParser&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser&#10;RNLin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNLinkAction.java&#10;NpmSta&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java&#10;AllIc&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;ReactDe&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.actions.console.ReactDevToolsAction&#10;Plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;IconLoader&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/openapi/util/IconLoader.class&#10;AllIcons&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;Debug&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java&#10;RNPath&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;KeyStroke&#9;PSI&#9;JAVA://javax.swing.KeyStroke&#10;Refresh&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java&#10;FileUtil&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class&#10;Plu&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Fr&#9;FILE&#9;file:///Users/beansoft/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/views/FreelineTerminal.java&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;JSON&#9;PSI&#9;JAVA://com.google.gson.JsonArray&#10;TabbedTerminalWidget&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/jediterm-pty-2.5.jar!/com/jediterm/terminal/ui/TabbedTerminalWidget.class&#10;NativeArray&#9;PSI&#9;JAVA://jdk.nashorn.internal.objects.NativeArray&#10;ScriptUtils&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptUtils&#10;ScriptObjectMi&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptObjectMirror&#10;Pattern&#9;PSI&#9;JAVA://java.util.regex.Pattern&#10;Notif&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/NotificationUtils.java&#10;JsonObject&#9;PSI&#9;JAVA://com.google.gson.JsonObject&#10;Gson&#9;PSI&#9;JAVA://com.google.gson.Gson&#10;Icon&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Simple&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java&#10;SimpleToolWindowPanel&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/openapi.jar!/com/intellij/openapi/ui/SimpleToolWindowPanel.class&#10;ConsoleViewImpl&#9;PSI&#9;JAVA://com.intellij.execution.testframework.ui.TestsConsoleViewImpl&#10;ToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Terminal&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/TerminalView.class&#10;TerminalToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Feed&#9;PSI&#9;JAVA://com.antfortune.freeline.idea.actions.FeedbackAction&#10;TerminalOptions&#9;null&#9;null" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="355" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/icons" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.35040432" />
+    <property name="project.structure.side.proportion" value="0.12285012" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
     <property name="show.inlinked.gradle.project.popup" value="false" />
+    <property name="show.unlinked.gradle.project.popup" value="false" />
   </component>
   <component name="PsiViewer.ProjectComponent">
     <option name="HIGHLIGHT" value="false" />
@@ -359,26 +161,26 @@
     <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/android" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.beansoftapp.reatnative.idea.views" />
+      <recent name="com.github.beansoftapp.reatnative.idea.sh" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions" />
-      <recent name="com.github.beansoftapp.reatnative.swing" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/android" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea" />
-      <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
     </key>
   </component>
   <component name="Regex">
@@ -392,21 +194,34 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Plugin.Plugin">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">
+      <option name="DOC_BASE" value="" />
+      <option name="DOC_MODULE_ROOT" value="" />
+      <option name="CONTEXT_PATH" value="" />
+      <option name="TOMCAT_PORT" value="8080" />
+      <option name="AJP_PORT" value="8009" />
+      <option name="ADMIN_PORT" value="8005" />
+      <option name="VM_OPTIONS" value="" />
+      <option name="PASS_PARENT_ENV_OPTIONS" value="true" />
+      <option name="CLASS_NAME" value="" />
+      <option name="DEBUG" value="" />
+      <option name="DIGEST" value="" />
+      <option name="ROLE_NAME_COL" value="" />
+      <option name="USER_CRED_COL" value="" />
+      <option name="USER_NAME_COL" value="" />
+      <option name="USER_ROLE_TABLE" value="" />
+      <option name="USER_TABLE" value="" />
+      <option name="JNDI_GLOBAL" value="" />
+      <option name="JNDI_NAME" value="" />
+      <option name="JNDI_TYPE" value="" />
+      <option name="DATA_SOURCE_NAME" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -433,17 +248,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="AdbParseTest" />
       <option name="METHOD_NAME" value="testParseAndroid" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AdbParseTest.testParseDump" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="react-native-console" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AdbParseTest" />
-      <option name="METHOD_NAME" value="testParseDump" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -526,6 +330,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test.sh" type="ShConfigurationType" temporary="true">
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/test.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -539,7 +351,7 @@
       <module name="react-native-console" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <alternative-path path="WebStorm WS-192.5728.87" alternative-path-enabled="true" />
+      <alternative-path path="WebStorm 2019.3" alternative-path-enabled="true" />
       <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -555,31 +367,33 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AdbParseTest.testParseDump" />
-      <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
-      <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
       <item itemvalue="JUnit.AdbParseTest.testADBgetDevicesConnectedByUSB" />
+      <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
+      <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
       <item itemvalue="JUnit.TestParseIOSDevices.testJS" />
+      <item itemvalue="Shell Script.test.sh" />
       <item itemvalue="Plugin.Plugin" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Shell Script.test.sh" />
         <item itemvalue="JUnit.TestParseIOSDevices.testJS" />
+        <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
         <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
         <item itemvalue="JUnit.AdbParseTest.testADBgetDevicesConnectedByUSB" />
-        <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
-        <item itemvalue="JUnit.AdbParseTest.testParseDump" />
       </list>
     </recent_temporary>
   </component>
   <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <treeState>
-          <expand />
-          <select />
-        </treeState>
-      </serviceView>
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
     </option>
   </component>
   <component name="StructureViewFactory">
@@ -628,27 +442,6 @@
       <workItem from="1565847112805" duration="23000" />
       <workItem from="1565847148371" duration="450000" />
       <workItem from="1565865784717" duration="203000" />
-    </task>
-    <task id="LOCAL-00011" summary="1.0.6 version, android reload js">
-      <created>1496153853422</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1496153853422</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fix bug https://github.com/beansoftapp/react-native-console/issues/8">
-      <created>1496286019829</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1496286019829</updated>
-    </task>
-    <task id="LOCAL-00013" summary="update plugin">
-      <created>1496286451347</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1496286451347</updated>
     </task>
     <task id="LOCAL-00014" summary="add ios devices">
       <created>1496747649050</created>
@@ -972,7 +765,28 @@
       <option name="project" value="LOCAL" />
       <updated>1566380483687</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="last version for IDEA 2017">
+      <created>1575179854147</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1575179854148</updated>
+    </task>
+    <task id="LOCAL-00061" summary="for IDEA 2019.2 etc">
+      <created>1575179917648</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1575179917648</updated>
+    </task>
+    <task id="LOCAL-00062" summary="version 2018 release">
+      <created>1575198615036</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1575198615038</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1027,9 +841,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add android refresh shortcut key" />
-    <MESSAGE value="update jar for test" />
-    <MESSAGE value="fix windows android  log can't display unicode, add linux tips" />
     <MESSAGE value="1.1.0 release" />
     <MESSAGE value="update vendor" />
     <MESSAGE value="add react devtools and improve UI interaction" />
@@ -1052,65 +863,237 @@
     <MESSAGE value="add jetbrains log" />
     <MESSAGE value="1.3.2 with android devices support" />
     <MESSAGE value="1.4 with adb devices support and run ios/android params, reload android js fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.4 with adb devices support and run ios/android params, reload android js fix" />
+    <MESSAGE value="last version for IDEA 2017" />
+    <MESSAGE value="for IDEA 2019.2 etc" />
+    <MESSAGE value="version 2018 release" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 2018 release" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="94" width="1052" height="666" key="#Project_Structure" />
-    <state x="320" y="94" width="1052" height="666" key="#Project_Structure/2880.1800" />
-    <state x="458" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" />
-    <state x="458" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/2880.1800" />
-    <state x="102" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog" />
-    <state x="102" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/2880.1800" />
-    <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser" />
-    <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser/2880.1800" />
-    <state x="684" y="148" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" />
-    <state x="684" y="148" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/2880.1800" />
-    <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" />
-    <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/2880.1800" />
-    <state x="316" y="25" key="CommitChangelistDialog2" />
-    <state x="316" y="25" key="CommitChangelistDialog2/2880.1800" />
-    <state x="482" y="140" key="DetectedRootsChooserDialog" />
-    <state x="482" y="140" key="DetectedRootsChooserDialog/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.0.bottom" />
-    <state width="1419" height="242" key="GridCell.Tab.0.bottom/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.0.center" />
-    <state width="1419" height="242" key="GridCell.Tab.0.center/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.0.left" />
-    <state width="1419" height="242" key="GridCell.Tab.0.left/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.0.right" />
-    <state width="1419" height="242" key="GridCell.Tab.0.right/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.1.bottom" />
-    <state width="1419" height="242" key="GridCell.Tab.1.bottom/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.1.center" />
-    <state width="1419" height="242" key="GridCell.Tab.1.center/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.1.left" />
-    <state width="1419" height="242" key="GridCell.Tab.1.left/2880.1800" />
-    <state width="1419" height="242" key="GridCell.Tab.1.right" />
-    <state width="1419" height="242" key="GridCell.Tab.1.right/2880.1800" />
-    <state width="1419" height="257" key="GridCell.Tab.2.bottom" />
-    <state width="1419" height="257" key="GridCell.Tab.2.bottom/2880.1800" />
-    <state width="1419" height="257" key="GridCell.Tab.2.center" />
-    <state width="1419" height="257" key="GridCell.Tab.2.center/2880.1800" />
-    <state width="1419" height="257" key="GridCell.Tab.2.left" />
-    <state width="1419" height="257" key="GridCell.Tab.2.left/2880.1800" />
-    <state width="1419" height="257" key="GridCell.Tab.2.right" />
-    <state width="1419" height="257" key="GridCell.Tab.2.right/2880.1800" />
-    <state x="213" y="78" key="SettingsEditor" />
-    <state x="213" y="78" key="SettingsEditor/2880.1800" />
-    <state x="404" y="152" key="Vcs.Push.Dialog" />
-    <state x="404" y="152" key="Vcs.Push.Dialog/2880.1800" />
-    <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" />
-    <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/2880.1800" />
-    <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" />
-    <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/2880.1800" />
-    <state x="459" y="190" key="extract.method.dialog" />
-    <state x="459" y="190" key="extract.method.dialog/2880.1800" />
-    <state x="383" y="118" width="673" height="618" key="find.popup" />
-    <state x="383" y="118" width="673" height="618" key="find.popup/2880.1800" />
-    <state x="114" y="35" key="new project wizard" />
-    <state x="114" y="35" key="new project wizard/2880.1800" />
-    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup" />
-    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup/2880.1800" />
+    <state x="320" y="104" key="#Plugins" timestamp="1575039819905">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="320" y="104" key="#Plugins/0.23.1440.829@0.23.1440.829" timestamp="1575039819904" />
+    <state x="320" y="94" width="916" height="666" key="#Project_Structure" timestamp="1575249238371">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="320" y="94" width="916" height="666" key="#Project_Structure/0.23.1440.828@0.23.1440.828" timestamp="1575199040289" />
+    <state x="320" y="94" key="#Project_Structure/0.23.1440.829@0.23.1440.829" timestamp="1575249238371" />
+    <state x="320" y="94" key="#Project_Structure/0.23.1440.830@0.23.1440.830" timestamp="1575093163454" />
+    <state x="320" y="94" width="1052" height="666" key="#Project_Structure/2880.1800" timestamp="1575019688202" />
+    <state x="458" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1575019688202" />
+    <state x="458" y="192" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/2880.1800" timestamp="1575019688202" />
+    <state x="102" y="111" width="1236" height="829" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575197595995">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="102" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.828@0.23.1440.828" timestamp="1575197595995" />
+    <state x="102" y="23" width="1236" height="829" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.829@0.23.1440.829" timestamp="1575114086822" />
+    <state x="102" y="23" width="1071" height="830" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.830@0.23.1440.830" timestamp="1575096293089" />
+    <state x="102" y="23" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.831@0.23.1440.831" timestamp="1575094375666" />
+    <state x="102" y="23" width="1236" height="832" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.832@0.23.1440.832" timestamp="1575094159799" />
+    <state x="102" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/2880.1800" timestamp="1575019688202" />
+    <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser" timestamp="1575194781424">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser/0.23.1440.829@0.23.1440.829" timestamp="1575194781424" />
+    <state x="533" y="124" key="#com.intellij.ide.util.MemberChooser/2880.1800" timestamp="1575019688202" />
+    <state x="457" y="231" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1575113780564">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="457" y="231" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.829@0.23.1440.829" timestamp="1575113780564" />
+    <state x="553" y="334" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575176561064">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="553" y="334" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.828@0.23.1440.828" timestamp="1575176561064" />
+    <state x="684" y="148" width="578" height="558" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1575190295037">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="684" y="148" width="578" height="558" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.23.1440.828@0.23.1440.828" timestamp="1575190295037" />
+    <state x="684" y="148" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/2880.1800" timestamp="1575019688202" />
+    <state x="408" y="175" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1575094336112">
+      <screen x="0" y="23" width="1440" height="833" />
+    </state>
+    <state x="408" y="174" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.830@0.23.1440.830" timestamp="1575093149614" />
+    <state x="408" y="175" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.833@0.23.1440.833" timestamp="1575094336112" />
+    <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1575019688202" />
+    <state x="185" y="359" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/2880.1800" timestamp="1575019688202" />
+    <state x="316" y="25" key="CommitChangelistDialog2" timestamp="1575198614418">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="316" y="25" key="CommitChangelistDialog2/0.23.1440.828@0.23.1440.828" timestamp="1575198614418" />
+    <state x="316" y="25" key="CommitChangelistDialog2/2880.1800" timestamp="1575019688202" />
+    <state x="482" y="140" key="DetectedRootsChooserDialog" timestamp="1575019688202" />
+    <state x="482" y="140" key="DetectedRootsChooserDialog/2880.1800" timestamp="1575019688202" />
+    <state x="100" y="123" width="1240" height="628" key="DiffContextDialog" timestamp="1575199316842">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="100" y="123" width="1240" height="628" key="DiffContextDialog/0.23.1440.828@0.23.1440.828" timestamp="1575199316842" />
+    <state x="11" y="34" width="1418" height="807" maximized="true" key="DiffContextDialog/0.23.1440.829@0.23.1440.829" timestamp="1575195957408" />
+    <state x="508" y="190" key="FileChooserDialogImpl" timestamp="1575249229469">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="508" y="190" key="FileChooserDialogImpl/0.23.1440.829@0.23.1440.829" timestamp="1575249229469" />
+    <state width="1398" height="350" key="GridCell.Tab.0.bottom" timestamp="1575200029430">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.0.bottom/0.23.1440.828@0.23.1440.828" timestamp="1575200029430" />
+    <state width="1398" height="350" key="GridCell.Tab.0.bottom/0.23.1440.829@0.23.1440.829" timestamp="1575196630483" />
+    <state width="1398" height="256" key="GridCell.Tab.0.bottom/0.23.1440.830@0.23.1440.830" timestamp="1575121908225" />
+    <state width="1398" height="487" key="GridCell.Tab.0.bottom/0.23.1440.831@0.23.1440.831" timestamp="1575094380857" />
+    <state width="699" height="208" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" timestamp="1575094221511" />
+    <state width="1419" height="242" key="GridCell.Tab.0.bottom/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.0.center" timestamp="1575200029429">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.0.center/0.23.1440.828@0.23.1440.828" timestamp="1575200029429" />
+    <state width="1398" height="350" key="GridCell.Tab.0.center/0.23.1440.829@0.23.1440.829" timestamp="1575196630441" />
+    <state width="1398" height="256" key="GridCell.Tab.0.center/0.23.1440.830@0.23.1440.830" timestamp="1575121908224" />
+    <state width="1398" height="487" key="GridCell.Tab.0.center/0.23.1440.831@0.23.1440.831" timestamp="1575094380856" />
+    <state width="699" height="208" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" timestamp="1575094221510" />
+    <state width="1419" height="242" key="GridCell.Tab.0.center/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.0.left" timestamp="1575200029428">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.0.left/0.23.1440.828@0.23.1440.828" timestamp="1575200029428" />
+    <state width="1398" height="350" key="GridCell.Tab.0.left/0.23.1440.829@0.23.1440.829" timestamp="1575196630439" />
+    <state width="1398" height="256" key="GridCell.Tab.0.left/0.23.1440.830@0.23.1440.830" timestamp="1575121908223" />
+    <state width="1398" height="487" key="GridCell.Tab.0.left/0.23.1440.831@0.23.1440.831" timestamp="1575094380855" />
+    <state width="699" height="208" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" timestamp="1575094221509" />
+    <state width="1419" height="242" key="GridCell.Tab.0.left/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.0.right" timestamp="1575200029430">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.0.right/0.23.1440.828@0.23.1440.828" timestamp="1575200029430" />
+    <state width="1398" height="350" key="GridCell.Tab.0.right/0.23.1440.829@0.23.1440.829" timestamp="1575196630479" />
+    <state width="1398" height="256" key="GridCell.Tab.0.right/0.23.1440.830@0.23.1440.830" timestamp="1575121908224" />
+    <state width="1398" height="487" key="GridCell.Tab.0.right/0.23.1440.831@0.23.1440.831" timestamp="1575094380856" />
+    <state width="699" height="208" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" timestamp="1575094221510" />
+    <state width="1419" height="242" key="GridCell.Tab.0.right/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.1.bottom" timestamp="1575200029431">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.1.bottom/0.23.1440.828@0.23.1440.828" timestamp="1575200029431" />
+    <state width="1398" height="350" key="GridCell.Tab.1.bottom/0.23.1440.829@0.23.1440.829" timestamp="1575196630493" />
+    <state width="1398" height="256" key="GridCell.Tab.1.bottom/0.23.1440.830@0.23.1440.830" timestamp="1575121908227" />
+    <state width="1398" height="487" key="GridCell.Tab.1.bottom/0.23.1440.831@0.23.1440.831" timestamp="1575094380859" />
+    <state width="699" height="208" key="GridCell.Tab.1.bottom/0.23.1440.833@0.23.1440.833" timestamp="1575094221514" />
+    <state width="1419" height="242" key="GridCell.Tab.1.bottom/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.1.center" timestamp="1575200029430">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.1.center/0.23.1440.828@0.23.1440.828" timestamp="1575200029430" />
+    <state width="1398" height="350" key="GridCell.Tab.1.center/0.23.1440.829@0.23.1440.829" timestamp="1575196630489" />
+    <state width="1398" height="256" key="GridCell.Tab.1.center/0.23.1440.830@0.23.1440.830" timestamp="1575121908226" />
+    <state width="1398" height="487" key="GridCell.Tab.1.center/0.23.1440.831@0.23.1440.831" timestamp="1575094380858" />
+    <state width="699" height="208" key="GridCell.Tab.1.center/0.23.1440.833@0.23.1440.833" timestamp="1575094221513" />
+    <state width="1419" height="242" key="GridCell.Tab.1.center/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.1.left" timestamp="1575200029430">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.1.left/0.23.1440.828@0.23.1440.828" timestamp="1575200029430" />
+    <state width="1398" height="350" key="GridCell.Tab.1.left/0.23.1440.829@0.23.1440.829" timestamp="1575196630486" />
+    <state width="1398" height="256" key="GridCell.Tab.1.left/0.23.1440.830@0.23.1440.830" timestamp="1575121908225" />
+    <state width="1398" height="487" key="GridCell.Tab.1.left/0.23.1440.831@0.23.1440.831" timestamp="1575094380857" />
+    <state width="699" height="208" key="GridCell.Tab.1.left/0.23.1440.833@0.23.1440.833" timestamp="1575094221512" />
+    <state width="1419" height="242" key="GridCell.Tab.1.left/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.1.right" timestamp="1575200029431">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.1.right/0.23.1440.828@0.23.1440.828" timestamp="1575200029431" />
+    <state width="1398" height="350" key="GridCell.Tab.1.right/0.23.1440.829@0.23.1440.829" timestamp="1575196630492" />
+    <state width="1398" height="256" key="GridCell.Tab.1.right/0.23.1440.830@0.23.1440.830" timestamp="1575121908226" />
+    <state width="1398" height="487" key="GridCell.Tab.1.right/0.23.1440.831@0.23.1440.831" timestamp="1575094380858" />
+    <state width="699" height="208" key="GridCell.Tab.1.right/0.23.1440.833@0.23.1440.833" timestamp="1575094221513" />
+    <state width="1419" height="242" key="GridCell.Tab.1.right/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.2.bottom" timestamp="1575200029432">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.2.bottom/0.23.1440.828@0.23.1440.828" timestamp="1575200029432" />
+    <state width="1398" height="350" key="GridCell.Tab.2.bottom/0.23.1440.829@0.23.1440.829" timestamp="1575196630503" />
+    <state width="1398" height="256" key="GridCell.Tab.2.bottom/0.23.1440.830@0.23.1440.830" timestamp="1575121908230" />
+    <state width="1419" height="257" key="GridCell.Tab.2.bottom/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.2.center" timestamp="1575200029431">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.2.center/0.23.1440.828@0.23.1440.828" timestamp="1575200029431" />
+    <state width="1398" height="350" key="GridCell.Tab.2.center/0.23.1440.829@0.23.1440.829" timestamp="1575196630502" />
+    <state width="1398" height="256" key="GridCell.Tab.2.center/0.23.1440.830@0.23.1440.830" timestamp="1575121908229" />
+    <state width="1419" height="257" key="GridCell.Tab.2.center/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.2.left" timestamp="1575200029431">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.2.left/0.23.1440.828@0.23.1440.828" timestamp="1575200029431" />
+    <state width="1398" height="350" key="GridCell.Tab.2.left/0.23.1440.829@0.23.1440.829" timestamp="1575196630496" />
+    <state width="1398" height="256" key="GridCell.Tab.2.left/0.23.1440.830@0.23.1440.830" timestamp="1575121908228" />
+    <state width="1419" height="257" key="GridCell.Tab.2.left/2880.1800" timestamp="1575019688202" />
+    <state width="1398" height="350" key="GridCell.Tab.2.right" timestamp="1575200029432">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state width="1398" height="350" key="GridCell.Tab.2.right/0.23.1440.828@0.23.1440.828" timestamp="1575200029432" />
+    <state width="1398" height="350" key="GridCell.Tab.2.right/0.23.1440.829@0.23.1440.829" timestamp="1575196630503" />
+    <state width="1398" height="256" key="GridCell.Tab.2.right/0.23.1440.830@0.23.1440.830" timestamp="1575121908229" />
+    <state width="1419" height="257" key="GridCell.Tab.2.right/2880.1800" timestamp="1575019688202" />
+    <state x="308" y="180" key="IDE.errors.dialog" timestamp="1575171000278">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="308" y="180" key="IDE.errors.dialog/0.23.1440.828@0.23.1440.828" timestamp="1575104188669" />
+    <state x="308" y="180" key="IDE.errors.dialog/0.23.1440.829@0.23.1440.829" timestamp="1575171000278" />
+    <state x="308" y="181" key="IDE.errors.dialog/0.23.1440.830@0.23.1440.830" timestamp="1575112608304" />
+    <state x="308" y="181" key="IDE.errors.dialog/0.23.1440.831@0.23.1440.831" timestamp="1575094537728" />
+    <state x="435" y="154" key="RollbackChangesDialog" timestamp="1575199019767">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="435" y="154" key="RollbackChangesDialog/0.23.1440.828@0.23.1440.828" timestamp="1575199019767" />
+    <state x="435" y="154" key="RollbackChangesDialog/0.23.1440.829@0.23.1440.829" timestamp="1575111247442" />
+    <state x="213" y="78" key="SettingsEditor" timestamp="1575423917332">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="213" y="78" key="SettingsEditor/0.23.1440.828@0.23.1440.828" timestamp="1575191229380" />
+    <state x="213" y="78" key="SettingsEditor/0.23.1440.829@0.23.1440.829" timestamp="1575423917332" />
+    <state x="213" y="78" key="SettingsEditor/0.23.1440.830@0.23.1440.830" timestamp="1575093038154" />
+    <state x="213" y="78" key="SettingsEditor/0.23.1440.831@0.23.1440.831" timestamp="1575094522680" />
+    <state x="213" y="78" key="SettingsEditor/2880.1800" timestamp="1575019688202" />
+    <state x="404" y="152" key="Vcs.Push.Dialog" timestamp="1575019688202" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1575199996984">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.828@0.23.1440.828" timestamp="1575199996984" />
+    <state x="404" y="152" key="Vcs.Push.Dialog/2880.1800" timestamp="1575019688202" />
+    <state x="100" y="123" width="1240" height="628" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1575122882081">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="100" y="123" width="1240" height="628" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.23.1440.829@0.23.1440.829" timestamp="1575122882081" />
+    <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1575020610470">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.828@0.23.1440.828" timestamp="1575020610470" />
+    <state x="558" y="330" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/2880.1800" timestamp="1575019688203" />
+    <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate" timestamp="1575019688203" />
+    <state x="381" y="281" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate/2880.1800" timestamp="1575019688203" />
+    <state x="476" y="328" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog" timestamp="1575113634145">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="476" y="328" key="com.intellij.uiDesigner.propertyInspector.editors.string.StringEditorDialog/0.23.1440.829@0.23.1440.829" timestamp="1575113634145" />
+    <state x="459" y="190" key="extract.method.dialog" timestamp="1575019688203" />
+    <state x="459" y="190" key="extract.method.dialog/2880.1800" timestamp="1575019688203" />
+    <state x="383" y="118" width="689" height="618" key="find.popup" timestamp="1575217529099">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="383" y="118" width="689" height="618" key="find.popup/0.23.1440.828@0.23.1440.828" timestamp="1575217529099" />
+    <state x="383" y="118" width="707" height="619" key="find.popup/0.23.1440.829@0.23.1440.829" timestamp="1575196989079" />
+    <state x="383" y="118" width="673" height="618" key="find.popup/2880.1800" timestamp="1575019688203" />
+    <state x="434" y="237" key="git4idea.merge.GitMergeDialog" timestamp="1575199196201">
+      <screen x="0" y="23" width="1440" height="828" />
+    </state>
+    <state x="434" y="237" key="git4idea.merge.GitMergeDialog/0.23.1440.828@0.23.1440.828" timestamp="1575199196201" />
+    <state x="114" y="35" key="new project wizard" timestamp="1575019688203" />
+    <state x="114" y="35" key="new project wizard/2880.1800" timestamp="1575019688203" />
+    <state x="385" y="155" width="670" height="677" key="search.everywhere.popup" timestamp="1575195520125">
+      <screen x="0" y="23" width="1440" height="829" />
+    </state>
+    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup/0.23.1440.828@0.23.1440.828" timestamp="1575173402987" />
+    <state x="385" y="155" width="670" height="677" key="search.everywhere.popup/0.23.1440.829@0.23.1440.829" timestamp="1575195520125" />
+    <state x="385" y="155" width="670" height="678" key="search.everywhere.popup/0.23.1440.830@0.23.1440.830" timestamp="1575096482067" />
+    <state x="385" y="155" width="670" height="676" key="search.everywhere.popup/2880.1800" timestamp="1575019688203" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

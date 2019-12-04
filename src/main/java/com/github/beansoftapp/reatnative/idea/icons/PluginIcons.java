@@ -26,7 +26,7 @@ public class PluginIcons {
     public static final Icon OpenTerminal = load("/icons/OpenTerminal.png");
     public static final Icon Execute = intellijLoad("/actions/execute.png");
     public static final Icon Install = intellijLoad("/actions/install.png");
-    public static final Icon Uninstall = AllIcons.Actions.Uninstall;
+    public static final Icon Uninstall = load("/icons/uninstall.svg");//AllIcons.Actions.Uninstall;
     public static final Icon Error = AllIcons.Ide.Error;
     public static final Icon Up = AllIcons.Actions.MoveUp;
     public static final Icon RESET_TO_EMPTY = AllIcons.Actions.Reset_to_empty;
