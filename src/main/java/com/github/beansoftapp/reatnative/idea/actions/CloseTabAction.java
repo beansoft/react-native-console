@@ -1,6 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
-import com.intellij.icons.AllIcons;
+import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.ui.content.Content;
@@ -20,6 +20,6 @@ public class CloseTabAction extends CloseAction {
         Presentation presentation = e.getPresentation();
         presentation.setEnabledAndVisible( myContent.isCloseable());//myManager.canCloseContents() &&
         presentation.setText(myManager.getCloseActionName());
-        presentation.setIcon(AllIcons.Actions.Cancel);
+        presentation.setIcon(PluginIcons.Cancel);
     }
 }

@@ -1,8 +1,8 @@
 package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleRunAction;
+import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.CustomShortcutSet;
 
 import javax.swing.*;
@@ -22,7 +22,7 @@ public class AndroidRefreshAction extends BaseRNConsoleRunAction// implements Sh
             VK_Z, InputEvent.CTRL_MASK|InputEvent.SHIFT_MASK ));
 
     public AndroidRefreshAction(ReactNativeConsole terminal) {
-        super(terminal, "Android Reload JS(Double Tap R key)", "Android Reloading JavaScript", AllIcons.Actions.Refresh);
+        super(terminal, "Android Reload JS(Double Tap R key)", "Android Reloading JavaScript", PluginIcons.Refresh);
 //        registerCustomShortcutSet(CustomShortcutSet.fromString("Ctrl Alt A"), getComponent(), parentDisposable);
         registerCustomShortcutSet(Android_REFRESH_SHORTCUT, null);
     }

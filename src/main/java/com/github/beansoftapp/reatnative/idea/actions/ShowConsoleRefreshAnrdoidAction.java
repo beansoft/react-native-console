@@ -1,11 +1,11 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
+import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.util.ExecUtil;
-import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 
@@ -19,7 +19,7 @@ import javax.swing.*;
 public class ShowConsoleRefreshAnrdoidAction extends AnAction {
 
     public ShowConsoleRefreshAnrdoidAction() {
-        super(AllIcons.Actions.Refresh);
+        super(PluginIcons.Refresh);
     }
 
     public ShowConsoleRefreshAnrdoidAction(Icon icon) {

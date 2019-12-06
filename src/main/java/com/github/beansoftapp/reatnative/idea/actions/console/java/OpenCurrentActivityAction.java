@@ -5,10 +5,10 @@ import com.github.beansoftapp.reatnative.idea.exception.ExecutionAdbException;
 import com.github.beansoftapp.reatnative.idea.exception.MultipleDevicesAdbException;
 import com.github.beansoftapp.reatnative.idea.exception.NoDevicesAdbException;
 import com.github.beansoftapp.reatnative.idea.exception.ParseAdbException;
+import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.icons.AllIcons;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.diagnostic.Logger;
@@ -63,7 +63,7 @@ public class OpenCurrentActivityAction extends BaseRNConsoleRunAction {
 
     public OpenCurrentActivityAction(ReactNativeConsole terminal) {
         super(terminal, "Open Current Activity",
-                "Open Current Activity source code displayed in Android App", AllIcons.General.Locate);
+                "Open Current Activity source code displayed in Android App", PluginIcons.Locate);
     }
 
     @Override

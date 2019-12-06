@@ -1,5 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.views;
 
+import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
@@ -10,7 +11,6 @@ import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
 import com.intellij.execution.ui.ConsoleViewContentType;
-import com.intellij.icons.AllIcons;
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -37,7 +37,7 @@ public class RNTerminalExecutionConsoleImpl extends TerminalExecutionConsole imp
     private class RerunAction extends AnAction {
         public RerunAction() {
             super("Rerun", "Rerun",
-                    AllIcons.Actions.Restart);
+                PluginIcons.Restart);
         }
 
         @Override

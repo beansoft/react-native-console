@@ -6,7 +6,6 @@ import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.execution.ui.ConsoleViewContentType;
-import com.intellij.icons.AllIcons;
 import com.intellij.openapi.ui.DialogWrapper;
 import com.intellij.openapi.ui.Messages;
 
@@ -34,7 +33,7 @@ public class ReactDevToolsAction extends BaseRNConsoleRunAction {
                             "This might take one or two minutes without any console update, please wait for the final result.\n" +
                             "After that, you'll need to click this button again.",
                     "Can Not Found React-Devtools", new String[]{"Yes", "No"}, 0,
-                    AllIcons.General.QuestionDialog, new DialogWrapper.DoNotAskOption.Adapter() {
+                PluginIcons.QuestionDialog, new DialogWrapper.DoNotAskOption.Adapter() {
                         @Override
                         public void rememberChoice(boolean b, int i) {
 

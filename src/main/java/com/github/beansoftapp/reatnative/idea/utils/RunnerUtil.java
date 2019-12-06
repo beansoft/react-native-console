@@ -1,5 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.utils;
 
+import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.intellij.execution.ExecutionManager;
 import com.intellij.execution.Executor;
 import com.intellij.execution.actions.StopProcessAction;
@@ -12,8 +13,11 @@ import com.intellij.execution.ui.ConsoleView;
 import com.intellij.execution.ui.ExecutionConsole;
 import com.intellij.execution.ui.RunContentDescriptor;
 import com.intellij.execution.ui.actions.CloseAction;
-import com.intellij.icons.AllIcons;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.ActionGroup;
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionToolbar;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 
@@ -40,7 +44,7 @@ public class RunnerUtil {
         panel.add((Component) toolbar.getComponent(), "West");
 
         RunContentDescriptor runDescriptor = new RunContentDescriptor((ExecutionConsole) consoleView,
-                (ProcessHandler) runHandler, (JComponent) panel, header, AllIcons.RunConfigurations.Application);
+                (ProcessHandler) runHandler, (JComponent) panel, header, PluginIcons.Application);
         AnAction[]
                 consoleActions = consoleView.createConsoleActions();
         toolbarActions.addAll((AnAction[]) Arrays.copyOf(consoleActions, consoleActions.length));

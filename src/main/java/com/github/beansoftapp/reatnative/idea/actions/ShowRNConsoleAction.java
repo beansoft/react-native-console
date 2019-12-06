@@ -3,8 +3,12 @@ package com.github.beansoftapp.reatnative.idea.actions;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.icons.AllIcons;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionPopupMenu;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
+import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
 import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
@@ -110,8 +114,8 @@ public class ShowRNConsoleAction extends BaseAction {
     private class GearAction extends AnAction {
         GearAction() {
             Presentation presentation = getTemplatePresentation();
-            presentation.setIcon(AllIcons.General.Gear);
-            presentation.setHoveredIcon(AllIcons.General.GearHover);
+            presentation.setIcon(PluginIcons.Gear);
+            presentation.setHoveredIcon(PluginIcons.GearHover);
         }
 
         @Override

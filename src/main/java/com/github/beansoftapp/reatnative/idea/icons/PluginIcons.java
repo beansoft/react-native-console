@@ -1,7 +1,6 @@
 package com.github.beansoftapp.reatnative.idea.icons;
 
 import com.github.beansoftapp.reatnative.swing.OverlayIcon;
-import com.intellij.icons.AllIcons;
 import com.intellij.openapi.util.IconLoader;
 
 import javax.swing.*;
@@ -15,7 +14,10 @@ import javax.swing.*;
 public class PluginIcons {
     //    public static final Icon LastEditLocation = load("/icons/last_edit_pos.png");
     public static final Icon AddGreen = load("/icons/add_green.png");
-    public static final Icon Add = load("/icons/add.png");
+    public static final Icon Add = load("/icons/add.svg");
+    public static final Icon Cancel = load("/actions/cancel.svg");
+    public static final Icon Refresh = load("/actions/refresh.svg");
+    public static final Icon Locate = load("/icons/locate.svg");
     //    public static final Icon Plus = load("/icons/plus.png");
     public static final Icon Npm = load("/icons/npm_16.png");
     public static final Icon Folder = load("/icons/folder.png");
@@ -23,26 +25,27 @@ public class PluginIcons {
     public static final Icon newWatch = load("/icons/newWatch.png");
     public static final Icon Jest = load("/icons/jest.png");
     public static final Icon FreelineIcon = load("/icons/ReactNative.png");
-    public static final Icon OpenTerminal = load("/icons/OpenTerminal.png");
-    public static final Icon Execute = intellijLoad("/actions/execute.png");
-    public static final Icon Install = intellijLoad("/actions/install.png");
-    public static final Icon Uninstall = load("/icons/uninstall.svg");//AllIcons.Actions.Uninstall;
-    public static final Icon Error = AllIcons.Ide.Error;
-    public static final Icon Up = AllIcons.Actions.MoveUp;
-    public static final Icon RESET_TO_EMPTY = AllIcons.Actions.Reset_to_empty;
-    public static final Icon Lightning = intellijLoad("/actions/lightning.png");
-    public static final Icon Suspend = intellijLoad("/actions/suspend.png");
-    public static final Icon StartDebugger = intellijLoad("/actions/startDebugger.png");
+    public static final Icon OpenTerminal = load("/icons/OpenTerminal_13x13.svg");
+    public static final Icon Execute = load("/actions/execute.svg");
+    public static final Icon Install = load("/actions/install.svg");
+    public static final Icon Uninstall = load("/icons/uninstall.svg");
+    public static final Icon Error = load("/icons/error.svg");;
+    public static final Icon Up = load("/actions/moveUp.svg");;
+    public static final Icon RESET_TO_EMPTY = Install;
+    public static final Icon Lightning = load("/actions/lightning.png");
+    public static final Icon Suspend = load("/actions/suspend.png");
+    public static final Icon StartDebugger = load("/actions/startDebugger.png");
     public static final Icon OpenChromeDebugger = load("/icons/chrome16.png");
-    public static final Icon QuickfixBulb = intellijLoad("/actions/quickfixBulb.png");
-    public static final Icon GC = intellijLoad("/actions/gc.png");
+    public static final Icon QuickfixBulb = load("/actions/quickfixBulb.png");
+    public static final Icon GC = load("/actions/gc.svg");
+    public static final Icon Restart = load("/actions/restart.svg");
 
-    public static final Icon EditConfig = intellijLoad("/actions/edit.png");
-    public static final Icon DevMenu = load("/general/gearPlain.png");
+    public static final Icon EditConfig = load("/actions/edit.png");
+    public static final Icon DevMenu = load("/icons/gearPlain.png");
     public static final Icon Link = load("/icons/link.png");
-    public static final Icon UnLink = AllIcons.Actions.Delete;
-    public static final Icon New = AllIcons.Actions.New;
-    public static final Icon Reset = AllIcons.Actions.Reset;
+    public static final Icon UnLink = load("/actions/cancel.svg");
+    public static final Icon New = load("/actions/new.svg");
+    public static final Icon Reset = load("/actions/rollback.svg");
 
     public static final Icon Android = load("/icons/android.png");
     public static final Icon LibraryModule = load("/icons/libraryModule.png");
@@ -53,22 +56,27 @@ public class PluginIcons {
     public static final Icon RNDebugger = load("/icons/rn_debugger.png");
     public static final Icon Apple = load("/icons/apple.png");
     public static final Icon React = load("/icons/jsx_16.png");
-    public static final Icon ResourceBundle = intellijLoad("/nodes/resourceBundle.png");
-    public static final Icon Archive = intellijLoad("/fileTypes/archive.png");
-    public static final Icon Export = AllIcons.ToolbarDecorator.Export;
+    public static final Icon ResourceBundle = load("/nodes/resourceBundle.png");
+    public static final Icon Archive = load("/icons/archive.png");
+    public static final Icon Export = load("/icons/export.svg");
+    public static final Icon Import = load("/icons/import.svg");
+    public static final Icon Application = load("/icons/application.svg");
+    public static final Icon QuestionDialog = load("/icons/questionDialog.svg");
     public static final Icon Compile = load("/icons/compile.png");
-    public static final Icon Undeploy = IconLoader.getIcon("/nodes/undeploy.png"); // 16x16
-    public static final Icon Help_small = IconLoader.getIcon("/general/help_small.png"); // 16x16
-    public static final Icon Deploy = IconLoader.getIcon("/nodes/deploy.png"); // 16x16
-    public static final Icon TrackTests = IconLoader.getIcon("/runConfigurations/trackTests.png"); // 16x16
-    public static final Icon Run_run = IconLoader.getIcon("/runConfigurations/testState/run_run.png"); // 12x12
-    public static final Icon Help = IconLoader.getIcon("/actions/help.png"); // 16x16
-    public static final Icon CommandLine = IconLoader.getIcon("/debugger/commandLine.png"); // 16x16
-    public static final Icon Console = IconLoader.getIcon("/debugger/console.png"); // 16x16
-    public static final Icon Console_log = IconLoader.getIcon("/debugger/console_log.png"); // 16x16
-    public static final Icon RealDevice = IconLoader.getIcon("/icons/real_device.png"); // 16x16
-    public static final Icon Gradle = IconLoader.getIcon("/icons/gradle.png"); // 16x16
-
+    public static final Icon Undeploy = load("/nodes/undeploy.png"); // 16x16
+    public static final Icon Help_small = load("/general/help_small.png"); // 16x16
+    public static final Icon Deploy = load("/icons/deploy.svg"); // 16x16
+    public static final Icon TrackTests = load("/icons/trackTests.png"); // 16x16
+    public static final Icon Run_run = load("/icons/run_run.svg"); // 12x12
+    public static final Icon Help = load("/actions/help.svg"); // 16x16
+    public static final Icon CommandLine = load("/icons/commandLine.png"); // 16x16
+    public static final Icon Console = load("/icons/console.png"); // 16x16
+    public static final Icon Console_log = load("/icons/console_log.png"); // 16x16
+    public static final Icon RealDevice = load("/icons/real_device.png"); // 16x16
+    public static final Icon Gradle = load("/icons/gradle.svg"); // 16x16
+    public static final Icon EditFolder = load("/icons/editFolder.svg");
+    public static final Icon Gear = load("/icons/gearPlain.svg");
+    public static final Icon GearHover = load("/icons/gearHover.png");
     /* Run action icon */
     public static final Icon ICON_ACTION_RUN = FreelineIcon;
     /* Tool window icon */
@@ -76,7 +84,7 @@ public class PluginIcons {
 
     public static Icon NPMStart = new OverlayIcon(Npm).add(Execute);
 
-    public static final Icon EditFolder = AllIcons.Modules.EditFolder;
+
 
     private static Icon load(String path) {
         try {
@@ -87,10 +95,10 @@ public class PluginIcons {
     }
 
 //    private static Icon androidLoad(String path) {
-//        return IconLoader.getIcon(path, AndroidIcons.class);
+//        return load(path, AndroidIcons.class);
 //    }
 
-    private static Icon intellijLoad(String path) {
-        return IconLoader.getIcon(path, AllIcons.class);
-    }
+//    private static Icon load(String path) {
+//        return load(path, AllIcons.class);
+//    }
 }

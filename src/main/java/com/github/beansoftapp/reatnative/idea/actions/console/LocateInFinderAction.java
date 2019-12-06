@@ -1,10 +1,10 @@
 package com.github.beansoftapp.reatnative.idea.actions.console;
 
 import com.github.beansoftapp.reatnative.idea.actions.BaseRNConsoleAction;
+import com.github.beansoftapp.reatnative.idea.actions.RevealFileAction;
 import com.github.beansoftapp.reatnative.idea.icons.PluginIcons;
 import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.ide.actions.ShowFilePathAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.util.SystemInfo;
 import org.jetbrains.annotations.NotNull;
@@ -21,7 +21,7 @@ public class LocateInFinderAction extends BaseRNConsoleAction {
         String npmLocation = RNPathUtil.getRNProjectPath(getProject());
 
         if (npmLocation != null) {
-            ShowFilePathAction.openFile(new File(npmLocation + File.separatorChar + "package.json"));
+            RevealFileAction.openFile(new File(npmLocation + File.separatorChar + "package.json"));
         }
     }
 
@@ -35,6 +35,6 @@ public class LocateInFinderAction extends BaseRNConsoleAction {
 
     @NotNull
     public static String getActionName() {
-        return SystemInfo.isMac ? "Reveal Project in Finder" : "Show Project in " + ShowFilePathAction.getFileManagerName();
+        return SystemInfo.isMac ? "Reveal Project in Finder" : "Show Project in " + com.intellij.ide.actions.RevealFileAction.getFileManagerName();
     }
 }
