@@ -1,2 +1,3 @@
 [  20350]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13.
  Please fix ToolWindow (ID:  ReactNative) or icon file:/Users/beansoft/Library/Caches/IdeaIC2017.1/plugins-sandbox/plugins/react-native-console/classes/icons/react.png
+plugins/sh/lib/sh.jar 2019.2
