@@ -38,12 +38,21 @@ public class RunNPMScriptsAction extends BaseRNConsoleActionGroup {
                     PluginIcons.Npm) {
                 @Override
                 public void doAction(AnActionEvent anActionEvent) {
+//                    try {
+//                        ShRunner shRunner  = ServiceManager.getService(project, ShRunner.class);
+//                        if (shRunner == null || !shRunner.isAvailable(project) ) {
+//                            RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
+//                            consoleView.runNPMCI(
+//                                    "npm run \"" + scriptName + "\"");
+//                        }
+//                        shRunner.run("npm run \"" + scriptName + "\"\n", RNPathUtil.getRNProjectPath(project));
+//                        return;
+//                    } catch (Exception ex) {
+//                        ex.printStackTrace();
+//                    }
                     RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                     consoleView.runNPMCI(
                             "npm run \"" + scriptName + "\"");
-
-//                    ShTerminalRunner runner = new ShTerminalRunner(project);
-//                    runner.run("npm run \"" + scriptName + "\"\n", RNPathUtil.getRNProjectPath(project));
                 }
             };
         }

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>2018.1</version>
+    <version>2019.1</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -78,6 +78,9 @@
     ]]></description>
 
     <change-notes><![CDATA[
+     <br>2019.1
+        <br>- fix android run with devices error on Windows,  https://github.com/beansoftapp/react-native-console/issues/36;
+        <br>- now plugin requires IDEA 2019.1 or later;
         <br>2018.1
         <br>- The last version for WebStorm 2018 and earlier as IDEA API changes a lot;
         - android add bundleRelease;
@@ -100,7 +103,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="162"/> <!-- 162.2228.15 (2016.2.5) -->
+    <idea-version since-build="191"/> <!-- 162.2228.15 (2016.2.5) -->
 
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -116,6 +119,7 @@
     -->
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
+<!--    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends>&lt;!&ndash; 2019.2 &ndash;&gt;-->
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- 注意 id 中不能有空格! RNToolWindowFactory.java中的ID定义也一样!

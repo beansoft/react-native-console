@@ -268,6 +268,7 @@ public class RNPathUtil {
      * Get the full path of an exe file by the IDEA platform.
      * On Mac sys, PATH might will not be directly access by the IDE code,
      * eg: Android Studio Runtime.exec('adb') will throw a no file or directory exception.
+     * On Windows, it will find the wrong executable such as "react-native", but we need "react-native.cmd".
      *
      * @param exeName
      * @return
@@ -337,7 +338,7 @@ public class RNPathUtil {
         }
     }
 
-    public static String getExecuteFullPathSingle(String exeName) {
+    private static String getExecuteFullPathSingle(String exeName) {
         List<File> fromPath = PathEnvironmentVariableUtil.findAllExeFilesInPath(exeName);
         if (fromPath != null && fromPath.size() > 0) {
             return fromPath.get(0).toString();

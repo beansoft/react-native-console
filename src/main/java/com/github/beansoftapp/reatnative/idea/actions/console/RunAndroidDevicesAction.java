@@ -116,7 +116,7 @@ public class RunAndroidDevicesAction extends BaseRNConsoleActionGroup {
 
                         RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                         consoleView.runRawNPMCI(
-                                RNPathUtil.getExecuteFullPathSingle("react-native"),
+                                RNPathUtil.getExecuteFileFullPath("react-native"),
                                 "run-android",
                                 "--deviceId",
                                 iosDeviceInfo.getId());

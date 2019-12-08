@@ -45,7 +45,7 @@ public class RNPathUtilTest {
         System.out.println("System PATH env:" + System.getenv("PATH"));
         System.out.println("System PATH env by IDEA:" + EnvironmentUtil.getValue("PATH"));
         System.out.println("JAVA_HOME:" + System.getenv("JAVA_HOME"));
-        System.out.println("adb:" + RNPathUtil.getExecuteFullPathSingle("adb"));
+        System.out.println("adb:" + RNPathUtil.getExecuteFileFullPath("adb"));
     }
 
     @Test

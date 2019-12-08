@@ -109,7 +109,7 @@ public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
                     public void doAction(AnActionEvent anActionEvent) {
                         RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                         consoleView.runRawNPMCI(
-                                RNPathUtil.getExecuteFullPathSingle("react-native"),
+                                RNPathUtil.getExecuteFileFullPath("react-native"),
                                 "run-ios",
                                 iosDeviceInfo.simulator ? "--simulator" : "--device",
                                 iosDeviceInfo.name);
