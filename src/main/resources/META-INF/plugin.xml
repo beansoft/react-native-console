@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>2019.1</version>
+    <version>2019.2</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -103,7 +103,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="191"/> <!-- 162.2228.15 (2016.2.5) -->
+    <idea-version since-build="192"/> <!-- 162.2228.15 (2016.2.5) -->
 
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -119,7 +119,7 @@
     -->
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
-<!--    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends>&lt;!&ndash; 2019.2 &ndash;&gt;-->
+    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends><!-- 2019.2 -->
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- 注意 id 中不能有空格! RNToolWindowFactory.java中的ID定义也一样!
@@ -130,7 +130,7 @@
 
         <!-- ReactNative Run Configuration Type define TODO-->
         <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"
-        id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
+                           id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
 
 
         <!-- ReactNative project UI service -->
@@ -170,7 +170,8 @@
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
         </action>
 
-        <action id="Plugin_ReactNative_Android_Refresh" class="com.github.beansoftapp.reatnative.idea.actions.ShowConsoleRefreshAnrdoidAction"
+        <action id="Plugin_ReactNative_Android_Refresh"
+                class="com.github.beansoftapp.reatnative.idea.actions.ShowConsoleRefreshAnrdoidAction"
                 text="Android Reload JS" description="Android Reload JS">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>
