@@ -31,6 +31,13 @@ public interface RNConsole extends ConsoleView {
   void executeShell(String shell, String workDirectory);
 
   /**
+   * Execute raw commands without any path or param modify.
+   *
+   * @param shell
+   */
+  void executeRawShell(String workDirectory, String[] shell);
+
+  /**
    * run npm commands in package.json project dir, execute raw commands without any path or param modify.
    * @param command
    */
