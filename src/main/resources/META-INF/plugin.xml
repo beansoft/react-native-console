@@ -78,7 +78,10 @@
     ]]></description>
 
     <change-notes><![CDATA[
-     <br>2019.1
+     <br>
+        2019.2
+        <br>- fix RN 0.60+ run issue;
+        2019.1
         <br>- fix android run with devices error on Windows,  https://github.com/beansoftapp/react-native-console/issues/36;
         <br>- now plugin requires IDEA 2019.1 or later;
         <br>2018.1

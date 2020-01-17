@@ -30,12 +30,12 @@ public class RunNPMScriptsAction extends BaseRNConsoleActionGroup {
         if (e == null) return EMPTY_ARRAY;
         final Project project = e.getProject();
         if (project == null) return EMPTY_ARRAY;
-        java.util.List<String> devices = NPMParser.parseScripts(new File(RNPathUtil.getRNProjectPath(project), "package.json" ) );
-        if (devices == null || devices.size() == 0) return EMPTY_ARRAY;
-        final AnAction[] actions = new AnAction[devices.size()];
+        java.util.List<String> scripts = NPMParser.parseScripts(new File(RNPathUtil.getRNProjectPath(project), "package.json" ) );
+        if (scripts == null || scripts.size() == 0) return EMPTY_ARRAY;
+        final AnAction[] actions = new AnAction[scripts.size()];
 
-        for (int i = 0; i < devices.size(); i++) {
-            String scriptName = devices.get(i);
+        for (int i = 0; i < scripts.size(); i++) {
+            String scriptName = scripts.get(i);
             actions[i] = new BaseRNConsoleAction(terminal, "npm " + scriptName, "npm run '" + scriptName + "'",
                     PluginIcons.Npm) {
                 @Override
