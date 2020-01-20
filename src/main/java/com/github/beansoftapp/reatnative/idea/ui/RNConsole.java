@@ -21,6 +21,8 @@ public interface RNConsole extends ConsoleView {
    */
   void runNPMCI(String command);
 
+  void runCocoapods(String command);
+
   void setDisplayName(String displayName);
 
   /**

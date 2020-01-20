@@ -162,6 +162,16 @@ public class RNConsoleImpl extends ConsoleViewImpl implements RNConsole {
         }
     }
 
+    public void runCocoapods(String command) {
+        String path = RNPathUtil.getRNProjectPath(getProject());
+        String workDir = RNPathUtil.getiOSPodPath(path);
+        if (workDir == null) {
+            NotificationUtils.cocoapodsFileNotFound();
+        } else {
+            executeShell(command, workDir);
+        }
+    }
+
     /**
      * run npm commands in package.json project dir, execute raw commands without any path or param modify.
      * @param command

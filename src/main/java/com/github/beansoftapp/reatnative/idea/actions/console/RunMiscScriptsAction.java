@@ -12,9 +12,9 @@ import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 public class RunMiscScriptsAction extends BaseRunNPMScriptsAction {
     public RunMiscScriptsAction(ReactNativeConsole terminal) {
         super(terminal, "Add dependencies", "Run scripts to add dependencies", PluginIcons.AddGreen);
-        addActions(makeAction(PluginIcons.yarn, "yarn add dependencies", "yarn add $"));
-        addActions(makeAction(PluginIcons.yarn, "yarn add dev dependencies", "yarn add --dev $"));
-        addActions(makeAction(PluginIcons.yarn, "yarn add global dependencies", "yarn global add $"));
+        addActions(makeAction(PluginIcons.Yarn, "yarn add dependencies", "yarn add $"));
+        addActions(makeAction(PluginIcons.Yarn, "yarn add dev dependencies", "yarn add --dev $"));
+        addActions(makeAction(PluginIcons.Yarn, "yarn add global dependencies", "yarn global add $"));
         addActions(makeAction(PluginIcons.Npm, "npm add dependencies", "npm i $ --save"));
         addActions(makeAction(PluginIcons.Npm, "npm add dev dependencies", "npm i $ --save-dev"));
         addActions(makeAction(PluginIcons.Npm, "npm add global dependencies", "npm i $ -g"));

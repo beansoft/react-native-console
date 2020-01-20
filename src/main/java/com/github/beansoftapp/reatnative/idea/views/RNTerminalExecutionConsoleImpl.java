@@ -155,6 +155,16 @@ public class RNTerminalExecutionConsoleImpl extends TerminalExecutionConsole imp
         }
     }
 
+    public void runCocoapods(String command) {
+        String path = RNPathUtil.getRNProjectPath(getProject());
+        String workDir = RNPathUtil.getiOSPodPath(path);
+        if (workDir == null) {
+            NotificationUtils.cocoapodsFileNotFound();
+        } else {
+            executeShell(command, workDir);
+        }
+    }
+
     /**
      * run npm commands in package.json project dir
      * @param command

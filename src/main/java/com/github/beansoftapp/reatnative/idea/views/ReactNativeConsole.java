@@ -23,6 +23,7 @@ import com.github.beansoftapp.reatnative.idea.actions.console.RNStartAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.ReactDevToolsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunAndroidAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunAndroidDevicesAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunCocoPodsAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSDeviceAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSDevicesAction;
@@ -397,6 +398,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
             group.add(new RunRNDebuggerAction(this));
             group.add(new NPMiOSLogsAction(this));
             group.add(new IOSBundleAction(this));
+            group.add(new RunCocoPodsAction(this));
             group.add(new RunIOSDeviceAction(this));
             group.add(new RunIOSDevicesAction(this));
         }

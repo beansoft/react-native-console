@@ -9,9 +9,7 @@ import com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.project.Project;
-import com.intellij.sh.run.ShRunner;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -40,18 +38,18 @@ public class RunNPMScriptsAction extends BaseRNConsoleActionGroup {
                     PluginIcons.Npm) {
                 @Override
                 public void doAction(AnActionEvent anActionEvent) {
-                    try {
-                        ShRunner shRunner  = ServiceManager.getService(project, ShRunner.class);
-                        if (shRunner == null || !shRunner.isAvailable(project) ) {
-                            RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
-                            consoleView.runNPMCI(
-                                    "npm run \"" + scriptName + "\"");
-                        }
-                        shRunner.run("npm run \"" + scriptName + "\"\n", RNPathUtil.getRNProjectPath(project));
-                        return;
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
+//                    try {
+//                        ShRunner shRunner  = ServiceManager.getService(project, ShRunner.class);
+//                        if (shRunner == null || !shRunner.isAvailable(project) ) {
+//                            RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
+//                            consoleView.runNPMCI(
+//                                    "npm run \"" + scriptName + "\"");
+//                        }
+//                        shRunner.run("npm run \"" + scriptName + "\"\n", RNPathUtil.getRNProjectPath(project));
+//                        return;
+//                    } catch (Exception ex) {
+//                        ex.printStackTrace();
+//                    }
                     RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
                     consoleView.runNPMCI(
                             "npm run \"" + scriptName + "\"");

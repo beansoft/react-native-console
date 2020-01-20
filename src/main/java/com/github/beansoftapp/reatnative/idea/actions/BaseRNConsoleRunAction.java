@@ -1,12 +1,10 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
-import com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser;
+import com.github.beansoftapp.reatnative.idea.utils.rn.RNVersionSwitcher;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 
 import javax.swing.*;
-import java.io.File;
 
 /**
  * An action to run general commands, doesn't care about directory.
@@ -31,16 +29,7 @@ public abstract class BaseRNConsoleRunAction extends BaseRNConsoleAction {
     }
 
     protected String rnVersionCommand() {
-        String command = command();
-        if(command != null && command.startsWith("react-native")) {
-            String version = NPMParser.parseRNVersion(new File(RNPathUtil.getRNProjectPath(project), "package.json" ) );
-            if(version != null && version.compareTo("0.60") >= 0) {
-                command = command.replaceFirst("react-native", "yarn react-native");
-            }
-        }
-
-
-        return command;
+        return RNVersionSwitcher.rnVersionCommand(command(), project);
     }
 
     // Some action before execute commands, eg mkdir through API or shell

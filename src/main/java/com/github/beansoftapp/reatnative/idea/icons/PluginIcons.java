@@ -21,7 +21,7 @@ public class PluginIcons {
     //    public static final Icon Plus = load("/icons/plus.png");
     public static final Icon Npm = load("/icons/npm_16.png");
     public static final Icon Folder = load("/icons/folder.png");
-    public static final Icon yarn = load("/icons/yarn.png");
+    public static final Icon Yarn = load("/icons/yarn.png");
     public static final Icon newWatch = load("/icons/newWatch.png");
     public static final Icon Jest = load("/icons/jest.png");
     public static final Icon FreelineIcon = load("/icons/ReactNative.png");
@@ -77,14 +77,14 @@ public class PluginIcons {
     public static final Icon EditFolder = load("/icons/editFolder.svg");
     public static final Icon Gear = load("/icons/gearPlain.svg");
     public static final Icon GearHover = load("/icons/gearHover.png");
+    public static final Icon CocoaPods = load("/icons/cocoapods-logo.svg");
+
     /* Run action icon */
     public static final Icon ICON_ACTION_RUN = FreelineIcon;
     /* Tool window icon */
     public static final Icon ICON_TOOL_WINDOW = OpenTerminal;
 
     public static Icon NPMStart = new OverlayIcon(Npm).add(Execute);
-
-
 
     private static Icon load(String path) {
         try {

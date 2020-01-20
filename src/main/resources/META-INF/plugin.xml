@@ -77,11 +77,14 @@
 <p><img src="https://plugins.jetbrains.com/files/9564/screenshot_17784.png" width='442' height='109'/></p>
     ]]></description>
 
+    <!--         <br>2019.3
+        <br>- add iOS cocoapods support;
+        -->
     <change-notes><![CDATA[
      <br>
-        2019.2
+        <br>2019.2
         <br>- fix RN 0.60+ run issue;
-        2019.1
+        <br>2019.1
         <br>- fix android run with devices error on Windows,  https://github.com/beansoftapp/react-native-console/issues/36;
         <br>- now plugin requires IDEA 2019.1 or later;
         <br>2018.1
@@ -106,7 +109,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="192"/> <!-- 162.2228.15 (2016.2.5) -->
+    <idea-version since-build="191"/> <!-- 162.2228.15 (2016.2.5) -->
 
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
@@ -122,7 +125,9 @@
     -->
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
-    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends><!-- 2019.2 -->
+    <!-- 2019.2 -->
+<!--    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends>-->
+
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- 注意 id 中不能有空格! RNToolWindowFactory.java中的ID定义也一样!

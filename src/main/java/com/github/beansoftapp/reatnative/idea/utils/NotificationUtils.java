@@ -82,9 +82,6 @@ public class NotificationUtils {
      */
     public static void packageJsonNotFound() {
         String tip = "File 'package.json' not found.\n Make sure that you have run `npm install` and that you are inside a react-native project.";//找不到有效的React Native目录, 命令将停止执行
-        if (SystemInfo.isWindows) {
-            tip += "  if first installation React Native or Set Environment variable, Please restart your computer";
-        }
         errorNotification(tip);
     }
 
@@ -96,6 +93,14 @@ public class NotificationUtils {
         if (SystemInfo.isWindows) {
             tip += "  if first installation React Native or Set Environment variable, Please restart your computer";
         }
+        errorNotification(tip);
+    }
+
+    /**
+     * cocoapods error message
+     */
+    public static void cocoapodsFileNotFound() {
+        String tip = "File 'Podfile' not found.\n Make sure that you have setup cocoapods inside a iOS project.";
         errorNotification(tip);
     }
 

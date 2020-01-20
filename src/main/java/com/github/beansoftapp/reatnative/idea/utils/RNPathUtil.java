@@ -34,6 +34,7 @@ public class RNPathUtil {
     public static String GRADLE_FILE = "build.gradle";
     public static String _IDEA_DIR = ".idea" + File.separator;
     public static String RN_CONSOLE_FILE = _IDEA_DIR + RN_CONSOLE;
+    public static String POD_FILE = "Podfile";
     // add rnconsole config file to .idea project @since 1.0.8
 
     /**
@@ -233,12 +234,34 @@ public class RNPathUtil {
      * @return
      */
     public static String getAndroidProjectPath(String inputDir) {
-        File file = new File(inputDir, GRADLE_FILE);
+        return getSubFolderWithFile(inputDir, GRADLE_FILE);
+    }
+
+
+    /**
+     * Get the real ios project root path, which contains Podfile file.
+     *
+     * @param inputDir root search dir
+     * @return
+     */
+    public static String getiOSPodPath(String inputDir) {
+        return getSubFolderWithFile(inputDir, POD_FILE);
+    }
+
+    /**
+     * Get the folder which contains $fileName file.
+     *
+     * @param inputDir root search dir
+     * @param fileName the file to search
+     * @return
+     */
+    public static String getSubFolderWithFile(String inputDir, String fileName) {
+        File file = new File(inputDir, fileName);
         // Search root
         if (file.exists()) {
             return inputDir;
         } else {
-            // search sub folders which might contains build.gradle file
+            // search sub folders which might contains the fileName
             File[] subfolders = new File(inputDir).listFiles(new FileFilter() {
                 @Override
                 public boolean accept(File pathname) {
@@ -248,7 +271,7 @@ public class RNPathUtil {
 
             if (subfolders != null) {
                 for (File dir : subfolders) {
-                    file = new File(dir.getAbsolutePath() + File.separatorChar + GRADLE_FILE);
+                    file = new File(dir.getAbsolutePath() + File.separatorChar + fileName);
                     if (file.exists()) {
                         return dir.getAbsolutePath();
                     }
@@ -258,11 +281,8 @@ public class RNPathUtil {
 
 //        Messages.showWarningDialog(project, "找不到有效的React Native目录, 命令将停止执行.\n目录" +
 //                inputDir + "及其上级目录中找不到有效的package.json文件.", "警告");
-
         return null;
     }
-
-
 
     /**
      * Get the full path of an exe file by the IDEA platform.

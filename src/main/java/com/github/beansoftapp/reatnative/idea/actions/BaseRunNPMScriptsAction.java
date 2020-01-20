@@ -1,6 +1,7 @@
 package com.github.beansoftapp.reatnative.idea.actions;
 
 import com.github.beansoftapp.reatnative.idea.ui.RNConsole;
+import com.github.beansoftapp.reatnative.idea.utils.rn.RNVersionSwitcher;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -85,8 +86,7 @@ public class BaseRunNPMScriptsAction extends BaseRNConsoleActionGroup {
                             });
                     if(packageName != null && packageName.trim().length() > 0) {
                         RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
-                        consoleView.runNPMCI(
-                                commandTemplate.replace("$", packageName.trim()));
+                        duRun(consoleView, commandTemplate.replace("$", packageName.trim()), project);
                     }
                 }
             };
@@ -96,9 +96,19 @@ public class BaseRunNPMScriptsAction extends BaseRNConsoleActionGroup {
                 @Override
                 public void doAction(AnActionEvent anActionEvent) {
                     RNConsole consoleView = terminal.getRNConsole(getText(), getIcon());
-                        consoleView.runNPMCI(commandTemplate);
+                    duRun(consoleView, commandTemplate, project);
                 }
             };
+        }
+
+    }
+
+    void duRun(RNConsole consoleView, String command, Project project) {
+        if (command.startsWith("pod")) {
+            consoleView.runCocoapods(command);
+        } else {
+            consoleView.runNPMCI(RNVersionSwitcher.rnVersionCommand(
+                command, project));
         }
 
     }
