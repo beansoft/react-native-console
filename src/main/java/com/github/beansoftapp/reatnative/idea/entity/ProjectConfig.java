@@ -43,4 +43,13 @@ public class ProjectConfig {
     this.iosParam = iosParam;
   }
 
+  @Override
+  public String toString() {
+    return "ProjectConfig{" +
+            "currentPath='" + currentPath + '\'' +
+            ", metroPort='" + metroPort + '\'' +
+            ", androidParam='" + androidParam + '\'' +
+            ", iosParam='" + iosParam + '\'' +
+            '}';
+  }
 }
