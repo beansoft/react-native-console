@@ -27,6 +27,8 @@ public class AndroidPathUtil {
     public static String getAndroidSDKHome(String inputDir) {
         String localSDKHome = getAndroidSDKHomeFromLocalProperties(inputDir);
         if (StringUtil.isNotEmpty(localSDKHome)) {
+            File dir = new File(localSDKHome);
+            if(dir.isDirectory() && dir.exists() && dir.canRead())
             return localSDKHome;
         }
         String envHome = EnvironmentUtil.getValue("ANDROID_HOME");

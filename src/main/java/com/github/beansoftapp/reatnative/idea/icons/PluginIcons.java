@@ -48,6 +48,7 @@ public class PluginIcons {
     public static final Icon Reset = load("/actions/rollback.svg");
 
     public static final Icon Android = load("/icons/android.png");
+    public static final Icon AndroidPhone = load("/icons/avd_manager.png");
     public static final Icon LibraryModule = load("/icons/libraryModule.png");
     public static final Icon IPhoneDevice = load("/icons/iPhone.png");
     public static final Icon IPhoneDevices = load("/icons/devices.png");

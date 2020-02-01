@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>2019.2</version>
+    <version>2019.3</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -17,6 +17,7 @@
     <li>Ctrl + F2 to reload android js bundle</li>
     <li>list and run scripts in package.json</li>
     <li>react-native run-android</li>
+    <li>list and run android emulator(avd)</li>
     <li>list all connected android devices(includes simulator and physical) and run as target</li>
     <li>react-native link</li>
     <li>react-native run-ios</li>
@@ -77,11 +78,11 @@
 <p><img src="https://plugins.jetbrains.com/files/9564/screenshot_17784.png" width='442' height='109'/></p>
     ]]></description>
 
-    <!--         <br>2019.3
-        <br>- add iOS cocoapods support;
-        -->
     <change-notes><![CDATA[
      <br>
+        <br>2019.3
+        <br>- add iOS cocoapods support;
+        <br>- list and run android emulator(avd)
         <br>2019.2
         <br>- fix RN 0.60+ run issue;
         <br>2019.1
