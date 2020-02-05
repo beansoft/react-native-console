@@ -63,7 +63,7 @@ public class AndroidAvdsAction extends BaseRNConsoleActionGroup {
     }
 
     void doRun(AnActionEvent e) {
-        String path = RNPathUtil.getRNProjectPath(getEventProject(e));
+        String path = RNPathUtil.getRNProjectPath(e.getProject());
         String gradleLocation = RNPathUtil.getAndroidProjectPath(path);
 
         ApplicationManager.getApplication().invokeLater(() -> {

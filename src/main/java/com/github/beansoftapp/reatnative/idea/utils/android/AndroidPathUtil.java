@@ -15,9 +15,9 @@ public class AndroidPathUtil {
         String sdkHome = getAndroidSDKHome(inputDir);
         if(StringUtil.isNotEmpty(sdkHome)) {
             if (OSUtils.isWindows()) {
-                return sdkHome + "\\tools\\emulator.exe";
+                return sdkHome + "\\emulator\\emulator.exe";
             } else {
-                return sdkHome + "/tools/emulator";
+                return sdkHome + "/emulator/emulator";
             }
         }
 
