@@ -44,6 +44,10 @@ public class RevealApkAction extends BaseRNConsoleAction {
     @Nullable
     private static File getFile(@NotNull AnActionEvent e) {
         String path = RNPathUtil.getRNProjectPath(e.getProject());
+        if(path == null) {
+            return null;
+        }
+
         String androidProjectPath = RNPathUtil.getAndroidProjectPath(path);
 
         if (StringUtils.isNotBlank(androidProjectPath)) {

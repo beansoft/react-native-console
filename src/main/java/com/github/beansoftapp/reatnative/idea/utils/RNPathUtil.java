@@ -43,6 +43,9 @@ public class RNPathUtil {
      * @return
      */
     private static String getRNProjectRootPathFromConfig(Project project) {
+        if(project == null) {
+            return null;
+        }
         String path = project.getBasePath();
         File file = new File(path, RN_CONSOLE_FILE);
         if (file.exists()) {
@@ -205,7 +208,12 @@ public class RNPathUtil {
      * @return
      */
     public static String getRNProjectPath(Project project) {
+        if(project == null) {
+            return null;
+        }
+
         String realPath = getRNProjectRootPathFromConfig(project);
+
         if(realPath != null) {
             return realPath;
         }
