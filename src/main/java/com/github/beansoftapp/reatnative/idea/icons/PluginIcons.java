@@ -86,6 +86,7 @@ public class PluginIcons {
     public static final Icon ICON_TOOL_WINDOW = OpenTerminal;
 
     public static Icon NPMStart = new OverlayIcon(Npm).add(Execute);
+    public static Icon RevealApk = new OverlayIcon(Archive).add(TrackTests);
 
     private static Icon load(String path) {
         try {

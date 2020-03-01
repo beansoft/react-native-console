@@ -1,7 +1,39 @@
 package com.github.beansoftapp.reatnative.idea.views;
 
 import com.github.beansoftapp.reatnative.idea.actions.CloseTabAction;
-import com.github.beansoftapp.reatnative.idea.actions.console.*;
+import com.github.beansoftapp.reatnative.idea.actions.console.AdbForwardAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidAvdsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidBundleAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidCleanAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidDebugApkAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidDevMenuAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidRefreshAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidReleaseApkAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.DebugUiAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.EditJsAppPathAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.EditMetroPortAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.HelpAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.IOSBundleAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.JestAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.LocateInFinderAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.NPMAndroidLogsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.NPMInstallAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.NPMStartAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.NPMiOSLogsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RNStartAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.ReactDevToolsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunAndroidAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunAndroidDevicesAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunCocoPodsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSDeviceAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunIOSDevicesAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunMiscScriptsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunNPMScriptsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunRNDebuggerAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.RunRNScriptsAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.YarnAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.android.RevealApkAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.hyperlink.EditRunAnroidOptions;
 import com.github.beansoftapp.reatnative.idea.actions.console.hyperlink.EditRuniOSOptions;
 import com.github.beansoftapp.reatnative.idea.actions.console.java.OpenCurrentActivityAction;
@@ -13,7 +45,11 @@ import com.intellij.execution.actions.StopProcessAction;
 import com.intellij.execution.filters.BrowserHyperlinkInfo;
 import com.intellij.execution.filters.HyperlinkInfoBase;
 import com.intellij.execution.ui.ConsoleViewContentType;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.ActionGroup;
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionPlaces;
+import com.intellij.openapi.actionSystem.ActionToolbar;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.SystemInfoRt;
@@ -343,7 +379,7 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new OpenCurrentActivityAction(this));
         group.add(new RunAndroidDevicesAction(this));
         group.add(new AndroidAvdsAction(this));
-
+        group.add(new RevealApkAction(this));
 
         // NPM, yarn and test
         group.addSeparator();

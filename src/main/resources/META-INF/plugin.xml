@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>2019.3.1</version>
+    <version>2019.3.2</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -80,6 +80,8 @@
 
     <change-notes><![CDATA[
      <br>
+        <br>2019.3.2
+        <br>- quickly open APK build output folder
         <br>2019.3.1
         <br>- fix issue on mac which can't run android emulator(avd)
         <br>2019.3
