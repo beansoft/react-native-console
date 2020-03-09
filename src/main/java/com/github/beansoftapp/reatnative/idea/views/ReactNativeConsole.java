@@ -9,6 +9,7 @@ import com.github.beansoftapp.reatnative.idea.actions.console.AndroidDebugApkAct
 import com.github.beansoftapp.reatnative.idea.actions.console.AndroidDevMenuAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.AndroidRefreshAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.AndroidReleaseApkAction;
+import com.github.beansoftapp.reatnative.idea.actions.console.AndroidReleaseOfflineApkAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.DebugUiAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.EditJsAppPathAction;
 import com.github.beansoftapp.reatnative.idea.actions.console.EditMetroPortAction;
@@ -380,6 +381,9 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
         group.add(new RunAndroidDevicesAction(this));
         group.add(new AndroidAvdsAction(this));
         group.add(new RevealApkAction(this));
+
+        group.add(new AndroidReleaseOfflineApkAction(this));
+
 
         // NPM, yarn and test
         group.addSeparator();
