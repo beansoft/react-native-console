@@ -16,6 +16,6 @@ public class AndroidReleaseOfflineApkAction extends BaseRNConsoleAndroidAction {
         if (OSUtils.isWindows()) {// https://github.com/beansoftapp/react-native-console/issues/8
             return "gradlew.bat --offline assembleRelease";
         }
-        return "." + File.separator + "gradlew --offlline assembleRelease";
+        return "." + File.separator + "gradlew --offline assembleRelease";
     }
 }
