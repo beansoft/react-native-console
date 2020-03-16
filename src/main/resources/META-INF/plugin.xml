@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>2019.3.2</version>
+    <version>2019.3.3</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -80,6 +80,8 @@
 
     <change-notes><![CDATA[
      <br>
+        <br>2019.3.3
+        <br>- gradle offline for faster apk build
         <br>2019.3.2
         <br>- quickly open APK build output folder
         <br>2019.3.1
