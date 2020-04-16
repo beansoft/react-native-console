@@ -302,7 +302,7 @@ public class RNPathUtil {
      * @return
      */
     public static String getExecuteFileFullPath(String exeName) {
-        String fullPath = exeName;
+        String fullPath;
         if (OSUtils.isWindows()) {
             if (!exeName.endsWith(".exe")) {
                 // first try exe

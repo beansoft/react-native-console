@@ -11,7 +11,6 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.Presentation;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
-import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
 
 import javax.swing.*;
 import java.awt.*;
@@ -92,7 +91,7 @@ public class ShowRNConsoleAction extends BaseAction {
     private void showGearPopup(Component component, int x, int y) {
         ActionPopupMenu popupMenu =
                 ((ActionManagerImpl) ActionManager.getInstance())
-                        .createActionPopupMenu(ToolWindowContentUi.POPUP_PLACE, createGearPopupGroup(), new MenuItemPresentationFactory(true));
+                        .createActionPopupMenu("ToolwindowPopup", createGearPopupGroup(), new MenuItemPresentationFactory(true));
         popupMenu.getComponent().show(component, x, y);
     }
 

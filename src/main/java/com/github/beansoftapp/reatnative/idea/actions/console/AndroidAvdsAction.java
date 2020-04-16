@@ -9,7 +9,11 @@ import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
 import com.github.beansoftapp.reatnative.idea.utils.android.AVDList;
 import com.github.beansoftapp.reatnative.idea.utils.android.AndroidPathUtil;
 import com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionPopupMenu;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.DataContext;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
 import com.intellij.openapi.application.ApplicationManager;
@@ -18,7 +22,6 @@ import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
 import com.intellij.util.ui.UIUtil;
 import org.jetbrains.annotations.NotNull;
 
@@ -90,7 +93,7 @@ public class AndroidAvdsAction extends BaseRNConsoleActionGroup {
     private void showDevicesPopup(Component component, int x, int y, DefaultActionGroup defaultActionGroup) {
         ActionPopupMenu popupMenu =
                 ((ActionManagerImpl) ActionManager.getInstance())
-                        .createActionPopupMenu(ToolWindowContentUi.POPUP_PLACE, defaultActionGroup,
+                        .createActionPopupMenu("ToolwindowPopup", defaultActionGroup,
                                 new MenuItemPresentationFactory(false));// don't set forceHide to true, otherwise icons will be hidden in menu item
         popupMenu.getComponent().show(component, x, y);
     }

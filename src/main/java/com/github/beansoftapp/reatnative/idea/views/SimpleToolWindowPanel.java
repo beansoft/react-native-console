@@ -18,7 +18,6 @@ package com.github.beansoftapp.reatnative.idea.views;
 import com.intellij.openapi.actionSystem.DataProvider;
 import com.intellij.ui.JBColor;
 import com.intellij.ui.switcher.QuickActionProvider;
-import com.intellij.util.ui.UIUtil;
 import org.jetbrains.annotations.NonNls;
 import org.jetbrains.annotations.Nullable;
 
@@ -59,14 +58,14 @@ public class SimpleToolWindowPanel extends JPanel implements DataProvider {
           ((Container)child).addContainerListener(this);
         }
         if (myBorderless) {
-          UIUtil.removeScrollBorder(SimpleToolWindowPanel.this);
+//          UIUtil.removeScrollBorder(SimpleToolWindowPanel.this);
         }
       }
 
       @Override
       public void componentRemoved(ContainerEvent e) {
         Component child = e.getChild();
-        
+
         if (child instanceof Container) {
           ((Container)child).removeContainerListener(this);
         }
@@ -89,14 +88,12 @@ public class SimpleToolWindowPanel extends JPanel implements DataProvider {
     }
 
 
-    if (c != null) {
-      if (vertical) {
-        add(c, BorderLayout.WEST);
-        myWestToolbar = c;
-      } else {
-        add(c, BorderLayout.NORTH);
-        myNorthToolbar = c;
-      }
+    if (vertical) {
+      add(c, BorderLayout.WEST);
+      myWestToolbar = c;
+    } else {
+      add(c, BorderLayout.NORTH);
+      myNorthToolbar = c;
     }
 
     revalidate();
@@ -144,7 +141,7 @@ public class SimpleToolWindowPanel extends JPanel implements DataProvider {
     add(c, BorderLayout.CENTER);
 
     if (myBorderless) {
-      UIUtil.removeScrollBorder(c);
+//      UIUtil.removeScrollBorder(c);
     }
 
     revalidate();

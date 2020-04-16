@@ -21,7 +21,6 @@ import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.wm.impl.content.ToolWindowContentUi;
 import com.intellij.util.ui.UIUtil;
 import org.jetbrains.annotations.NotNull;
 
@@ -92,7 +91,7 @@ public class RunAndroidDevicesAction extends BaseRNConsoleActionGroup {
     private void showDevicesPopup(Component component, int x, int y, DefaultActionGroup defaultActionGroup) {
         ActionPopupMenu popupMenu =
                 ((ActionManagerImpl) ActionManager.getInstance())
-                        .createActionPopupMenu(ToolWindowContentUi.POPUP_PLACE, defaultActionGroup,
+                        .createActionPopupMenu("ToolwindowPopup", defaultActionGroup,
                                 new MenuItemPresentationFactory(false));// don't set forceHide to true, otherwise icons will be hidden in menu item
         popupMenu.getComponent().show(component, x, y);
     }

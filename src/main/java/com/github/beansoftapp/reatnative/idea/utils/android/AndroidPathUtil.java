@@ -12,6 +12,11 @@ import java.util.Properties;
 
 public class AndroidPathUtil {
     public static String getEmulatorPath(String inputDir) {
+        String fullPath = RNPathUtil.getExecuteFileFullPath("emulator");
+        if (StringUtil.isNotEmpty(fullPath)) {
+            return fullPath;
+        }
+
         String sdkHome = getAndroidSDKHome(inputDir);
         if(StringUtil.isNotEmpty(sdkHome)) {
             if (OSUtils.isWindows()) {
