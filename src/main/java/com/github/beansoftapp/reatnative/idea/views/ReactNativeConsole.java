@@ -51,7 +51,6 @@ import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.ActionPlaces;
 import com.intellij.openapi.actionSystem.ActionToolbar;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
-import com.intellij.openapi.components.ProjectComponent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.SystemInfoRt;
 import com.intellij.openapi.wm.ToolWindow;
@@ -73,7 +72,7 @@ import java.awt.event.InputEvent;
  * thus tabs could be reused.
  * Created by beansoft@126.com on 2017/4/27.
  */
-public class ReactNativeConsole implements FocusListener, ProjectComponent {
+public class ReactNativeConsole implements FocusListener {
     private Project myProject;
 
     public static ReactNativeConsole getInstance(Project project) {
@@ -450,34 +449,5 @@ public class ReactNativeConsole implements FocusListener, ProjectComponent {
     public void focusLost(FocusEvent e) {
     }
 
-    /* ========= below 4 methods must be keeped otherwise old version IDEA 2016.3 will crash
-    see: https://github.com/beansoftapp/react-native-console/issues/26
-    ERROR - ij.components.ComponentManager - com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole.disposeComponent()V
-java.lang.AbstractMethodError: com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole.disposeComponent()V
-     */
-
-    @Override
-    public void projectOpened() {
-    }
-
-    @Override
-    public void projectClosed() {
-    }
-
-    @Override
-    public void initComponent() {
-    }
-
-    @Override
-    public void disposeComponent() {
-    }
-
-    // ========== end old version support
-
-    @NotNull
-    @Override
-    public String getComponentName() {
-        return "ReactNativeConsole";
-    }
 
 }

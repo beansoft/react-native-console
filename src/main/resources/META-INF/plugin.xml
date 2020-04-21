@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoftapp.reatnative.idea</id>
     <name>React Native Console</name>
-    <version>2020.1</version>
+    <version>2020.1.0</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -120,7 +120,6 @@
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
     <idea-version since-build="191"/> <!-- 162.2228.15 (2016.2.5) -->
 
-
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
     <!-- uncomment to enable plugin in all products
@@ -128,10 +127,9 @@
         <depends>org.jetbrains.plugins.gradle</depends>
     <depends>org.intellij.groovy</depends>
         <depends>org.jetbrains.android</depends>
-
     <depends>com.intellij.modules.lang</depends>
-
     -->
+    <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
     <!-- 2019.2 -->
@@ -146,17 +144,16 @@
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
-        <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"
-                           id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>
+<!--        <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"-->
+<!--                           id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>-->
 
 
-        <!-- ReactNative project UI service -->
+        <!-- ReactNative project UI service TODO -->
         <projectService serviceImplementation="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
-                        serviceInterface="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
                         id="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"/>
 
-        <applicationService
-                serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration"/>
+<!--        <applicationService TODO-->
+<!--                serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration"/>-->
 
     </extensions>
 
@@ -181,7 +178,7 @@
 
         <!-- ReactNative console show action -->
         <action id="Plugin_ReactNative_Show" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
-                text="Show React Native Console" description="Show React Native Console">
+                text="Show React Native Console" description="Show react native console">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
@@ -210,7 +207,7 @@
         <!-- id must be diff to IDEA default -->
         <action id="Plugin_ReactNative_JumpToLastChange"
                 class="com.github.beansoftapp.reatnative.idea.actions.JumpToLastEditAction"
-                icon="/icons/last_edit_pos.png" text="Last Edit Location" description="Last Edit Location">
+                icon="/icons/last_edit_pos.png" text="Last Edit Location" description="Last edit location">
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
@@ -219,6 +216,9 @@
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
+        <action id="testpsi" class="com.github.beansoftapp.reatnative.idea.actions.PsiTest" text="PsiTest" description="PsiTest">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
     </actions>
 
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
