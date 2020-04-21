@@ -28,6 +28,10 @@ import com.intellij.psi.util.PsiUtilBase;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+/**
+ * Clean comments from source code. Please use webstorm or IDEA Ultimate to delete comments in ES files.
+ * see de.plushnikov.intellij.plugin.action.delombok.AbstractDelombokAction
+ */
 public class PsiTest extends AnAction {
 
   @Override

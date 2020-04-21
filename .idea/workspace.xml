@@ -52,15 +52,8 @@
     </workspaceTree>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="fix RN 0.60+ run issue">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/Version.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/PsiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/PsiDebugUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temp/test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-native-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="add first comment clean func based on IDEA PSI operation">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/PsiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/PsiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -435,13 +428,6 @@
       <workItem from="1565847148371" duration="450000" />
       <workItem from="1565865784717" duration="203000" />
     </task>
-    <task id="LOCAL-00020" summary="add jest and yarn support">
-      <created>1502949014785</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1502949014785</updated>
-    </task>
     <task id="LOCAL-00021" summary="test terminal integrate">
       <created>1503310943870</created>
       <option name="number" value="00021" />
@@ -778,7 +764,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579259659233</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="add first comment clean func based on IDEA PSI operation">
+      <created>1587467483863</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1587467483865</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TodoView">
@@ -832,7 +825,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="add react devtools and improve UI interaction" />
     <MESSAGE value="add deps mgmt" />
     <MESSAGE value="1.1.1 add almost all React Native commands support" />
     <MESSAGE value="update plugin jar" />
@@ -857,7 +849,8 @@
     <MESSAGE value="version 2018 release" />
     <MESSAGE value="mig to IDEA 2020" />
     <MESSAGE value="fix RN 0.60+ run issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix RN 0.60+ run issue" />
+    <MESSAGE value="add first comment clean func based on IDEA PSI operation" />
+    <option name="LAST_COMMIT_MESSAGE" value="add first comment clean func based on IDEA PSI operation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="320" y="94" width="916" height="666" key="#Project_Structure" timestamp="1587460485247">
@@ -878,10 +871,10 @@
       <screen x="0" y="23" width="1440" height="834" />
     </state>
     <state x="408" y="175" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1579428640552" />
-    <state x="316" y="25" key="CommitChangelistDialog2" timestamp="1579259658150">
+    <state x="316" y="23" width="916" height="834" key="CommitChangelistDialog2" timestamp="1587467483542">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="316" y="25" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1579259658150" />
+    <state x="316" y="23" width="916" height="834" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1587467483542" />
     <state x="100" y="123" width="1240" height="634" key="DiffContextDialog" timestamp="1579510963815">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
@@ -980,10 +973,10 @@
     </state>
     <state x="213" y="78" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1579488549475" />
     <state x="213" y="78" key="SettingsEditor/0.23.1440.835@0.23.1440.835" timestamp="1587467065624" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1579259660804">
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1587467486060">
       <screen x="0" y="23" width="1440" height="834" />
     </state>
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.834@0.23.1440.834" timestamp="1579259660804" />
+    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.834@0.23.1440.834" timestamp="1587467486060" />
     <state width="720" height="408" key="XDebugger.FullValuePopup" timestamp="1587465980033">
       <screen x="0" y="23" width="1440" height="835" />
     </state>
