@@ -216,9 +216,12 @@
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
-        <action id="testpsi" class="com.github.beansoftapp.reatnative.idea.actions.PsiTest" text="PsiTest" description="PsiTest">
+        <action id="Plugin_ReactNative_CleanComment" class="com.github.beansoftapp.reatnative.idea.actions.CleanSourceCommentAction"
+                icon="/icons/error.svg" text="Remove Source Code Comments" description="Using WebStorm or IDEA ultimate to remove source code's comments">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
+
     </actions>
 
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->

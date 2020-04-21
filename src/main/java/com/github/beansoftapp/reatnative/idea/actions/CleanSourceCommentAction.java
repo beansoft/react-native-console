@@ -29,10 +29,13 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 /**
- * Clean comments from source code. Please use webstorm or IDEA Ultimate to delete comments in ES files.
+ * Clean comments from source code, supports all types of files if your IDEA can parse it, such as Java, JavaScript, SQL.
+ * Please use WebStorm or IDEA Ultimate to delete comments in ES files.
  * see de.plushnikov.intellij.plugin.action.delombok.AbstractDelombokAction
+ * @author beansoft
+ * 2020.4.21
  */
-public class PsiTest extends AnAction {
+public class CleanSourceCommentAction extends AnAction {
 
   @Override
   public void actionPerformed(@NotNull AnActionEvent event) {
