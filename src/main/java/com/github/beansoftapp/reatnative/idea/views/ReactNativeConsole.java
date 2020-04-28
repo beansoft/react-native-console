@@ -134,7 +134,7 @@ public class ReactNativeConsole implements FocusListener {
             }
 
             @Override
-            public void stateChanged() {
+            public void stateChanged(@NotNull ToolWindowManager toolWindowManager) {
                 ToolWindow window = ToolWindowManager.getInstance(myProject).getToolWindow(RNToolWindowFactory.TOOL_WINDOW_ID);
                 if (window != null) {
                     boolean visible = window.isVisible();
