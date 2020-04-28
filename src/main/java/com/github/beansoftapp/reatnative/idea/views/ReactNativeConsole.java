@@ -288,17 +288,21 @@ public class ReactNativeConsole implements FocusListener {
             consoleView.printHyperlink("\n\nEdit react-native run-ios command options of this project",
                 new EditRuniOSOptions());
 
-            if(SystemInfoRt.isLinux) {
+            if(SystemInfoRt.isLinux || SystemInfoRt.isMac) {
                 consoleView.print(
-                        "\n\n===========Linux Users PLEASE README FIRST ===========\nIf you found issue when click " +
+                        "\n\n===========Linux Users PLEASE README FIRST ===========\n" +
+                            "If you found issue when click " +
                                 "on the \"Debug Android\" button, error message: \n" +
-                                " \"SDK location not found \", please fix it like this :\n" +
+                                " \"SDK location not found \", or Task 'installDebug' not found in project ':app',\n" +
+                            " please fix it like this :\n" +
                                 "add a android local config file:\n" +
                                 "yourapp/android/local.properties\n" +
                                 "sdk.dir=/Users/xxxx/Documents/Java/android-sdk-macosx\n" +
                                 "let sdk.dir point to your ANDROID_HOME environment \n" +
                                 "if can't find adb, try this shell command:\n" +
                                 "sudo ln -s ~/Android/Sdk/platform-tools/adb /usr/bin/adb\n" +
+                            "If can't find avd list, try this shell command(please ensure your emulator path):\n" +
+                            "sudo ln -s /Users/my_user/Library/Android/sdk/emulator /usr/bin/emulator\n" +
                                 "More info please ref this issue:\n",
                         ConsoleViewContentType.SYSTEM_OUTPUT);
                 consoleView.printHyperlink("https://github.com/beansoftapp/react-native-console/issues/17",
@@ -436,9 +440,7 @@ public class ReactNativeConsole implements FocusListener {
             try {
                 ContentManager contentManager = toolWindow.getContentManager();
                 JComponent component = contentManager.getSelectedContent().getComponent();
-                if (component != null) {
-                    component.requestFocusInWindow();
-                }
+                component.requestFocusInWindow();
             } catch (Exception e1) {
                 e1.printStackTrace();
             }

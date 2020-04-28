@@ -156,11 +156,12 @@ public class PsiDebugUtil {
         indent += 2;
         return;
       }
-      System.out.println(root.getPsi().getClass().getName() + " is PsiComment = " + (root.getPsi() instanceof PsiComment));
+//      System.out.println(root.getPsi().getClass().getName() + " is PsiComment = " + (root.getPsi() instanceof PsiComment));
 
-      System.out.println("root.getPsi().getClass()=" + root.getPsi().getClass().getName());
+//      System.out.println("root.getPsi().getClass()=" + root.getPsi().getClass().getName());
       if (root.getPsi() instanceof PsiComment) {
         commentsToDelete.add(root.getPsi());
+        System.out.println("root.getPsi().getText()=" + root.getPsi().getText());
       }
 
       StringUtil.repeatSymbol(buffer, ' ', indent);

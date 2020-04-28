@@ -57,12 +57,12 @@ public class CleanSourceCommentAction extends AnAction {
       if (null != psiFile) {
           WriteCommandAction.writeCommandAction(project, psiFile).run(() ->
               {
-
-                StringBuilder data = new StringBuilder();
-                data.append(PsiDebugUtil.psiToString(psiFile, false, true));
+                PsiDebugUtil.psiToString(psiFile, false, true);
+//                StringBuilder data = new StringBuilder();
+//                data.append(PsiDebugUtil.psiToString(psiFile, false, true));
 
 //        CopyPasteManager.getInstance().setContents(new StringSelection(data.toString()));
-                System.out.println(data);
+//                System.out.println(data);
 
                 UndoUtil.markPsiFileForUndo(psiFile);
               }
