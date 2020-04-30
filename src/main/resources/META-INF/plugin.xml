@@ -225,11 +225,11 @@
     </actions>
 
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
-    <project-components>
-        <component>
-            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</implementation-class>
-        </component>
+<!--    <project-components>-->
+<!--        <component>-->
+<!--            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</implementation-class>-->
+<!--        </component>-->
 
-    </project-components>
+<!--    </project-components>-->
 
 </idea-plugin>

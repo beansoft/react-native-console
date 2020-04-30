@@ -74,9 +74,14 @@ import java.awt.event.InputEvent;
  */
 public class ReactNativeConsole implements FocusListener {
     private Project myProject;
+    private static ReactNativeConsole instance = null;
 
     public static ReactNativeConsole getInstance(Project project) {
-        return project.getComponent(ReactNativeConsole.class);
+//        return project.getComponent(ReactNativeConsole.class);
+        if(instance == null) {
+            instance = new ReactNativeConsole(project);
+        }
+        return instance;
     }
 
     public ReactNativeConsole(Project project) {
