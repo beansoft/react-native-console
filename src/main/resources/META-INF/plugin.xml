@@ -222,6 +222,9 @@
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </action>
 
+        <action id="visualgc" class="com.github.beansoftapp.gc.VisualGCAction" text="visualgc" description="visualgc">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </action>
     </actions>
 
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
