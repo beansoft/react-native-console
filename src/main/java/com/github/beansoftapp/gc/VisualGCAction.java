@@ -1,33 +1,32 @@
 package com.github.beansoftapp.gc;
 
-import beansoft.jvm.hotspot.util.GetProcessID;
-import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.sun.jvmstat.tools.visualgc.JpsHelper;
+import com.sun.jvmstat.tools.visualgc.VisualGCPane;
+import org.graalvm.visualvm.core.ui.components.DataViewComponent;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class VisualGCAction extends AnAction {
 
+  static class VisualGCPaneIdea extends VisualGCPane {
+    static {
+      VisualGCPane.customizeColors();
+    }
+    public DataViewComponent createComponent(final Container container) {
+      return super.createComponent(container);
+    }
+  }
+
   @Override
   public void actionPerformed(AnActionEvent e) {
-    String[] args = null;
-    // TODO: insert action logic here
-    JList list = new JList(JpsHelper.getJvmPSList().toArray());
-    String str = JOptionPane.showInputDialog(null, list, "Please select a PS", 3);
-    if (str == null || str.length() == 0) {
-      Object val = list.getSelectedValue();
-      if (val == null) {
-        args = new String[] { (new StringBuilder(String.valueOf(GetProcessID.getPid()))).toString() };
-      } else {
-        str = val.toString().substring(0, val.toString().indexOf(' '));
-        args = new String[] { str };
-      }
-    } else {
-      args = new String[] { str };
-    }
-    System.out.println(str);
-    NotificationUtils.infoNotification("PS:" + str);
+    JFrame frame = new JFrame();
+    frame.setIconImage(new ImageIcon(VisualGCPane.class.getResource("/visualgc.png")).getImage());
+    frame.setTitle("VisualGC 3.0");
+    VisualGCPaneIdea gcPane = new VisualGCPaneIdea();
+    frame.getContentPane().add(gcPane.createComponent(frame.getContentPane()), BorderLayout.CENTER);
+    frame.setSize(1024, 768);
+    frame.setVisible(true);
   }
 }

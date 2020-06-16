@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="visualgc_java81">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/visualgc_java8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
