@@ -115,7 +115,7 @@ public class ReactNativeConsole implements FocusListener {
      */
     public void init(final ToolWindow toolWindow) {
         toolWindow.setToHideOnEmptyContent(true);
-        toolWindow.setStripeTitle("RN Console");
+        toolWindow.setStripeTitle("RN Console Free");
         toolWindow.setIcon(PluginIcons.React);
         Content content = createConsoleTabContent(toolWindow, true, "Welcome", null);
 //        toolWindow.getContentManager().addContent(content);

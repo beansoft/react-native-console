@@ -1,13 +1,15 @@
 <idea-plugin>
-    <id>com.github.beansoftapp.reatnative.idea</id>
-    <name>React Native Console</name>
+    <id>com.github.beansoftapp.reatnative.idea.free</id>
+    <name>React Native Console Free</name>
     <version>2020.1.0</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
-    <h2>React Native Console</h2>
+    <h2>React Native Console Free</h2>
 <p>an IDEA/WebStorm/Android Studio Plugin for run React Native commands</p>
-<p><a href='https://github.com/beansoftapp/react-native-console'>Give a Star or Suggestion https://github.com/beansoftapp/react-native-console</a></p>
+<p>This is the original free edition, and will kept AS IS for current free users without any support.  This plugin is first made for myself for daily using 3 years ago,
+ so in case you found it useful, you can buy the new paid version which is under active development in
+  <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>React Native Console</a></p>
 
 <h2>Features</h2>
 
@@ -74,8 +76,6 @@
 <p>
 <a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a></p>
 
-<h2>ScreenShot</h2>
-<p><img src="https://plugins.jetbrains.com/files/9564/screenshot_17784.png" width='442' height='109'/></p>
     ]]></description>
 
     <change-notes><![CDATA[
@@ -132,6 +132,7 @@
     <depends>com.intellij.modules.lang</depends>
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
+    <depends optional="true" config-file="withJava.xml">com.intellij.modules.java</depends>
     <!-- 2019.2 -->
 <!--    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends>-->
 
@@ -140,7 +141,7 @@
         <!-- 注意 id 中不能有空格! RNToolWindowFactory.java中的ID定义也一样!
         Warning: the tool window id should't cotains any space char, same ID value constraint in file RNToolWindowFactory.java
         -->
-        <toolWindow id="RNConsole" anchor="bottom" icon="/icons/ReactNative.png"
+        <toolWindow id="RNConsoleFree" anchor="bottom" icon="/icons/ReactNative.png"
                     factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
@@ -149,8 +150,8 @@
 
 
         <!-- ReactNative project UI service TODO -->
-        <projectService serviceImplementation="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"
-                        id="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"/>
+<!--        <projectService serviceImplementation="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"-->
+<!--                        id="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"/>-->
 
 <!--        <applicationService TODO-->
 <!--                serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration"/>-->
@@ -177,14 +178,14 @@
         <!--</group>-->
 
         <!-- ReactNative console show action -->
-        <action id="Plugin_ReactNative_Show" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
-                text="Show React Native Console" description="Show react native console">
+        <action id="Plugin_ReactNative_Free_Show" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
+                text="Show React Native Console Free " description="Show react native console free">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift F11"/>
         </action>
 
-        <action id="Plugin_ReactNative_Android_Refresh"
+        <action id="Plugin_ReactNative_Android_Refresh_Free"
                 class="com.github.beansoftapp.reatnative.idea.actions.ShowConsoleRefreshAnrdoidAction"
                 text="Android Reload JS" description="Android Reload JS">
             <add-to-group group-id="MainToolBar" anchor="last"/>
@@ -205,26 +206,19 @@
 
 
         <!-- id must be diff to IDEA default -->
-        <action id="Plugin_ReactNative_JumpToLastChange"
+        <action id="Plugin_ReactNative_JumpToLastChange_Free"
                 class="com.github.beansoftapp.reatnative.idea.actions.JumpToLastEditAction"
                 icon="/icons/last_edit_pos.png" text="Last Edit Location" description="Last edit location">
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
-        <action id="Plugin_ReactNative_RevealIn" class="com.github.beansoftapp.reatnative.idea.actions.RevealFileAction"
+        <action id="Plugin_ReactNative_RevealIn_Free" class="com.github.beansoftapp.reatnative.idea.actions.RevealFileAction"
                 icon="/icons/folder.png">
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
-        <action id="Plugin_ReactNative_CleanComment" class="com.github.beansoftapp.reatnative.idea.actions.CleanSourceCommentAction"
-                icon="/icons/error.svg" text="Remove Source Code Comments" description="Using WebStorm or IDEA ultimate to remove source code's comment">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
-        </action>
 
-        <action id="visualgc" class="com.github.beansoftapp.gc.VisualGCAction" text="visualgc" description="visualgc">
-            <add-to-group group-id="ToolsMenu" anchor="last"/>
-        </action>
+
     </actions>
 
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
