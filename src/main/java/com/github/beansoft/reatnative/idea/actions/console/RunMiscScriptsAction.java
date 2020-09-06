@@ -1,0 +1,23 @@
+package com.github.beansoft.reatnative.idea.actions.console;
+
+import com.github.beansoft.reatnative.idea.actions.BaseRunNPMScriptsAction;
+import com.github.beansoft.reatnative.idea.icons.PluginIcons;
+import com.github.beansoft.reatnative.idea.views.ReactNativeConsole;
+
+/**
+ * 2018-01-04
+ * Dependencies management for yarn and npm
+ * @author beansoft
+ * run misc add commands */
+public class RunMiscScriptsAction extends BaseRunNPMScriptsAction {
+    public RunMiscScriptsAction(ReactNativeConsole terminal) {
+        super(terminal, "Add dependencies", "Run scripts to add dependencies", PluginIcons.AddGreen);
+        addActions(makeAction(PluginIcons.Yarn, "yarn add dependencies", "yarn add $"));
+        addActions(makeAction(PluginIcons.Yarn, "yarn add dev dependencies", "yarn add --dev $"));
+        addActions(makeAction(PluginIcons.Yarn, "yarn add global dependencies", "yarn global add $"));
+        addActions(makeAction(PluginIcons.Npm, "npm add dependencies", "npm i $ --save"));
+        addActions(makeAction(PluginIcons.Npm, "npm add dev dependencies", "npm i $ --save-dev"));
+        addActions(makeAction(PluginIcons.Npm, "npm add global dependencies", "npm i $ -g"));
+    }
+
+}

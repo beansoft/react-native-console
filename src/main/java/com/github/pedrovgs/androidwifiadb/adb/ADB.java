@@ -16,7 +16,7 @@
 
 package com.github.pedrovgs.androidwifiadb.adb;
 
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
+import com.github.beansoft.reatnative.idea.utils.RNPathUtil;
 import com.github.pedrovgs.androidwifiadb.Device;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.GeneralCommandLine;

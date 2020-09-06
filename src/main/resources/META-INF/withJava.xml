@@ -1,6 +1,6 @@
 <idea-plugin>
     <actions>
-        <action id="Plugin_ReactNative_CleanComment_Free" class="com.github.beansoftapp.reatnative.idea.actions.CleanSourceCommentAction"
+        <action id="Plugin_ReactNative_CleanComment_Free" class="com.github.beansoft.reatnative.idea.actions.CleanSourceCommentAction"
                 icon="/icons/error.svg" text="Remove Source Code Comments" description="Using WebStorm or IDEA ultimate to remove source code's comment">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>

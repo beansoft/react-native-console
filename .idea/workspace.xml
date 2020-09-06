@@ -51,14 +51,163 @@
       <ws layout="Compact" />
     </workspaceTree>
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:2019.2" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="202">
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="update jar">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/hotswap_agent.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/JestAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/YarnAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-native-console.jar" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/CleanSourceCommentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/CleanSourceCommentAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/PsiDebugUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/PsiDebugUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console-free.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/Version.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/Version.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseRNConsoleAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleActionGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseRNConsoleActionGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleAndroidAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseRNConsoleAndroidAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleNPMAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseRNConsoleNPMAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRNConsoleRunAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseRNConsoleRunAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/BaseRunNPMScriptsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseRunNPMScriptsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/CleanSourceCommentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/CleanSourceCommentAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/CloseTabAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/CloseTabAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/JumpToLastEditAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/JumpToLastEditAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/RevealFileAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/RevealFileAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowConsoleRefreshAnrdoidAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/ShowConsoleRefreshAnrdoidAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/ShowRNConsoleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/ShowRNConsoleAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/UpdageModuleAARAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/UpdageModuleAARAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/UpdateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/UpdateAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AdbForwardAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AdbForwardAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidAvdsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidAvdsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidBundleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidBundleAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidCleanAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidCleanAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidDebugApkAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidDebugApkAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidDevMenuAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidDevMenuAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidRefreshAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidReleaseApkAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidReleaseApkAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidReleaseOfflineApkAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/AndroidReleaseOfflineApkAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/DebugUiAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditJsAppPathAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/EditJsAppPathAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/EditMetroPortAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/EditMetroPortAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/HelpAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/HelpAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/IOSBundleAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/IOSBundleAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/JestAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/LocateInFinderAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/LocateInFinderAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMAndroidLogsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/NPMAndroidLogsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMInstallAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/NPMInstallAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/NPMStartAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMiOSLogsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/NPMiOSLogsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNInstallAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RNInstallAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNLinkAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RNLinkAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNStartAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RNStartAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNUnInstallAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RNUnInstallAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNUpgradeAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RNUpgradeAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReWatchManAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/ReWatchManAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/ReactDevToolsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/ReactDevToolsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunAndroidAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunAndroidDevicesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunAndroidDevicesAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunCocoPodsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunCocoPodsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunIOSAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDeviceAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunIOSDeviceAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunIOSDevicesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunIOSDevicesAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunMiscScriptsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunMiscScriptsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunNPMScriptsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunNPMScriptsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNDebuggerAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunRNDebuggerAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RunRNScriptsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/RunRNScriptsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/YarnAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/android/RevealApkAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/android/RevealApkAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/hyperlink/EditRunAnroidOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/hyperlink/EditRunAnroidOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/hyperlink/EditRuniOSOptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/hyperlink/EditRuniOSOptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/java/OpenCurrentActivityAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/java/OpenCurrentActivityAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/java/RunGradleTaskAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/console/java/RunGradleTaskAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/configuration/FreeConfigurationFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/configuration/FreeConfigurationFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/configuration/FreeConfigurationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/configuration/FreeConfigurationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/configuration/FreeRunConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/configuration/FreeRunConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/configuration/FreeSettingEditor.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/configuration/FreeSettingEditor.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/configuration/FreeSettingEditor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/configuration/FreeSettingEditor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/content/RNContentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/content/RNContentImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ProjectConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/entity/ProjectConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ios/IOSDeviceInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/entity/ios/IOSDeviceInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/ios/Simulators.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/entity/ios/Simulators.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/exception/AdbException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/exception/AdbException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/exception/ExecutionAdbException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/exception/ExecutionAdbException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/exception/MultipleDevicesAdbException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/exception/MultipleDevicesAdbException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/exception/NoDevicesAdbException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/exception/NoDevicesAdbException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/exception/ParseAdbException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/exception/ParseAdbException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/icons/PluginIcons.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/models/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/GradleDependencyEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/models/GradleDependencyEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/GradleSyncHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/models/GradleSyncHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/RNConsoleConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/models/RNConsoleConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh/ShConfigurationType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh/ShRunConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh/ShRunConfigurationEditor.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh/ShRunConfigurationEditor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh/ShRunConfigurationProfileState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh/ShRunFileAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh/ShStringUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/storage/GlobalPropertyBasedDoNotAskOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/storage/GlobalPropertyBasedDoNotAskOption.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/ui/RNConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/ui/RNConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/DocumentUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/DocumentUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/GradleSyncUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/GradleSyncUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/GradleUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/GradleUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/IdeaMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/IdeaMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/LogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/LogUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/NotificationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/NotificationUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/OSUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/OSUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/PsiDebugUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/PsiDebugUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/RNPathUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNUIManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/RNUIManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/RNUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RunnerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/RunnerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/StreamUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/StreamUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/android/AVDList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/android/AVDList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/android/AndroidPathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/android/AndroidPathUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/ios/IOSDevicesParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/ios/IOSDevicesParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/js/JSExec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/js/JSExec.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/npm/NPMParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/npm/NPMParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/utils/rn/RNVersionSwitcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/rn/RNVersionSwitcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ActionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/views/ActionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/views/RNConsoleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNTerminalExecutionConsoleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/views/RNTerminalExecutionConsoleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNToolWindowFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/views/RNToolWindowFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/ReactNativeConsole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/views/ReactNativeConsole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/views/SimpleToolWindowPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/swing/OverlayIcon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/swing/OverlayIcon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/pedrovgs/androidwifiadb/adb/ADB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/withJava.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/withJava.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/RNPathUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/RNPathUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestParseIOSDevices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/TestParseIOSDevices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/js/JSExecTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/github/beansoft/reatnative/idea/utils/js/JSExecTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/github/beansoftapp/reatnative/idea/utils/npm/test/NPMParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/github/beansoft/reatnative/idea/utils/npm/test/NPMParserTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +216,9 @@
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -79,18 +231,18 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
-        <option value="Action" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="java" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -98,6 +250,9 @@
     <option name="FILTER_INFO" value="false" />
     <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" value="" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1OrQPsJrpNQvwAWKkZhVLfp3SVL" />
   <component name="ProjectViewState">
@@ -126,22 +281,25 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/resources/META-INF/plugin.xml&#10;package.j&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/package.json&#10;RNPa&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Path&#9;FILE&#9;file://D:/pilipa/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;Registry&#9;PSI&#9;JAVA://com.intellij.openapi.util.registry.Registry&#10;Executors&#9;PSI&#9;JAVA://java.util.concurrent.Executors&#10;RNConsoleImpl&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/RNConsoleImpl.java&#10;NPMParser&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.utils.npm.NPMParser&#10;RNLin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/RNLinkAction.java&#10;NpmSta&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/NPMStartAction.java&#10;AllIc&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;ReactDe&#9;PSI&#9;JAVA://com.github.beansoftapp.reatnative.idea.actions.console.ReactDevToolsAction&#10;Plugin&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;IconLoader&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/openapi/util/IconLoader.class&#10;AllIcons&#9;FILE&#9;jar:///Applications/IntelliJ IDEA.app/Contents/lib/util.jar!/com/intellij/icons/AllIcons.class&#10;Debug&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/DebugUiAction.java&#10;RNPath&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/RNPathUtil.java&#10;KeyStroke&#9;PSI&#9;JAVA://javax.swing.KeyStroke&#10;Refresh&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console/AndroidRefreshAction.java&#10;FileUtil&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/util.jar!/com/intellij/openapi/util/io/FileUtil.class&#10;Plu&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Fr&#9;FILE&#9;file:///Users/beansoft/Movies/IDEA/freeline-master/freeline-studio-plugin/src/main/java/com/antfortune/freeline/idea/views/FreelineTerminal.java&#10;File&#9;PSI&#9;JAVA://java.io.File&#10;JSON&#9;PSI&#9;JAVA://com.google.gson.JsonArray&#10;TabbedTerminalWidget&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/jediterm-pty-2.5.jar!/com/jediterm/terminal/ui/TabbedTerminalWidget.class&#10;NativeArray&#9;PSI&#9;JAVA://jdk.nashorn.internal.objects.NativeArray&#10;ScriptUtils&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptUtils&#10;ScriptObjectMi&#9;PSI&#9;JAVA://jdk.nashorn.api.scripting.ScriptObjectMirror&#10;Pattern&#9;PSI&#9;JAVA://java.util.regex.Pattern&#10;Notif&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/utils/NotificationUtils.java&#10;JsonObject&#9;PSI&#9;JAVA://com.google.gson.JsonObject&#10;Gson&#9;PSI&#9;JAVA://com.google.gson.Gson&#10;Icon&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/icons/PluginIcons.java&#10;Simple&#9;FILE&#9;file:///Users/beansoft/Documents/github/react-native-console/src/main/java/com/github/beansoftapp/reatnative/idea/views/SimpleToolWindowPanel.java&#10;SimpleToolWindowPanel&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/lib/openapi.jar!/com/intellij/openapi/ui/SimpleToolWindowPanel.class&#10;ConsoleViewImpl&#9;PSI&#9;JAVA://com.intellij.execution.testframework.ui.TestsConsoleViewImpl&#10;ToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Terminal&#9;FILE&#9;jar:///Applications/IntelliJ IDEA CE.app/Contents/plugins/terminal/lib/terminal.jar!/org/jetbrains/plugins/terminal/TerminalView.class&#10;TerminalToolWindowPanel&#9;PSI&#9;JAVA://org.jetbrains.plugins.terminal.TerminalToolWindowPanel&#10;Feed&#9;PSI&#9;JAVA://com.antfortune.freeline.idea.actions.FeedbackAction&#10;TerminalOptions&#9;null&#9;null" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="355" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/META-INF" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.12285012" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="show.inlinked.gradle.project.popup" value="false" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="show.unlinked.gradle.project.popup" value="false" />
   </component>
   <component name="PsiViewer.ProjectComponent">
@@ -153,26 +311,26 @@
     <option name="AUTOSCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea" />
-      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
-      <recent name="$PROJECT_DIR$/src/main/resources/actions" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/sh" />
-      <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/entity/android" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.beansoftapp.reatnative.idea.utils" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
-      <recent name="com.github.beansoftapp.reatnative.idea.views" />
-      <recent name="com.github.beansoftapp.reatnative.idea.sh" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/models/ios/devices" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
+      <recent name="com.github.beansoftapp.reatnative.idea.views" />
+      <recent name="com.github.beansoftapp.reatnative.idea.sh" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
+      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.java" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\github\beansoftapp\react-native-console\src\main\resources\META-INF" />
+      <recent name="D:\github\react-native-console\src\main\resources\icons" />
+      <recent name="D:\github\react-native-console" />
+      <recent name="$PROJECT_DIR$/src/main/resources/icons" />
+      <recent name="$PROJECT_DIR$/src/main/resources/actions" />
     </key>
   </component>
   <component name="Regex">
@@ -218,34 +376,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AVDList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.beansoft.reatnative.idea.utils.android.AVDList" />
+      <module name="react-native-console-free" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.beansoft.reatnative.idea.utils.android.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AdbParseTest.testParseAndroid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="react-native-console" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="AdbParseTest" />
-      <option name="METHOD_NAME" value="testParseAndroid" />
+    <configuration name="NPMParserTest.parseScripts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="react-native-console-free" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.beansoft.reatnative.idea.utils.npm.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.beansoft.reatnative.idea.utils.npm.test" />
+      <option name="MAIN_CLASS_NAME" value="com.github.beansoft.reatnative.idea.utils.npm.test.NPMParserTest" />
+      <option name="METHOD_NAME" value="parseScripts" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NPMParserTest.parseScripts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="react-native-console" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.github.beansoftapp.reatnative.idea.utils.npm.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.github.beansoftapp.reatnative.idea.utils.npm.test" />
-      <option name="MAIN_CLASS_NAME" value="com.github.beansoftapp.reatnative.idea.utils.npm.test.NPMParserTest" />
-      <option name="METHOD_NAME" value="parseScripts" />
+    <configuration name="RNPathUtilTest.testJS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="react-native-console-free" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RNPathUtilTest" />
+      <option name="METHOD_NAME" value="testJS" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -253,7 +426,7 @@
       </method>
     </configuration>
     <configuration name="RNPathUtilTest.testLinuxPathEnv" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="react-native-console" />
+      <module name="react-native-console-free" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="RNPathUtilTest" />
       <option name="METHOD_NAME" value="testLinuxPathEnv" />
@@ -263,15 +436,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestParseIOSDevices.testJS" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="react-native-console" />
+    <configuration name="RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="react-native-console-free" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestParseIOSDevices" />
-      <option name="METHOD_NAME" value="testJS" />
+      <option name="MAIN_CLASS_NAME" value="RNPathUtilTest" />
+      <option name="METHOD_NAME" value="testParseConfigFromRNConsoleJsonFile" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BSP.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -294,51 +468,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test.sh" type="ShConfigurationType" temporary="true">
-      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
-      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/test.sh" />
-      <option name="SCRIPT_OPTIONS" value="" />
-      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
-      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -349,17 +478,17 @@
       </method>
     </configuration>
     <configuration name="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="react-native-console" />
+      <module name="react-native-console-free" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <alternative-path path="/Applications/WebStorm.app/Contents" alternative-path-enabled="true" />
+      <alternative-path path="WebStorm WS-201.7223.93" alternative-path-enabled="false" />
       <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="react-native-console" />
+      <module name="react-native-console-free" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file enabled="true" id="idea.log" />
@@ -368,26 +497,24 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
+      <item itemvalue="Application.AVDList" />
       <item itemvalue="JUnit.NPMParserTest.parseScripts" />
+      <item itemvalue="JUnit.RNPathUtilTest.testJS" />
       <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
-      <item itemvalue="JUnit.TestParseIOSDevices.testJS" />
+      <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
       <item itemvalue="Plugin.Plugin" />
-      <item itemvalue="Shell Script.test.sh" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Shell Script.test.sh" />
-        <item itemvalue="JUnit.TestParseIOSDevices.testJS" />
+        <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
+        <item itemvalue="JUnit.RNPathUtilTest.testJS" />
+        <item itemvalue="Application.AVDList" />
         <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
         <item itemvalue="JUnit.NPMParserTest.parseScripts" />
-        <item itemvalue="JUnit.AdbParseTest.testParseAndroid" />
       </list>
     </recent_temporary>
   </component>
-  <component name="StructureViewFactory">
-    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_ANONYMOUS" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -431,34 +558,6 @@
       <workItem from="1565847112805" duration="23000" />
       <workItem from="1565847148371" duration="450000" />
       <workItem from="1565865784717" duration="203000" />
-    </task>
-    <task id="LOCAL-00022" summary="update rn console">
-      <created>1503659277776</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1503659277776</updated>
-    </task>
-    <task id="LOCAL-00023" summary="add last edit location and show in finder action">
-      <created>1504166921373</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1504166921373</updated>
-    </task>
-    <task id="LOCAL-00024" summary="update chrome icon to retina">
-      <created>1504167781449</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1504167781449</updated>
-    </task>
-    <task id="LOCAL-00025" summary="fix npe">
-      <created>1504168001794</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1504168001794</updated>
     </task>
     <task id="LOCAL-00026" summary="update icon">
       <created>1504250770244</created>
@@ -761,22 +860,59 @@
       <option name="project" value="LOCAL" />
       <updated>1579259659233</updated>
     </task>
-    <task id="LOCAL-00069" summary="add first comment clean func based on IDEA PSI operation">
-      <created>1587467483863</created>
+    <task id="LOCAL-00069" summary="avd manager">
+      <created>1580308327186</created>
       <option name="number" value="00069" />
       <option name="presentableId" value="LOCAL-00069" />
       <option name="project" value="LOCAL" />
-      <updated>1587467483865</updated>
+      <updated>1580308327186</updated>
     </task>
-    <task id="LOCAL-00070" summary="update clean comment action">
-      <created>1587469955475</created>
+    <task id="LOCAL-00070" summary="2019.3 android avd support">
+      <created>1580550448494</created>
       <option name="number" value="00070" />
       <option name="presentableId" value="LOCAL-00070" />
       <option name="project" value="LOCAL" />
-      <updated>1587469955475</updated>
+      <updated>1580550448495</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="update jar">
+      <created>1580730565408</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1580730565409</updated>
+    </task>
+    <task id="LOCAL-00072" summary="fix NPE">
+      <created>1583055464047</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1583055464047</updated>
+    </task>
+    <task id="LOCAL-00073" summary="free version update">
+      <created>1594450535721</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1594450535721</updated>
+    </task>
+    <task id="LOCAL-00074" summary="update readme">
+      <created>1594460115904</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1594460115905</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -794,6 +930,23 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="BRANCHES_LOG">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
@@ -820,10 +973,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="1.1.1 add almost all React Native commands support" />
-    <MESSAGE value="update plugin jar" />
-    <MESSAGE value="update readme" />
-    <MESSAGE value="fix npe" />
     <MESSAGE value="fix https://github.com/beansoftapp/react-native-console/issues/21" />
     <MESSAGE value="1.1.3" />
     <MESSAGE value="add edit js project dir action" />
@@ -843,155 +992,114 @@
     <MESSAGE value="version 2018 release" />
     <MESSAGE value="mig to IDEA 2020" />
     <MESSAGE value="fix RN 0.60+ run issue" />
-    <MESSAGE value="add first comment clean func based on IDEA PSI operation" />
-    <MESSAGE value="update clean comment action" />
-    <option name="LAST_COMMIT_MESSAGE" value="update clean comment action" />
+    <MESSAGE value="avd manager" />
+    <MESSAGE value="2019.3 android avd support" />
+    <MESSAGE value="update jar" />
+    <MESSAGE value="fix NPE" />
+    <MESSAGE value="free version update" />
+    <MESSAGE value="update readme" />
+    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="94" width="916" height="666" key="#Project_Structure" timestamp="1587460485247">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state x="440" y="91" key="#Project_Structure" timestamp="1594449042674">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="320" y="94" key="#Project_Structure/0.23.1440.834@0.23.1440.834" timestamp="1579488812042" />
-    <state x="320" y="94" key="#Project_Structure/0.23.1440.835@0.23.1440.835" timestamp="1587460485247" />
-    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587469638577">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state x="440" y="91" key="#Project_Structure/0.0.1920.1034@0.0.1920.1034" timestamp="1594449042674" />
+    <state x="414" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599410674866">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.834@0.23.1440.834" timestamp="1587469638577" />
-    <state x="184" y="99" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.835@0.23.1440.835" timestamp="1587441739289" />
-    <state x="320" y="137" width="866" height="600" key="#com.intellij.internal.psiView.PsiViewerDialog" timestamp="1587455235978">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state x="414" y="171" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1599410674866" />
+    <state x="549" y="85" key="CommitChangelistDialog2" timestamp="1594460113391">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="320" y="137" width="866" height="600" key="#com.intellij.internal.psiView.PsiViewerDialog/0.23.1440.835@0.23.1440.835" timestamp="1587455235978" />
-    <state x="408" y="175" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1579428640552">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state x="549" y="85" key="CommitChangelistDialog2/0.0.1920.1034@0.0.1920.1034" timestamp="1594460113391" />
+    <state width="1876" height="128" key="GridCell.Tab.0.bottom" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="408" y="175" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.834@0.23.1440.834" timestamp="1579428640552" />
-    <state x="316" y="23" width="916" height="834" key="CommitChangelistDialog2" timestamp="1588068340482">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.0.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1876" height="128" key="GridCell.Tab.0.center" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="316" y="23" width="916" height="834" key="CommitChangelistDialog2/0.23.1440.834@0.23.1440.834" timestamp="1588068340482" />
-    <state x="100" y="123" width="1240" height="634" key="DiffContextDialog" timestamp="1579510963815">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.0.center/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1876" height="128" key="GridCell.Tab.0.left" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="100" y="123" width="1240" height="634" key="DiffContextDialog/0.23.1440.834@0.23.1440.834" timestamp="1579510963815" />
-    <state width="1398" height="366" key="GridCell.Tab.0.bottom" timestamp="1588068219433">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.0.left/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1876" height="128" key="GridCell.Tab.0.right" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.0.bottom/0.23.1440.833@0.23.1440.833" timestamp="1579518006622" />
-    <state width="1398" height="366" key="GridCell.Tab.0.bottom/0.23.1440.834@0.23.1440.834" timestamp="1588068219433" />
-    <state width="1398" height="134" key="GridCell.Tab.0.bottom/0.23.1440.835@0.23.1440.835" timestamp="1587467223490" />
-    <state width="699" height="232" key="GridCell.Tab.0.bottom/0.23.1440.836@0.23.1440.836" timestamp="1587441882818" />
-    <state width="1398" height="366" key="GridCell.Tab.0.center" timestamp="1588068219432">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.0.right/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1876" height="128" key="GridCell.Tab.1.bottom" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.0.center/0.23.1440.833@0.23.1440.833" timestamp="1579518006621" />
-    <state width="1398" height="366" key="GridCell.Tab.0.center/0.23.1440.834@0.23.1440.834" timestamp="1588068219432" />
-    <state width="1398" height="134" key="GridCell.Tab.0.center/0.23.1440.835@0.23.1440.835" timestamp="1587467223490" />
-    <state width="699" height="232" key="GridCell.Tab.0.center/0.23.1440.836@0.23.1440.836" timestamp="1587441882818" />
-    <state width="1398" height="366" key="GridCell.Tab.0.left" timestamp="1588068219432">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.1.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1876" height="128" key="GridCell.Tab.1.center" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.0.left/0.23.1440.833@0.23.1440.833" timestamp="1579518006621" />
-    <state width="1398" height="366" key="GridCell.Tab.0.left/0.23.1440.834@0.23.1440.834" timestamp="1588068219432" />
-    <state width="1398" height="134" key="GridCell.Tab.0.left/0.23.1440.835@0.23.1440.835" timestamp="1587467223489" />
-    <state width="699" height="232" key="GridCell.Tab.0.left/0.23.1440.836@0.23.1440.836" timestamp="1587441882815" />
-    <state width="1398" height="366" key="GridCell.Tab.0.right" timestamp="1588068219433">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.1.center/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1876" height="128" key="GridCell.Tab.1.left" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.0.right/0.23.1440.833@0.23.1440.833" timestamp="1579518006622" />
-    <state width="1398" height="366" key="GridCell.Tab.0.right/0.23.1440.834@0.23.1440.834" timestamp="1588068219433" />
-    <state width="1398" height="134" key="GridCell.Tab.0.right/0.23.1440.835@0.23.1440.835" timestamp="1587467223490" />
-    <state width="699" height="232" key="GridCell.Tab.0.right/0.23.1440.836@0.23.1440.836" timestamp="1587441882818" />
-    <state width="1398" height="366" key="GridCell.Tab.1.bottom" timestamp="1588068219435">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.1.left/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1876" height="128" key="GridCell.Tab.1.right" timestamp="1599411888897">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.1.bottom/0.23.1440.833@0.23.1440.833" timestamp="1579518006623" />
-    <state width="1398" height="366" key="GridCell.Tab.1.bottom/0.23.1440.834@0.23.1440.834" timestamp="1588068219435" />
-    <state width="1398" height="134" key="GridCell.Tab.1.bottom/0.23.1440.835@0.23.1440.835" timestamp="1587467223492" />
-    <state width="1398" height="232" key="GridCell.Tab.1.bottom/0.23.1440.836@0.23.1440.836" timestamp="1587441886925" />
-    <state width="1398" height="366" key="GridCell.Tab.1.center" timestamp="1588068219434">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1876" height="128" key="GridCell.Tab.1.right/0.0.1920.1034@0.0.1920.1034" timestamp="1599411888897" />
+    <state width="1877" height="309" key="GridCell.Tab.2.bottom" timestamp="1594460467827">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.1.center/0.23.1440.833@0.23.1440.833" timestamp="1579518006623" />
-    <state width="1398" height="366" key="GridCell.Tab.1.center/0.23.1440.834@0.23.1440.834" timestamp="1588068219434" />
-    <state width="1398" height="134" key="GridCell.Tab.1.center/0.23.1440.835@0.23.1440.835" timestamp="1587467223491" />
-    <state width="1398" height="232" key="GridCell.Tab.1.center/0.23.1440.836@0.23.1440.836" timestamp="1587441886924" />
-    <state width="1398" height="366" key="GridCell.Tab.1.left" timestamp="1588068219434">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1877" height="309" key="GridCell.Tab.2.bottom/0.0.1920.1034@0.0.1920.1034" timestamp="1594460467827" />
+    <state width="1877" height="309" key="GridCell.Tab.2.center" timestamp="1594460467826">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.1.left/0.23.1440.833@0.23.1440.833" timestamp="1579518006622" />
-    <state width="1398" height="366" key="GridCell.Tab.1.left/0.23.1440.834@0.23.1440.834" timestamp="1588068219434" />
-    <state width="1398" height="134" key="GridCell.Tab.1.left/0.23.1440.835@0.23.1440.835" timestamp="1587467223491" />
-    <state width="1398" height="232" key="GridCell.Tab.1.left/0.23.1440.836@0.23.1440.836" timestamp="1587441886923" />
-    <state width="1398" height="366" key="GridCell.Tab.1.right" timestamp="1588068219434">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1877" height="309" key="GridCell.Tab.2.center/0.0.1920.1034@0.0.1920.1034" timestamp="1594460467826" />
+    <state width="1877" height="309" key="GridCell.Tab.2.left" timestamp="1594460467826">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.1.right/0.23.1440.833@0.23.1440.833" timestamp="1579518006623" />
-    <state width="1398" height="366" key="GridCell.Tab.1.right/0.23.1440.834@0.23.1440.834" timestamp="1588068219434" />
-    <state width="1398" height="134" key="GridCell.Tab.1.right/0.23.1440.835@0.23.1440.835" timestamp="1587467223491" />
-    <state width="1398" height="232" key="GridCell.Tab.1.right/0.23.1440.836@0.23.1440.836" timestamp="1587441886924" />
-    <state width="1398" height="366" key="GridCell.Tab.2.bottom" timestamp="1588068219436">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1877" height="309" key="GridCell.Tab.2.left/0.0.1920.1034@0.0.1920.1034" timestamp="1594460467826" />
+    <state width="1877" height="309" key="GridCell.Tab.2.right" timestamp="1594460467827">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.2.bottom/0.23.1440.833@0.23.1440.833" timestamp="1579518006624" />
-    <state width="1398" height="366" key="GridCell.Tab.2.bottom/0.23.1440.834@0.23.1440.834" timestamp="1588068219436" />
-    <state width="1398" height="134" key="GridCell.Tab.2.bottom/0.23.1440.835@0.23.1440.835" timestamp="1587467223493" />
-    <state width="699" height="232" key="GridCell.Tab.2.bottom/0.23.1440.836@0.23.1440.836" timestamp="1587441882820" />
-    <state width="1398" height="366" key="GridCell.Tab.2.center" timestamp="1588068219435">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state width="1877" height="309" key="GridCell.Tab.2.right/0.0.1920.1034@0.0.1920.1034" timestamp="1594460467827" />
+    <state x="540" y="259" key="IDE.errors.dialog" timestamp="1599412273229">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.2.center/0.23.1440.833@0.23.1440.833" timestamp="1579518006624" />
-    <state width="1398" height="366" key="GridCell.Tab.2.center/0.23.1440.834@0.23.1440.834" timestamp="1588068219435" />
-    <state width="1398" height="134" key="GridCell.Tab.2.center/0.23.1440.835@0.23.1440.835" timestamp="1587467223492" />
-    <state width="699" height="232" key="GridCell.Tab.2.center/0.23.1440.836@0.23.1440.836" timestamp="1587441882820" />
-    <state width="1398" height="366" key="GridCell.Tab.2.left" timestamp="1588068219435">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state x="540" y="259" key="IDE.errors.dialog/0.0.1920.1034@0.0.1920.1034" timestamp="1599412273229" />
+    <state x="184" y="85" key="MergeDialog" timestamp="1593137097363">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.2.left/0.23.1440.833@0.23.1440.833" timestamp="1579518006624" />
-    <state width="1398" height="366" key="GridCell.Tab.2.left/0.23.1440.834@0.23.1440.834" timestamp="1588068219435" />
-    <state width="1398" height="134" key="GridCell.Tab.2.left/0.23.1440.835@0.23.1440.835" timestamp="1587467223492" />
-    <state width="699" height="232" key="GridCell.Tab.2.left/0.23.1440.836@0.23.1440.836" timestamp="1587441882820" />
-    <state width="1398" height="366" key="GridCell.Tab.2.right" timestamp="1588068219436">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state x="184" y="85" key="MergeDialog/0.0.1920.1034@0.0.1920.1034" timestamp="1593137097363" />
+    <state x="552" y="236" key="Vcs.Push.Dialog.v2" timestamp="1594460117060">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="1398" height="156" key="GridCell.Tab.2.right/0.23.1440.833@0.23.1440.833" timestamp="1579518006624" />
-    <state width="1398" height="366" key="GridCell.Tab.2.right/0.23.1440.834@0.23.1440.834" timestamp="1588068219436" />
-    <state width="1398" height="134" key="GridCell.Tab.2.right/0.23.1440.835@0.23.1440.835" timestamp="1587467223493" />
-    <state width="699" height="232" key="GridCell.Tab.2.right/0.23.1440.836@0.23.1440.836" timestamp="1587441882820" />
-    <state x="435" y="155" key="RollbackChangesDialog" timestamp="1579518078116">
-      <screen x="0" y="23" width="1440" height="833" />
+    <state x="552" y="236" key="Vcs.Push.Dialog.v2/0.0.1920.1034@0.0.1920.1034" timestamp="1594460117060" />
+    <state x="753" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1593136935834">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="435" y="155" key="RollbackChangesDialog/0.23.1440.833@0.23.1440.833" timestamp="1579518078116" />
-    <state x="213" y="78" width="1148" height="722" key="SettingsEditor" timestamp="1587467065624">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state x="753" y="429" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1034@0.0.1920.1034" timestamp="1593136935834" />
+    <state x="662" y="249" width="596" height="536" key="find.popup" timestamp="1599411060478">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="213" y="78" key="SettingsEditor/0.23.1440.834@0.23.1440.834" timestamp="1579488549475" />
-    <state x="213" y="78" key="SettingsEditor/0.23.1440.835@0.23.1440.835" timestamp="1587467065624" />
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2" timestamp="1587469957488">
-      <screen x="0" y="23" width="1440" height="834" />
+    <state x="662" y="249" width="596" height="536" key="find.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1599411060478" />
+    <state x="551" y="199" key="new project wizard" timestamp="1599400594922">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state x="320" y="178" key="Vcs.Push.Dialog.v2/0.23.1440.834@0.23.1440.834" timestamp="1587469957488" />
-    <state width="720" height="408" key="XDebugger.FullValuePopup" timestamp="1587465980033">
-      <screen x="0" y="23" width="1440" height="835" />
+    <state x="551" y="199" key="new project wizard/0.0.1920.1034@0.0.1920.1034" timestamp="1599400594922" />
+    <state x="616" y="170" width="672" height="676" key="search.everywhere.popup" timestamp="1594449246311">
+      <screen x="0" y="0" width="1920" height="1034" />
     </state>
-    <state width="720" height="408" key="XDebugger.FullValuePopup/0.23.1440.835@0.23.1440.835" timestamp="1587465980033" />
-    <state x="383" y="118" width="847" height="624" key="find.popup" timestamp="1587462520574">
-      <screen x="0" y="23" width="1440" height="835" />
-    </state>
-    <state x="383" y="118" width="847" height="623" key="find.popup/0.23.1440.834@0.23.1440.834" timestamp="1587456022661" />
-    <state x="383" y="118" width="847" height="624" key="find.popup/0.23.1440.835@0.23.1440.835" timestamp="1587462520574" />
-    <state x="385" y="156" width="670" height="683" key="search.everywhere.popup" timestamp="1587455132558">
-      <screen x="0" y="23" width="1440" height="835" />
-    </state>
-    <state x="385" y="156" width="670" height="682" key="search.everywhere.popup/0.23.1440.834@0.23.1440.834" timestamp="1579512907180" />
-    <state x="385" y="156" width="670" height="683" key="search.everywhere.popup/0.23.1440.835@0.23.1440.835" timestamp="1587455132558" />
+    <state x="616" y="170" width="672" height="676" key="search.everywhere.popup/0.0.1920.1034@0.0.1920.1034" timestamp="1594449246311" />
   </component>
   <component name="XDebuggerManager">
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo typeName="com.github.beansoftapp.reatnative.idea.utils.PsiDebugUtil$TreeToBuffer" fieldName="commentsToDelete" />
-      </pinned-members>
-    </pin-to-top-manager>
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/BaseAction.java</url>
+          <line>43</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />

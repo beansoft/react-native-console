@@ -1,5 +1,5 @@
-import com.github.beansoftapp.reatnative.idea.entity.ProjectConfig;
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
+import com.github.beansoft.reatnative.idea.entity.ProjectConfig;
+import com.github.beansoft.reatnative.idea.utils.RNPathUtil;
 import com.intellij.util.EnvironmentUtil;
 import org.junit.Assert;
 import org.junit.Test;

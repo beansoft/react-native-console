@@ -1,15 +1,16 @@
 <idea-plugin>
-    <id>com.github.beansoftapp.reatnative.idea.free</id>
+    <id>com.github.beansoft.reatnative.idea.free</id>
     <name>React Native Console Free</name>
     <version>2020.1.0</version>
-    <vendor email="beansoft@126.com" url="https://github.com/beansoftapp/react-native-console">BeanSoft</vendor>
+    <vendor email="beansoft@126.com" url="https://github.com/beansoft/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
     <h2>React Native Console Free</h2>
-<p>an IDEA/WebStorm/Android Studio Plugin for run React Native commands</p>
-<p>This is the original FREE edition released at Apr 28, 2020, it will kept AS IS for current free users without any update.
-The plugin is first made for myself in daily coding 3 years ago,
- so in case you found it useful, you can buy the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>new paid version</a> which is under active development.
+<p>a Free IDEA/WebStorm/Android Studio Plugin for run React Native commands</p>
+<p>This is the original FREE edition released at Apr 28, 2020, and will be maintained to run under latest IDEA/Android Studio.<br>
+FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>Paid Version</a> which is under active development.<br>
+    🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">FluterStorm</a></b> a
+    WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications.<br>
   </p>
 
 <h2>Features</h2>
@@ -142,20 +143,20 @@ The plugin is first made for myself in daily coding 3 years ago,
         <!-- 注意 id 中不能有空格! RNToolWindowFactory.java中的ID定义也一样!
         Warning: the tool window id should't cotains any space char, same ID value constraint in file RNToolWindowFactory.java
         -->
-        <toolWindow id="RNConsoleFree" anchor="bottom" icon="/icons/ReactNative.png"
-                    factoryClass="com.github.beansoftapp.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
+        <toolWindow id="RN Console Free" anchor="bottom" icon="/icons/ReactNative.png"
+                    factoryClass="com.github.beansoft.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
-<!--        <configurationType implementation="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"-->
-<!--                           id="com.github.beansoftapp.reatnative.idea.configuration.FreeConfigurationType"/>-->
+<!--        <configurationType implementation="com.github.beansoft.reatnative.idea.configuration.FreeConfigurationType"-->
+<!--                           id="com.github.beansoft.reatnative.idea.configuration.FreeConfigurationType"/>-->
 
 
         <!-- ReactNative project UI service TODO -->
-<!--        <projectService serviceImplementation="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"-->
-<!--                        id="com.github.beansoftapp.reatnative.idea.utils.RNUIManager"/>-->
+<!--        <projectService serviceImplementation="com.github.beansoft.reatnative.idea.utils.RNUIManager"-->
+<!--                        id="com.github.beansoft.reatnative.idea.utils.RNUIManager"/>-->
 
 <!--        <applicationService TODO-->
-<!--                serviceImplementation="com.github.beansoftapp.reatnative.idea.models.RNConsoleConfiguration"/>-->
+<!--                serviceImplementation="com.github.beansoft.reatnative.idea.models.RNConsoleConfiguration"/>-->
 
     </extensions>
 
@@ -169,7 +170,7 @@ The plugin is first made for myself in daily coding 3 years ago,
 
         <!--&lt;!&ndash;-->
         <!--<action id="Plugin_ReactNative_Run_Update"-->
-        <!--class="com.github.beansoftapp.reatnative.idea.actions.UpdateAction"-->
+        <!--class="com.github.beansoft.reatnative.idea.actions.UpdateAction"-->
         <!--text="Check ReactNative Console Update"-->
         <!--description="Check Update">-->
         <!--</action>-->
@@ -179,7 +180,7 @@ The plugin is first made for myself in daily coding 3 years ago,
         <!--</group>-->
 
         <!-- ReactNative console show action -->
-        <action id="Plugin_ReactNative_Free_Show" class="com.github.beansoftapp.reatnative.idea.actions.ShowRNConsoleAction"
+        <action id="Plugin_ReactNative_Free_Show" class="com.github.beansoft.reatnative.idea.actions.ShowRNConsoleAction"
                 text="Show React Native Console Free " description="Show react native console free">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
@@ -187,7 +188,7 @@ The plugin is first made for myself in daily coding 3 years ago,
         </action>
 
         <action id="Plugin_ReactNative_Android_Refresh_Free"
-                class="com.github.beansoftapp.reatnative.idea.actions.ShowConsoleRefreshAnrdoidAction"
+                class="com.github.beansoft.reatnative.idea.actions.ShowConsoleRefreshAnrdoidAction"
                 text="Android Reload JS" description="Android Reload JS">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="last"/>
@@ -198,7 +199,7 @@ The plugin is first made for myself in daily coding 3 years ago,
         </action>
 
         <!--
-        <action id="UpdateModuleAAR" class="com.github.beansoftapp.reatnative.idea.actions.UpdageModuleAARAction"
+        <action id="UpdateModuleAAR" class="com.github.beansoft.reatnative.idea.actions.UpdageModuleAARAction"
                 icon="/icons/libraryModule.png">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
@@ -208,12 +209,12 @@ The plugin is first made for myself in daily coding 3 years ago,
 
         <!-- id must be diff to IDEA default -->
         <action id="Plugin_ReactNative_JumpToLastChange_Free"
-                class="com.github.beansoftapp.reatnative.idea.actions.JumpToLastEditAction"
+                class="com.github.beansoft.reatnative.idea.actions.JumpToLastEditAction"
                 icon="/icons/last_edit_pos.png" text="Last Edit Location" description="Last edit location">
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
-        <action id="Plugin_ReactNative_RevealIn_Free" class="com.github.beansoftapp.reatnative.idea.actions.RevealFileAction"
+        <action id="Plugin_ReactNative_RevealIn_Free" class="com.github.beansoft.reatnative.idea.actions.RevealFileAction"
                 icon="/icons/folder.png">
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
@@ -225,7 +226,7 @@ The plugin is first made for myself in daily coding 3 years ago,
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
 <!--    <project-components>-->
 <!--        <component>-->
-<!--            <implementation-class>com.github.beansoftapp.reatnative.idea.views.ReactNativeConsole</implementation-class>-->
+<!--            <implementation-class>com.github.beansoft.reatnative.idea.views.ReactNativeConsole</implementation-class>-->
 <!--        </component>-->
 
 <!--    </project-components>-->

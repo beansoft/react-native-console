@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/react-native-console.iml" filepath="$PROJECT_DIR$/react-native-console.iml" />
+      <module fileurl="file://$PROJECT_DIR$/react-native-console-free.iml" filepath="$PROJECT_DIR$/react-native-console-free.iml" />
     </modules>
   </component>
 </project>

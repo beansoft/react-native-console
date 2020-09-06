@@ -1,8 +1,8 @@
-import com.github.beansoftapp.reatnative.idea.entity.ios.IOSDeviceInfo;
-import com.github.beansoftapp.reatnative.idea.entity.ios.Simulators;
-import com.github.beansoftapp.reatnative.idea.utils.NotificationUtils;
-import com.github.beansoftapp.reatnative.idea.utils.RNPathUtil;
-import com.github.beansoftapp.reatnative.idea.utils.ios.IOSDevicesParser;
+import com.github.beansoft.reatnative.idea.entity.ios.IOSDeviceInfo;
+import com.github.beansoft.reatnative.idea.entity.ios.Simulators;
+import com.github.beansoft.reatnative.idea.utils.NotificationUtils;
+import com.github.beansoft.reatnative.idea.utils.RNPathUtil;
+import com.github.beansoft.reatnative.idea.utils.ios.IOSDevicesParser;
 import com.google.gson.Gson;
 import com.intellij.execution.ExecutionException;
 import com.intellij.execution.configurations.GeneralCommandLine;
