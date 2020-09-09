@@ -7,7 +7,7 @@ An IDEA/WebStorm/Android Studio Plugin for run React Native commands, the No.1 W
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console) ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/9564) 
 
 # React Native Console Free
-This repo holds the source code of free version.
+This repo holds the source code of free version. https://plugins.jetbrains.com/plugin/15016-react-native-console-free
 
 [![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/15016-react-native-console-free.svg)](https://plugins.jetbrains.com/plugin/15016-react-native-console-free)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/15016-react-native-console-free)](https://plugins.jetbrains.com/plugin/15016-react-native-console-free) ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/15016-react-native-console-free) 
