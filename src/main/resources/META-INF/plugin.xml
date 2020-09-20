@@ -1,14 +1,14 @@
 <idea-plugin>
     <id>com.github.beansoft.reatnative.idea.free</id>
     <name>React Native Console Free</name>
-    <version>2020.1.0</version>
+    <version>2020.2</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoft/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
     <h2>React Native Console Free</h2>
 <p>a Free IDEA/WebStorm/Android Studio Plugin for run React Native commands</p>
-<p>This is the original FREE edition released at Apr 28, 2020, and will be maintained to run under latest IDEA/Android Studio.<br>
-FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>Paid Version</a> which is under active development.<br>
+<p>This is the original FREE edition, and will be maintained to run under latest IDEA/Android Studio.<br>
+FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>Paid Pro Version</a> which is under active development.<br>
     🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">FluterStorm</a></b> a
     WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications.<br>
   </p>
@@ -82,6 +82,10 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
 
     <change-notes><![CDATA[
      <br>
+     <br>2020.2
+     <br>- add close tab button;
+     <br>- fix RN 0.62 run issue;
+     <br>- fix open new project in same window plugin not working issue;
         <br>2020.1
         <br>- improve avd list command
         <br>2019.3.3
@@ -143,7 +147,7 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
         <!-- 注意 id 中不能有空格! RNToolWindowFactory.java中的ID定义也一样!
         Warning: the tool window id should't cotains any space char, same ID value constraint in file RNToolWindowFactory.java
         -->
-        <toolWindow id="RN Console Free" anchor="bottom" icon="/icons/ReactNative.png"
+        <toolWindow id="RN Console Free" anchor="bottom" icon="/icons/ReactNative.png" canCloseContents="true"
                     factoryClass="com.github.beansoft.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->

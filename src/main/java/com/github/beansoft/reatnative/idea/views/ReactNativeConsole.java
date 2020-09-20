@@ -78,7 +78,12 @@ public class ReactNativeConsole implements FocusListener {
 
     public static ReactNativeConsole getInstance(Project project) {
 //        return project.getComponent(ReactNativeConsole.class);
-        if(instance == null) {
+        if (instance == null) {
+            instance = new ReactNativeConsole(project);
+        }
+
+        // Open another project in same window @since 2020.1.2
+        if (instance.myProject != project) {
             instance = new ReactNativeConsole(project);
         }
         return instance;
