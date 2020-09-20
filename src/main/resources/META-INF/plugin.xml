@@ -124,7 +124,7 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="191"/> <!-- 162.2228.15 (2016.2.5) -->
+    <idea-version since-build="193"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
