@@ -111,6 +111,6 @@ https://github.com/troublediehard dmportenko@gmail.com
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
 
 
-This project is developed with free [JetBrains.](https://www.jetbrains.com/?from=ReactNativeConsole) Open Source license(s).
+This project is developed using IntelliJ IDEA and WebStorm with a free [JetBrains](https://www.jetbrains.com/?from=ReactNativeConsole) Open Source license.
  
 [![jetbrains](jetbrains.png)](https://www.jetbrains.com/?from=ReactNativeConsole)
