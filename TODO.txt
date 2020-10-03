@@ -1,3 +1,11 @@
 [  20350]   WARN - openapi.wm.impl.ToolWindowImpl - ToolWindow icons should be 13x13.
  Please fix ToolWindow (ID:  ReactNative) or icon file:/Users/beansoft/Library/Caches/IdeaIC2017.1/plugins-sandbox/plugins/react-native-console/classes/icons/react.png
 plugins/sh/lib/sh.jar 2019.2
+
+# React Native Console Free
+This repo holds the source code of free version. 
+
+https://plugins.jetbrains.com/plugin/15016-react-native-console-free
+
+[![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/15016-react-native-console-free.svg)](https://plugins.jetbrains.com/plugin/15016-react-native-console-free)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/15016-react-native-console-free)](https://plugins.jetbrains.com/plugin/15016-react-native-console-free) ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/15016-react-native-console-free) 
