@@ -2,8 +2,10 @@
 
 An IDEA/WebStorm/Android Studio Plugin for run React Native commands, the No.1 WebStorm / IDEA plugin for React Native developers.
 
+https://plugins.jetbrains.com/plugin/9564-react-native-console 
+
 [![JetBrains Plugins](https://img.shields.io/jetbrains/plugin/v/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/9564-react-native-console.svg)](https://plugins.jetbrains.com/plugin/9564-react-native-console) ![Rating](https://img.shields.io/jetbrains/plugin/r/rating/9564)  ![Vistor](https://visitor-badge.glitch.me/badge?page_id=react-native-console)
 
 [Chinese Instruction Here](README_CN.m)
 
@@ -109,6 +111,6 @@ https://github.com/troublediehard dmportenko@gmail.com
 ![](https://raw.githubusercontent.com/beansoftapp/react-native-console/master/screenshot/rnconsole.gif)
 
 
-This project is developed with free [JetBrains.](https://www.jetbrains.com/?from=ReactNativeConsole) Open Source license(s).
+This project is developed using IntelliJ IDEA and WebStorm with a free [JetBrains](https://www.jetbrains.com/?from=ReactNativeConsole) Open Source license.
  
 [![jetbrains](jetbrains.png)](https://www.jetbrains.com/?from=ReactNativeConsole)
