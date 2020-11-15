@@ -21,6 +21,8 @@ you can munally install jar file react-native-console.jar as a plugin to your ID
 
 Now restart IDEA and enjoy!
 
+## Free version
+Since I didn't have much time on the free version plugin, you can download and install from local disk: https://github.com/beansoft/react-native-console/releases/download/2020.3/react-native-console-free.jar
 
 ## Note
 Java 8 or plus required to run the IDE.<br/>
