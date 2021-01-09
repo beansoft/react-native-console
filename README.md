@@ -1,5 +1,23 @@
 # React Native Console
 
+Node:
+
+This branch only shows how to using the InlayProvider to display in code editor to show usage for JavaScript function, 
+you need add javascript-openapi.jar and JavaScriptLanguage.jar to project's classpath and mark it as provided.
+
+My code mainly based on IJ source code at com.intellij.codeInsight.daemon.impl.JavaCodeVisionProvider, please using git
+history for what's added for this function.
+
+Please using the react-native-console-free.jar to test in IJ Ultimate or WebStorm with a React or React Native project.
+
+The preferences will show a JavaScript Inlay option for Usages.
+
+Screenshot:
+![](./screenshot/JSX_hints.png)
+
+---
+
+
 An IDEA/WebStorm/Android Studio Plugin for run React Native commands, the No.1 WebStorm / IDEA plugin for React Native developers.
 
 https://plugins.jetbrains.com/plugin/9564-react-native-console 
