@@ -139,6 +139,7 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
     <depends>com.intellij.modules.platform</depends>
     <depends>org.jetbrains.plugins.terminal</depends>
     <depends optional="true" config-file="withJava.xml">com.intellij.modules.java</depends>
+    <depends optional="true" config-file="withJavaScript.xml">JavaScript</depends>
     <!-- 2019.2 -->
 <!--    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends>-->
 

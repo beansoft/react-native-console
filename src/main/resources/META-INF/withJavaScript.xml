@@ -1,0 +1,6 @@
+<idea-plugin>
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Show usage inlay -->
+        <codeInsight.inlayProvider language="JavaScript" implementationClass="com.github.beansoftapp.javascript.codeInsight.JavaScriptJSXCodeVisionProvider"/>
+    </extensions>
+</idea-plugin>
