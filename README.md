@@ -17,7 +17,7 @@ The preferences will show a JavaScript Inlay option for Usages.
 Screenshot:
 ![](./screenshot/JSX_hints.png)
 
----
+----
 
 
 An IDEA/WebStorm/Android Studio Plugin for run React Native commands, the No.1 WebStorm / IDEA plugin for React Native developers.
