@@ -1,8 +1,10 @@
 # React Native Console
 
+
 Node:
 
-This branch only shows how to using the InlayProvider to display in code editor to show usage for JavaScript function, 
+This branch contains the free version source code, also includes code that using the InlayProvider for display 
+in code editor to show usages for a JavaScript function.
 you need add javascript-openapi.jar and JavaScriptLanguage.jar to project's classpath and mark it as provided.
 
 My code mainly based on IJ source code at com.intellij.codeInsight.daemon.impl.JavaCodeVisionProvider, please using git
