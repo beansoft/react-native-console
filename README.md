@@ -120,11 +120,6 @@ https://github.com/beansoftapp/react-native-console/issues/17
 
 https://github.com/facebook/react-native/commit/33d710e8c58ef1dc69816a59ac1cf390894e7cb9
 
-
-https://github.com/beansoftapp beansoft@126.com
-
-https://github.com/troublediehard dmportenko@gmail.com
-
 ## ScreenShot
 
 ![](https://plugins.jetbrains.com/files/9564/screenshot_17784.png)
