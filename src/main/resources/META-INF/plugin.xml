@@ -1,91 +1,100 @@
 <idea-plugin>
     <id>com.github.beansoft.reatnative.idea.free</id>
     <name>React Native Console Free</name>
-    <version>2020.2</version>
+    <version>2021.2.0</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoft/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
-    <h2>React Native Console Free</h2>
-<p>a Free IDEA/WebStorm/Android Studio Plugin for run React Native commands</p>
-<p>This is the original FREE edition, and will be maintained to run under latest IDEA/Android Studio.<br>
-FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>Paid Pro Version</a> which is under active development.<br>
-    🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">FluterStorm</a></b> a
-    WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications.<br>
-  </p>
+        <h2>React Native Console Free</h2>
+        <p>a Free IDEA/WebStorm/Android Studio Plugin for run React Native commands</p>
+        <p>This is the original FREE edition, and will be maintained to run under latest IDEA/Android Studio.<br>
+            FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>Paid Pro Version</a> which
+            is under active development.<br>
+            🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">FluterStorm</a></b> a
+            WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications.<br>
+        </p>
 
-<h2>Features</h2>
+        <h2>Features</h2>
 
-<ul>
-    <li>open current Android activity source code in project</li>
-    <li>run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)</li>
-    <li>Ctrl + F2 to reload android js bundle</li>
-    <li>list and run scripts in package.json</li>
-    <li>react-native run-android</li>
-    <li>list and run android emulator(avd)</li>
-    <li>list all connected android devices(includes simulator and physical) and run as target</li>
-    <li>react-native link</li>
-    <li>react-native run-ios</li>
-    <li>run on physical iOS device</li>
-    <li>list all iOS devices(includes simulator and physical) and run as target</li>
-    <li>npm run start</li>
-    <li>npm install</li>
-    <li>Open dev menu on Android device(adb shell input keyevent 82)</li>
-    <li>forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)</li>
-    <li>Android Reloading JavaScript</li>
-    <li>open React Native debugger ui(Chrome browser required)</li>
-    <li>react-native log-android</li>
-    <li>react-native log-ios</li>
-    <li>gradlew assembleRelease</li>
-    <li>react-native bundle --platform android/ios --dev false</li>
-    <li>yarn</li>
-    <li>jest</li>
-    <li>react-native uninstall</li>
-    <li>react-native start</li>
-    <li>gradlew clean</li>
-    <li>react-native react-native-git-upgrade</li>
-    <li>yarn add project, dev, global dependencies</li>
-    <li>npm add project, dev, global dependencies</li>
-    <li>auto install and run react-devtools</li>
-    <li>Last Edit Location(main toolbar)</li>
-    <li>Reveal file in Finder/Explorer(main toolbar)</li>
-    <li>Reveal project folder in Finder/Explorer</li>
-    <li>Specify js project work directory, eg ./jsapp, from welcome screen or toolbar (optional, see
-        https://github.com/beansoftapp/react-native-console for more info)</li>
-    <li>Modify Metro Bundler port(need React Native 0.56+)</li>
-    <li>
-        Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only
-        coding Java in Android Studio),
-        thus the command will auto execute in the correct folder
-    </li>
-</ul>
+        <ul>
+            <li>open current Android activity source code in project</li>
+            <li>run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)</li>
+            <li>Ctrl + F2 to reload android js bundle</li>
+            <li>list and run scripts in package.json</li>
+            <li>react-native run-android</li>
+            <li>list and run android emulator(avd)</li>
+            <li>list all connected android devices(includes simulator and physical) and run as target</li>
+            <li>react-native link</li>
+            <li>react-native run-ios</li>
+            <li>run on physical iOS device</li>
+            <li>list all iOS devices(includes simulator and physical) and run as target</li>
+            <li>npm run start</li>
+            <li>npm install</li>
+            <li>Open dev menu on Android device(adb shell input keyevent 82)</li>
+            <li>forward android device request to dev machine(adb reverse tcp:8081 tcp:8081)</li>
+            <li>Android Reloading JavaScript</li>
+            <li>open React Native debugger ui(Chrome browser required)</li>
+            <li>react-native log-android</li>
+            <li>react-native log-ios</li>
+            <li>gradlew assembleRelease</li>
+            <li>react-native bundle --platform android/ios --dev false</li>
+            <li>yarn</li>
+            <li>jest</li>
+            <li>react-native uninstall</li>
+            <li>react-native start</li>
+            <li>gradlew clean</li>
+            <li>react-native react-native-git-upgrade</li>
+            <li>yarn add project, dev, global dependencies</li>
+            <li>npm add project, dev, global dependencies</li>
+            <li>auto install and run react-devtools</li>
+            <li>Last Edit Location(main toolbar)</li>
+            <li>Reveal file in Finder/Explorer(main toolbar)</li>
+            <li>Reveal project folder in Finder/Explorer</li>
+            <li>Specify js project work directory, eg ./jsapp, from welcome screen or toolbar (optional, see
+                https://github.com/beansoftapp/react-native-console for more info)
+            </li>
+            <li>Modify Metro Bundler port(need React Native 0.56+)</li>
+            <li>
+                Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg
+                only
+                coding Java in Android Studio),
+                thus the command will auto execute in the correct folder
+            </li>
+        </ul>
 
-<h2>Contributors</h2>
-<p>
-    <a href='https://github.com/beansoftapp'>beansoft@126.com</a></p>
-<p>
-    <a href='https://github.com/troublediehard'>dmportenko@gmail.com</a>
-</p>
-<h2>Installation</h2>
-<p>
-    First, please setup your React Native dev env:
-    <a href='https://facebook.github.io/react-native/docs/getting-started.html'>
-        https://facebook.github.io/react-native/docs/getting-started.html</a>,
-    Then install this plugin to your IDE, then you will find a React Native tab on your bottom dock bar.
-</p>
-<p>Java 8 or plus required to run the IDE.</p>
+        <h2>Contributors</h2>
+        <p>
+            <a href='https://github.com/beansoftapp'>beansoft@126.com</a></p>
+        <p>
+            <a href='https://github.com/troublediehard'>dmportenko@gmail.com</a>
+        </p>
+        <h2>Installation</h2>
+        <p>
+            First, please setup your React Native dev env:
+            <a href='https://facebook.github.io/react-native/docs/getting-started.html'>
+                https://facebook.github.io/react-native/docs/getting-started.html</a>,
+            Then install this plugin to your IDE, then you will find a React Native tab on your bottom dock bar.
+        </p>
+        <p>Java 8 or plus required to run the IDE.</p>
 
-<h2>ISSUES</h2>
-<p>
-<a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a></p>
-
-    ]]></description>
+        <h2>ISSUES</h2>
+        <p>
+            <a href='https://github.com/beansoftapp/react-native-console/issues'>Submit Suggestions or Bugs</a></p>
+        ]]></description>
 
     <change-notes><![CDATA[
-     <br>
-     <br>2020.2
-     <br>- add close tab button;
-     <br>- fix RN 0.62 run issue;
-     <br>- fix open new project in same window plugin not working issue;
+        <br>2021.2.0
+        <br>-internal update: Fix java.lang.NoClassDefFoundError: com/intellij/util/exception/FrequentErrorLogger error for WebStorm 2021.2;
+        <br>- remove 1 usage of scheduled for removal API
+        <pre>React Native Console Free 2020.2 uses API scheduled for removal in future releases
+        Scheduled for removal constructor usage (1)
+        NotificationGroup.<init>(...) (1) (scheduled for removal in 2021.3)
+            Deprecated constructor NotificationGroup.<init>(...) is invoked in CleanSourceCommentAction.process(...).
+                This constructor will be removed in 2021.3</pre>
+        <br>2020.2
+        <br>- add close tab button;
+        <br>- fix RN 0.62 run issue;
+        <br>- fix open new project in same window plugin not working issue;
         <br>2020.1
         <br>- improve avd list command
         <br>2019.3.3
@@ -120,7 +129,7 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
         <br>- ...
         <br>1.0.0
         <br>- The first version,  add React Native ToolWindow and let you easily run some commands without type a key.
-    ]]>
+        ]]>
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
@@ -141,7 +150,7 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
     <depends optional="true" config-file="withJava.xml">com.intellij.modules.java</depends>
     <depends optional="true" config-file="withJavaScript.xml">JavaScript</depends>
     <!-- 2019.2 -->
-<!--    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends>-->
+    <!--    <depends optional="true" config-file="sh-terminal.xml">com.jetbrains.sh</depends>-->
 
 
     <extensions defaultExtensionNs="com.intellij">
@@ -152,16 +161,16 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
                     factoryClass="com.github.beansoft.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
-<!--        <configurationType implementation="com.github.beansoft.reatnative.idea.configuration.FreeConfigurationType"-->
-<!--                           id="com.github.beansoft.reatnative.idea.configuration.FreeConfigurationType"/>-->
+        <!--        <configurationType implementation="com.github.beansoft.reatnative.idea.configuration.FreeConfigurationType"-->
+        <!--                           id="com.github.beansoft.reatnative.idea.configuration.FreeConfigurationType"/>-->
 
 
         <!-- ReactNative project UI service TODO -->
-<!--        <projectService serviceImplementation="com.github.beansoft.reatnative.idea.utils.RNUIManager"-->
-<!--                        id="com.github.beansoft.reatnative.idea.utils.RNUIManager"/>-->
+        <!--        <projectService serviceImplementation="com.github.beansoft.reatnative.idea.utils.RNUIManager"-->
+        <!--                        id="com.github.beansoft.reatnative.idea.utils.RNUIManager"/>-->
 
-<!--        <applicationService TODO-->
-<!--                serviceImplementation="com.github.beansoft.reatnative.idea.models.RNConsoleConfiguration"/>-->
+        <!--        <applicationService TODO-->
+        <!--                serviceImplementation="com.github.beansoft.reatnative.idea.models.RNConsoleConfiguration"/>-->
 
     </extensions>
 
@@ -185,7 +194,8 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
         <!--</group>-->
 
         <!-- ReactNative console show action -->
-        <action id="Plugin_ReactNative_Free_Show" class="com.github.beansoft.reatnative.idea.actions.ShowRNConsoleAction"
+        <action id="Plugin_ReactNative_Free_Show"
+                class="com.github.beansoft.reatnative.idea.actions.ShowRNConsoleAction"
                 text="Show React Native Console Free " description="Show react native console free">
             <add-to-group group-id="MainToolBar" anchor="last"/>
             <add-to-group group-id="ToolsMenu" anchor="first"/>
@@ -219,21 +229,21 @@ FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
-        <action id="Plugin_ReactNative_RevealIn_Free" class="com.github.beansoft.reatnative.idea.actions.RevealFileAction"
+        <action id="Plugin_ReactNative_RevealIn_Free"
+                class="com.github.beansoft.reatnative.idea.actions.RevealFileAction"
                 icon="/icons/folder.png">
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
 
-
     </actions>
 
     <!-- must put your own classes here, otherwise a NPE will be thrown when call ReactNativeConsole.getInstance(project) -->
-<!--    <project-components>-->
-<!--        <component>-->
-<!--            <implementation-class>com.github.beansoft.reatnative.idea.views.ReactNativeConsole</implementation-class>-->
-<!--        </component>-->
+    <!--    <project-components>-->
+    <!--        <component>-->
+    <!--            <implementation-class>com.github.beansoft.reatnative.idea.views.ReactNativeConsole</implementation-class>-->
+    <!--        </component>-->
 
-<!--    </project-components>-->
+    <!--    </project-components>-->
 
 </idea-plugin>

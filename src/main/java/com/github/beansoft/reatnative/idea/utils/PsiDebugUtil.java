@@ -44,7 +44,7 @@ import com.intellij.util.PairConsumer;
 import com.intellij.util.ThrowableRunnable;
 import com.intellij.util.TimeoutUtil;
 import com.intellij.util.diff.FlyweightCapableTreeStructure;
-import com.intellij.util.exception.FrequentErrorLogger;
+//import com.intellij.util.exception.FrequentErrorLogger;
 import com.intellij.util.graph.InboundSemiGraph;
 import com.intellij.util.graph.OutboundSemiGraph;
 import org.jetbrains.annotations.NotNull;
@@ -117,7 +117,7 @@ public class PsiDebugUtil {
                                    @Nullable PairConsumer<? super PsiElement, Consumer<PsiElement>> extra) {
     TreeToBuffer vistor = new TreeToBuffer(buffer, indent, skipWhiteSpaces, showRanges, showChildrenRanges, usePsi, extra);
     ((TreeElement) root).acceptTree(vistor
-      );
+    );
     System.out.println(vistor.getCommentsToDelete());
     for (PsiElement comment : vistor.getCommentsToDelete()) {
       comment.delete();
@@ -161,7 +161,7 @@ public class PsiDebugUtil {
 //      System.out.println("root.getPsi().getClass()=" + root.getPsi().getClass().getName());
       if (root.getPsi() instanceof PsiComment) {
         commentsToDelete.add(root.getPsi());
-        System.out.println("root.getPsi().getText()=" + root.getPsi().getText());
+//        System.out.println("Remove comment: " + root.getPsi().getText());
       }
 
       StringUtil.repeatSymbol(buffer, ' ', indent);
@@ -218,7 +218,7 @@ public class PsiDebugUtil {
       PsiElement psiElement = extra != null && usePsi && e instanceof CompositeElement ? e.getPsi() : null;
       if (psiElement != null) {
         extra.consume(psiElement, element ->
-          treeToBuffer(buffer, element.getNode(), indent, skipWhiteSpaces, showRanges, showChildrenRanges, true, null));
+                treeToBuffer(buffer, element.getNode(), indent, skipWhiteSpaces, showRanges, showChildrenRanges, true, null));
       }
       indent -= 2;
     }
@@ -454,19 +454,19 @@ public class PsiDebugUtil {
   public static String psiToStringIgnoringNonCode(@NotNull PsiElement element) {
     StringBuilder buffer = new StringBuilder();
     ((TreeElement)element.getNode()).acceptTree(
-      new TreeToBuffer(buffer, 0, true, false, false, false, null) {
-        @Override
-        protected boolean shouldSkipNode(TreeElement node) {
-          return super.shouldSkipNode(node) || node instanceof PsiErrorElement || node instanceof PsiComment ||
-                 node instanceof LeafPsiElement && StringUtil.isEmptyOrSpaces(node.getText()) ||
-                 node instanceof OuterLanguageElement;
-        }
+            new TreeToBuffer(buffer, 0, true, false, false, false, null) {
+              @Override
+              protected boolean shouldSkipNode(TreeElement node) {
+                return super.shouldSkipNode(node) || node instanceof PsiErrorElement || node instanceof PsiComment ||
+                        node instanceof LeafPsiElement && StringUtil.isEmptyOrSpaces(node.getText()) ||
+                        node instanceof OuterLanguageElement;
+              }
 
-        @Override
-        protected boolean showEmptyChildren() {
-          return false;
-        }
-      });
+              @Override
+              protected boolean showEmptyChildren() {
+                return false;
+              }
+            });
     return buffer.toString();
   }
 
@@ -520,7 +520,7 @@ public class PsiDebugUtil {
       }
       if (extra != null) {
         extra.consume(root,
-                      element -> psiToBuffer(buffer, element, indent + 2, skipWhiteSpaces, showChildrenRanges, showChildrenRanges, null));
+                element -> psiToBuffer(buffer, element, indent + 2, skipWhiteSpaces, showChildrenRanges, showChildrenRanges, null));
       }
     }
     catch (IOException e) {
@@ -556,7 +556,7 @@ public class PsiDebugUtil {
 
   private static final ThreadLocal<Object> ourPsiModificationTrace = new ThreadLocal<>();
   private static final ThreadLocal<Integer> ourPsiModificationDepth = new ThreadLocal<>();
-  private static final FrequentErrorLogger ourErrorLogger = FrequentErrorLogger.newInstance(LOG);
+//  private static final FrequentErrorLogger ourErrorLogger = FrequentErrorLogger.newInstance(LOG);
 
   /**
    * Marks a start of PSI modification action. Any PSI/AST elements invalidated inside such an action will contain a debug trace
@@ -661,7 +661,8 @@ public class PsiDebugUtil {
     Object trace = ourPsiModificationTrace.get();
     if (trace == null) {
       trace = new Throwable();
-      ourErrorLogger.info("PSI invalidated outside transaction", (Throwable)trace);
+//      ourErrorLogger.info("PSI invalidated outside transaction", (Throwable)trace);
+      System.err.println("PSI invalidated outside transaction " + trace);
     }
     return trace;
   }
