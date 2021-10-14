@@ -1,4 +1,4 @@
-If you are a students or open source developer as described here: https://www.jetbrains.com/store/?#discounts?billing=yearly  .Please go to https://plugins.jetbrains.com/plugin/9564-react-native-console/pricing , there should be a discount there like something says for Student(Free). 
+If you are a students or open source developer as described here: [https://www.jetbrains.com/store/?#discounts?billing=yearly](https://www.jetbrains.com/store/?#discounts?billing=yearly)  .Please go to [https://plugins.jetbrains.com/plugin/9564-react-native-console/pricing](https://plugins.jetbrains.com/plugin/9564-react-native-console/pricing) , there should be a discount there like something says for Student(Free). 
     If you still have issues, I can using another way to generate a coupon code, mail to me beansoft@126.com
 
 ![free_discount](free_discount.png)    
