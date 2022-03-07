@@ -1,23 +1,23 @@
 package com.github.beansoft.reatnative.idea.utils;
 
 import com.github.beansoft.reatnative.idea.icons.PluginIcons;
+import com.intellij.execution.ExecutionException;
 import com.intellij.execution.ExecutionManager;
 import com.intellij.execution.Executor;
 import com.intellij.execution.actions.StopProcessAction;
+import com.intellij.execution.configurations.GeneralCommandLine;
 import com.intellij.execution.executors.DefaultRunExecutor;
 import com.intellij.execution.impl.ConsoleViewImpl;
+import com.intellij.execution.process.KillableProcessHandler;
 import com.intellij.execution.process.OSProcessHandler;
 import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
 import com.intellij.execution.ui.ConsoleView;
+import com.intellij.execution.ui.ConsoleViewContentType;
 import com.intellij.execution.ui.ExecutionConsole;
 import com.intellij.execution.ui.RunContentDescriptor;
 import com.intellij.execution.ui.actions.CloseAction;
-import com.intellij.openapi.actionSystem.ActionGroup;
-import com.intellij.openapi.actionSystem.ActionManager;
-import com.intellij.openapi.actionSystem.ActionToolbar;
-import com.intellij.openapi.actionSystem.AnAction;
-import com.intellij.openapi.actionSystem.DefaultActionGroup;
+import com.intellij.openapi.actionSystem.*;
 import com.intellij.openapi.project.Project;
 import org.jetbrains.annotations.NotNull;
 
@@ -57,9 +57,28 @@ public class RunnerUtil {
         return (ConsoleView) consoleView;
     }
 
-    public static void showConsole(Project project, Executor defaultExecutor, @NotNull RunContentDescriptor contentDescriptor) {
+    private static void showConsole(Project project, Executor defaultExecutor, @NotNull RunContentDescriptor contentDescriptor) {
         // Show in run toolwindow
         ExecutionManager.getInstance(project).getContentManager().showRunContent(defaultExecutor, contentDescriptor);
+    }
+
+    /**
+     * Execute in the runner console window.
+     * @param commandLine cmds need to be execute
+     * @param project current project
+     * @param title tab title
+     * @throws ExecutionException
+     */
+    public static void genInConsole(@NotNull GeneralCommandLine commandLine, @NotNull Project project,
+                                     @NotNull String title) throws
+            ExecutionException {
+        OSProcessHandler handler = new KillableProcessHandler(commandLine, false);
+
+        ConsoleView consoleView = showHelperProcessRunContent(title, handler, project, getExecutor());
+        consoleView.print("cd \"" + commandLine.getWorkDirectory().getAbsolutePath() + "\"\n" ,
+                ConsoleViewContentType.SYSTEM_OUTPUT);
+
+        handler.startNotify();// Start the execute
     }
 
 //    /**
@@ -100,7 +119,7 @@ public class RunnerUtil {
 //        });
 //    }
 
-    protected Executor getExecutor() {
+    public static Executor getExecutor() {
         return DefaultRunExecutor.getRunExecutorInstance();
     }
 }
