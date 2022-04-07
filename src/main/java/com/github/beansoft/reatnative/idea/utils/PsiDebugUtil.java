@@ -7,55 +7,30 @@ import com.intellij.lang.LighterASTTokenNode;
 import com.intellij.lang.impl.PsiBuilderImpl;
 import com.intellij.openapi.application.Application;
 import com.intellij.openapi.application.ApplicationManager;
-import com.intellij.openapi.application.impl.ApplicationInfoImpl;
 import com.intellij.openapi.diagnostic.Logger;
 import com.intellij.openapi.editor.Document;
 import com.intellij.openapi.util.Ref;
 import com.intellij.openapi.util.ThrowableComputable;
 import com.intellij.openapi.util.UserDataHolderBase;
 import com.intellij.openapi.util.text.StringUtil;
-import com.intellij.psi.FileViewProvider;
-import com.intellij.psi.PsiComment;
-import com.intellij.psi.PsiDocumentManager;
-import com.intellij.psi.PsiElement;
-import com.intellij.psi.PsiErrorElement;
-import com.intellij.psi.PsiFile;
-import com.intellij.psi.PsiInvalidElementAccessException;
-import com.intellij.psi.PsiWhiteSpace;
-import com.intellij.psi.TokenType;
+import com.intellij.psi.*;
 import com.intellij.psi.impl.DebugUtil;
 import com.intellij.psi.impl.source.SourceTreeToPsiMap;
-import com.intellij.psi.impl.source.tree.CompositeElement;
-import com.intellij.psi.impl.source.tree.LeafPsiElement;
-import com.intellij.psi.impl.source.tree.RecursiveTreeElementWalkingVisitor;
-import com.intellij.psi.impl.source.tree.SharedImplUtil;
-import com.intellij.psi.impl.source.tree.TreeElement;
+import com.intellij.psi.impl.source.tree.*;
 import com.intellij.psi.stubs.ObjectStubSerializer;
 import com.intellij.psi.stubs.Stub;
 import com.intellij.psi.templateLanguages.OuterLanguageElement;
 import com.intellij.psi.tree.IElementType;
 import com.intellij.psi.util.PsiUtilCore;
-import com.intellij.util.ArrayUtil;
-import com.intellij.util.CharTable;
-import com.intellij.util.Consumer;
-import com.intellij.util.ExceptionUtil;
-import com.intellij.util.Function;
-import com.intellij.util.PairConsumer;
-import com.intellij.util.ThrowableRunnable;
-import com.intellij.util.TimeoutUtil;
+import com.intellij.util.*;
 import com.intellij.util.diff.FlyweightCapableTreeStructure;
-//import com.intellij.util.exception.FrequentErrorLogger;
 import com.intellij.util.graph.InboundSemiGraph;
 import com.intellij.util.graph.OutboundSemiGraph;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @SuppressWarnings({"UtilityClassWithoutPrivateConstructor", "UnusedDeclaration", "TestOnlyProblems"})
 public class PsiDebugUtil {
@@ -573,7 +548,7 @@ public class PsiDebugUtil {
     }
 
     if (ourPsiModificationTrace.get() == null) {
-      ourPsiModificationTrace.set(trace != null || ApplicationInfoImpl.isInStressTest() ? trace : new Throwable());
+      ourPsiModificationTrace.set(trace != null ? trace : new Throwable());
     }
     Integer depth = ourPsiModificationDepth.get();
     if (depth == null) depth = 0;

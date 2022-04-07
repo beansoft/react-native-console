@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoft.reatnative.idea.free</id>
     <name>React Native Console Free</name>
-    <version>2021.2.0</version>
+    <version>2022.1.0</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoft/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -10,7 +10,10 @@
         <p>This is the original FREE edition, and will be maintained to run under latest IDEA/Android Studio.<br>
             FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>Paid Pro Version</a> which
             is under active development.<br>
-            🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">FluterStorm</a></b> a
+            🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/17501-notes/">Notes</a></b> a
+            A code-centric notes manager inside your IDE without altering the source file, connects note and your source code just in editor,
+            Supports SQLite local storage or sync with Evernote(IDEA/安卓代码收集及笔记管理).<br>
+            🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">Fluter Storm</a></b> a
             WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications.<br>
         </p>
 
@@ -83,8 +86,11 @@
         ]]></description>
 
     <change-notes><![CDATA[
+        <br>2022.1.0
+        <br>- add support to WebStorm/IDEA 2022.1
+        <br>- remove 2 usages of scheduled for removal API
         <br>2021.2.0
-        <br>-internal update: Fix java.lang.NoClassDefFoundError: com/intellij/util/exception/FrequentErrorLogger error for WebStorm 2021.2;
+        <br>- internal update: Fix java.lang.NoClassDefFoundError: com/intellij/util/exception/FrequentErrorLogger error for WebStorm 2021.2;
         <br>- remove 1 usage of scheduled for removal API
         <pre>React Native Console Free 2020.2 uses API scheduled for removal in future releases
         Scheduled for removal constructor usage (1)
@@ -133,7 +139,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="193"/>
+    <idea-version since-build="201.8743.12"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->

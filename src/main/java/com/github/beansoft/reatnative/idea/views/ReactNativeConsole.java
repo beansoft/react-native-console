@@ -268,11 +268,11 @@ public class ReactNativeConsole implements FocusListener {
             consoleView.print(
                     "Welcome to React Native Console Free, now please click one button on top toolbar to start.\n",
                     ConsoleViewContentType.SYSTEM_OUTPUT);
-            consoleView.print(
-                    "Give a Star or Suggestion:\n",
-                    ConsoleViewContentType.NORMAL_OUTPUT);
-            consoleView.printHyperlink("https://github.com/beansoft/react-native-console",
-                    new BrowserHyperlinkInfo("https://github.com/beansoft/react-native-console"));
+//            consoleView.print(
+//                    "Give a Star or Suggestion:\n",
+//                    ConsoleViewContentType.NORMAL_OUTPUT);
+//            consoleView.printHyperlink("https://github.com/beansoft/react-native-console",
+//                    new BrowserHyperlinkInfo("https://github.com/beansoft/react-native-console"));
 
             consoleView.print(
                     "\nFYI Pro Paid version:\n",
@@ -281,7 +281,14 @@ public class ReactNativeConsole implements FocusListener {
                     new BrowserHyperlinkInfo("https://plugins.jetbrains.com/plugin/9564-react-native-console"));
 
             consoleView.print(
-                    "\n\uD83C\uDD95FYI FluterStorm a WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications:\n",
+                    "\n\uD83C\uDD95FYI Notes, a code-centric notes manager inside your IDE without altering the source file, connects note and your source code just in editor," +
+                            "Supports SQLite local storage or sync with Evernote:\n",
+                    ConsoleViewContentType.NORMAL_OUTPUT);
+            consoleView.printHyperlink("https://plugins.jetbrains.com/plugin/17501-notes",
+                    new BrowserHyperlinkInfo("https://plugins.jetbrains.com/plugin/17501-notes"));
+
+            consoleView.print(
+                    "\n\uD83C\uDD95FYI Flutter Storm a WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications:\n",
                     ConsoleViewContentType.NORMAL_OUTPUT);
             consoleView.printHyperlink("https://plugins.jetbrains.com/plugin/14718-fluterstorm",
                     new BrowserHyperlinkInfo("https://plugins.jetbrains.com/plugin/14718-fluterstorm"));
@@ -380,7 +387,7 @@ public class ReactNativeConsole implements FocusListener {
 
         // top toolbars
         DefaultActionGroup group = new DefaultActionGroup();
-        ActionToolbar toolbarNorth = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) group, true);
+        ActionToolbar toolbarNorth = ActionManager.getInstance().createActionToolbar("RNConsoleFree", (ActionGroup) group, true);
         toolbarNorth.setTargetComponent(consoleView.getComponent());
         panel.setToolbar(toolbarNorth.getComponent(), false);
 
