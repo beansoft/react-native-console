@@ -1,6 +1,5 @@
 package com.github.beansoft.reatnative.idea.utils;
 
-import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.project.Project;
 
 /**
@@ -9,7 +8,7 @@ import com.intellij.openapi.project.Project;
 public class RNUIManager {
 
     public static RNUIManager getInstance(Project project) {
-        return ServiceManager.getService(project, RNUIManager.class);
+        return project.getService(RNUIManager.class);
     }
 
 //    private ConsoleView mFreeConsole;

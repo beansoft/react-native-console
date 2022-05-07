@@ -275,23 +275,32 @@ public class ReactNativeConsole implements FocusListener {
 //                    new BrowserHyperlinkInfo("https://github.com/beansoft/react-native-console"));
 
             consoleView.print(
-                    "\nFYI Pro Paid version:\n",
+                    "\nFYI ",
                     ConsoleViewContentType.NORMAL_OUTPUT);
-            consoleView.printHyperlink("https://plugins.jetbrains.com/plugin/9564-react-native-console",
+            consoleView.printHyperlink("React Native Console Pro",
                     new BrowserHyperlinkInfo("https://plugins.jetbrains.com/plugin/9564-react-native-console"));
+            consoleView.print(
+                    " which has many premium features.",
+                    ConsoleViewContentType.NORMAL_OUTPUT);
 
             consoleView.print(
-                    "\n\uD83C\uDD95FYI Notes, a code-centric notes manager inside your IDE without altering the source file, connects note and your source code just in editor," +
-                            "Supports SQLite local storage or sync with Evernote:\n",
+                    "\n\uD83C\uDD95FYI ",
                     ConsoleViewContentType.NORMAL_OUTPUT);
-            consoleView.printHyperlink("https://plugins.jetbrains.com/plugin/17501-notes",
+            consoleView.printHyperlink("Notes",
                     new BrowserHyperlinkInfo("https://plugins.jetbrains.com/plugin/17501-notes"));
+            consoleView.print(
+                    " a code-centric notes/bookmarks manager inside your IDE without altering the source file," +
+                            " supports SQLite local storage or sync with Evernote.",
+                    ConsoleViewContentType.NORMAL_OUTPUT);
 
             consoleView.print(
-                    "\n\uD83C\uDD95FYI Flutter Storm a WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications:\n",
+                    "\n\uD83C\uDD95FYI ",
                     ConsoleViewContentType.NORMAL_OUTPUT);
-            consoleView.printHyperlink("https://plugins.jetbrains.com/plugin/14718-fluterstorm",
+            consoleView.printHyperlink("Flutter Storm",
                     new BrowserHyperlinkInfo("https://plugins.jetbrains.com/plugin/14718-fluterstorm"));
+            consoleView.print(
+                    " a WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications.",
+                    ConsoleViewContentType.NORMAL_OUTPUT);
 
             consoleView.printHyperlink(
                     "\n\nEdit Js project working directory (Optional, if it's not under root directory)",
@@ -303,7 +312,7 @@ public class ReactNativeConsole implements FocusListener {
                 });
 
 
-            consoleView.printHyperlink("\n\nEdit metro port in React Native 0.56+(Optional, default value 8081)",
+            consoleView.printHyperlink("\nEdit metro port in React Native 0.56+(Optional, default value 8081)",
                 new HyperlinkInfoBase() {
                     @Override
                     public void navigate(@NotNull Project project, @Nullable RelativePoint relativePoint) {
@@ -311,10 +320,10 @@ public class ReactNativeConsole implements FocusListener {
                     }
                 });
 
-            consoleView.printHyperlink("\n\nEdit react-native run-android command options of this project",
+            consoleView.printHyperlink("\nEdit react-native run-android command options of this project",
                 new EditRunAnroidOptions());
 
-            consoleView.printHyperlink("\n\nEdit react-native run-ios command options of this project",
+            consoleView.printHyperlink("\nEdit react-native run-ios command options of this project",
                 new EditRuniOSOptions());
 
             if(SystemInfoRt.isLinux || SystemInfoRt.isMac) {

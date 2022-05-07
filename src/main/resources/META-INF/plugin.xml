@@ -1,23 +1,23 @@
 <idea-plugin>
     <id>com.github.beansoft.reatnative.idea.free</id>
     <name>React Native Console Free</name>
-    <version>2022.1.0</version>
+    <version>2022.1.1</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoft/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
         <h2>React Native Console Free</h2>
         <p>a Free IDEA/WebStorm/Android Studio Plugin for run React Native commands</p>
-        <p>This is the original FREE edition, and will be maintained to run under latest IDEA/Android Studio.<br>
-            FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>Paid Pro Version</a> which
-            is under active development.<br>
+        <p>This is the open source FREE edition, and will be maintained to run under latest IDEA/Android Studio.<br>
+            FYI the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>React Native Console Pro</a> which
+            has many new premium features.<br>
             🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/17501-notes/">Notes</a></b> a
             A code-centric notes manager inside your IDE without altering the source file, connects note and your source code just in editor,
             Supports SQLite local storage or sync with Evernote(IDEA/安卓代码收集及笔记管理).<br>
-            🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">Fluter Storm</a></b> a
+            🆕FYI <b><a href="https://plugins.jetbrains.com/plugin/14718-flutter-storm/">Flutter Storm</a></b> a
             WebStorm/PhpStorm/GoLand/PyCharm/CLion/RubyMine plugin for developing Flutter applications.<br>
         </p>
 
-        <h2>Features</h2>
+        <h2>Features in Free Version</h2>
 
         <ul>
             <li>open current Android activity source code in project</li>
@@ -65,6 +65,47 @@
             </li>
         </ul>
 
+        <h2>Premium Features in the <a href='https://plugins.jetbrains.com/plugin/9564-react-native-console'>React Native Console Pro</a></h2>
+
+        <ul>
+            <li>Price: Paid, free for Students</li>
+            <li>Active development</li>
+            <li>UI display Language: Chinese / English</li>
+            <li>Advanced React Native JSX Outline (Class, Function, JSX)</li>
+            <li>Image path completion and inline image preview</li>
+            <li>Single click in JSX file to open imported package&#39;s homepage or source code </li>
+            <li>JSX tag range indicator</li>
+            <li>Preview imported component source or homepage</li>
+            <li>Display usages inlay editor hints for JSX language</li>
+            <li>Install APK file inside the project with right click</li>
+            <li>Better RN Android Log Viewer</li>
+            <li>New Expo or React Native Project in All IDE</li>
+            <li>Enhanced package.json editor: package completion, run scripts</li>
+            <li>ADB Start App</li>
+            <li>ADB Kill App</li>
+            <li>ADB Restart App</li>
+            <li>ADB Clear App Data</li>
+            <li>ADB Clear App Data and Restart</li>
+            <li>ADB Uninstall App </li>
+            <li>ADB Revoke Permissions</li>
+            <li>ADB Revoke Permissions and Restart</li>
+            <li>ADB Grant Permissions </li>
+            <li>ADB Open App Info page</li>
+            <li>ADB Get App Start Time</li>
+            <li>ADB Enable Wi-Fi</li>
+            <li>ADB Disable Wi-Fi </li>
+            <li>ADB Enable Mobile Data</li>
+            <li>ADB Disable Mobile Data </li>
+            <li>Record a video of the Android device display</li>
+            <li>Take a screenshot from the Android device display </li>
+            <li>Take a screenshot from the iOS Simulator Screen </li>
+            <li>Record a video of the iOS Simulator display </li>
+            <li>Run CocoPods commands: pod install, pod update</li>
+            <li>iOS in IDE App version editor </li>
+
+        </ul>
+
+
         <h2>Contributors</h2>
         <p>
             <a href='https://github.com/beansoftapp'>beansoft@126.com</a></p>
@@ -86,6 +127,10 @@
         ]]></description>
 
     <change-notes><![CDATA[
+        <br>2022.1.0
+        <br>- add support to WebStorm/IDEA 2022.1.1 RC
+        <br>- remove 2 usages of scheduled for removal API
+        <br>- optimize the welcome page output
         <br>2022.1.0
         <br>- add support to WebStorm/IDEA 2022.1
         <br>- remove 2 usages of scheduled for removal API
@@ -139,7 +184,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="201.8743.12"/>
+    <idea-version since-build="203.5981.155"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
@@ -165,6 +210,8 @@
         -->
         <toolWindow id="RN Console Free" anchor="bottom" icon="/icons/ReactNative.png" canCloseContents="true"
                     factoryClass="com.github.beansoft.reatnative.idea.views.RNToolWindowFactory" secondary="false"/>
+        <!-- for 2020.3 or later https://plugins.jetbrains.com/docs/intellij/notifications.html -->
+        <notificationGroup id="com.github.beansoftapp.reatnative.idea.free" displayType="STICKY_BALLOON"/>
 
         <!-- ReactNative Run Configuration Type define TODO-->
         <!--        <configurationType implementation="com.github.beansoft.reatnative.idea.configuration.FreeConfigurationType"-->

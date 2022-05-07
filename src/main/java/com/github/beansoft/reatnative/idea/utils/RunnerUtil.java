@@ -72,7 +72,7 @@ public class RunnerUtil {
     public static void genInConsole(@NotNull GeneralCommandLine commandLine, @NotNull Project project,
                                      @NotNull String title) throws
             ExecutionException {
-        OSProcessHandler handler = new KillableProcessHandler(commandLine, false);
+        OSProcessHandler handler = new KillableProcessHandler(commandLine);
 
         ConsoleView consoleView = showHelperProcessRunContent(title, handler, project, getExecutor());
         consoleView.print("cd \"" + commandLine.getWorkDirectory().getAbsolutePath() + "\"\n" ,

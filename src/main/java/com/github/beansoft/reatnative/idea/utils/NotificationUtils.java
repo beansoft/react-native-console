@@ -1,17 +1,14 @@
 package com.github.beansoft.reatnative.idea.utils;
 
-import com.intellij.notification.Notification;
-import com.intellij.notification.NotificationGroup;
-import com.intellij.notification.NotificationType;
-import com.intellij.notification.Notifications;
+import com.intellij.notification.*;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.ui.Messages;
 import com.intellij.openapi.util.SystemInfo;
 
 public class NotificationUtils {
-
+    private static final String NOTIFY_ID = "com.github.beansoftapp.reatnative.idea.free";
     private static final String TITLE = "React Native Console";
-    private static final NotificationGroup NOTIFICATION_GROUP = NotificationGroup.balloonGroup(TITLE);
+    private static final NotificationGroup NOTIFICATION_GROUP = NotificationGroupManager.getInstance().getNotificationGroup(NOTIFY_ID);
 
     /**
      * show a Notification
@@ -21,13 +18,10 @@ public class NotificationUtils {
      */
     public static void showNotification(final String message,
                                         final NotificationType type) {
-        ApplicationManager.getApplication().invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                Notification notification =
-                        NOTIFICATION_GROUP.createNotification(TITLE, message, type, null);
-                Notifications.Bus.notify(notification);
-            }
+        ApplicationManager.getApplication().invokeLater(() -> {
+            Notification notification =
+                    NOTIFICATION_GROUP.createNotification( message, type);
+            Notifications.Bus.notify(notification);
         });
     }
 

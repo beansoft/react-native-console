@@ -1,6 +1,10 @@
 package com.github.beansoft.reatnative.idea.models;
 
-import com.intellij.openapi.components.*;
+import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.components.PersistentStateComponent;
+import com.intellij.openapi.components.RoamingType;
+import com.intellij.openapi.components.State;
+import com.intellij.openapi.components.Storage;
 import com.intellij.util.xmlb.XmlSerializerUtil;
 import org.jetbrains.annotations.Nullable;
 
@@ -26,6 +30,6 @@ public class RNConsoleConfiguration implements PersistentStateComponent<RNConsol
     }
 
     public static RNConsoleConfiguration getInstance() {
-        return ServiceManager.getService(RNConsoleConfiguration.class);
+        return ApplicationManager.getApplication().getService(RNConsoleConfiguration.class);
     }
 }
