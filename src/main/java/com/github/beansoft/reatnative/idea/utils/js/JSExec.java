@@ -51,4 +51,13 @@ public class JSExec {
 //                ;
 //        getEngine().eval(js);
 //    }
+
+    public static void main(String[] args) {
+        String code = "JSON.stringify(JSON.parse('{\"b\": 2, \"a\": 1}'))";
+        try {
+            System.out.println(getEngine().eval(code));
+        } catch (ScriptException e) {
+            e.printStackTrace();
+        }
+    }
 }

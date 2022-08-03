@@ -1,6 +1,8 @@
 package com.github.beansoft.reatnative.idea.actions;
 
 import com.github.beansoft.reatnative.idea.utils.RNPathUtil;
+import com.intellij.execution.configurations.PtyCommandLine;
+import com.intellij.execution.util.ExecUtil;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
 import com.intellij.openapi.diagnostic.Logger;
@@ -10,6 +12,8 @@ import com.intellij.openapi.vfs.VirtualFileSystem;
 import com.intellij.openapi.vfs.newvfs.ArchiveFileSystem;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+
+import java.util.Arrays;
 
 /**
 
@@ -32,22 +36,24 @@ public class TestJsonFormatAction extends DumbAwareAction  {
         VirtualFile file = getFile(e);
         if (file != null) {
             String npxFull = RNPathUtil.getExecuteFileFullPath("npx");
-            String cmd = npxFull + " json-format-cli " + file.getPresentableUrl();
-            try {
-                Process process = Runtime.getRuntime().exec(cmd);
-//                process.waitFor();
-                System.out.println(process.exitValue());
-            } catch (Exception ioException) {
-                ioException.printStackTrace();
-            }
-//            GeneralCommandLine commandLine =
-//                    RNPathUtil.createFullPathCommandLine();
+            String cmd = npxFull + " --yes json-format-cli " + file.getPresentableUrl();
 //            try {
-////                RunnerUtil.genInConsole(commandLine, e.getProject(), "JsonFormat");
-//                ExecUtil.execAndGetOutput(commandLine);
-//            } catch (ExecutionException executionException) {
-//                executionException.printStackTrace();
+//                Process process = Runtime.getRuntime().exec(cmd);
+////                process.waitFor();
+//                System.out.println(process.exitValue());
+//            } catch (Exception ioException) {
+//                ioException.printStackTrace();
 //            }
+            PtyCommandLine commandLine = new PtyCommandLine(Arrays.asList(cmd.split(" ")));
+            commandLine.setWorkDirectory(e.getProject().getBasePath());
+//            GeneralCommandLine commandLine =
+//                    RNPathUtil.createFullPathCommandLine("npx json-format-cli " + file.getPresentableUrl(), e.getProject().getBasePath());
+            try {
+//                RunnerUtil.genInConsole(commandLine, e.getProject(), "JsonFormat");
+                ExecUtil.execAndGetOutput(commandLine);
+            } catch (Exception executionException) {
+                executionException.printStackTrace();
+            }
         }
     }
 

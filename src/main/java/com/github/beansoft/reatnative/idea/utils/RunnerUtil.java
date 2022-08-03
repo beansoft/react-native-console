@@ -10,15 +10,17 @@ import com.intellij.execution.executors.DefaultRunExecutor;
 import com.intellij.execution.impl.ConsoleViewImpl;
 import com.intellij.execution.process.KillableProcessHandler;
 import com.intellij.execution.process.OSProcessHandler;
-import com.intellij.execution.process.ProcessHandler;
 import com.intellij.execution.process.ProcessTerminatedListener;
 import com.intellij.execution.ui.ConsoleView;
 import com.intellij.execution.ui.ConsoleViewContentType;
-import com.intellij.execution.ui.ExecutionConsole;
 import com.intellij.execution.ui.RunContentDescriptor;
 import com.intellij.execution.ui.actions.CloseAction;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.ActionManager;
+import com.intellij.openapi.actionSystem.ActionToolbar;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.project.Project;
+import com.intellij.terminal.TerminalExecutionConsole;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -26,35 +28,40 @@ import java.awt.*;
 import java.util.Arrays;
 
 /**
+ * Show run console for some command or shell command.
+ * Some command such as: npx --yes json-format-cli my.json
+ * must use the PtyCommandLine:
+ * PtyCommandLine commandLine = new PtyCommandLine(Arrays.asList(cmd.split(" ")));
  * Created by beansoft on 17/4/1.
+ * @version 2022.8.3
  */
-@Deprecated
 public class RunnerUtil {
 
-    public static final ConsoleView showHelperProcessRunContent(String header, OSProcessHandler runHandler, Project project, Executor defaultExecutor) {
+    public static final ConsoleView showHelperProcessRunContent(String header, OSProcessHandler runHandler,
+                                                                Project project, Executor defaultExecutor, boolean usePtyCommandLine) {
         ProcessTerminatedListener.attach(runHandler);
 
-        ConsoleViewImpl consoleView = new ConsoleViewImpl(project, true);
+        ConsoleView consoleView = usePtyCommandLine? new TerminalExecutionConsole(project, runHandler) :  new ConsoleViewImpl(project, true);
         DefaultActionGroup toolbarActions = new DefaultActionGroup();
 
-        JPanel panel = new JPanel((LayoutManager) new BorderLayout());
-        panel.add((Component) consoleView.getComponent(), "Center");
-        ActionToolbar toolbar = ActionManager.getInstance().createActionToolbar("unknown", (ActionGroup) toolbarActions, false);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add(consoleView.getComponent(), "Center");
+        ActionToolbar toolbar = ActionManager.getInstance().createActionToolbar("unknown", toolbarActions, false);
         toolbar.setTargetComponent(consoleView.getComponent());
-        panel.add((Component) toolbar.getComponent(), "West");
+        panel.add(toolbar.getComponent(), "West");
 
-        RunContentDescriptor runDescriptor = new RunContentDescriptor((ExecutionConsole) consoleView,
-                (ProcessHandler) runHandler, (JComponent) panel, header, PluginIcons.Application);
+        RunContentDescriptor runDescriptor = new RunContentDescriptor(consoleView,
+                runHandler, panel, header, PluginIcons.Application);
         AnAction[]
                 consoleActions = consoleView.createConsoleActions();
-        toolbarActions.addAll((AnAction[]) Arrays.copyOf(consoleActions, consoleActions.length));
-        toolbarActions.add((AnAction) new StopProcessAction("Stop process", "Stop process", (ProcessHandler) runHandler));
-        toolbarActions.add((AnAction) new CloseAction(defaultExecutor, runDescriptor, project));
+        toolbarActions.addAll(Arrays.copyOf(consoleActions, consoleActions.length));
+        toolbarActions.add(new StopProcessAction("Stop process", "Stop process", runHandler));
+        toolbarActions.add(new CloseAction(defaultExecutor, runDescriptor, project));
 
-        consoleView.attachToProcess((ProcessHandler) runHandler);
+        consoleView.attachToProcess(runHandler);
 //        ExecutionManager.getInstance(environment.getProject()).getContentManager().showRunContent(environment.getExecutor(), runDescriptor);
         showConsole(project, defaultExecutor, runDescriptor);
-        return (ConsoleView) consoleView;
+        return consoleView;
     }
 
     private static void showConsole(Project project, Executor defaultExecutor, @NotNull RunContentDescriptor contentDescriptor) {
@@ -70,11 +77,11 @@ public class RunnerUtil {
      * @throws ExecutionException
      */
     public static void genInConsole(@NotNull GeneralCommandLine commandLine, @NotNull Project project,
-                                     @NotNull String title) throws
+                                     @NotNull String title, boolean usePtyCommandLine) throws
             ExecutionException {
         OSProcessHandler handler = new KillableProcessHandler(commandLine);
 
-        ConsoleView consoleView = showHelperProcessRunContent(title, handler, project, getExecutor());
+        ConsoleView consoleView = showHelperProcessRunContent(title, handler, project, getExecutor(), usePtyCommandLine);
         consoleView.print("cd \"" + commandLine.getWorkDirectory().getAbsolutePath() + "\"\n" ,
                 ConsoleViewContentType.SYSTEM_OUTPUT);
 
