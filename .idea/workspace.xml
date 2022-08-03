@@ -76,21 +76,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="update jar">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/javascript_openapi.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/JavaScriptLanguage.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/javascript-openapi.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/screenshot/JSX_hints.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/javascript/codeInsight/JavaScriptJSXCodeVisionProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/javascript/codeInsight/daemon/impl/JavaScriptTelescope.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/javascript/codeInsight/daemon/impl/JavaScriptUnusedSymbolUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/javascript/codeInsight/daemon/impl/PsiEditorUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/withJavaScript.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="f91d5f09-019f-408c-8710-b7fd180077a0" name="Default" comment="release 2022.1 version">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/notesWindowViewState.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/refactorings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/actions/TestJsonFormatAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/visualgc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-native-console-free.iml" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console-free.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-native-console-free.jar" beforeDir="false" afterPath="$PROJECT_DIR$/react-native-console-free.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/RNPathUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/beansoft/reatnative/idea/utils/RNPathUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,12 +120,26 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
     <option name="FILTER_INFO" value="false" />
     <option name="FILTER_DEBUG" value="false" />
     <option name="CUSTOM_FILTER" value="" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -174,13 +181,13 @@
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/reatnative/idea/actions/console" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/screenshot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.12285012" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="show.inlinked.gradle.project.popup" value="false" />
     <property name="show.migrate.to.gradle.popup" value="false" />
     <property name="show.unlinked.gradle.project.popup" value="false" />
@@ -195,11 +202,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\beans\Documents\github\beansoft\react-native-console" />
+      <recent name="C:\Users\beans\Documents\github\beansoft\react-native-console\lib" />
       <recent name="$PROJECT_DIR$/screenshot" />
       <recent name="$PROJECT_DIR$/lib" />
       <recent name="$PROJECT_DIR$/src/main/java/com/github/beansoftapp/javascript/codeInsight" />
-      <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
-      <recent name="D:\github\beansoftapp\react-native-console\src\main\resources\META-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
@@ -209,11 +216,11 @@
       <recent name="$PROJECT_DIR$/" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.beansoft.reatnative.idea.actions" />
       <recent name="com.github.beansoftapp.javascript.codeInsight.daemon.impl" />
       <recent name="com.github.beansoftapp.reatnative.idea.actions.console" />
       <recent name="com.github.beansoftapp.reatnative.idea.views" />
       <recent name="com.github.beansoftapp.reatnative.idea.sh" />
-      <recent name="com.github.beansoftapp.reatnative.idea.actions.console.hyperlink" />
     </key>
   </component>
   <component name="Regex">
@@ -227,7 +234,7 @@
     <option name="referencePos" value="0" />
     <option name="showLabels" value="true" />
   </component>
-  <component name="RunManager" selected="Plugin.Plugin">
+  <component name="RunManager" selected="插件.Plugin">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -364,7 +371,7 @@
       <module name="react-native-console-free" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <alternative-path path="/Applications/WebStorm 2020.1.app/Contents" alternative-path-enabled="true" />
+      <alternative-path path="/Applications/WebStorm 2020.1.app/Contents" alternative-path-enabled="false" />
       <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -380,18 +387,17 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AVDList" />
       <item itemvalue="JUnit.NPMParserTest.parseScripts" />
       <item itemvalue="JUnit.RNPathUtilTest.testJS" />
       <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
       <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
-      <item itemvalue="Plugin.Plugin" />
+      <item itemvalue="应用程序.AVDList" />
+      <item itemvalue="插件.Plugin" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RNPathUtilTest.testParseConfigFromRNConsoleJsonFile" />
         <item itemvalue="JUnit.RNPathUtilTest.testJS" />
-        <item itemvalue="Application.AVDList" />
         <item itemvalue="JUnit.RNPathUtilTest.testLinuxPathEnv" />
         <item itemvalue="JUnit.NPMParserTest.parseScripts" />
       </list>
@@ -441,48 +447,9 @@
       <workItem from="1565847112805" duration="23000" />
       <workItem from="1565847148371" duration="450000" />
       <workItem from="1565865784717" duration="203000" />
-    </task>
-    <task id="LOCAL-00026" summary="update icon">
-      <created>1504250770244</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1504250770244</updated>
-    </task>
-    <task id="LOCAL-00027" summary="release 1.0.8">
-      <created>1504254179926</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1504254179926</updated>
-    </task>
-    <task id="LOCAL-00028" summary="release 1.0.9, list and run scripts in package.json">
-      <created>1504503306027</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1504503306027</updated>
-    </task>
-    <task id="LOCAL-00029" summary="update readme">
-      <created>1504503715277</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1504503715277</updated>
-    </task>
-    <task id="LOCAL-00030" summary="update test code">
-      <created>1504503857372</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1504503857372</updated>
-    </task>
-    <task id="LOCAL-00031" summary="add wp rename code">
-      <created>1505375370459</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1505375370459</updated>
+      <workItem from="1645888828396" duration="424000" />
+      <workItem from="1648690757965" duration="3626000" />
+      <workItem from="1649332907409" duration="432000" />
     </task>
     <task id="LOCAL-00032" summary="reorder console built in actions, move scroll to end and clear console to leading">
       <created>1505719524462</created>
@@ -785,7 +752,49 @@
       <option name="project" value="LOCAL" />
       <updated>1594460115905</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="update mkdown">
+      <created>1634176910617</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1634176910617</updated>
+    </task>
+    <task id="LOCAL-00076" summary="update doc">
+      <created>1645888949496</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1645888949497</updated>
+    </task>
+    <task id="LOCAL-00077" summary="update runner demo">
+      <created>1646633938668</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1646633938669</updated>
+    </task>
+    <task id="LOCAL-00078" summary="fix compiler issue">
+      <created>1646634671270</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1646634671270</updated>
+    </task>
+    <task id="LOCAL-00079" summary="release 2022.1 version">
+      <created>1649333243231</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1649333243231</updated>
+    </task>
+    <task id="LOCAL-00080" summary="release 2022.1.1 version">
+      <created>1651936214261</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1651936214262</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TodoView">
@@ -798,7 +807,7 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -856,12 +865,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="fix https://github.com/beansoftapp/react-native-console/issues/21" />
-    <MESSAGE value="1.1.3" />
-    <MESSAGE value="add edit js project dir action" />
-    <MESSAGE value="1.1.5 version" />
-    <MESSAGE value="No new features, fix an regression bug in ios bundle command which was introduced in 1.1.5" />
-    <MESSAGE value="run React Native Debugger https://github.com/jhen0409/react-native-debugger(Mac Only)" />
     <MESSAGE value="fix plugin crash regression bug introduced with v1.1.7 on IDEA 2016.3 fix https://github.com/beansoftapp/react-native-console/issues/26" />
     <MESSAGE value="1.1.7" />
     <MESSAGE value="1.1.8 fix https://github.com/beansoftapp/react-native-console/issues/27" />
@@ -881,7 +884,13 @@
     <MESSAGE value="fix NPE" />
     <MESSAGE value="free version update" />
     <MESSAGE value="update readme" />
-    <option name="LAST_COMMIT_MESSAGE" value="update readme" />
+    <MESSAGE value="update mkdown" />
+    <MESSAGE value="update doc" />
+    <MESSAGE value="update runner demo" />
+    <MESSAGE value="fix compiler issue" />
+    <MESSAGE value="release 2022.1 version" />
+    <MESSAGE value="release 2022.1.1 version" />
+    <option name="LAST_COMMIT_MESSAGE" value="release 2022.1.1 version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

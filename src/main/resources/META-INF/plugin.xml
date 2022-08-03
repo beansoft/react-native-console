@@ -288,6 +288,12 @@
             <add-to-group group-id="MainToolBar" anchor="last"/>
         </action>
 
+        <action id="TestJsonFormatAction"
+                class="com.github.beansoft.reatnative.idea.actions.TestJsonFormatAction"
+                icon="/icons/commandLine.png">
+            <add-to-group group-id="MainToolBar" anchor="last"/>
+        </action>
+
 
     </actions>
 

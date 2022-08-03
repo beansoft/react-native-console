@@ -432,6 +432,7 @@ public class RNPathUtil {
             cmdList.add(0, exeFullPath);
 
             commandLine = new GeneralCommandLine(exeFullPath);
+            commandLine.setWorkDirectory(workDirectory);
 
             // Fix param with quotes issue, see com.intellij.diff.tools.external.ExternalDiffToolUtil, https://github.com/beansoftapp/react-native-console/issues/31
             List<String> parameters = ParametersListUtil.parse(shell.substring(exePath.length()), false);// keepQuotes: false
