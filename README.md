@@ -1,7 +1,7 @@
-# React   Native Console  21  
+# React   Native Console 
 
 
-Node:
+Note:
 
 This branch contains the free version source code, also includes code that using the InlayProvider for display 
 in code editor to show usages for a JavaScript function.
