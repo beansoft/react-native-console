@@ -1,9 +1,9 @@
-# React   Native Console 
+# React Native Console 
 
 
 Note:
 
-This branch contains the free version source code, also includes code that using the InlayProvider for display 
+This branch only contains the free version source code, also includes code that using the InlayProvider for display 
 in code editor to show usages for a JavaScript function.
 you need add javascript-openapi.jar and JavaScriptLanguage.jar to project's classpath and mark it as provided.
 
