@@ -118,7 +118,7 @@ public class JavaScriptJSXCodeVisionProvider implements InlayHintsProvider<NoSet
           SequencePresentation shiftedPresentation = new SequencePresentation(presentations);
           InlayPresentation withSettings = addSettings(element.getProject(), factory, shiftedPresentation);
           // addBlockElement(offset: Int, relatesToPrecedingText: Boolean, showAbove: Boolean, priority: Int, presentation: InlayPresentation)
-          sink.addBlockElement(startOffset, true, true, BlockInlayPriority.CODE_VISION, withSettings);// 代码行上新起一行的提示
+          sink.addBlockElement(startOffset, true, true, BlockInlayPriority.DOC_RENDER, withSettings);// 代码行上新起一行的提示
 //          sink.addInlineElement(startOffset,true, withSettings);// 加在行首
 //          sink.addInlineElement(startOffset, (RootInlayPresentation<?>) withSettings,
 //          new HorizontalConstraints(BlockInlayPriority.CODE_VISION, true)); // 加行尾的尚未调试通过

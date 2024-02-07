@@ -3,14 +3,14 @@
 
 Note:
 
-This branch only contains the free version source code, also includes code that using the InlayProvider for display 
+This repo only contains the free version source code, also includes code that using the InlayProvider for display 
 in code editor to show usages for a JavaScript function.
-you need add javascript-openapi.jar and JavaScriptLanguage.jar to project's classpath and mark it as provided.
+You need to add javascript-openapi.jar and JavaScriptLanguage.jar to this project's dependency and mark it as provided.
 
-My code mainly based on IJ source code at com.intellij.codeInsight.daemon.impl.JavaCodeVisionProvider, please using git
+My code is mainly based on IJ source code at com.intellij.codeInsight.daemon.impl.JavaCodeVisionProvider, please use git
 history for what's added for this function.
 
-Please using the react-native-console-free.jar to test in IJ Ultimate or WebStorm with a React or React Native project.
+Please use the react-native-console-free.jar to test in IJ Ultimate or WebStorm with a React or React Native project.
 
 The preferences will show a JavaScript Inlay option for Usages.
 
@@ -33,7 +33,7 @@ https://plugins.jetbrains.com/plugin/9564-react-native-console
 First, please setup your React Native dev env:
 https://facebook.github.io/react-native/docs/getting-started.html
 
-Second, you can install it through your IDE, bring up  Preferences > Plugins > Browse repositories... , search for '**React Native Console**',
+Second, you can install it through your IDE, bring up Preferences > Plugins > Browse repositories... , search for '**React Native Console**',
 then you can install this plugin there.<br/>
 
 Or
@@ -42,13 +42,13 @@ you can munally install jar file react-native-console.jar as a plugin to your ID
 Now restart IDEA and enjoy!
 
 ## Free version
-Since I didn't have much time on the free version plugin, you can download and install from local disk: https://github.com/beansoft/react-native-console/releases/download/2020.3/react-native-console-free.jar
+Since I had little time on the free version plugin, you can download and install from local disk: https://github.com/beansoft/react-native-console/releases/download/2020.3/react-native-console-free.jar
 
 ## Note
 Java 8 or plus required to run the IDE.<br/>
 
-## Settings(Optional, only need if js project dir can't be auto find)
-Specify js project work directory rather than root directory, eg ./jsapp , now can from welcome screen or toolbar to edit this property. And the final value is stored in a file named .idea/.rnconsole, which content should like this:
+## Settings (Optional, only need if js project dir can't be auto find)
+Specify js project work directory rather than root directory, eg `./jsapp` , now can from the welcome screen or toolbar to edit this property. And the final value is stored in a file named .idea/.rnconsole, which content should like this:
 
 ```json
 {
@@ -56,24 +56,24 @@ Specify js project work directory rather than root directory, eg ./jsapp , now c
 }
 ```
 
-after that all npm commands will use this as the working dir.
+after that, all npm commands will use this as the working dir.
 
 ## Linux Users PLEASE README FIRST
 
-If you found issue when click on the "Debug Android" button, error message: 
- "SDK location not found ", please fix it like this :
-add a android local config file:
+If you found issue when clicking on the "Debug Android" button, error message: 
+ "SDK location not found ", please fix it like this:
+add an android local config file:
 yourapp/android/local.properties
 `sdk.dir=/Users/xxxx/Documents/Java/android-sdk-macosx`
-let sdk.dir point to your ANDROID_HOME environment 
-if can't find adb, try this shell command:
+let `sdk.dir` point to your ANDROID_HOME environment 
+if you can't find adb, try this shell command:
 
 ```sh
 sudo ln -s ~/Android/Sdk/platform-tools/adb /usr/bin/adb
 ```
 
 
-More info please ref this issue:
+For More info, please ref this issue:
 https://github.com/beansoftapp/react-native-console/issues/17
 
 
@@ -83,7 +83,7 @@ https://github.com/beansoftapp/react-native-console/issues/17
 - Ctrl + F2 to reload android js bundle
 - list and run scripts in package.json
 - react-native run-android
-- list all connected android devices(includes simulator and physical) and run as target
+- list all connected android devices (includes simulator and physical) and run as target
 - react-native link
 - react-native run-ios
 - run on physical iOS device
@@ -110,9 +110,9 @@ https://github.com/beansoftapp/react-native-console/issues/17
 - Last Edit Location(main toolbar)
 - Reveal file in Finder/Explorer(main toolbar)
 - Reveal project folder in Finder/Explorer
-- Specify js project work directory, eg ./jsapp, from welcome screen or toolbar (optional, see https://github.com/beansoftapp/react-native-console for more info)
-- Modify Metro Bundler port(need React Native 0.56+)
-- Auto detect React Native package.json or build.gradle in current folder and parent/children folder(eg only coding Java in Android Studio), thus the command will auto execute in the correct folder
+- Specify js project work directory, eg `./jsapp`, from welcome screen or toolbar (optionally, see https://github.com/beansoftapp/react-native-console for more info)
+- Modify Metro Bundler port (need to React Native 0.56+)
+- Auto-detect React Native package.json or build.gradle in current folder and parent/children folder(e.g., only coding Java in Android Studio), thus the command will auto execute in the correct folder
 
 
 

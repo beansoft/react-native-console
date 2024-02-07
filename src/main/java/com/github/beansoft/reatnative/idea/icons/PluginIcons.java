@@ -34,14 +34,14 @@ public class PluginIcons {
     public static final Icon RESET_TO_EMPTY = Install;
     public static final Icon Lightning = load("/actions/lightning.png");
     public static final Icon Suspend = load("/actions/suspend.png");
-    public static final Icon StartDebugger = load("/actions/startDebugger.png");
+    public static final Icon StartDebugger = load("/actions/startDebugger.svg");
     public static final Icon OpenChromeDebugger = load("/icons/chrome16.png");
     public static final Icon QuickfixBulb = load("/actions/quickfixBulb.png");
     public static final Icon GC = load("/actions/gc.svg");
     public static final Icon Restart = load("/actions/restart.svg");
 
     public static final Icon EditConfig = load("/actions/edit.png");
-    public static final Icon DevMenu = load("/icons/gearPlain.png");
+    public static final Icon DevMenu = load("/icons/gearPlain.svg");
     public static final Icon Link = load("/icons/link.png");
     public static final Icon UnLink = load("/actions/cancel.svg");
     public static final Icon New = load("/actions/new.svg");
@@ -58,7 +58,7 @@ public class PluginIcons {
     public static final Icon Apple = load("/icons/apple.png");
     public static final Icon React = load("/icons/jsx_16.png");
     public static final Icon ResourceBundle = load("/nodes/resourceBundle.png");
-    public static final Icon Archive = load("/icons/archive.png");
+    public static final Icon Archive = load("/icons/archive.svg");
     public static final Icon Export = load("/icons/export.svg");
     public static final Icon Import = load("/icons/import.svg");
     public static final Icon Application = load("/icons/application.svg");

@@ -12,7 +12,6 @@ import com.github.beansoft.reatnative.idea.views.ReactNativeConsole;
 import com.intellij.openapi.actionSystem.ActionManager;
 import com.intellij.openapi.actionSystem.ActionPopupMenu;
 import com.intellij.openapi.actionSystem.AnActionEvent;
-import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.actionSystem.DefaultActionGroup;
 import com.intellij.openapi.actionSystem.impl.ActionManagerImpl;
 import com.intellij.openapi.actionSystem.impl.MenuItemPresentationFactory;
@@ -35,15 +34,15 @@ public class RunIOSDevicesAction extends BaseRNConsoleActionGroup {
         setPopup(true);
     }
 
-    /**
-     * @return true if {@link #actionPerformed(AnActionEvent)} should be called, in this mode method
-     * AnAction[] getChildren(@Nullable AnActionEvent e)
-     * will be ignored.
-     * 默认可点击
-     */
-    public boolean canBePerformed(DataContext context) {
-        return true;
-    }
+    // /**
+    //  * @return true if {@link #actionPerformed(AnActionEvent)} should be called, in this mode method
+    //  * AnAction[] getChildren(@Nullable AnActionEvent e)
+    //  * will be ignored.
+    //  * 默认可点击
+    //  */
+    // public boolean canBePerformed(DataContext context) {
+    //     return true;
+    // }
 
     @Override
     public void actionPerformed(AnActionEvent e) {

@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>com.github.beansoft.reatnative.idea.free</id>
     <name>React Native Console Free</name>
-    <version>2022.1.1</version>
+    <version>2023.3.0</version>
     <vendor email="beansoft@126.com" url="https://github.com/beansoft/react-native-console">BeanSoft</vendor>
 
     <description><![CDATA[
@@ -127,6 +127,8 @@
         ]]></description>
 
     <change-notes><![CDATA[
+        <br>2023.3.0
+        <br>- add support to WebStorm/IDEA 2023.3
         <br>2022.1.0
         <br>- add support to WebStorm/IDEA 2022.1.1 RC
         <br>- remove 2 usages of scheduled for removal API
@@ -153,7 +155,7 @@
         <br>2019.3.2
         <br>- quickly open APK build output folder
         <br>2019.3.1
-        <br>- fix issue on mac which can't run android emulator(avd)
+        <br>- fix issue on macOS which can't run android emulator(avd)
         <br>2019.3
         <br>- add iOS cocoapods support;
         <br>- list and run android emulator(avd)
@@ -184,7 +186,7 @@
     </change-notes>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
-    <idea-version since-build="203.5981.155"/>
+    <idea-version since-build="233" until-build="233.*"/>
 
     <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
          on how to target different products -->
